@@ -16908,6 +16908,25 @@ textarea {
   height: 100%;
 }
 
+.qela-members {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  gap: 8px;
+}
+.qela-members *:first-child {
+  flex: 0 0 65px;
+}
+.qela-members i {
+  border-left: 1px solid #dfdfdf;
+}
+.qela-members i::before {
+  font-size: 32px;
+  margin-left: 8px;
+}
+
 .qela-modal.modal:has(.card, .table) .qela-modal-empty {
   display: none;
 }
@@ -19092,54 +19111,85 @@ textarea {
 }
 
 .qela-subscription {
-  border-color: #cacaca;
-  padding: 1.5rem 0;
+  height: 100%;
+  position: relative;
+}
+.qela-subscription.active .card:first-child {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.qela-subscription.active .card:last-child {
+  transform: perspective(600px) rotateY(0);
+}
+.qela-subscription .card {
+  padding-bottom: 1.5rem;
   text-align: center;
-  color: #4b4b4b;
-  min-height: 245px;
-  min-width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: border-color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s;
+  gap: 8px;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: border-color 0.3s ease-in-out 0s, background-color 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
   background-color: #fff;
 }
-.qela-subscription .card-header {
-  padding: 0.5rem 1rem;
-  border-radius: 0;
+.qela-subscription .card:first-child {
+  position: relative;
+  transform: perspective(600px) rotateY(0);
 }
-.qela-subscription .card-header,
-.qela-subscription .card-footer {
-  border: 0;
+.qela-subscription .card:last-child {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: perspective(600px) rotateY(180deg);
 }
-.qela-subscription .card-body,
-.qela-subscription .card-footer {
-  background-color: transparent;
-}
-.qela-subscription .card-body {
-  padding: 1.5rem 1rem;
-}
-.qela-subscription .card-footer {
-  padding: 1rem 1rem 0 1rem;
-}
-.qela-subscription .card-footer [class*=ic-] {
-  padding-bottom: 0.5rem;
-}
-.qela-subscription .card-footer [class*=ic-]::before {
-  font-size: 20px;
-  color: #9188ff;
-}
-
-.qela-price {
-  display: inline-flex;
+.qela-subscription .card > div:first-child {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #9188ff;
-  font-size: 26px;
-  font-weight: 600;
-  line-height: 120%;
-  gap: 2px;
-  transition: color 0.3s ease-out 0s;
+  gap: 6px;
+  border-radius: 0;
+  min-height: 100px;
+  background-color: transparent;
+}
+.qela-subscription.current .card {
+  border-color: #9188ff;
+}
+
+.qela-card-list {
+  width: 296px;
+  border: 1px solid #9188ff;
+  border-radius: 8px;
+}
+.qela-card-list > div:first-child {
+  padding: 2.5rem 0;
+}
+.qela-card-list ul {
+  padding: 0;
+  list-style: none;
+}
+.qela-card-list li {
+  padding: 1rem;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qela-card-list li i {
+  padding: 0.25rem;
+  color: #8169eb;
+  background-color: #ecebff;
+  border-radius: 50%;
+}
+
+.btn .qela-ic-rotate {
+  transition: all 0.3s ease 0s;
+}
+.btn:not(.collapsed) .qela-ic-rotate:last-child {
+  transform: rotate(180deg);
 }
 
 .qela-carousel .carousel-item {
@@ -20004,13 +20054,8 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-nav-wrapper .nav:first-child {
   margin-bottom: auto;
 }
-.qela-nav-wrapper .nav:last-child {
+.qela-nav-wrapper .nav:not(:first-child) {
   padding-top: 0;
-}
-@media (max-width: 767.98px) {
-  .qela-nav-wrapper .nav {
-    padding: 20px 16px;
-  }
 }
 .qela-nav-wrapper .nav-link {
   display: block;

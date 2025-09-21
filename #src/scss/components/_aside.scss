@@ -53,13 +53,8 @@
 		&:first-child {
 			margin-bottom: auto;
 		}
-
-		&:last-child {
+		&:not(:first-child) {
 			padding-top: 0;
-		}
-
-		@include media-breakpoint-down(md) {
-			padding: 20px 16px;
 		}
 	}
 

@@ -72,3 +72,23 @@
 	border: 1px solid $gray-200;
 	height: 100%;
 }
+.qela-members {
+	display: flex;
+	align-items: center;
+	padding: rem(8);
+	background-color: $info-100;
+	border-radius: 6px;
+	gap: 8px;
+	* {
+		&:first-child {
+			flex: 0 0 65px;
+		}
+	}
+	i {
+		border-left: 1px solid $info-300;
+		&::before {
+			font-size: 32px;
+			margin-left: 8px;
+		}
+	}
+}
