@@ -1,0 +1,61 @@
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- item whith title and button burger-->
+            <div class="col gap-2">
+                <!--FIX mobile logo -->
+                <a class="navbar-brand qela-logo" href="#">
+                    <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
+                </a>
+
+                <h1 class="h5 qela-clamp">@@title</h1>
+                <!-- <button class="qela-burger">
+                    <img src="img/burger.svg" width="24" height="40" alt="burger button" />
+                </button> -->
+            </div>
+            <div class="col-auto d-flex gap-2">
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-help-circle"></a>
+                <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Сайт для прихильників"></a>
+
+                <!--FIX user -->
+                <div class="dropdown qela-dropdown">
+                    <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                        <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                            <img src="img/header/user.jpg" alt="">
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu shadow" style="width:350px">
+                        <li>
+                            <div class="qela-item-user">
+                                <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                                    <img src="img/header/user.jpg" alt="">
+                                </span>
+                                <div class="flex-grow-1">
+                                    <div class="h3 mb-1"></div>
+                                    <span>qelatesting1+1800@gmail.com</span>
+                                    <div class="text-info-600">
+                                        <small>Власник</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item ic-user-24" href="#">Профіль</a>
+
+                        </li>
+                        <li><a class="dropdown-item ic-bill" href="#">Оплата</a></li>
+                        <li><a class="dropdown-item ic-dollar" href="#">Підписка</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item ic-log-out" href="#">вийти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

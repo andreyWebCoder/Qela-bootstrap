@@ -1,0 +1,780 @@
+<!-- FIX Modals  -->
+<section class="d-grid gap-3">
+	<h2 class="h1 mt-4">Modals</h2>
+	<!-- Button trigger modal -->
+	<div>
+		<div class="pt-3 d-flex flex-wrap gap-2">
+			<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal1">modal small</button>
+			<button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#modal2">modal middle</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">modal lg Organization</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">modal xl Quest templates</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">modal lg Chains in Campaign</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal6">modal lg Quests in Campaign</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCompany">modal md Company</button>
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPublicated">modal md Publicated</button>
+		</div>
+		<!-- Modal sm-->
+		<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+			<div class="modal-dialog modal-sm modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="modalLabel1">Modal</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure you want to post this way?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-secondary">Publish Now</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal md-->
+		<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel2">Add more info about Location</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label class="form-label">Order</label>
+									</div>
+								</div>
+								<div>
+									<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								</div>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label for="textarea1" class="form-label">Address <span class="text-danger">*</span></label>
+									</div>
+								</div>
+								<textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
+								<div class="invalid-feedback">Error text</div>
+								<div class="helper-text">☝️ Displayed to users like Location Name</div>
+							</div>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label class="form-label">Radius of area</label>
+									</div>
+								</div>
+								<div>
+									<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								</div>
+								<div class="invalid-feedback">Error text</div>
+								<div class="helper-text">☝️ Radius of area around location coordinates where check-in is available</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-secondary ico-right ic-check-big">Save point</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal lg Organization-->
+		<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel3">Invite administrator</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body bg-body">
+						<!-- form email -->
+						<form>
+							<div class="pb-5">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label for="inputEmail1" class="form-label">Email <span class="text-danger">*</span></label>
+									</div>
+								</div>
+								<input type="email" class="form-control" id="inputEmail1" placeholder="Type client email" />
+								<div class="invalid-feedback">Error text</div>
+								<!-- <div class="helper-text">Helper text</div> -->
+							</div>
+						</form>
+						<!-- title h2 -->
+						<h2 class="h6 py-3">Roles</h2>
+						<!-- items label-->
+						<div class="pt-2 pb-1 d-none d-md-block">
+							<div class="row g-0">
+								<div class="col">
+									<div class="text-info-600">Role</div>
+								</div>
+								<div class="col-auto">
+									<div class="text-info-600 px-3">For Branch</div>
+								</div>
+								<div class="col">
+									<div class="text-info-600 pe-2">Branch Name</div>
+								</div>
+								<div class="col-md-auto">
+									<div class="text-info-600">Action</div>
+								</div>
+							</div>
+						</div>
+						<div class="pt-2 pb-3">
+							<!-- items selects-->
+							<div class="pb-2">
+								<div class="row g-1 g-md-2">
+									<div class="col">
+										<div>
+											<div>
+												<v-multi-select v-model="value1" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+											</div>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+										<div class="form-check form-switch px-0 px-md-2">
+											<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" checked />
+											<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+										</div>
+									</div>
+									<div class="col">
+										<div>
+											<div>
+												<v-multi-select v-model="value2" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+											</div>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+										<div class="btn-group" role="group" aria-label="button group">
+											<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- items selects-->
+							<div>
+								<div class="row g-1 g-md-2">
+									<div class="col">
+										<div>
+											<div>
+												<v-multi-select v-model="value3" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+											</div>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+										<div class="form-check form-switch px-0 px-md-2">
+											<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck17" />
+											<label class="form-check-label d-block d-md-none" for="SwitchCheck17">Correct</label>
+										</div>
+									</div>
+									<div class="col">
+										<div>
+											<div>
+												<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+											</div>
+											<div class="invalid-feedback">Error text</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-auto d-flex gap-3 gap-md-2 align-items-center justify-content-end justify-content-md-center">
+										<div class="btn-group" role="group" aria-label="button group">
+											<button type="button" class="btn btn-outline-info ico ic-delete"></button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- button-->
+						<div class="pb-3">
+							<button type="button" class="btn btn-sm btn-secondary ico-right ic-plus">Add New Role</button>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary">Invite Administrator</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal xl Quest templates-->
+		<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+			<div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel4">Quest templates</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0">
+						<div class="qela-tab">
+							<ul class="nav nav-tabs flex-md-column align-items-start py-1 p-mb-3" id="myTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0 active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all-tab-pane" type="button" role="tab" aria-controls="all-tab-pane" aria-selected="true">All</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="GEO-tab" data-bs-toggle="tab" data-bs-target="#GEO-tab-pane" type="button" role="tab" aria-controls="GEO-tab-pane" aria-selected="true">GEO-location</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity-tab-pane" type="button" role="tab" aria-controls="activity-tab-pane" aria-selected="false" tabindex="-1">Online activity</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="QR-tab" data-bs-toggle="tab" data-bs-target="#QR-tab-pane" type="button" role="tab" aria-controls="QR-tab-pane" aria-selected="false" tabindex="-1">QR-code</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="quiz-tab" data-bs-toggle="tab" data-bs-target="#quiz-tab-pane" type="button" role="tab" aria-controls="quiz-tab-pane" aria-selected="false" tabindex="-1">Quiz</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="files-tab" data-bs-toggle="tab" data-bs-target="#files-tab-pane" type="button" role="tab" aria-controls="files-tab-pane" aria-selected="false" tabindex="-1">Send files</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="link-tab" data-bs-toggle="tab" data-bs-target="#link-tab-pane" type="button" role="tab" aria-controls="link-tab-pane" aria-selected="false" tabindex="-1">Send a link</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="feedback-tab" data-bs-toggle="tab" data-bs-target="#feedback-tab-pane" type="button" role="tab" aria-controls="feedback-tab-pane" aria-selected="false" tabindex="-1">Feedback</button>
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link border-0" id="donate-tab" data-bs-toggle="tab" data-bs-target="#donate-tab-pane" type="button" role="tab" aria-controls="donate-tab-pane" aria-selected="false" tabindex="-1">Donate</button>
+								</li>
+							</ul>
+							<div class="tab-content w-100" id="myTabContent">
+								<!-- ==========All========== -->
+								<div class="tab-pane h-100 fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+									<div class="row h-100 g-0">
+										<div class="col-md-8 h-100 border-end">
+											<form class="p-3" role="search">
+												<div class="input-group">
+													<input type="password" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
+													<button class="btn btn-input ic-search" type="button" id="button-search"></button>
+												</div>
+											</form>
+											<div class="qela-quest active" data-quest="quest1">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5"><small>Sign a petition</small></div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest2">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5">
+															<small>Post on social media</small>
+														</div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest3">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5">
+															<small>Invite to the event</small>
+														</div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest4">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5"><small>Online meeting</small></div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest5">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5"><small>Donate</small></div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest6">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5">
+															<small>Share a visual online</small>
+														</div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+											<div class="qela-quest" data-quest="quest7">
+												<div class="head gap-3 p-3 pe-md-4 pe-3">
+													<div class="flex-grow-1 pb-md-0 pb-3">
+														<div class="h5">
+															<small> Share on social media</small>
+														</div>
+													</div>
+													<div class="d-flex gap-2 flex-column flex-sm-row">
+														<a href="#" class="btn btn-secondary">Use the template</a>
+														<button type="button" class="btn d-block d-md-none btn-outline-info" data-bs-target="#modalToggle1" data-bs-toggle="modal">About</button>
+													</div>
+													<span class="triangle"></span>
+												</div>
+											</div>
+										</div>
+										<!-- ---------===== -->
+										<div class="col-md-4 pb-6 d-md-block d-none">
+											<div id="quest1" class="qela-content active">
+												<div class="p-3 border-bottom">
+													<h2 class="h5 px-2">Post on social media</h2>
+												</div>
+												<div class="px-3 pt-4">
+													<h2 class="h6 pb-1">User flow</h2>
+													<p class="mb-2">юзер бачить опис проблеми та зовнішнє посилання, переходить за зовнішнім посиланням, підписує, прінт-скрінить</p>
+													<h2 class="h6 pb-1 pt-3">Verification</h2>
+													<p class="mb-2">юзер бачить опис проблеми та зовнішнє посилання, переходить за зовнішнім посиланням, підписує, прінт-скрінить</p>
+													<h2 class="h6 pb-1 pt-3">Tags</h2>
+													<div class="d-flex gap-1 pb-1 flex-wrap">
+														<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># manual check</small></span>
+														<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># screenshot</small></span>
+														<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># download image</small></span>
+														<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># link</small></span>
+													</div>
+												</div>
+											</div>
+											<div id="quest2" class="qela-content">Post on social media Content 2 Content 2</div>
+											<div id="quest3" class="qela-content">Invite to the event Content 3 Content 3 Content 3</div>
+											<div id="quest4" class="qela-content">Online meeting Content 4 Content 4 Content 4 Content 4</div>
+											<div id="quest5" class="qela-content">Donate Content 5 Content 5 Content 5 Content 5</div>
+											<div id="quest6" class="qela-content">Share a visual online Content 6 Content 6 Content 6 Content 6</div>
+											<div id="quest7" class="qela-content">Share on social media Content 7 Content 7 Content 7 Content 7</div>
+										</div>
+									</div>
+								</div>
+								<!-- ==========GEO-location========== -->
+								<div class="tab-pane fade" id="GEO-tab-pane" role="tabpanel" aria-labelledby="GEO-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">GEO-location</h2>
+									</div>
+								</div>
+								<!-- ==========Online activity========== -->
+								<div class="tab-pane fade" id="activity-tab-pane" role="tabpanel" aria-labelledby="activity-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Online activity</h2>
+									</div>
+								</div>
+								<!-- ==========QR-code========== -->
+								<div class="tab-pane fade" id="QR-tab-pane" role="tabpanel" aria-labelledby="QR-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">QR-code</h2>
+									</div>
+								</div>
+								<!-- ==========Quiz========== -->
+								<div class="tab-pane fade" id="quiz-tab-pane" role="tabpanel" aria-labelledby="quiz-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Quiz</h2>
+									</div>
+								</div>
+								<!-- ==========Send files========== -->
+								<div class="tab-pane fade" id="files-tab-pane" role="tabpanel" aria-labelledby="files-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Send files</h2>
+									</div>
+								</div>
+								<!-- ==========Send a link========== -->
+								<div class="tab-pane fade" id="link-tab-pane" role="tabpanel" aria-labelledby="link-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Send a link</h2>
+									</div>
+								</div>
+								<!-- ==========Donate========== -->
+								<div class="tab-pane fade" id="donate-tab-pane" role="tabpanel" aria-labelledby="donate-tab" tabindex="0">
+									<!-- Subtitle -->
+									<div class="p-3 border-bottom qela-rounded-et">
+										<h2 class="h5">Donate</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal xl in modal xl -->
+		<div class="modal fade" id="modalToggle1" aria-hidden="true" aria-labelledby="modalToggle5" tabindex="-1">
+			<div class="modal-dialog modal-xl qela-modal-xl modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button class="btn btn-sm btn-outline-info ico-left ic-chevron-left" data-bs-target="#modal5" data-bs-toggle="modal">Back</button>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body p-0 pb-6">
+						<div class="p-3 border-bottom">
+							<h2 class="h5 px-2">Post on social media</h2>
+						</div>
+						<div class="px-3 pt-4">
+							<h2 class="h6 pb-1">User flow</h2>
+							<p class="mb-2">юзер бачить опис проблеми та зовнішнє посилання, переходить за зовнішнім посиланням, підписує, прінт-скрінить</p>
+							<h2 class="h6 pb-1 pt-3">Verification</h2>
+							<p class="mb-2">юзер бачить опис проблеми та зовнішнє посилання, переходить за зовнішнім посиланням, підписує, прінт-скрінить</p>
+							<h2 class="h6 pb-1 pt-3">Tags</h2>
+							<div class="d-flex gap-1 pb-1 flex-wrap">
+								<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># manual check</small></span>
+								<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># screenshot</small></span>
+								<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># download image</small></span>
+								<span class="badge bg-info-200 px-2 py-1 text-info-900 fs-6 fw-normal"><small># link</small></span>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="#" class="btn btn-secondary">Use the template</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal lg Organization Chains in Campaign-->
+		<div class="modal qela-modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel5">Chains in Campaign</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body bg-body">
+						<!-- button-->
+						<div class="pb-3 text-end">
+							<button type="button" class="btn btn-primary">Add New Chain</button>
+						</div>
+						<!-- Text empty -->
+						<p class="qela-modal-empty px-8 py-4 text-info-600">There is no any Quest Chains yet</p>
+						<!-- grid whit cards-->
+						<div class="row g-3">
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-2.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg qela-noimg bg-info-100">
+										<span class="ic-img text-info"></span>
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-3.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-4.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-2.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card" style="width: 13.625rem">
+									<div class="qela-ibg qela-noimg bg-info-100">
+										<span class="ic-img text-info"></span>
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-4 col-sm-6">
+								<a href="#" class="card qela-card">
+									<div class="qela-ibg">
+										<img src="img/cards/img-card-1.jpg" class="card-img-top" alt="img" />
+									</div>
+									<div class="card-body pt-2">
+										<div class="text-end pb-2">
+											<span class="badge qela-badge-success">Published</span>
+										</div>
+										<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal lg Organization Quests in Campaign-->
+		<div class="modal qela-modal fade" id="modal6" tabindex="-1" aria-labelledby="modalLabel6" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="exampleModalLabel6">Chains in Campaign</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body bg-body px-0">
+						<!-- button-->
+						<div class="pb-3 px-3 text-end">
+							<button type="button" class="btn btn-primary">Add New Chain</button>
+						</div>
+						<!-- Text empty -->
+						<p class="qela-modal-empty px-8 py-4 text-info-600">There is no any Quest Chains yet</p>
+						<!-- Таблица -->
+						<div class="table-responsive table-qela">
+							<table class="table table-hover">
+								<tbody>
+									<tr>
+										<td>
+											<div width="42px" class="qela-ibg qela-previews img" style="--img-size: 42px">
+												<img class="rounded" src="img/table-img-1.jpg" width="42px" height="42" alt="" />
+											</div>
+										</td>
+										<td width="36px" class="position-relative">
+											<div class="qela-vector start"></div>
+										</td>
+										<td>
+											<button type="button" class="qela-clamp text-start p-0 bg-transparent border-0" style="max-width: 450px" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March! Share invite to the Climate Unity March! Climate Unity March!</button>
+										</td>
+										<td class="text-center">
+											<span class="badge qela-badge-success">Published</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div width="42px" class="qela-ibg qela-previews img" style="--img-size: 42px">
+												<img class="rounded" src="img/table-img-1.jpg" width="42px" height="42" alt="" />
+											</div>
+										</td>
+										<td width="36px" class="position-relative">
+											<div class="qela-vector"></div>
+										</td>
+										<td>
+											<button type="button" class="qela-clamp p-0 bg-transparent border-0" style="max-width: 450px" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
+										</td>
+										<td class="text-center">
+											<span class="badge qela-badge-warning">Draft</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div width="42px" class="qela-ibg qela-previews img" style="--img-size: 42px">
+												<img class="rounded" src="img/table-img-1.jpg" width="42px" height="42" alt="" />
+											</div>
+										</td>
+										<td class="position-relative">
+											<div width="36px" class="qela-vector end"></div>
+										</td>
+										<td>
+											<button type="button" class="qela-clamp p-0 bg-transparent border-0" style="max-width: 450px" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
+										</td>
+										<td class="text-center">
+											<span class="badge qela-badge-success">Published</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div width="42px" class="qela-ibg qela-previews img" style="--img-size: 42px">
+												<img class="rounded" src="img/table-img-1.jpg" width="42px" height="42" alt="" />
+											</div>
+										</td>
+										<td width="36px" class="text-center">
+											<span class="qela-novector ic-un-link"></span>
+										</td>
+										<td>
+											<button type="button" class="qela-clamp p-0 bg-transparent border-0" style="max-width: 450px" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
+										</td>
+										<td class="text-center">
+											<span class="badge qela-badge-success">Published</span>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div width="42px" class="qela-ibg qela-previews img" style="--img-size: 42px">
+												<img class="rounded" src="img/table-img-1.jpg" width="42px" height="42" alt="" />
+											</div>
+										</td>
+										<td width="36px" class="text-center">
+											<span class="qela-novector ic-un-link"></span>
+										</td>
+										<td>
+											<button type="button" class="qela-clamp p-0 bg-transparent border-0" style="max-width: 450px" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Full name of Campaign">Share invite to the Climate Unity March! Climate Unity March!</button>
+										</td>
+										<td class="text-center">
+											<span class="badge qela-badge-success">Published</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal md Company-->
+		<div class="modal fade" id="modalCompany" tabindex="-1" aria-labelledby="modalLabelCompany" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="modalLabelCompany">Add more info about Location</h1>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label class="form-label">Order</label>
+									</div>
+								</div>
+								<div>
+									<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								</div>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label for="textarea1" class="form-label">Address <span class="text-danger">*</span></label>
+									</div>
+								</div>
+								<textarea class="form-control" placeholder="Placeholder" id="textarea1" rows="3"></textarea>
+								<div class="invalid-feedback">Error text</div>
+								<div class="helper-text">☝️ Displayed to users like Location Name</div>
+							</div>
+							<div class="pb-4">
+								<div class="d-flex justify-content-between gap-1">
+									<div class="d-flex align-items-start gap-1">
+										<label class="form-label">Radius of area</label>
+									</div>
+								</div>
+								<div>
+									<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
+								</div>
+								<div class="invalid-feedback">Error text</div>
+								<div class="helper-text">☝️ Radius of area around location coordinates where check-in is available</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-secondary ico-right ic-check-big">Save point</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal md Publicated-->
+		<div class="modal fade" id="modalPublicated" tabindex="-1" aria-labelledby="modalLabelPublicated" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header border-0 align-items-start">
+						<h2 class="modal-title h6" id="modalLabelCompany">Опублікувати Ланцюжок?</h2>
+						<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body pt-0">
+						<small>❗️Увага! Після публікації ланцюжок буде неможливо відредагувати</small>
+					</div>
+					<div class="modal-footer border-0 pt-0 px-3 pb-3 gap-2">
+						<button type="button" class="btn btn-sm btn-info m-0" data-bs-dismiss="modal">Продовжити редагування</button>
+						<button type="button" class="btn btn-sm btn-secondary m-0">Опублікувати зараз</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
