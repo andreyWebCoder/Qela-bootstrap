@@ -1,5 +1,6 @@
+@use "../vars" as ql;
 .dp__main {
-	font-family: $font-family-base;
+	font-family: ql.$font-family-base;
 	position: relative;
 	// &.small {
 	// 	.dp__input {
@@ -13,16 +14,16 @@
 
 .dp__input {
 	height: 38px;
-	border-radius: $border-radius;
-	color: $gray-600;
-	border-color: $input-border-color;
+	border-radius: ql.$border-radius;
+	color: ql.$gray-600;
+	border-color: ql.$input-border-color;
 
 	&:hover {
-		border-color: $secondary;
+		border-color: ql.$secondary;
 	}
 
 	&::placeholder {
-		color: $gray-600;
+		color: ql.$gray-600;
 	}
 
 	&:disabled {
@@ -63,7 +64,7 @@
 	--dp-menu-min-width: 100%;
 	border-radius: 17px;
 	// min-width: 300px;
-	font-family: $font-family-base;
+	font-family: ql.$font-family-base;
 	font-size: 12px;
 	overflow: hidden;
 }
@@ -82,22 +83,22 @@
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 120%;
-	color: $black;
+	color: ql.$black;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $secondary-100;
+			background-color: ql.$secondary-100;
 		}
 	}
 }
 
 .dp__inner_nav {
-	background: $white;
+	background: ql.$white;
 	border-radius: 6px;
 	padding: 7px;
 
 	&:hover {
-		background-color: $secondary-100;
+		background-color: ql.$secondary-100;
 	}
 }
 
@@ -135,12 +136,12 @@
 	justify-content: center;
 	text-align: center;
 	letter-spacing: 0.4px;
-	color: $gray-500-700;
+	color: ql.$gray-500;
 	font-weight: 400;
 }
 
 .dp__cell_offset {
-	color: $gray-500;
+	color: ql.$gray-500;
 }
 
 .dp__cell_inner {
@@ -155,7 +156,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $secondary-100;
+			background-color: ql.$secondary-100;
 		}
 	}
 }
@@ -163,30 +164,30 @@
 .dp__range_end,
 .dp__range_start,
 .dp__active_date {
-	background-color: $secondary;
+	background-color: ql.$secondary;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $secondary;
+			background-color: ql.$secondary;
 		}
 	}
 }
 
 .dp__overlay_cell_active {
-	background-color: $secondary;
+	background-color: ql.$secondary;
 }
 
 .dp__today {
-	border: 2px solid $secondary;
+	border: 2px solid ql.$secondary;
 }
 
 .dp__button {
-	border-top: $gray-300;
-	border-top: 1px solid $gray-300;
+	border-top: ql.$gray-300;
+	border-top: 1px solid ql.$gray-300;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $secondary-100;
+			background-color: ql.$secondary-100;
 		}
 	}
 }
@@ -196,19 +197,19 @@
 }
 
 .dp__icon {
-	fill: $black;
+	fill: ql.$black;
 }
 
 .dp__action_row {
 	border-radius: 0 0 17px 17px;
-	border-top: 1px solid $gray-300;
+	border-top: 1px solid ql.$gray-300;
 }
 
 .dp__selection_preview {
 	font-size: 16px;
 	line-height: 100%;
 	letter-spacing: 0.4px;
-	color: $black;
+	color: ql.$black;
 	width: 70%;
 }
 
@@ -216,11 +217,11 @@
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 100%;
-	color: $purple;
+	color: ql.$purple;
 }
 
 .dp__action_button {
-	color: $secondary;
+	color: ql.$secondary;
 	font-weight: 500;
 	font-size: 14px;
 	padding: 4px 16px;
@@ -231,7 +232,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $secondary-600;
+			color: ql.$secondary-600;
 		}
 	}
 }
@@ -241,19 +242,19 @@
 }
 .is-invalid {
 	.dp__input {
-		color: $gray-500;
-		border-color: $red;
+		color: ql.$gray-500;
+		border-color: ql.$red;
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: $red;
+				border-color: ql.$red;
 			}
 		}
 
 		&:focus {
 			@media (any-hover: hover) {
 				&:hover {
-					border-color: $red;
+					border-color: ql.$red;
 				}
 			}
 		}
