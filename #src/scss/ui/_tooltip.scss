@@ -142,4 +142,9 @@
 			border-style: solid;
 		}
 	}
+	&.lg {
+		.tooltip-inner {
+			--bs-tooltip-max-width: 355px;
+		}
+	}
 }

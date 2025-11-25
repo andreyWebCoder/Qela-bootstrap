@@ -5,10 +5,10 @@
 @import "form/datapiker";
 
 .server-error {
-    color: $red;
+	color: $red;
 }
 .form-label {
-    &.small {
-        font-size: 15px;
-    }
+	&.small {
+		font-size: 15px;
+	}
 }

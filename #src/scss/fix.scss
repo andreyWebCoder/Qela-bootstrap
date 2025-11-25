@@ -583,3 +583,8 @@ td .tag {
 .json__value--boolean {
 	color: red;
 }
+
+.ic-check-filled.copied::before {
+	color: green;
+	transform: scale(1.3);
+}

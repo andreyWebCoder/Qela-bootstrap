@@ -261,8 +261,8 @@ $table-cell-padding-x-sm: 0.25rem;
 
 $table-cell-vertical-align: center;
 
-$table-color: var(--#{$prefix}body-color);
-// $table-bg: transparent;
+// $table-color: var(--#{$prefix}body-color);
+$table-bg: transparent;
 // $table-accent-bg: transparent;
 
 $table-th-font-weight: 500;

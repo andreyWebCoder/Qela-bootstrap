@@ -187,10 +187,6 @@
 				color: $gray-600;
 			}
 		}
-		@include media-breakpoint-down(md) {
-			padding: 16px;
-			margin-bottom: 0;
-		}
 	}
 
 	.line {

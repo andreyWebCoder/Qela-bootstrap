@@ -1,44 +1,44 @@
 .qela-scroll-custom {
-    --scroll-pr: 0px;
-    --scroll-width: 8px;
-    --scroll-rounded: 50px;
-    --scroll-bg-track: #dee2e6;
-    --scroll-bg-thumb: #6c757d;
-    > * {
-        padding-right: var(--scroll-pr);
-    }
+	--scroll-pr: 0px;
+	--scroll-width: 8px;
+	--scroll-rounded: 50px;
+	--scroll-bg-track: #dee2e6;
+	--scroll-bg-thumb: #6c757d;
+	> * {
+		padding-right: var(--scroll-pr);
+	}
 
-    /* Для WebKit-браузеров */
-    ::-webkit-scrollbar {
-        width: var(--scroll-width);
-    }
-    /* Для Firefox */
-    scrollbar {
-        width: var(--scroll-width);
-    }
+	/* Для WebKit-браузеров */
+	::-webkit-scrollbar {
+		width: var(--scroll-width);
+	}
+	/* Для Firefox */
+	scrollbar {
+		width: var(--scroll-width);
+	}
 
-    ::-webkit-scrollbar-track {
-        /* Цвет фона трека скроллбара */
-        background: var(--scroll-bg-track);
-        border-radius: var(--scroll-rounded);
-    }
-    scrollbar-track {
-        /* Цвет фона трека скроллбара */
-        background-color: var(--scroll-bg-track);
-        border-radius: var(--scroll-rounded);
-    }
+	::-webkit-scrollbar-track {
+		/* Цвет фона трека скроллбара */
+		background: var(--scroll-bg-track);
+		border-radius: var(--scroll-rounded);
+	}
+	scrollbar-track {
+		/* Цвет фона трека скроллбара */
+		background-color: var(--scroll-bg-track);
+		border-radius: var(--scroll-rounded);
+	}
 
-    ::-webkit-scrollbar-thumb {
-        background: var(--scroll-bg-thumb);
-        border-radius: var(--scroll-rounded);
-        height: 20%;
-        border: 2px solid $gray-300;
-    }
-    scrollbar-thumb {
-        /* Цвет ползунка скроллбара */
-        background: var(--scroll-bg-thumb);
-        border-radius: var(--scroll-rounded);
-        height: 20%;
-        border: 2px solid $gray-300;
-    }
+	::-webkit-scrollbar-thumb {
+		background: var(--scroll-bg-thumb);
+		border-radius: var(--scroll-rounded);
+		height: 20%;
+		border: 2px solid $gray-300;
+	}
+	scrollbar-thumb {
+		/* Цвет ползунка скроллбара */
+		background: var(--scroll-bg-thumb);
+		border-radius: var(--scroll-rounded);
+		height: 20%;
+		border: 2px solid $gray-300;
+	}
 }
