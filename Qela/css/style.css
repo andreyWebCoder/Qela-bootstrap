@@ -9733,15 +9733,15 @@ progress {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-body-color);
-  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-bg: transparent;
   --bs-table-border-color: #e9e9e8;
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-body-color);
+  --bs-table-striped-color: var(--bs-emphasis-color);
   --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
-  --bs-table-active-color: var(--bs-body-color);
+  --bs-table-active-color: var(--bs-emphasis-color);
   --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
-  --bs-table-hover-color: var(--bs-body-color);
+  --bs-table-hover-color: var(--bs-emphasis-color);
   --bs-table-hover-bg: whitesmoke;
   width: 100%;
   margin-bottom: 1rem;
@@ -15718,6 +15718,18 @@ textarea.form-control-lg {
   content: "\e9bb";
 }
 
+.ic-at:before {
+  content: "\e9bc";
+}
+
+.ic-progress:before {
+  content: "\e9be";
+}
+
+.ic-emptylist:before {
+  content: "\e9bf";
+}
+
 /* Свои глобальние стили (qela-) */
 html,
 body {
@@ -18989,12 +19001,6 @@ textarea {
 .qela-nav-item .nav-link.disabled::before {
   color: #858585;
 }
-@media (max-width: 767.98px) {
-  .qela-nav-item .nav-link {
-    padding: 16px;
-    margin-bottom: 0;
-  }
-}
 .qela-nav-item .line {
   position: absolute;
   height: 100%;
@@ -20800,6 +20806,9 @@ textarea {
   position: absolute;
   border-color: transparent;
   border-style: solid;
+}
+.custom-tooltip.lg .tooltip-inner {
+  --bs-tooltip-max-width: 355px;
 }
 
 .qelas-toast .btn-close {
