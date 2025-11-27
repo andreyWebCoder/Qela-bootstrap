@@ -16609,8 +16609,6 @@ main {
   --ql-btn-icon-color: #9188ff;
   padding: 0;
   border-radius: 50%;
-  flex: 0 0 24px;
-  height: 24px;
 }
 .qela-btn-tooltip:hover {
   --bs-btn-hover-color: #8169eb;
@@ -16627,8 +16625,6 @@ main {
 }
 .qela-btn-tooltip.btn-sm[class^=ic-]:before, .btn-group-sm > .qela-btn-tooltip[class^=ic-].btn:before, .qela-btn-tooltip.btn-sm[class*=ic-]:before, .btn-group-sm > .qela-btn-tooltip[class*=ic-].btn:before {
   font-size: 1rem;
-  width: 16px;
-  height: 16px;
 }
 .qela-btn-tooltip.secondary {
   --ql-btn-icon-color: #8169eb;
