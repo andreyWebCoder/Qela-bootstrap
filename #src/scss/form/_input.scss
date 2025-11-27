@@ -262,10 +262,11 @@ textarea {
 	> div {
 		display: flex;
 		align-items: baseline;
-		margin-right: 4px;
-
+		margin-right: rem(8);
 		.qela-btn-tooltip {
-			margin-left: 4px;
+			margin-left: rem(8);
+			margin-bottom: rem(8);
+			margin-top: rem(8);
 		}
 	}
 

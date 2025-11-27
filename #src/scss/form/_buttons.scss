@@ -473,7 +473,8 @@
 	--ql-btn-icon-color: #{$secondary};
 	padding: 0;
 	border-radius: 50%;
-
+	flex: 0 0 24px;
+	height: 24px;
 	&:hover {
 		--bs-btn-hover-color: #{$secondary-600};
 		--ql-btn-icon-color: #{$secondary-600};
@@ -486,12 +487,16 @@
 
 	&.btn[class^="ic-"]:before,
 	&.btn[class*="ic-"]:before {
-		font-size: 16px;
+		font-size: rem(24);
 		line-height: 1;
+
+		cursor: pointer;
 	}
 	&.btn-sm[class^="ic-"]:before,
 	&.btn-sm[class*="ic-"]:before {
-		font-size: 14px;
+		font-size: rem(16);
+		width: 16px;
+		height: 16px;
 	}
 	&.secondary {
 		--ql-btn-icon-color: #{$secondary-600};
