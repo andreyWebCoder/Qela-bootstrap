@@ -21555,6 +21555,17 @@ header .container-xxl > .row [class*=col]:last-child {
   background-color: #ecebff;
   --bs-table-hover-bg: #ecebff;
 }
+.qela-table tr .qela-btn-ic {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-in 0s;
+}
+.qela-table tr:hover .qela-btn-ic {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
 .qela-table.large td,
 .qela-table.large th {
   font-size: 1rem;

@@ -70,6 +70,19 @@
 				--bs-table-hover-bg: #{$secondary-200};
 			}
 		}
+		.qela-btn-ic {
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+			transition: all 0.2s ease-in 0s;
+		}
+		&:hover {
+			.qela-btn-ic {
+				visibility: visible;
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
 	}
 
 	&.large {
