@@ -327,18 +327,23 @@
 				<nav class="ps-3">
 					<ol class="d-flex flex-column gap-1 ps-0 --elastic">
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/alert">alert</a></li>
-						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/chat">chat</a></li>
-						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/billing-success">billing-success</a></li>
+						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/chat">chat</a>
+						</li>
+						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/billing-success">billing-success</a>
+						</li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/colors">colors</a></li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/email">email</a></li>
-						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/list-party">list-party</a></li>
-						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/list-verification">list-verification</a></li>
+						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/list-party">list-party</a>
+						</li>
+						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/list-verification">list-verification</a>
+						</li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/log-in">log-in</a></li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/master">master</a></li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/quests">quests</a></li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/reg">registration</a></li>
 						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/talents">talents</a></li>
-						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/subscription">subscription</a></li>
+						<li><a class="--link" href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/subscription">subscription</a>
+						</li>
 					</ol>
 				</nav>
 			</aside>
@@ -1501,24 +1506,23 @@
 		<div class="helper-text">Helper text</div>
 	</div>
 </section>
-
 					<!-- FIX Datapiker  -->
 <section class="d-grid gap-3">
-    <h2 class="h1 mt-4">Datapiker</h2>
-    <div>
-        <div class="qela-form-labels">
-            <div>
-                <label class="form-label required">Datapiker</label>
-                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-            </div>
-            <label class="form-label">hint text</label>
-        </div>
-        <div>
-            <!-- <v-date-picker v-model="date" range multi-calendars /> -->
-            <v-date-picker uid="datapiker-2" v-model="date" placeholder="Select Date" position="right" />
-        </div>
-        <span class="invalid-feedback">Set start date and time</span>
-    </div>
+	<h2 class="h1 mt-4">Datapiker</h2>
+	<div>
+		<div class="qela-form-labels">
+			<div>
+				<label class="form-label required">Datapiker</label>
+				<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+			</div>
+			<label class="form-label">hint text</label>
+		</div>
+		<div>
+			<!-- <v-date-picker v-model="date" range multi-calendars /> -->
+			<!-- <v-date-picker uid="datapiker-2" v-model="date" placeholder="Select Date" position="right" /> -->
+		</div>
+		<span class="invalid-feedback">Set start date and time</span>
+	</div>
 </section>
 					<section class="d-grid gap-3">
 	<!-- Chat -->
@@ -6760,22 +6764,26 @@
 		</main>
 	</div>
 
-	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/vue@latest"></script>
 	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+	<!-- <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script> -->
 	<script type="text/javascript">
+
 		let app = Vue.createApp({
 			components: {
-				"v-date-picker": VueDatePicker,
+				// 'v-date-picker': VueDatePicker,
 				"v-multi-select": VueMultiselect.default,
 			},
 			data() {
 				return {
-					date: new Date(),
-					value1: "",
-					value2: "",
-					value3: "",
-					value4: "",
+					date: null,
+					value1: [],
+					value2: [],
+					value3: [],
+					value4: null,
+					value5: [],
+					value6: [],
+					value7: [],
 					options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
 				};
 			},
