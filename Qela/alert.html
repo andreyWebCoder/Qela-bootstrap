@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ua">
-  <head>
+<head>
     <title>Device alert</title>
     <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
@@ -9,16 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-  <body class="qela-body">
-    <header>
+<body class="qela-body">
+	<header>
 	<div class="container-fluid">
 		<div class="row">
 			<!-- item whith title and button burger-->
 			<div class="col gap-2">
 				<!--FIX mobile logo -->
 				<a class="navbar-brand qela-logo" href="#">
-					<!-- <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" /> -->
-					<img src="img/logo-strichka.svg" alt="Logo" width="40" height="40" />
+					<img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
 				</a>
 
 				<h1 class="h5 qela-clamp">Main Dashboard</h1>
@@ -86,67 +85,62 @@
 		</div>
 	</div>
 </header>
-    <div id="app" v-cloak>
-      <main>
-        <!-- =====================Список користувачів==================== -->
-        <div class="container">
-          <div class="qela-device-alert">
-            <img src="img/divices.svg" alt="" />
-            <h5>
-              ❗️Please switch to laptops or desktop devices to use Qela admin.
-            </h5>
-            <p>Qela Admin doesn't work properly on mobiles and tablets</p>
-            <button class="btn btn-primary">Got it</button>
-          </div>
-        </div>
-      </main>
-    </div>
-    <script
-      src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"
-      type="text/javascript"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"
-    ></script>
-    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-    <script type="text/javascript">
-      let app = Vue.createApp({
-        components: {
-          "v-date-picker": VueDatePicker,
-          "v-multi-select": VueMultiselect.default,
-        },
-        data() {
-          return {
-            date: [new Date(), new Date()],
-            value1: "",
-            value2: "",
-            value3: "",
-            value4: "",
-            options: [
-              "Пункт 1 sadafdf",
-              "Пункт 2",
-              "Пункт 3",
-              "Пункт 4",
-              "Пункт 1 assadafdf",
-              "Пункт 2sades",
-              "Пункт 3sd",
-              "Пункт 4sd",
-            ],
-          };
-        },
-        methods: {
-          click() {
-            alert(1);
-            this.message += " clicked!";
-          },
-        },
-      });
-      console.dir(app);
-      app.mount("#app");
-    </script>
-    <!-- =========================== -->
-    <script src="js/vendors.js"></script>
+	<div id="app" v-cloak>
+		<main>
+			<!-- =====================Список користувачів==================== -->
+			<div class="container">
+				<div class="qela-device-alert">
+					<img src="img/divices.svg" alt="" />
+					<h5>
+						❗️Please switch to laptops or desktop devices to use Qela admin.
+					</h5>
+					<p>Qela Admin doesn't work properly on mobiles and tablets</p>
+					<button class="btn btn-primary">Got it</button>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+	<script type="text/javascript">
+		let app = Vue.createApp({
+			components: {
+				"v-date-picker": VueDatePicker,
+				"v-multi-select": VueMultiselect.default,
+			},
+			data() {
+				return {
+					date: [new Date(), new Date()],
+					value1: "",
+					value2: "",
+					value3: "",
+					value4: "",
+					options: [
+						"Пункт 1 sadafdf",
+						"Пункт 2",
+						"Пункт 3",
+						"Пункт 4",
+						"Пункт 1 assadafdf",
+						"Пункт 2sades",
+						"Пункт 3sd",
+						"Пункт 4sd",
+					],
+				};
+			},
+			methods: {
+				click() {
+					alert(1);
+					this.message += " clicked!";
+				},
+			},
+		});
+		console.dir(app);
+		app.mount("#app");
+	</script>
+	<!-- =========================== -->
+	<script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-  </body>
+</body>
+
 </html>
