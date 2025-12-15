@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <title>shop</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="qela-body" id="app">
+	<header>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- item whith title and button burger-->
+			<div class="col gap-2">
+				<!--FIX mobile logo -->
+				<a class="navbar-brand qela-logo" href="#">
+					<!-- <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" /> -->
+					<img src="img/logo-strichka.svg" alt="Logo" width="40" height="40" />
+				</a>
+
+				<h1 class="h5 qela-clamp">shop</h1>
+				<!-- <button class="qela-burger">
+                    <img src="img/burger.svg" width="24" height="40" alt="burger button" />
+                </button> -->
+			</div>
+			<div class="col-auto d-flex gap-2">
+				<div class="dropdown qela-dropdown ">
+					<button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i></button>
+					<ul class="dropdown-menu dropdown-menu-end shadow">
+						<li>
+							<a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
+						</li>
+						<li>
+							<a href="#" target="_blank" class="dropdown-item ">Admin Guideline</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">FAQ</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
+				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-help-circle"></a>
+				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Сайт для прихильників"></a> -->
+				<a href="#" target="_blank" class="btn btn-sm btn-info ico-left ic-phone">User Site</a>
+				<!-- user -->
+				<div class="dropdown qela-dropdown">
+					<button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+						<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+							<img src="img/header/user.jpg" alt="">
+						</span>
+					</button>
+					<ul class="dropdown-menu shadow" style="width:350px">
+						<li>
+							<div class="qela-item-user">
+								<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+									<img src="img/header/user.jpg" alt="">
+								</span>
+								<div class="flex-grow-1">
+									<div class="h3 mb-1"></div>
+									<span>qelatesting1+1800@gmail.com</span>
+									<div class="text-info-600">
+										<small>Власник</small>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<hr class="dropdown-divider" />
+						</li>
+						<li>
+							<a class="dropdown-item ic-user-24" href="#">Профіль</a>
+
+						</li>
+						<li><a class="dropdown-item ic-bill" href="#">Оплата</a></li>
+						<li><a class="dropdown-item ic-dollar" href="#">Підписка</a></li>
+						<li>
+							<hr class="dropdown-divider" />
+						</li>
+						<li><a class="dropdown-item ic-log-out" href="#">вийти</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+	<main id="app" class="flex-grow-1">
+		<!--FIX menu -->
+<aside class="qela-menu">
+	<!--FIX buttons -->
+	<button type="button" class="ic-chevrons-left qela-btn-menu"></button>
+	<!-- <button type="button" class="ic-cloze p-2 border-0 position-absolute qela-btn-close" aria-label="Close"></button> -->
+	<nav class="qela-nav qela-scroll-custom">
+		<!--FIX nav wrapper -->
+		<div class="qela-nav-wrapper">
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-city" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація">Організація</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-box-arrow" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд">
+							Покроковий ґайд
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-people" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі">
+							Користувачі
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-task" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна">Задачі адміна</small>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link @@quests" aria-current="page">
+						<small class="ic-diamond" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"> Квести </small>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-voting" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування">
+							Голосування
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-notes" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини">
+							Новини
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-tag" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги">Теги</small>
+					</a>
+				</li>
+
+				<li class="nav-item">
+					<a href="#" class="nav-link @@rewards" aria-current="page">
+						<small class="ic-trophy" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди">
+							Винагороди
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-donation-outlined" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати">
+							Донати
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-chart-pie" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд">
+							Дашборд
+						</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link @@chat" aria-current="page">
+						<span class="qela-counter">50</span>
+						<small class="ic-message-circle" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення">Обговорення</small>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link active" aria-current="page">
+						<small class="ic-tent" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин">Магазин</small>
+					</a>
+				</li>
+			</ul>
+			<ul class="nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link" aria-current="page">
+						<small class="ic-settings" data-bs-trigger="hover" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування">Налаштування</small>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</aside>
+		<!-- ====================================== shop start====================================-->
+		<div class="container-fluid h-100">
+			<div class="bg-white rounded-3 border mb-2 pb-4">
+				<!-- Tabs -->
+				<ul class="nav nav-tabs rounded-top px-3 pt-3 px-md-4 pt-md-4" id="shopTab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="products-tab" data-bs-toggle="tab" data-bs-target="#products-tab-pane" type="button" role="tab" aria-controls="products-tab-pane" aria-selected="true">
+							Товари
+						</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="true">
+							Замовлення
+						</button>
+					</li>
+				</ul>
+				<!--Tab content -->
+				<div class="tab-content">
+					<!-- Products -->
+					<div class="tab-pane active" id="products-tab-pane" role="tabpanel" aria-labelledby="products-tab" tabindex="0">
+						<!-- 1 row: search, filters, actions-->
+						<div class="border-bottom px-3 py-4">
+							<div class="d-flex gap-4 align-items-center">
+								<div class="qela-search" style="width: 188px;">
+									<button type="button" class="ic-search"></button>
+									<input type="search" class="form-control" placeholder="Пошук по назві">
+								</div>
+								<div class="d-flex align-items-center gap-3"><span class="text-info-600 h6">Фільтр:</span>
+									<div style="width: 175px;">
+										<div>
+											<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі статуси"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<div style="width: 175px;">
+										<div>
+											<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі типи"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<div style="width: 175px;">
+										<div>
+											<v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі категорії"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<div style="width: 140px;">
+										<div>
+											<v-multi-select v-model="value4" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="🔥Топ - Всі"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+
+								</div>
+								<button type="button" class="btn btn-primary ic-plus ico-right ms-auto">Додати товар</button>
+							</div>
+						</div>
+						<!-- 2 row: applied filters -->
+						<div class="p-3 border-bottom">
+							<div class="d-flex gap-2 flex-wrap">
+								<span class="text-info-600 h6 text-nowrap">Застосовані фільтри:</span>
+								<span class="badge qela-badge-danger ic-cloze">Danger</span>
+								<span class="badge qela-badge-danger ic-cloze">Danger</span>
+								<span class="badge qela-badge-info ic-cloze">📚 Книги та культура</span>
+								<span class="badge qela-badge-danger ic-cloze">Danger</span>
+								<span class="badge qela-badge-secondary ic-cloze">secondary</span>
+								<button type="button" class="badge border-1 qela-badge-light">Clear All</button>
+							</div>
+						</div>
+						<!-- 2 row: applied filters -->
+						<!-- 3 row: buttons and add category -->
+						<div class="border-bottom p-3">
+							<div class="d-flex gap-3">
+								<button type="button" class="btn btn-info ic-plus ico-right">Додати категорію</button>
+								<button type="button" class="btn btn-info ic-edit ico-right">Редагувати категорії</button>
+								<button type="button" class="btn btn-info ic-menu-order ico-right">Змінити порядок товарів</button>
+							</div>
+							<!-- + -->
+							<div class="d-flex gap-3">
+								<div class="text-info-900 h4">Додати категорію</div>
+								<div style="width: 320px">
+									<input type="text" class="form-control" id="addCategory" placeholder="Придумайте назву категорії">
+								</div>
+								<div class="d-flex gap-2">
+									<button type="button" class="btn btn-info btn-md ic-cloze ico-right">Скасувати</button>
+									<button type="button" class="btn btn-primary btn-md ic-check-big ico-right">Зберегти</button>
+								</div>
+							</div>
+						</div>
+						<!-- 3 row: buttons -->
+						<!-- Table -->
+						<div class="table-responsive qela-table position-relative">
+							<table class="table table-hover">
+								<thead class="table-light">
+									<tr>
+										<th class="pe-0">
+											<div class="form-check form-check-inline m-0"><input type="checkbox" autocomplete="off" class="form-check-input"></div>
+										</th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">Назва</button></th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">Категорія</button></th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">🔥Топ </button></th>
+										<th>Тип</th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">Статус</button></th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">Ціна, бали</button></th>
+										<th><button type="button" class="btn ico-right ic-arrows-down-up">В наявності </button></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="pe-0">
+											<div class="form-check form-check-inline m-0"><input type="checkbox" autocomplete="off" class="form-check-input"></div>
+										</td>
+										<td>
+											<div class="d-flex gap-3" title="Тимофій Кварницький Кварниця"><a href="/banderateam/user/show/1f2241df-376b-4146-a867-f672d4365dfd" class="qela-avatar qela-ibg border-2" style="--img-size: 40px;"><small><small>ТК</small></small></a>
+												<div class="qela-email-copy"><span class="qela-clamp"><span style="background-color: yellow"></span>Т<span style="background-color: yellow"></span>и<span style="background-color: yellow"></span>м<span style="background-color: yellow"></span>о<span style="background-color: yellow"></span>ф<span style="background-color: yellow"></span>і<span style="background-color: yellow"></span>й<span style="background-color: yellow"></span> <span style="background-color: yellow"></span>К<span style="background-color: yellow"></span>в<span style="background-color: yellow"></span>а<span style="background-color: yellow"></span>р<span style="background-color: yellow"></span>н<span style="background-color: yellow"></span>и<span style="background-color: yellow"></span>ц<span style="background-color: yellow"></span>ь<span style="background-color: yellow"></span>к<span style="background-color: yellow"></span>и<span style="background-color: yellow"></span>й<span style="background-color: yellow"></span> <span style="background-color: yellow"></span>К<span style="background-color: yellow"></span>в<span style="background-color: yellow"></span>а<span style="background-color: yellow"></span>р<span style="background-color: yellow"></span>н<span style="background-color: yellow"></span>и<span style="background-color: yellow"></span>ц<span style="background-color: yellow"></span>я<span style="background-color: yellow"></span></span><button type="button" class="btn ic-file-copy" aria-label="Copy"></button></div>
+											</div>
+										</td>
+										<td>
+											📚 Книги та культура
+										</td>
+										<td>
+											Так
+										</td>
+										<td>Електронний (з опрацюванням)</td>
+										<td>
+											<span class="text-danger-700">Вимкнений</span>
+										</td>
+										<td>
+											75
+										</td>
+										<td>Необмежено</td>
+										<td></td>
+									</tr>
+									<!-- <tr>
+										<td>
+											<div v-if="loadingData" class="qela-loader">
+												<div class="mb-4">
+													<svg class="spinner" width="40px" height="40px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+														<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30">
+														</circle>
+													</svg>
+												</div>
+												<span>@loc["LoadingText"]</span>
+											</div>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+						<!-- Table navigation -->
+						<div class="px-4 py-3">
+							<nav aria-label="Page navigation" class="d-flex justify-content-end">
+								<div class="d-flex flex-wrap align-items-baseline gap-3"><select class="form-control w-auto">
+										<option value="10">10</option>
+										<option value="25">25</option>
+										<option value="50">50</option>
+									</select><span style="flex: 0 0 auto;">1 - 10 from 62</span>
+									<ul class="pagination pagination-sm">
+										<li class="page-item disabled"><button class="page-link" aria-label="Previous page">Prev</button></li>
+										<li class="page-item active"><button class="page-link">1</button></li>
+										<li class="page-item "><button class="page-link">2</button></li>
+										<li class="page-item "><button class="page-link">3</button></li>
+										<li class="page-item "><button class="page-link">4</button></li>
+										<li class="page-item "><button class="page-link">5</button></li>
+										<li class="page-item "><button class="page-link">6</button></li>
+										<li class="page-item "><button class="page-link">7</button></li>
+										<li class="page-item "><button class="page-link" aria-label="Next Page">Next</button>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<!-- Order -->
+					<div class="tab-pane" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">2</div>
+				</div>
+			</div>
+		</div>
+		<!-- ====================================== shop end====================================-->
+	</main>
+
+	<script src="https://unpkg.com/vue@latest"></script>
+	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+	<script>
+		const app = Vue.createApp({
+			components: {
+				"v-multi-select": VueMultiselect.default,
+			},
+			data() {
+				return {
+					date: null,
+					value1: null,
+					value2: null,
+					value3: null,
+					value4: null,
+					options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
+				};
+			},
+		});
+		app.mount("#app");
+	</script>
+	<!-- =========================== -->
+	<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
