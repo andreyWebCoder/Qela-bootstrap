@@ -278,7 +278,35 @@
 								</div>
 							</div>
 						</div>
-						<!-- 3 row: buttons -->
+						<!-- Add Category -->
+						<div class="px-3 py-2 bg-secondary-300">
+							<div class="d-flex align-items-center justify-content-between">
+								<div class="d-flex align-items-center gap-4">
+									<span>2 з 10 вибрано</span>
+									<div class="form-check form-switch form-switch-sm">
+										<label class="form-check-label" for="SwitchShopProducts"><small>Обрати всі</small></label>
+										<input class="form-check-input" type="checkbox" role="switch" id="SwitchShopProducts">
+									</div>
+								</div>
+								<div class="d-flex gap-2">
+									<div style="width: 268px;">
+										<div>
+											<v-multi-select v-model="value8" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі статуси"></v-multi-select>
+										</div>
+										<div class="invalid-feedback">Error text</div>
+									</div>
+									<div class="d-flex gap-1 align-items-center">
+										<button type="button" class="btn btn-warning ic-mute ico-right"> Вимкнути </button>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Вимикає товар, міняє статус та видаляє зі списку юзера."></button>
+									</div>
+									<div class="d-flex gap-1 align-items-center">
+										<button type="button" class="btn btn-danger ic-delete ico-right"> Видалити </button>
+										<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Видаляє товар з  активного списку в магазині. Його видно тільки за фільтром"></button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Add Category -->
 						<!-- Table -->
 						<div class="table-responsive qela-table position-relative">
 							<table class="table table-hover">
@@ -395,7 +423,8 @@
 					value2: null,
 					value3: null,
 					value4: null,
-					options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
+					value8: null,
+					options: ["🪖 Сувеніри від військових 🇺🇦", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"],
 				};
 			},
 		});
