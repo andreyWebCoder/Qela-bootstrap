@@ -44,7 +44,18 @@
 		font-weight: 400;
 	}
 }
-
+.btn-md {
+	font-size: rem(14);
+	font-weight: 400;
+	padding: rem(8) rem(10);
+	gap: rem(4);
+	&[class^="ic-"],
+	&[class*="ic-"] {
+		&:before {
+			font-size: rem(16);
+		}
+	}
+}
 .btn-sm {
 	gap: rem(4);
 	font-weight: 400;

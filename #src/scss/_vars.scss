@@ -307,8 +307,8 @@ $zindex-tooltip: 1095;
 $input-btn-padding-y: 0.5rem;
 $input-btn-padding-x: 1rem;
 $input-btn-border-width: 1px;
-$input-btn-font-size: $font-size-base;
-$input-btn-line-height: $line-height-base;
+$input-btn-font-size: 1rem;
+$input-btn-line-height: 130%;
 $input-btn-padding-y-sm: 0.359375rem;
 $input-btn-padding-x-sm: 0.5rem;
 $input-btn-font-size-sm: $font-size-sm;
@@ -370,8 +370,8 @@ $form-label-font-weight: 500;
 // scss-docs-end form-label-variables
 // scss-docs-start form-input-variables
 $input-padding-y: $input-btn-padding-y;
-$input-padding-x: $input-btn-padding-x;
-$input-font-size: $input-btn-font-size;
+$input-padding-x: 0.75rem;
+$input-font-size: 0.875rem;
 $input-line-height: 1.2;
 
 $input-padding-y-sm: $input-btn-padding-y-sm;
@@ -468,7 +468,7 @@ $dropdown-padding-y: 0.5rem;
 // $dropdown-spacer: .125rem;
 $dropdown-font-size: $font-size-base;
 $dropdown-color: $black;
-// $dropdown-bg: $white;
+$dropdown-bg: $white;
 $dropdown-border-color: $info-400;
 $dropdown-border-radius: $border-radius;
 $dropdown-border-width: $border-width;
@@ -574,6 +574,7 @@ $pagination-padding-x-sm: 0.5rem;
 $pagination-font-size: $font-size-base;
 $pagination-border-radius: $border-radius-lg * 0.8;
 $pagination-color: $secondary-600;
+$pagination-bg: $white;
 $pagination-border-color: $gray-200;
 $pagination-focus-color: $secondary-600;
 $pagination-focus-bg: $white;
