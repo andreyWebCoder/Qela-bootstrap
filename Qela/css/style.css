@@ -21551,6 +21551,10 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-table tr td {
   cursor: pointer;
 }
+.qela-table tr.checked td {
+  background-color: #ecebff;
+  --bs-table-hover-bg: #ecebff;
+}
 .qela-table.large td,
 .qela-table.large th {
   font-size: 1rem;

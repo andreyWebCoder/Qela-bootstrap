@@ -64,6 +64,12 @@
 		td {
 			cursor: pointer;
 		}
+		&.checked {
+			td {
+				background-color: $secondary-200;
+				--bs-table-hover-bg: #{$secondary-200};
+			}
+		}
 	}
 
 	&.large {
