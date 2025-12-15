@@ -6,6 +6,9 @@
 	@@include('./components/_header.html',{ "title":"Quests > Title" })
 	<div id="app" v-cloak>
 		<main>
+			@@include('./components/_aside.html',{
+			"quests": "active"
+			})
 			<!-- =====================Список користувачів==================== -->
 			<div class="container-fluid">
 				<div class="row mb-3 mt-3">
