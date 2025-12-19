@@ -273,8 +273,8 @@
 									<input type="text" class="form-control" id="addCategory" placeholder="Придумайте назву категорії">
 								</div>
 								<div class="d-flex gap-2">
-									<button type="button" class="btn btn-info btn-md ic-cloze ico-right">Скасувати</button>
-									<button type="button" class="btn btn-primary btn-md ic-check-big ico-right">Зберегти</button>
+									<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+									<button type="button" class="btn btn-primary btn-md ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modalSave">Зберегти</button>
 								</div>
 							</div>
 						</div>
@@ -477,8 +477,39 @@
 				</div>
 			</div>
 		</div>
+		<!-- modal cancel -->
+		<div class="modal fade" id="modalCancel" tabindex="-1" aria-labelledby="modalCancelLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body p-4 text-center">
+						<h5 class="fs-18 fw-medium pb-2">Зберегти зміни?</h5>
+						<div class="pt-1">Якщо ви вийдете, зміни не будуть збережені</div>
+					</div>
+					<div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
+						<button type="button" class="btn btn-info m-0 me-auto" data-bs-dismiss="modal">Назад</button>
+						<button type="button" class="btn btn-info m-0">Не зберігати</button>
+						<button type="button" class="btn btn-primary m-0">Зберегти</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal Save -->
+		<div class="modal fade" id="modalSave" tabindex="-1" aria-labelledby="modalSaveLabel" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-body p-4 text-center">
+						<h5 class="fs-18 fw-medium pb-2">Хвилинку уваги!</h5>
+						<div class="pt-1">Видалення категорій також видалить і всі товари в ній</div>
+					</div>
+					<div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
+						<button type="button" class="btn btn-info m-0" data-bs-dismiss="modal">Скасувати</button>
+						<button type="button" class="btn btn-danger ico-right ic-delete m-0">Видалити</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- modal Add Item -->
-		<div class="modal fade show" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true" style="display: block;">
+		<div class="modal fade" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered" style="--bs-modal-width:896px">
 				<div class="modal-content">
 					<div class="modal-header py-4">
@@ -486,14 +517,46 @@
 					</div>
 					<div class="modal-body p-0">
 						<div class="row g-0">
-							<div class="col-auto border-end" style="flex-basis: 300px;">
+							<div class="col-auto border-end" style="flex-basis: 302px;">
 								<div class="p-3 d-flex justify-content-between align-content-center border-bottom">
 									<h3 class="fs-5 text-info-700">Фото</h3>
-									<!-- <button type="button" class="qela-btn-ic ic-menu-order text-info"></button> -->
 									<button type="button" class="qela-btn-ic ic-menu-order text-info" data-bs-offset="0, 5" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Змінити порядок"></button>
 								</div>
-								<div class="p-3">
-
+								<div class="p-3 d-flex gap-2 flex-wrap">
+									<!-- default -->
+									<div class="qela-card-shop">
+										<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+										<div class="qela-card-actions px-2">
+											<button type="button" class="btn btn-sm btn-danger ic-delete ico-right w-100"> Видалити </button>
+											<button type="button" class="btn btn-sm btn-info ic-refresh ico-right w-100"> Оновити </button>
+										</div>
+									</div>
+									<!-- no img -->
+									<div class="qela-card-shop empty">
+										<div class="d-flex flex-column justify-content-center align-items-center h-100 gap-2 ">
+											<i class="ic-img-plus text-info-600"></i>
+											<div class="text-center px-1">
+												<div class="text-secondary text-decoration-underline text-nowrap">Клікніть щоб загрузити</div>
+												<div class="text-info-700 mt-1">або перетягніть сюди</div>
+											</div>
+										</div>
+									</div>
+									<!-- eddit -->
+									<div class="qela-card-shop eddit">
+										<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+										<span class="qela-list-num bg-white border">1</span>
+										<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
+											<i class="ic-dots-2 text-info-600 d-inline-block"></i>
+										</div>
+									</div>
+									<!-- eddit drag-->
+									<div class="qela-card-shop eddit opacity-50" style="cursor: grab;">
+										<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+										<span class="qela-list-num bg-white border">1</span>
+										<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
+											<i class="ic-dots-2 text-info-600 d-inline-block"></i>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="col">
@@ -712,10 +775,19 @@
 							</div>
 						</div>
 					</div>
-					<div class="modal-footer justify-content-end p-3 gap-2">
-						<button type="button" class="btn btn-info m-0" data-bs-dismiss="modal" aria-label="cancel">Скасувати</button>
-						<button type="button" class="btn btn-info m-0" aria-label="Save as draft">Зберегти як чернетку</button>
-						<button type="button" class="btn btn-primary m-0" aria-label="Save">Зберегти</button>
+					<div class="modal-footer p-3 gap-2">
+						<div class="d-flex gap-2">
+							<div class="d-flex gap-1 align-items-center">
+								<button type="button" class="btn btn-warning ic-mute ico-right" data-bs-toggle="modal" data-bs-target="#modalOff"> Вимкнути </button><button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Вимикає товар, міняє статус та видаляє зі списку юзера."></button>
+							</div>
+							<div class="d-flex gap-1 align-items-center"><button type="button" class="btn btn-danger ic-delete ico-right" data-bs-toggle="modal" data-bs-target="#modalDelete"> Видалити </button><button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Видаляє товар з  активного списку в магазині. Його видно тільки за фільтром"></button></div>
+						</div>
+						<div class="d-flex gap-2 ms-auto">
+							<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+							<button type="button" class="btn btn-info m-0" aria-label="Save as draft">Зберегти як чернетку</button>
+							<button type="button" class="btn btn-primary m-0" aria-label="Save">Зберегти</button>
+						</div>
+
 					</div>
 				</div>
 			</div>

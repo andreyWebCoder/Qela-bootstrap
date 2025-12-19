@@ -20117,6 +20117,68 @@ textarea {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+.qela-card-shop {
+  width: 130px;
+  height: 130px;
+  overflow: hidden;
+  border: 1px solid #dfdfdf;
+  border-radius: 6px;
+  position: relative;
+  transition: border-color 0.25s ease 0s;
+  background-color: #f5f5f5;
+}
+.qela-card-shop.empty {
+  border: 1px dashed #ababab;
+  cursor: pointer;
+  font-size: 0.625rem;
+}
+.qela-card-shop.empty i::before {
+  font-size: 2rem;
+}
+.qela-card-shop.eddit {
+  display: flex;
+  flex-direction: column;
+}
+@media (any-hover: hover) {
+  .qela-card-shop:not(.eddit, .empty):hover {
+    border-color: #9188ff;
+  }
+  .qela-card-shop:not(.eddit, .empty):hover .qela-card-actions {
+    overflow: visible;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.qela-card-shop img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.qela-card-shop .qela-card-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(213, 211, 255, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: overflow 0.25s ease 0s, opacity 0.25s ease 0s;
+}
+.qela-card-shop .qela-list-num {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 0.75rem;
+}
+
 .qela-awards {
   position: relative;
   display: inline-block;
