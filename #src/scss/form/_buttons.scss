@@ -43,12 +43,26 @@
 		border-radius: 10px;
 		font-weight: 400;
 	}
+	&.current {
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			border: 2px solid $secondary;
+			border-radius: 8px;
+			width: calc(100% + 12px);
+			height: calc(100% + 12px);
+		}
+	}
 }
 .btn-md {
 	font-size: rem(14);
 	font-weight: 400;
-	padding: rem(8) rem(10);
+	padding: rem(9.5) rem(8);
 	gap: rem(4);
+	line-height: 124%;
 	&[class^="ic-"],
 	&[class*="ic-"] {
 		&:before {

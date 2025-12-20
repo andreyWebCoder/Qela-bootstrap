@@ -23,14 +23,14 @@
 	justify-content: center;
 	border-radius: 6px;
 	text-decoration: none;
-	background-color: $info-100;
+	background-color: $white;
 	border-radius: 6px;
 	border: 2px solid $info-200;
 	overflow: hidden;
 	transition: all 0.3s ease-out 0s;
 	cursor: pointer;
 	&::before {
-		font-size: 20px;
+		font-size: 24px;
 	}
 	&:not(:last-child) {
 		margin-right: 2px;
@@ -52,10 +52,13 @@
 	}
 	&.qela-sm {
 		--img-size: 31px;
+		&::before {
+			font-size: 20px;
+		}
 	}
 	&.qela-icon,
 	&.qela-text {
-		border: 1px solid transparent;
+		border: 1px solid $info-200;
 		@media (any-hover: hover) {
 			&:hover {
 				border: 1px solid $secondary-400;
@@ -68,7 +71,7 @@
 		}
 	}
 	&.qela-icon {
-		color: $info-700;
+		color: $info-600;
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $secondary-200;

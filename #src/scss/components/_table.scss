@@ -408,6 +408,9 @@
 	cursor: default;
 	@media (any-hover: hover) {
 		&:hover {
+			span {
+				text-decoration: underline;
+			}
 			.btn {
 				opacity: 1;
 				visibility: visible;
@@ -420,10 +423,10 @@
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity 0.15s ease 0s;
-		color: $gray-600;
 		&[class*="ic-"] {
 			&::before {
 				font-size: rem(16);
+				color: $info-600;
 			}
 		}
 	}
