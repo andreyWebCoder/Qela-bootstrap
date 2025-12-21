@@ -18009,6 +18009,42 @@ textarea {
   padding: 0;
 }
 
+.qela-accordion-shop {
+  --bs-accordion-btn-icon-width: 1.5rem;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-body-padding-y: 0;
+  --bs-accordion-body-padding-x: 0;
+}
+.qela-accordion-shop.accordion-flush .accordion-item:not(:last-child) {
+  margin-bottom: 0;
+}
+.qela-accordion-shop .accordion-button:not(.collapsed) .qela-btn-ic {
+  transform: rotate(-180deg);
+}
+.qela-accordion-shop .accordion-button::after {
+  display: none;
+  background: none;
+}
+.qela-accordion-shop .accordion-button i:first-child::before {
+  font-size: 1.5rem;
+}
+.qela-accordion-shop .accordion-button .qela-btn-ic {
+  transition: transform 0.25s ease 0s;
+}
+.qela-accordion-shop .accordion-button .qela-btn-ic::before {
+  font-size: 1.5rem;
+}
+.qela-accordion-shop .accordion-item:last-child .accordion-body > div:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.qela-accordion-shop .drag {
+  border-bottom: 1px solid #dfdfdf;
+  border-top: 1px solid #dfdfdf;
+  box-shadow: 0 4px 34px 0 rgba(0, 0, 0, 0.15);
+  opacity: 0.5;
+  transition: all 0.2s ease 0s;
+}
+
 .qela-alert {
   position: relative;
   font-size: 14px;

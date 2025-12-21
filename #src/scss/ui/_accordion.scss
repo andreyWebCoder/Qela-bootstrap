@@ -121,3 +121,60 @@
 		}
 	}
 }
+.qela-accordion-shop {
+	--bs-accordion-btn-icon-width: 1.5rem;
+	--bs-accordion-bg: transparent;
+	--bs-accordion-body-padding-y: 0;
+	--bs-accordion-body-padding-x: 0;
+	&.accordion-flush {
+		.accordion-item {
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.accordion-button {
+		&:not(.collapsed) {
+			.qela-btn-ic {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&::after {
+			display: none;
+			background: none;
+		}
+		i {
+			&:first-child {
+				&::before {
+					font-size: rem(24);
+				}
+			}
+		}
+		.qela-btn-ic {
+			transition: transform 0.25s ease 0s;
+			&::before {
+				font-size: rem(24);
+			}
+		}
+	}
+	.accordion-item {
+		&:last-child {
+			.accordion-body {
+				> div {
+					&:last-child {
+						border-radius: 0 0 6px 6px;
+					}
+				}
+			}
+		}
+	}
+
+	.drag {
+		border-bottom: 1px solid $info-300;
+		border-top: 1px solid $info-300;
+		box-shadow: 0 4px 34px 0 rgba($black, 0.15);
+		opacity: 0.5;
+		transition: all 0.2s ease 0s;
+	}
+}
