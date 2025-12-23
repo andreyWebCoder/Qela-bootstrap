@@ -16721,22 +16721,6 @@ main {
   }
 }
 
-.qela-burger {
-  display: none;
-  border: 0;
-  padding: 0;
-}
-@media (max-width: 767.98px) {
-  .qela-burger {
-    display: block;
-    cursor: pointer;
-    background-color: transparent;
-  }
-  .qela-burger img {
-    pointer-events: none;
-  }
-}
-
 .qela-btn-map {
   border-color: transparent;
   position: absolute;
@@ -21496,6 +21480,7 @@ header .container-xxl > .row [class*=col]:last-child {
 .qela-nav-wrapper .nav {
   padding: 0.5rem;
   flex-direction: column;
+  align-items: start;
   gap: 0.5rem;
 }
 .qela-nav-wrapper .nav:first-child {
@@ -21516,7 +21501,7 @@ header .container-xxl > .row [class*=col]:last-child {
   }
 }
 .qela-nav-wrapper .nav-link > small:not(.small), .qela-nav-wrapper .nav-link > .small:not(.small) {
-  width: 100%;
+  width: 152px;
   height: 40px;
   color: #676767;
   display: flex;
@@ -21534,6 +21519,10 @@ header .container-xxl > .row [class*=col]:last-child {
   .qela-nav-wrapper .nav-link > small:not(.small), .qela-nav-wrapper .nav-link > .small:not(.small) {
     width: 40px;
   }
+}
+.qela-nav-wrapper .nav-link > small.sm:not(.small), .qela-nav-wrapper .nav-link > .sm.small:not(.small) {
+  font-size: 0.75rem;
+  white-space: wrap;
 }
 .qela-nav-wrapper .nav-link .qela-counter {
   position: absolute;

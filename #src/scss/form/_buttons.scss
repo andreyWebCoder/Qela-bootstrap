@@ -608,22 +608,6 @@
 //     }
 // }
 
-.qela-burger {
-	display: none;
-	border: 0;
-	padding: 0;
-
-	@include media-breakpoint-down(md) {
-		display: block;
-		cursor: pointer;
-		background-color: transparent;
-
-		img {
-			pointer-events: none;
-		}
-	}
-}
-
 .qela-btn-map {
 	border-color: transparent;
 	position: absolute;

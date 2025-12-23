@@ -1,6 +1,9 @@
 const btnMenu = document.querySelector('.qela-btn-menu');
 const menuAside = document.querySelector('.qela-menu');
+const menuLinks = menuAside.querySelectorAll('.nav-link small');
 const sidebarTooltips = document.querySelectorAll('[data-bs-custom-class="qela-sidebar-tooltip"],[data-bs-custom-class="qela-sidebar-tooltip settings"]');
+
+
 // open/close menu
 if (menuAside) {
 	btnMenu.addEventListener('click', () => {
@@ -14,6 +17,19 @@ if (menuAside) {
 		document.body.style.paddingLeft = widthAside + 'px';
 	})
 	observer.observe(menuAside);
+
+	for (let i = 0; i < menuLinks.length; i++) {
+		const el = menuLinks[i];
+		const parentWidth = el.parentElement.offsetWidth;
+
+		const contentWidth = el.scrollWidth;
+
+		if (contentWidth > parentWidth) {
+			el.classList.add('sm');
+		} else {
+			el.classList.remove('sm');
+		}
+	}
 }
 // hide tooltips when menu open
 for (let i = 0; i < sidebarTooltips.length; i++) {

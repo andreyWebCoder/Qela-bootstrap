@@ -88,8 +88,11 @@ $utilities: map-merge(
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ>==================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>======================================
-@import "./components/header";
-@import "./components/aside";
-@import "./components/table";
-@import "./components/text-editor";
+@import "components/header";
+@import "components/aside";
+@import "components/table";
+@import "components/text-editor";
+@import "theme/theme-strichka";
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>===========================================
+//<Themes>===========================================
+//<Themes>===========================================
