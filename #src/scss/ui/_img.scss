@@ -26,6 +26,9 @@
 	background-color: $white;
 	border: 1px solid $info-300;
 	overflow: hidden;
+	&:not(:last-child) {
+		margin-right: rem(2);
+	}
 	&::before {
 		font-size: rem(24);
 		color: $info-600;
