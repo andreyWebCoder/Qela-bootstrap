@@ -12,7 +12,7 @@
 	}
 }
 .qela-previews {
-	--img-size: 32px;
+	--img-size: 40px;
 	font-size: rem(14);
 	display: flex;
 	width: var(--img-size);
@@ -30,9 +30,12 @@
 		font-size: rem(24);
 		color: $info-600;
 	}
-	&.qela-lg {
-		--img-size: 40px;
+	&.sm {
+		--img-size: 32px;
 	}
+	// &.lg {
+	// 	--img-size: 64px;
+	// }
 }
 .qela-img1x1 {
 	padding-top: 100%;

@@ -19848,7 +19848,7 @@ textarea {
 }
 
 .qela-previews {
-  --img-size: 32px;
+  --img-size: 40px;
   font-size: 0.875rem;
   display: flex;
   width: var(--img-size);
@@ -19867,8 +19867,8 @@ textarea {
   font-size: 1.5rem;
   color: #858585;
 }
-.qela-previews.qela-lg {
-  --img-size: 40px;
+.qela-previews.sm {
+  --img-size: 32px;
 }
 
 .qela-img1x1 {
