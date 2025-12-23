@@ -12,8 +12,8 @@
 	}
 }
 .qela-previews {
-	--img-size: 38px;
-	font-size: 14px;
+	--img-size: 32px;
+	font-size: rem(14);
 	display: flex;
 	width: var(--img-size);
 	height: var(--img-size);
@@ -24,85 +24,14 @@
 	border-radius: 6px;
 	text-decoration: none;
 	background-color: $white;
-	border-radius: 6px;
-	border: 2px solid $info-200;
+	border: 1px solid $info-300;
 	overflow: hidden;
-	transition: all 0.3s ease-out 0s;
-	cursor: pointer;
 	&::before {
-		font-size: 24px;
-	}
-	&:not(:last-child) {
-		margin-right: 2px;
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			border: 1px solid $secondary-400;
-		}
-	}
-	&.current {
-		border: 2px solid $secondary;
-		box-shadow: 0px 0px 0px 0px #dcd9fb inset;
-		&::before {
-			color: $secondary;
-		}
+		font-size: rem(24);
+		color: $info-600;
 	}
 	&.qela-lg {
 		--img-size: 40px;
-	}
-	&.qela-sm {
-		--img-size: 31px;
-		&::before {
-			font-size: 20px;
-		}
-	}
-	&.qela-icon,
-	&.qela-text {
-		border: 1px solid $info-200;
-		@media (any-hover: hover) {
-			&:hover {
-				border: 1px solid $secondary-400;
-			}
-		}
-		&.current {
-			border-width: 1px;
-			border: 1px solid $secondary;
-			box-shadow: 0px 0px 0px 3px #dcd9fb inset;
-		}
-	}
-	&.qela-icon {
-		color: $info-600;
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $secondary-200;
-				color: $secondary;
-			}
-		}
-	}
-	&.qela-text {
-		color: $secondary-700;
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $secondary-300;
-			}
-		}
-	}
-	&.disabled {
-		pointer-events: none;
-		border-color: $info-200;
-		background-color: $info-100;
-		img {
-			opacity: 0.4;
-		}
-		&.qela-icon {
-			border-color: transparent;
-			&::before {
-				color: $info;
-			}
-		}
-		&.qela-text {
-			color: $secondary-400;
-		}
 	}
 }
 .qela-img1x1 {

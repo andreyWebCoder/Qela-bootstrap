@@ -19848,8 +19848,8 @@ textarea {
 }
 
 .qela-previews {
-  --img-size: 38px;
-  font-size: 14px;
+  --img-size: 32px;
+  font-size: 0.875rem;
   display: flex;
   width: var(--img-size);
   height: var(--img-size);
@@ -19860,85 +19860,15 @@ textarea {
   border-radius: 6px;
   text-decoration: none;
   background-color: #fff;
-  border-radius: 6px;
-  border: 2px solid #e9e9e8;
+  border: 1px solid #dfdfdf;
   overflow: hidden;
-  transition: all 0.3s ease-out 0s;
-  cursor: pointer;
 }
 .qela-previews::before {
-  font-size: 24px;
-}
-.qela-previews:not(:last-child) {
-  margin-right: 2px;
-}
-@media (any-hover: hover) {
-  .qela-previews:hover {
-    border: 1px solid #ada6ff;
-  }
-}
-.qela-previews.current {
-  border: 2px solid #9188ff;
-  box-shadow: 0px 0px 0px 0px #dcd9fb inset;
-}
-.qela-previews.current::before {
-  color: #9188ff;
+  font-size: 1.5rem;
+  color: #858585;
 }
 .qela-previews.qela-lg {
   --img-size: 40px;
-}
-.qela-previews.qela-sm {
-  --img-size: 31px;
-}
-.qela-previews.qela-sm::before {
-  font-size: 20px;
-}
-.qela-previews.qela-icon, .qela-previews.qela-text {
-  border: 1px solid #e9e9e8;
-}
-@media (any-hover: hover) {
-  .qela-previews.qela-icon:hover, .qela-previews.qela-text:hover {
-    border: 1px solid #ada6ff;
-  }
-}
-.qela-previews.qela-icon.current, .qela-previews.qela-text.current {
-  border-width: 1px;
-  border: 1px solid #9188ff;
-  box-shadow: 0px 0px 0px 3px #dcd9fb inset;
-}
-.qela-previews.qela-icon {
-  color: #858585;
-}
-@media (any-hover: hover) {
-  .qela-previews.qela-icon:hover {
-    background-color: #ecebff;
-    color: #9188ff;
-  }
-}
-.qela-previews.qela-text {
-  color: #6550c4;
-}
-@media (any-hover: hover) {
-  .qela-previews.qela-text:hover {
-    background-color: #d5d3ff;
-  }
-}
-.qela-previews.disabled {
-  pointer-events: none;
-  border-color: #e9e9e8;
-  background-color: #f5f5f5;
-}
-.qela-previews.disabled img {
-  opacity: 0.4;
-}
-.qela-previews.disabled.qela-icon {
-  border-color: transparent;
-}
-.qela-previews.disabled.qela-icon::before {
-  color: #ababab;
-}
-.qela-previews.disabled.qela-text {
-  color: #ada6ff;
 }
 
 .qela-img1x1 {
