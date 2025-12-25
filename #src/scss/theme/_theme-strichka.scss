@@ -1,2 +1,41 @@
 .theme--strichka {
+	// globall colors
+	--bs-blue: #0057b8;
+	--bs-yellow: #ffe000;
+	--bs-secondary: var(--bs-blue);
+	--bs-primary: var(--bs-yellow);
+	--bs-primary-rgb: 255, 224, 0;
+	--bs-secondary-rgb: 0, 87, 184;
+	// prymarys
+	--bs-custom-primary-100: #fffce6;
+	--bs-custom-primary-200: #fff8c1;
+	--bs-custom-primary-300: #fff399;
+	--bs-custom-primary-400: #ffeb75;
+	--bs-custom-primary-500: #ffe000;
+	--bs-custom-primary-600: #e9c608;
+	--bs-custom-primary-700: #c3a502;
+	--bs-custom-primary-800: #8a7500;
+	--bs-custom-primary-900: #625301;
+	// secondarys
+	--bs-custom-secondary-100: #edf5ff;
+	--bs-custom-secondary-200: #d9ebff;
+	--bs-custom-secondary-300: #9fccff;
+	--bs-custom-secondary-400: #1f7fea;
+	--bs-custom-secondary-500: #0057b8;
+	--bs-custom-secondary-600: #0351a9;
+	--bs-custom-secondary-700: #014796;
+	--bs-custom-secondary-800: #013672;
+	--bs-custom-secondary-900: #012c5c;
+	// components colors
+	// link
+	--bs-link-color-rgb: var(--bs-secondary-rgb);
+	--bs-link-hover-color-rgb: 1, 71, 150;
+	// radiobutton
+	[type="radio"]:checked {
+		&:checked {
+			&:hover {
+				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba(3, 81, 169, 0.99)}'/></svg>");
+			}
+		}
+	}
 }

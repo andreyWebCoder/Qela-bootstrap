@@ -31,17 +31,17 @@
 
 	&:checked {
 		&:hover {
-			border-color: $secondary-700;
-			background-color: $secondary-700;
+			border-color: var(--bs-custom-secondary-700);
+			background-color: var(--bs-custom-secondary-700);
 		}
 
 		&:disabled {
-			border-color: $secondary-400;
-			background-color: $secondary-400;
+			border-color: var(--bs-custom-secondary-400);
+			background-color: var(--bs-custom-secondary-400);
 
 			&:hover {
-				border-color: $secondary-400;
-				background-color: $secondary-400;
+				border-color: var(--bs-custom-secondary-400);
+				background-color: var(--bs-custom-secondary-400);
 			}
 		}
 	}
@@ -70,7 +70,6 @@
 	&:checked {
 		border-width: 2px;
 		background-color: transparent;
-
 		&:hover {
 			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($secondary-600, 0.99)}'/></svg>");
 		}
@@ -139,11 +138,11 @@
 		}
 
 		&:checked {
-			background-color: $secondary;
+			background-color: var(--bs-secondary);
 			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.5' fill='#{rgba($white, 0.99)}'/></svg>");
 
 			&:hover {
-				background-color: $secondary-700;
+				background-color: var(--bs-custom-secondary-700);
 			}
 
 			&:disabled {

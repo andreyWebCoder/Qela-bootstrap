@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
-	
-	<head>
-	<title>Device alert</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/vendors.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+	{% set title = "Device alert" %}
+	{% include "_head.njk" %}
 	<body class="qela-body">
 	@@include('./components/_header.html',{ "title":"Main Dashboard" , "logo":"img/logo-sm.svg" })
 	<div id="app" v-cloak>
@@ -67,8 +60,7 @@
 			app.mount("#app");
 		</script>
 		<!-- =========================== -->
-		<script src="js/vendors.js"></script>
-<script src="js/app.js"></script>
+		{% include "_js.html" %}
 	</body>
 
 </html>

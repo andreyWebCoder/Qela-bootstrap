@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="ua">
-<head>
-    <title>List-party</title>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/vendors.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<head>
+	<title>List-party</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/vendors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<body class="qela-body">
-	<header>
+	<body class="qela-body">
+		
+		<header>
 	<div class="container-fluid">
 		<div class="row">
 			<!-- item whith title and button burger-->
 			<div class="col gap-2">
 				<!--FIX mobile logo -->
 				<a class="navbar-brand qela-logo" href="#">
-					<img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
+					<img src="img/logo-sm.svg" alt="Logo" width="40" height="40"/>
 				</a>
 				<h1 class="h5 qela-clamp">Sokira Party</h1>
 			</div>
 			<div class="col-auto d-flex gap-2">
 				<div class="dropdown qela-dropdown ">
-					<button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i></button>
+					<button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i>
+					</button>
 					<ul class="dropdown-menu dropdown-menu-end shadow">
 						<li>
 							<a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
@@ -63,26 +65,32 @@
 							</div>
 						</li>
 						<li>
-							<hr class="dropdown-divider" />
+							<hr class="dropdown-divider"/>
 						</li>
 						<li>
 							<a class="dropdown-item ic-user-24" href="#">Профіль</a>
 
 						</li>
-						<li><a class="dropdown-item ic-bill" href="#">Оплата</a></li>
-						<li><a class="dropdown-item ic-dollar" href="#">Підписка</a></li>
 						<li>
-							<hr class="dropdown-divider" />
+							<a class="dropdown-item ic-bill" href="#">Оплата</a>
 						</li>
-						<li><a class="dropdown-item ic-log-out" href="#">вийти</a></li>
+						<li>
+							<a class="dropdown-item ic-dollar" href="#">Підписка</a>
+						</li>
+						<li>
+							<hr class="dropdown-divider"/>
+						</li>
+						<li>
+							<a class="dropdown-item ic-log-out" href="#">вийти</a>
+						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
-	<main>
-		<!--FIX menu -->
+		<main>
+			<!--FIX menu -->
 <aside class="qela-menu">
 	<!--FIX buttons -->
 	<button type="button" class="ic-chevrons-left qela-btn-menu"></button>
@@ -116,7 +124,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link @@quests" aria-current="page">
+					<a href="#" class="nav-link " aria-current="page">
 						<small class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"> Квести </small>
 					</a>
 				</li>
@@ -142,7 +150,7 @@
 				</li>
 
 				<li class="nav-item">
-					<a href="#" class="nav-link @@rewards" aria-current="page">
+					<a href="#" class="nav-link " aria-current="page">
 						<small class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди">
 							Винагороди
 						</small>
@@ -163,13 +171,13 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link @@chat" aria-current="page">
+					<a href="#" class="nav-link " aria-current="page">
 						<span class="qela-counter">50</span>
 						<small class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення">Обговорення</small>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="#" class="nav-link @@shop" aria-current="page">
+					<a href="#" class="nav-link " aria-current="page">
 						<small class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин">Магазин</small>
 					</a>
 				</li>
@@ -184,136 +192,136 @@
 		</div>
 	</nav>
 </aside>
-		<!-- =====================Список користувачів==================== -->
-		<div class="container-fluid">
-			<div class="row mb-3 mt-3">
-				<div class="col-12">
-					<div class="border pb-3 pb-md-4 mb-3 bg-white rounded-2">
-						<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+			<!-- =====================Список користувачів==================== -->
+			<div class="container-fluid">
+				<div class="row mb-3 mt-3">
+					<div class="col-12">
+						<div class="border pb-3 pb-md-4 mb-3 bg-white rounded-2">
+							<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
+								<li class="nav-item" role="presentation">
+									<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
 									Organization
 								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
 									Branches
 								</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+								</li>
+								<li class="nav-item" role="presentation">
+									<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
 									Admins
 								</button>
-							</li>
-						</ul>
-						<div class="tab-content" id="myTabContent">
-							<!-- Organization -->
-							<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-								<div class="table-responsive table-qela p-3">
-									<table class="table table-hover">
-										<tbody>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700"> Id </span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
+								</li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+								<!-- Organization -->
+								<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+									<div class="table-responsive table-qela p-3">
+										<table class="table table-hover">
+											<tbody>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700"> Id </span>
+													</td>
+													<td class="pe-2">
+														<span class="fs-6">
 														6ab4c473-a7ae-4b5e-b53a-ba5d537dc847
 													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700"> Name </span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6"> Name </span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700"> Name </span>
+													</td>
+													<td class="pe-2">
+														<span class="fs-6"> Name </span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700">
 														Description
 													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
+													</td>
+													<td class="pe-2">
+														<span class="fs-6">
 														Sokira party short description
 													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700">
 														Phone Number
 													</span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6"> +38 067 000 00 00 </span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700"> Email </span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6">
+													</td>
+													<td class="pe-2">
+														<span class="fs-6"> +38 067 000 00 00 </span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700"> Email </span>
+													</td>
+													<td class="pe-2">
+														<span class="fs-6">
 														mailto:alex.kukhtin@gmail.com
 													</span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700"> Memo </span>
-												</td>
-												<td class="pe-2">
-													<span class="fs-6"> - </span>
-												</td>
-											</tr>
-											<tr>
-												<td class="ps-2" width="200">
-													<span class="fs-6 text-info-700">
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700"> Memo </span>
+													</td>
+													<td class="pe-2">
+														<span class="fs-6"> - </span>
+													</td>
+												</tr>
+												<tr>
+													<td class="ps-2" width="200">
+														<span class="fs-6 text-info-700">
 														DateCreated
 													</span>
-												</td>
-												<td class="pe-2">
+													</td>
+													<td class="pe-2">
 													s
 													<span class="fs-6"> 2023-03-01T09:40:23.963Z </span>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
-							</div>
-							<!-- Branches -->
-							<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-								<div class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
-									<h2 class="h6">Branche List</h2>
-									<button type="button" class="btn btn-primary ic-plus ico-right">
+								<!-- Branches -->
+								<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+									<div class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
+										<h2 class="h6">Branche List</h2>
+										<button type="button" class="btn btn-primary ic-plus ico-right">
 										Create New Branch
 									</button>
-								</div>
-								<div class="table-responsive table-qela">
-									<table class="table table-hover">
-										<thead class="table-light">
-											<tr>
-												<th scope="col">Branches Name</th>
-												<th scope="col">ID</th>
-												<th scope="col">Description</th>
-												<th scope="col" class="text-center">Users</th>
-												<th class="text-end" scope="col">Дії</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>
-													<a href="#">Branch #1</a>
-												</td>
-												<td width="27.25%">
+									</div>
+									<div class="table-responsive table-qela">
+										<table class="table table-hover">
+											<thead class="table-light">
+												<tr>
+													<th scope="col">Branches Name</th>
+													<th scope="col">ID</th>
+													<th scope="col">Description</th>
+													<th scope="col" class="text-center">Users</th>
+													<th class="text-end" scope="col">Дії</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="#">Branch #1</a>
+													</td>
+													<td width="27.25%">
 													dad60bc3-0941-4ce2-b151-462734c6d81a
 												</td>
-												<td width="auto">
-													<div class="qela-clamp">
+													<td width="auto">
+														<div class="qela-clamp">
 														The eighth requirement. Raise the healthcare
 														system's focus on the epidemic well-being of the
 														LGBTQ+ communities, mental, sexual and
@@ -321,19 +329,19 @@
 														municipal funding for quality public health
 														services for all key groups of population.
 													</div>
-												</td>
-												<td class="text-center">20</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-info ico ic-edit"></button>
-															<button type="button" class="btn btn-info ico ic-delete"></button>
-															<button type="button" class="btn btn-info ico ic-writing danger"></button>
+													</td>
+													<td class="text-center">20</td>
+													<td>
+														<div class="text-end">
+															<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																<button type="button" class="btn btn-info ico ic-edit"></button>
+																<button type="button" class="btn btn-info ico ic-delete"></button>
+																<button type="button" class="btn btn-info ico ic-writing danger"></button>
+															</div>
 														</div>
-													</div>
-												</td>
-											</tr>
-											<!-- <tr>
+													</td>
+												</tr>
+												<!-- <tr>
 												<td width="27.25%">
 													<a href="#">Branch #1</a>
 												</td>
@@ -402,153 +410,153 @@
 													</div>
 												</td>
 											</tr> -->
-										</tbody>
-									</table>
+											</tbody>
+										</table>
+									</div>
 								</div>
-							</div>
-							<!-- Admins -->
-							<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-								<div class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
-									<h2 class="h6">Admin List</h2>
-									<button type="button" class="btn btn-primary ic-plus ico-right">
+								<!-- Admins -->
+								<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+									<div class="py-2 px-3 d-flex align-items-center justify-content-between flex-wrap gap-2 gap-sm-4">
+										<h2 class="h6">Admin List</h2>
+										<button type="button" class="btn btn-primary ic-plus ico-right">
 										Create New Branch
 									</button>
-								</div>
-								<div class="table-responsive table-qela">
-									<table class="table table-hover">
-										<thead class="table-light">
-											<tr>
-												<th width="18.5%" scope="col">Branches Name</th>
-												<th width="18.5%" scope="col">ID</th>
-												<th width="18.5%" scope="col">Persone Name</th>
-												<th width="18.5%" scope="col">Persone Data</th>
-												<th scope="col" class="text-center">Role</th>
-												<th scope="col" class="text-center">Confirmed</th>
-												<th class="text-end" scope="col">Дії</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="qela-clamp w-75">
+									</div>
+									<div class="table-responsive table-qela">
+										<table class="table table-hover">
+											<thead class="table-light">
+												<tr>
+													<th width="18.5%" scope="col">Branches Name</th>
+													<th width="18.5%" scope="col">ID</th>
+													<th width="18.5%" scope="col">Persone Name</th>
+													<th width="18.5%" scope="col">Persone Data</th>
+													<th scope="col" class="text-center">Role</th>
+													<th scope="col" class="text-center">Confirmed</th>
+													<th class="text-end" scope="col">Дії</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td width="18.5%">
+														<a href="#">example@gmail.com</a>
+													</td>
+													<td width="18.5%">
+														<div class="qela-clamp w-75">
 														dad60bc3-0941-4ce2-b151-462734c6d81a
 													</div>
-												</td>
-												<td width="18.5%">Босик Ждана</td>
-												<td width="18.5%">01/03/2023, 11:39</td>
-												<td class="text-center">owner</td>
-												<td>
-													<div class="qela-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-info ico ic-edit"></button>
-															<button type="button" class="btn btn-info ico ic-delete"></button>
-															<button type="button" class="btn btn-info ico ic-writing danger"></button>
+													</td>
+													<td width="18.5%">Босик Ждана</td>
+													<td width="18.5%">01/03/2023, 11:39</td>
+													<td class="text-center">owner</td>
+													<td>
+														<div class="qela-verification">
+															<span class="ic-success bg-success-100 text-success"></span>
 														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="qela-clamp w-75">
+													</td>
+													<td>
+														<div class="text-end">
+															<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																<button type="button" class="btn btn-info ico ic-edit"></button>
+																<button type="button" class="btn btn-info ico ic-delete"></button>
+																<button type="button" class="btn btn-info ico ic-writing danger"></button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td width="18.5%">
+														<a href="#">example@gmail.com</a>
+													</td>
+													<td width="18.5%">
+														<div class="qela-clamp w-75">
 														dad60bc3-0941-4ce2-b151-462734c6d81a
 													</div>
-												</td>
-												<td width="18.5%">Босик Ждана</td>
-												<td width="18.5%">01/03/2023, 11:39</td>
-												<td class="text-center">owner</td>
-												<td>
-													<div class="qela-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-info ico ic-edit"></button>
-															<button type="button" class="btn btn-info ico ic-delete"></button>
-															<button type="button" class="btn btn-info ico ic-writing danger"></button>
+													</td>
+													<td width="18.5%">Босик Ждана</td>
+													<td width="18.5%">01/03/2023, 11:39</td>
+													<td class="text-center">owner</td>
+													<td>
+														<div class="qela-verification">
+															<span class="ic-success bg-success-100 text-success"></span>
 														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="qela-clamp w-75">
+													</td>
+													<td>
+														<div class="text-end">
+															<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																<button type="button" class="btn btn-info ico ic-edit"></button>
+																<button type="button" class="btn btn-info ico ic-delete"></button>
+																<button type="button" class="btn btn-info ico ic-writing danger"></button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td width="18.5%">
+														<a href="#">example@gmail.com</a>
+													</td>
+													<td width="18.5%">
+														<div class="qela-clamp w-75">
 														dad60bc3-0941-4ce2-b151-462734c6d81a
 													</div>
-												</td>
-												<td width="18.5%">Босик Ждана</td>
-												<td width="18.5%">01/03/2023, 11:39</td>
-												<td class="text-center">owner</td>
-												<td>
-													<div class="qela-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-info ico ic-edit"></button>
-															<button type="button" class="btn btn-info ico ic-delete"></button>
-															<button type="button" class="btn btn-info ico ic-writing danger"></button>
+													</td>
+													<td width="18.5%">Босик Ждана</td>
+													<td width="18.5%">01/03/2023, 11:39</td>
+													<td class="text-center">owner</td>
+													<td>
+														<div class="qela-verification">
+															<span class="ic-success bg-success-100 text-success"></span>
 														</div>
-													</div>
-												</td>
-											</tr>
-											<tr>
-												<td width="18.5%">
-													<a href="#">example@gmail.com</a>
-												</td>
-												<td width="18.5%">
-													<div class="qela-clamp w-75">
+													</td>
+													<td>
+														<div class="text-end">
+															<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																<button type="button" class="btn btn-info ico ic-edit"></button>
+																<button type="button" class="btn btn-info ico ic-delete"></button>
+																<button type="button" class="btn btn-info ico ic-writing danger"></button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td width="18.5%">
+														<a href="#">example@gmail.com</a>
+													</td>
+													<td width="18.5%">
+														<div class="qela-clamp w-75">
 														dad60bc3-0941-4ce2-b151-462734c6d81a
 													</div>
-												</td>
-												<td width="18.5%">Босик Ждана</td>
-												<td width="18.5%">01/03/2023, 11:39</td>
-												<td class="text-center">owner</td>
-												<td>
-													<div class="qela-verification">
-														<span class="ic-success bg-success-100 text-success"></span>
-													</div>
-												</td>
-												<td>
-													<div class="text-end">
-														<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
-															<button type="button" class="btn btn-info ico ic-edit"></button>
-															<button type="button" class="btn btn-info ico ic-delete"></button>
-															<button type="button" class="btn btn-info ico ic-writing danger"></button>
+													</td>
+													<td width="18.5%">Босик Ждана</td>
+													<td width="18.5%">01/03/2023, 11:39</td>
+													<td class="text-center">owner</td>
+													<td>
+														<div class="qela-verification">
+															<span class="ic-success bg-success-100 text-success"></span>
 														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
+													</td>
+													<td>
+														<div class="text-end">
+															<div class="btn-group qela-btn-group" role="group" aria-label="Basic example">
+																<button type="button" class="btn btn-info ico ic-edit"></button>
+																<button type="button" class="btn btn-info ico ic-delete"></button>
+																<button type="button" class="btn btn-info ico ic-writing danger"></button>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</main>
-	<!-- =========================== -->
-	<script src="js/vendors.js"></script>
+		</main>
+		<!-- =========================== -->
+		<script src="js/vendors.js"></script>
 <script src="js/app.js"></script>
-</body>
+	</body>
 
 </html>

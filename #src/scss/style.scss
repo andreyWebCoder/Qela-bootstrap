@@ -10,6 +10,16 @@
 @import "bootstrap/utilities";
 $all-colors: map-merge-multiple($primarys, $secondarys, $warnings, $succeses, $dangers, $infos);
 
+$all-colors-vars: ();
+@each $name, $value in $all-colors {
+	$all-colors-vars: map-merge(
+		$all-colors-vars,
+		(
+			$name: var(--bs-custom-#{$name})
+		)
+	);
+}
+
 $utilities: map-merge(
 	$utilities,
 	(
@@ -17,23 +27,47 @@ $utilities: map-merge(
 			map-merge(
 				map-get($utilities, "color"),
 				(
-					values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors))
+					values: map-merge(map-get(map-get($utilities, "color"), "values"), $all-colors-vars)
 				)
-			)
-	)
-);
-$utilities: map-merge(
-	$utilities,
-	(
+			),
 		"background-color":
 			map-merge(
 				map-get($utilities, "background-color"),
 				(
-					values: map-merge(map-get(map-get($utilities, "background-color"), "values"), ($all-colors))
+					values: map-merge(map-get(map-get($utilities, "background-color"), "values"), $all-colors-vars)
 				)
 			)
 	)
 );
+:root {
+	@each $name, $color in $all-colors {
+		--bs-custom-#{$name}: #{$color};
+	}
+}
+// $utilities: map-merge(
+// 	$utilities,
+// 	(
+// 		"color":
+// 			map-merge(
+// 				map-get($utilities, "color"),
+// 				(
+// 					values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors))
+// 				)
+// 			)
+// 	)
+// );
+// $utilities: map-merge(
+// 	$utilities,
+// 	(
+// 		"background-color":
+// 			map-merge(
+// 				map-get($utilities, "background-color"),
+// 				(
+// 					values: map-merge(map-get(map-get($utilities, "background-color"), "values"), ($all-colors))
+// 				)
+// 			)
+// 	)
+// );
 @import "bootstrap/utilities/api";
 @import "bootstrap/root";
 @import "bootstrap/reboot";
@@ -79,6 +113,9 @@ $utilities: map-merge(
 @import "fonts";
 /* Иконочный шрифт */
 @import "icons";
+//<Themes>===========================================
+@import "theme/theme-strichka";
+//<Themes>===========================================
 /* Свои глобальние стили (qela-) */
 @import "globall";
 
@@ -92,7 +129,4 @@ $utilities: map-merge(
 @import "components/aside";
 @import "components/table";
 @import "components/text-editor";
-@import "theme/theme-strichka";
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>===========================================
-//<Themes>===========================================
-//<Themes>===========================================

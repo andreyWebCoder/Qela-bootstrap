@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
-	
-	<head>
-	<title>Billing success</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/vendors.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+	{% set title = "Billing success" %}
+	{% include "_head.njk" %}
 	<body class="bg-white ps-0">
 		<main class="qela-main py-3">
 			<div class="container-xxl">
@@ -49,8 +42,7 @@
 			</div>
 		</main>
 		<!-- =========================== -->
-		<script src="js/vendors.js"></script>
-<script src="js/app.js"></script>
+		{% include "_js.html" %}
 	</body>
 
 </html>
