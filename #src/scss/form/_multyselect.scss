@@ -27,37 +27,37 @@
 	cursor: pointer;
 	min-height: 38px;
 	&__option {
-		font-size: 14px;
+		font-size: rem(14);
 	}
 	&.multiselect--disabled {
 		opacity: $btn-close-opacity;
 
 		.multiselect__select {
 			background: transparent;
-			border-color: $input-disabled-border-color;
-			color: $input-disabled-color;
+			border-color: var(--bs-ql-info-200);
+			color: var(--bs-ql-info-600);
 		}
 
 		.multiselect__tags {
-			background-color: $input-disabled-bg;
-			border-color: $input-disabled-border-color;
-			color: $input-disabled-color;
+			background-color: var(--bs-ql-info-200);
+			border-color: var(--bs-ql-info-200);
+			color: var(--bs-ql-info-600);
 		}
 
 		.multiselect__single {
-			background-color: $input-disabled-bg;
+			background-color: var(--bs-ql-info-200);
 		}
 	}
 }
 .multiselect--active {
 	.multiselect__tags {
-		border-color: $secondary;
+		border-color: var(--bs-secondary);
 
 		// border-bottom-color: $input-bg;
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: $secondary;
+				border-color: var(--bs-secondary);
 				// border-bottom-color: $input-bg;
 			}
 		}
@@ -70,7 +70,7 @@
 	flex-wrap: wrap;
 	border-radius: $input-border-radius;
 	border: 1px solid $input-border-color;
-	background-color: $input-bg;
+	background-color: var(--bs-white);
 	min-height: 38px;
 	transition: border-color 0.2s ease 0s;
 	@media (any-hover: hover) {

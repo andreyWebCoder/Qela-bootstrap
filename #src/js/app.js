@@ -1,11 +1,11 @@
 const btnMenu = document.querySelector('.qela-btn-menu');
 const menuAside = document.querySelector('.qela-menu');
-const menuLinks = menuAside.querySelectorAll('.nav-link small');
 const sidebarTooltips = document.querySelectorAll('[data-bs-custom-class="qela-sidebar-tooltip"],[data-bs-custom-class="qela-sidebar-tooltip settings"]');
 
 
 // open/close menu
 if (menuAside) {
+	const menuLinks = menuAside.querySelectorAll('.nav-link small');
 	btnMenu.addEventListener('click', () => {
 		btnMenu.classList.toggle('close');
 		menuAside.classList.toggle('close');

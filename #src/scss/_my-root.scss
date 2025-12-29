@@ -1,0 +1,25 @@
+:root {
+	@each $name, $color in $all-colors {
+		--bs-ql-#{$name}: #{$color};
+	}
+	--bs-ql-input-color: var(--bs-ql-info-900);
+	--bs-ql-input-border-color: var(--bs-ql-info-400);
+	--bs-ql-input-bg-color: var(--bs-white);
+
+	--bs-ql-input-placeholder-color: var(--bs-info);
+
+	--bs-ql-input-hover-color: var(--bs-ql-secondary-500);
+	// --bs-ql-input-hover-border-color: var(--bs-ql-info-400);
+	// --bs-ql-input-hover-bg-color: var(--bs-white);
+
+	--bs-ql-input-focus-color: var(--bs-ql-info-900);
+	--bs-ql-input-focus-border-color: var(--bs-ql-secondary-500);
+	--bs-ql-input-focus-bg-color: var(--bs-white);
+	--bs-ql-input-focus-box-shadow: var(--bs-ql-secondary-500);
+
+	--bs-ql-input-disabled-color: var(--bs-ql-info-600);
+	--bs-ql-input-disabled-border-color: var(--bs-ql-info-400);
+	--bs-ql-input-disabled-bg-color: var(--bs-ql-info-200);
+
+	--bs-ql-input-ivalid-border-color: var(--bs-danger);
+}

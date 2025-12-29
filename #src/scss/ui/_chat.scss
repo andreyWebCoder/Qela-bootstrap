@@ -147,14 +147,14 @@
 	color: #03448f;
 }
 .qela-chat-like {
-	background-color: $white;
-	border: 1px solid $info-200;
+	background-color: var(--bs-white);
+	border: 1px solid var(--bs-ql-info-200);
 	display: inline-flex;
 	gap: rem(4);
 	border-radius: 20px;
 	padding: rem(1) rem(7);
 	.btn {
-		color: $info-700;
+		color: var(--bs-ql-info-700);
 		padding: 0;
 		border-radius: 0;
 		font-size: rem(12);
@@ -163,22 +163,25 @@
 		gap: rem(2);
 		&:not(:first-child) {
 			padding-left: rem(4);
-			border-left: 1px solid $gray-300;
+			border-left: 1px solid var(--bs-ql-info-300);
 		}
 		&.current {
+			&::after {
+				display: none;
+			}
 			i {
 				&:first-child {
 					display: none;
 				}
 				&:nth-child(2) {
 					display: block;
-					color: $secondary-700;
+					color: var(--bs-ql-secondary-700);
 				}
 			}
 		}
 		&:active {
 			border-color: transparent !important;
-			color: $info-700 !important;
+			color: var(--bs-ql-info-700) !important;
 		}
 		i {
 			&:nth-child(2) {

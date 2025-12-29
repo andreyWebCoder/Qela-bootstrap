@@ -30,18 +30,20 @@
 	}
 
 	&:checked {
+		background-color: var(--bs-ql-secondary-500);
+		border-color: var(--bs-ql-secondary-500);
 		&:hover {
-			border-color: var(--bs-custom-secondary-700);
-			background-color: var(--bs-custom-secondary-700);
+			border-color: var(--bs-ql-secondary-700);
+			background-color: var(--bs-ql-secondary-700);
 		}
 
 		&:disabled {
-			border-color: var(--bs-custom-secondary-400);
-			background-color: var(--bs-custom-secondary-400);
+			border-color: var(--bs-ql-secondary-400);
+			background-color: var(--bs-ql-secondary-400);
 
 			&:hover {
-				border-color: var(--bs-custom-secondary-400);
-				background-color: var(--bs-custom-secondary-400);
+				border-color: var(--bs-ql-secondary-400);
+				background-color: var(--bs-ql-secondary-400);
 			}
 		}
 	}
@@ -64,34 +66,26 @@
 	}
 }
 
-[type="radio"]:checked {
-	background-size: 140%;
-
+[type="radio"] {
 	&:checked {
+		background-size: 140%;
 		border-width: 2px;
 		background-color: transparent;
-		&:hover {
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($secondary-600, 0.99)}'/></svg>");
-		}
-	}
-
-	&.is-invalid {
-		&:checked {
+		&.is-invalid {
 			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($danger-500, 0.99)}'/></svg>");
-
-			&:hover {
+		}
+		&:disabled {
+			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($gray-500, 0.99)}'/></svg>");
+		}
+		&:hover {
+			background-color: transparent;
+			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$secondary-700}'/></svg>");
+			&.is-invalid {
 				border-color: $danger-600;
 				background-color: $white;
 				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($danger-600, 0.99)}'/></svg>");
 			}
-		}
-	}
-
-	&:disabled {
-		&:checked {
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($gray-500, 0.99)}'/></svg>");
-
-			&:hover {
+			&:disabled {
 				background-color: $white;
 			}
 		}
@@ -142,7 +136,7 @@
 			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.5' fill='#{rgba($white, 0.99)}'/></svg>");
 
 			&:hover {
-				background-color: var(--bs-custom-secondary-700);
+				background-color: var(--bs-ql-secondary-700);
 			}
 
 			&:disabled {

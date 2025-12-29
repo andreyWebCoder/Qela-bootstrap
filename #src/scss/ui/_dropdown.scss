@@ -34,8 +34,11 @@
 		padding: rem(14) rem(24);
 		&[class*="ic-"] {
 			&::before {
-				font-size: 18px;
+				font-size: rem(18);
 			}
+		}
+		&.active {
+			background-color: var(--bs-secondary);
 		}
 		&.danger {
 			color: $danger-800;

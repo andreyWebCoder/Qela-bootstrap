@@ -15,7 +15,7 @@ $all-colors-vars: ();
 	$all-colors-vars: map-merge(
 		$all-colors-vars,
 		(
-			$name: var(--bs-custom-#{$name})
+			$name: var(--bs-ql-#{$name})
 		)
 	);
 }
@@ -39,11 +39,7 @@ $utilities: map-merge(
 			)
 	)
 );
-:root {
-	@each $name, $color in $all-colors {
-		--bs-custom-#{$name}: #{$color};
-	}
-}
+@import "my-root";
 // $utilities: map-merge(
 // 	$utilities,
 // 	(

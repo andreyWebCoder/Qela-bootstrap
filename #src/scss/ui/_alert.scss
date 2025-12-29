@@ -1,108 +1,108 @@
 .qela-alert {
-    position: relative;
-    font-size: 14px;
-    letter-spacing: 0.2px;
-    border-width: 1px;
-    border-style: solid;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    &.alert {
-        span {
-            &[class*="ic-"] {
-                position: absolute;
-                left: 1rem;
-                top: 1rem;
-                &::before {
-                    font-size: 1rem;
-                }
-            }
-        }
+	position: relative;
+	font-size: rem(14);
+	letter-spacing: 0.2px;
+	border-width: 1px;
+	border-style: solid;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	&.alert {
+		span {
+			&[class*="ic-"] {
+				position: absolute;
+				left: 1rem;
+				top: 1rem;
+				&::before {
+					font-size: 1rem;
+				}
+			}
+		}
 
-        a {
-            text-decoration: none;
-        }
-    }
-    &.custom {
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-        &.alert-secondary {
-            border-color: transparent;
-        }
-        span {
-            &[class*="ic-"] {
-                position: static;
-                padding-bottom: 0.5rem;
-                &::before {
-                    font-size: 38px;
-                }
-            }
-        }
-    }
-    &.column {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-        > div {
-            width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            span {
-                &[class*="ic-"] {
-                    position: static;
-                }
-            }
-        }
-    }
-    &.alert-secondary {
-        background-color: $secondary-200;
-        border-color: $secondary-400;
-    }
-    &.alert-danger {
-        background-color: $danger-200;
-        border-color: $danger-400;
-    }
+		a {
+			text-decoration: none;
+		}
+	}
+	&.custom {
+		text-align: center;
+		flex-direction: column;
+		align-items: center;
+		&.alert-secondary {
+			border-color: transparent;
+		}
+		span {
+			&[class*="ic-"] {
+				position: static;
+				padding-bottom: 0.5rem;
+				&::before {
+					font-size: 38px;
+				}
+			}
+		}
+	}
+	&.column {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+		> div {
+			width: 100%;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			span {
+				&[class*="ic-"] {
+					position: static;
+				}
+			}
+		}
+	}
+	&.alert-secondary {
+		background-color: var(--bs-ql-secondary-200);
+		border-color: var(--bs-ql-secondary-400);
+	}
+	&.alert-danger {
+		background-color: var(--bs-ql-danger-200);
+		border-color: var(--bs-ql-danger-400);
+	}
 
-    &.alert-warning {
-        background-color: $warning-200;
-        border-color: $warning-400;
-    }
-    &.alert-info {
-        background-color: $info-100;
-        border-color: $info-400;
-    }
-    &.alert-success {
-        background-color: $success-100;
-        border-color: $success-400;
-    }
+	&.alert-warning {
+		background-color: var(--bs-ql-warning-200);
+		border-color: var(--bs-ql-warning-400);
+	}
+	&.alert-info {
+		background-color: var(--bs-ql-info-100);
+		border-color: var(--bs-ql-info-400);
+	}
+	&.alert-success {
+		background-color: var(--bs-ql-success-100);
+		border-color: var(--bs-ql-success-400);
+	}
 
-    &.small {
-        padding: 0.5rem 2rem;
+	&.small {
+		padding: 0.5rem 2rem;
 
-        span {
-            &[class^="ic-"],
-            [class*="ic-"] {
-                left: 12px;
-                top: 0.5rem;
-            }
-        }
-        .btn-close {
-            top: 0.5rem;
-            right: 0.5rem;
-        }
-    }
+		span {
+			&[class^="ic-"],
+			[class*="ic-"] {
+				left: 12px;
+				top: 0.5rem;
+			}
+		}
+		.btn-close {
+			top: 0.5rem;
+			right: 0.5rem;
+		}
+	}
 
-    .btn-close {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        font-size: 1rem;
-        opacity: 1;
-        &.small {
-            padding: 0;
-        }
-    }
+	.btn-close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		font-size: 1rem;
+		opacity: 1;
+		&.small {
+			padding: 0;
+		}
+	}
 }

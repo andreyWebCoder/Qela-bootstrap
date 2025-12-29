@@ -7,20 +7,36 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-control {
 	--input-number-width: 56px;
 	min-height: 38px;
+	color: var(--bs-ql-input-color);
+	border-color: var(--bs-ql-input-border-color);
+	background-color: var(--bs-ql-input-bg-color);
+	&::placeholder {
+		color: var(--bs-ql-input-placeholder-color);
+	}
 	@media (any-hover: hover) {
 		&:hover {
-			border-color: $secondary;
-
-			&:focus {
-				border-color: $secondary;
+			border-color: var(--bs-ql-input-hover-color);
+		}
+	}
+	&:focus {
+		color: var(--bs-ql-input-focus-color);
+		border-color: var(--bs-ql-input-focus-border-color);
+		background-color: var(--bs-ql-input-focus-bg-color);
+		box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+			color-mix(in srgb, var(--bs-ql-input-focus-box-shadow), transparent 70%);
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--bs-ql-input-focus-border-color);
 			}
 		}
 	}
-
 	&:disabled {
+		color: var(--bs-ql-input-disabled-color);
+		background-color: var(--bs-ql-input-disabled-bg-color);
+		border-color: var(--bs-ql-input-disabled-border-color);
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: $gray-400;
+				border-color: var(--bs-ql-input-disabled-border-color);
 			}
 		}
 	}
@@ -30,18 +46,18 @@ input[type="search"]::-webkit-search-results-decoration {
 		padding-right: 1rem;
 
 		&:hover {
-			border-color: $danger;
+			border-color: var(--bs-ql-input-ivalid-border-color);
 		}
 
 		& ~ .btn-input {
 			&:hover {
-				color: $black;
-				border-color: $gray-400;
+				color: var(--bs-black);
+				border-color: var(--bs-ql-info-400);
 			}
 
 			&:active {
-				color: $black !important;
-				border-color: $gray-400 !important;
+				color: var(--bs-black) !important;
+				border-color: var(--bs-ql-info-400) !important;
 			}
 		}
 
@@ -62,7 +78,7 @@ input[type="search"]::-webkit-search-results-decoration {
 		padding: 0;
 		border: none;
 		background-color: transparent;
-		color: $gray-500;
+		color: var(--bs-info);
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -73,7 +89,7 @@ input[type="search"]::-webkit-search-results-decoration {
 			right: 12px;
 		}
 		&::before {
-			font-size: 20px;
+			font-size: rem(20);
 		}
 	}
 }
@@ -108,7 +124,7 @@ input[type="search"]::-webkit-search-results-decoration {
 		}
 		.btn {
 			&::before {
-				font-size: 16px;
+				font-size: rem(16);
 			}
 		}
 	}
@@ -131,7 +147,7 @@ input[type="search"]::-webkit-search-results-decoration {
 				~ .btn {
 					&:not(:disabled) {
 						&::before {
-							color: $black;
+							color: var(--bs-black);
 						}
 					}
 				}
@@ -141,7 +157,7 @@ input[type="search"]::-webkit-search-results-decoration {
 			~ .btn {
 				&:not(:disabled) {
 					&::before {
-						color: $black;
+						color: var(--bs-black);
 					}
 				}
 			}
@@ -149,7 +165,7 @@ input[type="search"]::-webkit-search-results-decoration {
 		&:disabled {
 			~ .btn {
 				&::before {
-					color: $black;
+					color: var(--bs-black);
 				}
 			}
 		}
@@ -162,7 +178,7 @@ input[type="search"]::-webkit-search-results-decoration {
 		background-color: transparent;
 		padding: 0;
 		&::before {
-			color: $gray-600;
+			color: var(--bs-ql-info-600);
 			font-size: 20px;
 		}
 
@@ -170,22 +186,22 @@ input[type="search"]::-webkit-search-results-decoration {
 			background: transparent;
 			border-color: none;
 			&::before {
-				color: $black;
+				color: var(--bs-black);
 			}
 		}
 
 		&:active {
-			color: $black !important;
+			color: var(--bs-black) !important;
 			background: transparent !important;
 			border-color: none;
 			&::before {
-				color: $black;
+				color: var(--bs-black);
 			}
 		}
 
 		&:disabled {
 			&::before {
-				color: $gray-600;
+				color: var(--bs-ql-info-600);
 			}
 		}
 	}
@@ -198,13 +214,13 @@ input::-webkit-inner-spin-button {
 }
 
 textarea {
-	color: $info-700;
+	color: var(--bs-ql-info-700);
 }
 
 .helper-text {
 	display: block;
-	color: $gray-600;
-	margin-top: 4px;
+	color: var(--bs-ql-info-600);
+	margin-top: rem(4);
 	width: 100%;
 	font-size: rem(14);
 }
@@ -214,28 +230,28 @@ textarea {
 }
 
 .btn-input {
-	padding: 4px 8px;
-	border-color: $gray-400;
-	background: $white;
+	padding: rem(4) rem(8);
+	border-color: var(--bs-ql-info-400);
+	background: var(--bs-white);
 
 	&::before {
-		font-size: 18px;
+		font-size: rem(18);
 	}
 
 	&:hover {
-		background: $white;
-		border-color: $gray-600;
-		color: $gray-600;
+		background: var(--bs-white);
+		border-color: var(--bs-ql-info-600);
+		color: var(--bs-ql-info-600);
 	}
 
 	&:active {
-		color: $gray-600 !important;
-		border-color: $gray-600 !important;
-		background: $white !important;
+		color: var(--bs-ql-info-600) !important;
+		border-color: var(--bs-ql-info-600) !important;
+		background: var(--bs-white) !important;
 	}
 
 	&:disabled {
-		border-color: $gray-400;
+		border-color: var(--bs-ql-info-400);
 	}
 }
 
@@ -250,8 +266,8 @@ textarea {
 .required {
 	&.form-label::after {
 		content: "*";
-		color: $danger;
-		padding-left: 4px;
+		color: var(--bs-danger);
+		padding-left: rem(4);
 	}
 }
 
@@ -272,13 +288,68 @@ textarea {
 
 	.form-label {
 		&:last-child {
-			color: $gray-700;
+			color: var(--bs-ql-info-700);
 			font-weight: 400;
 		}
 	}
 }
 
 .form-range {
+	&::-webkit-slider-runnable-track {
+		background: var(--bs-secondary);
+	}
+	&::-moz-range-track {
+		background: var(--bs-secondary);
+	}
+	&::-ms-track {
+		background: var(--bs-secondary);
+	}
+	&::-webkit-slider-thumb {
+		background: var(--bs-secondary);
+	}
+	&::-moz-range-thumb {
+		background: var(--bs-secondary);
+	}
+	&::-ms-thumb {
+		background: var(--bs-secondary);
+	}
+	&:active {
+		&::-webkit-slider-thumb {
+			background-color: var(--bs-secondary);
+			box-shadow:
+				0 0 0 1px var(--bs-secondary),
+				$input-focus-box-shadow;
+		}
+		&::-moz-range-thumb {
+			background-color: var(--bs-secondary);
+			box-shadow:
+				0 0 0 1px var(--bs-secondary),
+				$input-focus-box-shadow;
+		}
+		&::-ms-thumb {
+			background-color: var(--bs-secondary);
+			box-shadow:
+				0 0 0 1px var(--bs-secondary),
+				$input-focus-box-shadow;
+		}
+	}
+	&:focus {
+		&::-webkit-slider-thumb {
+			box-shadow:
+				0 0 0 1px var(--bs-ql-secondary-600),
+				$input-focus-box-shadow;
+		}
+		&::-moz-range-thumb {
+			box-shadow:
+				0 0 0 1px var(--bs-ql-secondary-600),
+				$input-focus-box-shadow;
+		}
+		&::-ms-thumb {
+			box-shadow:
+				0 0 0 1px var(--bs-ql-secondary-600),
+				$input-focus-box-shadow;
+		}
+	}
 	&:disabled {
 		&::-webkit-slider-runnable-track {
 			background: $input-disabled-bg;
@@ -303,15 +374,15 @@ textarea {
 }
 
 .qela-file {
-	font-size: 14px;
+	font-size: rem(14);
 
 	label {
 		height: 140px;
 		width: 100%;
-		background-color: $input-bg;
+		background-color: var(--bs-ql-input-bg-color);
 		padding: 0.75rem $input-padding-x;
 		border-radius: $input-border-radius;
-		border: $input-border-width solid $input-border-color;
+		border: $input-border-width solid var(--bs-ql-input-border-color);
 		margin: 0;
 		transition: border-color 0.2s ease 0s;
 		display: flex;
@@ -333,14 +404,15 @@ textarea {
 
 		&:hover {
 			& ~ label {
-				border-color: $gray-600;
+				border-color: var(--bs-ql-info-600);
 			}
 		}
 
 		&:focus {
 			& ~ label {
-				border-color: $input-focus-border-color;
-				box-shadow: $input-focus-box-shadow;
+				border-color: var(--bs-ql-input-focus-border-color);
+				box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+					color-mix(in srgb, var(--bs-ql-input-focus-box-shadow), transparent 70%);
 			}
 		}
 
@@ -348,21 +420,22 @@ textarea {
 			cursor: auto;
 
 			& ~ label {
-				color: $input-disabled-color;
-				background-color: $input-disabled-bg;
-				border-color: $input-disabled-border-color;
+				color: var(--bs-ql-input-disabled-color);
+				background-color: var(--bs-ql-input-disabled-bg-color);
+				border-color: var(--bs-ql-input-disabled-border-color);
 				opacity: 1;
 			}
 		}
 
 		&.is-invalid {
 			& ~ label {
-				border-color: $danger;
+				border-color: var(--bs-ql-input-ivalid-border-color);
 			}
 
 			&:focus {
 				& ~ label {
-					box-shadow: 0 0 0 0.125rem rgba($danger, 0.3);
+					box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+						color-mix(in srgb, var(--bs-ql-input-ivalid-border-color), transparent 70%);
 				}
 			}
 		}
@@ -398,7 +471,7 @@ textarea {
 
 		label {
 			flex-direction: row;
-			background-color: $body-bg;
+			background-color: var(--bs-body-bg);
 			height: auto;
 			width: auto;
 			gap: 0.25rem;
@@ -407,12 +480,12 @@ textarea {
 
 		[class^="ic-"],
 		[class*="ic-"] {
-			color: $black;
+			color: var(--bs-black);
 		}
 
 		small {
 			font-weight: 500;
-			color: $black;
+			color: var(--bs-black);
 		}
 	}
 
@@ -427,8 +500,8 @@ textarea {
 
 		.qela-avatar {
 			margin-right: 0;
-			background-color: $white;
-			border: 1px solid $gray-200;
+			background-color: var(--bs-white);
+			border: 1px solid var(--bs-ql-info-200);
 		}
 	}
 }
@@ -436,7 +509,7 @@ textarea {
 .qela-preview {
 	display: none;
 	gap: 0.5rem;
-	font-size: 14px;
+	font-size: rem(14);
 
 	@include media-breakpoint-down(sm) {
 		flex-direction: column;
@@ -447,17 +520,17 @@ textarea {
 
 		&:first-child {
 			display: flex;
-			background-color: $white;
+			background-color: var(--bs-white);
 			border-radius: 0.375rem;
 			overflow: hidden;
-			border: 1px solid $gray-400;
+			border: 1px solid var(--bs-ql-info-400);
 
 			[class*="ic-"] {
 				width: 70px;
 				height: 100%;
-				border-right: 1px solid $gray-400;
+				border-right: 1px solid var(--bs-ql-info-400);
 				font-size: 24px;
-				color: $gray-400;
+				color: var(--bs-ql-info-400);
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -473,8 +546,8 @@ textarea {
 
 	.btn {
 		&.ico-left {
-			padding-top: 7.5px;
-			padding-bottom: 7.5px;
+			padding-top: rem(7.5);
+			padding-bottom: rem(7.5);
 		}
 	}
 }
@@ -484,7 +557,7 @@ textarea {
 		text-align: right;
 		background:
 			url("../img/icons/crossed-round.svg") calc(100% - 12px) center/18px 18px no-repeat,
-			$white;
+			var(--bs-white);
 		padding-right: 38px;
 		position: relative;
 		z-index: 5;
@@ -492,51 +565,51 @@ textarea {
 		&.success {
 			background:
 				url("../img/icons/arrow-big-up.svg") calc(100% - 12px) center/18px 18px no-repeat,
-				$white;
-			border-color: $success-600;
-			border-color: $success-600;
+				var(--bs-white);
+			border-color: var(--bs-ql-success-600);
+			border-color: var(--bs-ql-success-600);
 			box-shadow:
-				2px 2px 0px 0px rgba($success, 0.3),
-				-2px -2px 0px 0px rgba($success, 0.3);
+				2px 2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%),
+				-2px -2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%);
 
 			&:hover {
-				border-color: $success-600;
+				border-color: var(--bs-ql-success-600);
 			}
 
 			&:focus {
-				border-color: $success-600;
+				border-color: var(--bs-ql-success-600);
 				box-shadow:
-					2px 2px 0px 0px rgba($success, 0.3),
-					-2px -2px 0px 0px rgba($success, 0.3);
+					2px 2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%),
+					-2px -2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%);
 			}
 		}
 
 		&.danger {
 			background:
 				url("../img/icons/arrow-big-down.svg") calc(100% - 12px) center/18px 18px no-repeat,
-				$white;
-			border-color: $danger-600;
+				var(--bs-white);
+			border-color: var(--bs-ql-danger-600);
 			box-shadow:
-				2px 2px 0px 0px rgba($danger, 0.3),
-				-2px -2px 0px 0px rgba($danger, 0.3);
-			border-color: $danger-600;
+				2px 2px 0px 0px color-mix(in srgb, var(--bs-danger), transparent 70%),
+				-2px -2px 0px 0px color-mix(in srgb, var(--bs-danger), transparent 70%);
+			border-color: var(--bs-ql-danger-600);
 
 			&:hover {
-				border-color: $danger-600;
+				border-color: var(--bs-ql-danger-600);
 			}
 
 			&:focus {
-				border-color: $danger-600;
+				border-color: var(--bs-ql-danger-600);
 				box-shadow:
-					2px 2px 0px 0px rgba($danger, 0.3),
-					-2px -2px 0px 0px rgba($danger, 0.3);
+					2px 2px 0px 0px color-mix(in srgb, var(--bs-danger), transparent 70%),
+					-2px -2px 0px 0px color-mix(in srgb, var(--bs-danger), transparent 70%);
 			}
 		}
 
 		&.active {
 			box-shadow:
-				2px 2px 0px 0px rgba(145, 136, 255, 0.3),
-				-2px -2px 0px 0px rgba(145, 136, 255, 0.3);
+				2px 2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%),
+				-2px -2px 0px 0px color-mix(in srgb, var(--bs-secondary), transparent 70%);
 		}
 	}
 }
