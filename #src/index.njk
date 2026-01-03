@@ -3,7 +3,7 @@
 	{% set title = "Components" %}
 	{% include "_head.njk" %}
 
-	<body>
+	<body class="theme--strichka">
 		<script>
 			function addDarkClass() {
 				try {
@@ -471,11 +471,11 @@
 						{% include "./components/_multi-select.html" %}
 						{% include "./components/_datapiker.html" %}
 						{% include "./components/_chat.html" %}
-						{% include "./components/_checkbox.html" %}
-						{% include "./components/_radiobutton.html" %}
+						{% include "./components/_checkbox.njk" %}
+						{% include "./components/_radiobutton.njk" %}
 						{% include "./components/_range.html" %}
 						{% include "./components/_accordion.html" %}
-						{% include "./components/_alert.html" %}
+						{% include "./components/_alert.njk" %}
 						{% include "./components/_avatars.html" %}
 						{% include "./components/_badge.html" %}
 						{% include "./components/_breadcrumb.html" %}

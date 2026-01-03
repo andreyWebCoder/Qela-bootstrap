@@ -10032,7 +10032,6 @@ progress {
 .form-label {
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #2c2c2c;
 }
 
 .col-form-label {
@@ -10042,7 +10041,6 @@ progress {
   font-size: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: #2c2c2c;
 }
 
 .col-form-label-lg {
@@ -10342,11 +10340,11 @@ textarea.form-control-lg {
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
 }
 .form-check-input:checked[type=radio] {
-  --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%239188ff'/%3e%3c/svg%3e");
+  --bs-form-check-bg-image: none;
 }
 .form-check-input[type=checkbox]:indeterminate {
-  background-color: #9188ff;
-  border-color: #9188ff;
+  background-color: #ffe000;
+  border-color: #ffe000;
   --bs-form-check-bg-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
 }
 .form-check-input:disabled {
@@ -10360,7 +10358,6 @@ textarea.form-control-lg {
 }
 
 .form-check-label {
-  color: #676767;
   cursor: pointer;
 }
 
@@ -15845,12 +15842,6 @@ textarea.form-control-lg {
   --bs-ql-input-disabled-bg-color: var(--bs-ql-info-200);
   --bs-ql-input-ivalid-border-color: var(--bs-danger);
 }
-.theme--strichka [type=radio]:checked {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgba(0, 87, 184, 0.99)'/></svg>");
-}
-.theme--strichka [type=radio]:checked:hover {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgba(3, 81, 169, 0.99)'/></svg>");
-}
 
 /* Свои глобальние стили (qela-) */
 html,
@@ -16425,6 +16416,8 @@ main {
 }
 .btn-secondary:active {
   --bs-btn-active-color: var(--bs-white);
+  --bs-btn-active-bg: var(--bs-secondary);
+  --bs-btn-active-border-color: var(--bs-secondary);
 }
 .btn-secondary:disabled, .btn-secondary.disabled {
   --bs-btn-disabled-color: var(--bs-white);
@@ -17699,11 +17692,14 @@ textarea {
   vertical-align: baseline;
 }
 .form-check.qela-sm {
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-left: 1.25rem;
 }
 .form-check.qela-sm .form-check-input {
   margin-left: -1.25rem;
+}
+.form-check.qela-sm .form-check-label {
+  margin-top: 0.15em;
 }
 .form-check .invalid-feedback {
   font-size: 0.875rem;
@@ -17712,14 +17708,18 @@ textarea {
   margin-bottom: 0.125rem;
 }
 
+.form-check-input {
+  background-color: var(--bs-white);
+  border-color: var(--bs-ql-info-700);
+}
 .form-check-input:hover {
-  border-color: #2c2c2c;
+  border-color: var(--bs-ql-info-900);
 }
 .form-check-input:disabled {
-  border-color: #ababab;
+  border-color: var(--bs-ql-info-500);
 }
 .form-check-input:disabled ~ .form-check-label {
-  color: #ababab;
+  color: var(--bs-ql-info-500);
 }
 .form-check-input:checked {
   background-color: var(--bs-ql-secondary-500);
@@ -17741,39 +17741,72 @@ textarea {
   box-shadow: none;
 }
 .form-check-input.is-invalid:hover {
-  border-color: #e13d33;
+  border-color: var(--bs-ql-danger-600);
 }
 .form-check-input.is-invalid:checked:hover {
-  border-color: #e13d33;
-  background-color: #e13d33;
+  border-color: var(--bs-ql-danger-600);
+  background-color: var(--bs-ql-danger-600);
+}
+
+.qela-radiobutton {
+  position: relative;
+}
+.qela-radiobutton::after {
+  content: "";
+  position: absolute;
+  top: 6.5px;
+  left: 4px;
+  z-index: 3;
+  width: 8px;
+  height: 8px;
+  background-color: var(--bs-secondary);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.15s ease 0s;
+}
+.qela-radiobutton:has([type=radio]:checked):hover::after {
+  background-color: var(--bs-ql-secondary-700);
+}
+.qela-radiobutton:has([type=radio]:checked)::after {
+  opacity: 1;
+}
+.qela-radiobutton:has([type=radio]:checked.is-invalid):hover::after {
+  background-color: var(--bs-ql-danger-600);
+}
+.qela-radiobutton:has([type=radio]:checked.is-invalid)::after {
+  background-color: var(--bs-danger);
+}
+.qela-radiobutton:has([type=radio]:checked:disabled)::after {
+  background-color: var(--bs-ql-secondary-400);
 }
 
 [type=radio]:checked {
-  background-size: 140%;
   border-width: 2px;
-  background-color: transparent;
-}
-[type=radio]:checked.is-invalid {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgba(255, 65, 54, 0.99)'/></svg>");
-}
-[type=radio]:checked:disabled {
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgba(171, 171, 171, 0.99)'/></svg>");
+  background-color: var(--bs-white);
 }
 [type=radio]:checked:hover {
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#6550c4'/></svg>");
+  background-color: var(--bs-white);
+  border-color: var(--bs-ql-secondary-700);
 }
 [type=radio]:checked:hover.is-invalid {
-  border-color: #e13d33;
-  background-color: #fff;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgba(225, 61, 51, 0.99)'/></svg>");
+  background-color: var(--bs-white);
+  border-color: var(--bs-ql-danger-600);
 }
 [type=radio]:checked:hover:disabled {
-  background-color: #fff;
+  background-color: var(--bs-white);
+}
+[type=radio]:checked.is-invalid {
+  background-color: var(--bs-white);
+  border-color: var(--bs-danger);
+}
+[type=radio]:checked:disabled {
+  background-color: var(--bs-white);
+  border-color: var(--bs-ql-secondary-400);
 }
 
 .form-check-label {
   transition: color 0.3s ease 0s;
+  color: var(--bs-ql-info-700);
 }
 @media (any-hover: hover) {
   .form-check-label:hover {
@@ -18075,11 +18108,14 @@ textarea {
 }
 
 .server-error {
-  color: #ff4136;
+  color: var(--bs-danger);
 }
 
+.form-label {
+  color: var(--bs-ql-info-900);
+}
 .form-label.small {
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .qela-accordion.accordion-flush .accordion-item {

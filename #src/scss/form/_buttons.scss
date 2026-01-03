@@ -116,6 +116,8 @@
 
 	&:active {
 		--bs-btn-active-color: var(--bs-white);
+		--bs-btn-active-bg: var(--bs-secondary);
+		--bs-btn-active-border-color: var(--bs-secondary);
 	}
 	&:disabled,
 	&.disabled {

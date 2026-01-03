@@ -1,10 +1,13 @@
 .form-check {
 	vertical-align: baseline;
 	&.qela-sm {
-		font-size: 14px;
+		font-size: rem(14);
 		padding-left: 1.25rem;
 		.form-check-input {
 			margin-left: -1.25rem;
+		}
+		.form-check-label {
+			margin-top: 0.15em;
 		}
 	}
 	.invalid-feedback {
@@ -17,15 +20,17 @@
 }
 
 .form-check-input {
+	background-color: var(--bs-white);
+	border-color: var(--bs-ql-info-700);
 	&:hover {
-		border-color: $gray-900;
+		border-color: var(--bs-ql-info-900);
 	}
 
 	&:disabled {
-		border-color: $gray-500;
+		border-color: var(--bs-ql-info-500);
 
 		& ~ .form-check-label {
-			color: $gray-500;
+			color: var(--bs-ql-info-500);
 		}
 	}
 
@@ -54,47 +59,87 @@
 		}
 
 		&:hover {
-			border-color: $danger-600;
+			border-color: var(--bs-ql-danger-600);
 		}
 
 		&:checked {
 			&:hover {
-				border-color: $danger-600;
-				background-color: $danger-600;
+				border-color: var(--bs-ql-danger-600);
+				background-color: var(--bs-ql-danger-600);
 			}
 		}
 	}
 }
-
+.qela-radiobutton {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 6.5px;
+		left: 4px;
+		z-index: 3;
+		width: 8px;
+		height: 8px;
+		background-color: var(--bs-secondary);
+		border-radius: 50%;
+		opacity: 0;
+		transition: all 0.15s ease 0s;
+	}
+	&:has([type="radio"]:checked) {
+		&:hover {
+			&::after {
+				background-color: var(--bs-ql-secondary-700);
+			}
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
+	&:has([type="radio"]:checked.is-invalid) {
+		&:hover {
+			&::after {
+				background-color: var(--bs-ql-danger-600);
+			}
+		}
+		&::after {
+			background-color: var(--bs-danger);
+		}
+	}
+	&:has([type="radio"]:checked:disabled) {
+		&::after {
+			background-color: var(--bs-ql-secondary-400);
+		}
+	}
+}
 [type="radio"] {
 	&:checked {
-		background-size: 140%;
 		border-width: 2px;
-		background-color: transparent;
-		&.is-invalid {
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($danger-500, 0.99)}'/></svg>");
-		}
-		&:disabled {
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($gray-500, 0.99)}'/></svg>");
-		}
+		background-color: var(--bs-white);
 		&:hover {
-			background-color: transparent;
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$secondary-700}'/></svg>");
+			background-color: var(--bs-white);
+			border-color: var(--bs-ql-secondary-700);
 			&.is-invalid {
-				border-color: $danger-600;
-				background-color: $white;
-				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba($danger-600, 0.99)}'/></svg>");
+				background-color: var(--bs-white);
+				border-color: var(--bs-ql-danger-600);
 			}
 			&:disabled {
-				background-color: $white;
+				background-color: var(--bs-white);
 			}
+		}
+		&.is-invalid {
+			background-color: var(--bs-white);
+			border-color: var(--bs-danger);
+		}
+		&:disabled {
+			background-color: var(--bs-white);
+			border-color: var(--bs-ql-secondary-400);
 		}
 	}
 }
 
 .form-check-label {
 	transition: color 0.3s ease 0s;
-
+	color: var(--bs-ql-info-700);
 	@media (any-hover: hover) {
 		&:hover {
 			color: $gray-900;

@@ -30,15 +30,7 @@
 	// link
 	--bs-link-color-rgb: var(--bs-secondary-rgb);
 	--bs-link-hover-color-rgb: 1, 71, 150;
-	// radiobutton
-	[type="radio"] {
-		&:checked {
-			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba(0, 87, 184, 0.99)}'/></svg>");
-			&:hover {
-				background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{rgba(3, 81, 169, 0.99)}'/></svg>");
-			}
-		}
-	}
+	// input
 	--bs-ql-input-color: var(--bs-ql-info-900);
 	--bs-ql-input-border-color: var(--bs-ql-info-400);
 	--bs-ql-input-bg-color: var(--bs-white);
