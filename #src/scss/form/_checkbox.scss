@@ -142,7 +142,7 @@
 	color: var(--bs-ql-info-700);
 	@media (any-hover: hover) {
 		&:hover {
-			color: $gray-900;
+			color: var(--bs-ql-info-900);
 		}
 	}
 }
@@ -159,7 +159,7 @@
 		width: 3.2em;
 		margin-left: 0;
 		height: 1.75rem;
-		background-color: $info-300;
+		background-color: var(--bs-ql-info-300);
 		border: none;
 		background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.5' fill='#{rgba($white, 0.99)}'/></svg>");
 		border-radius: 1em;
@@ -168,11 +168,11 @@
 			background-color 0.2s ease 0s,
 			background-position 0.2s linear 0s;
 		&:hover {
-			background-color: $info-400;
+			background-color: var(--bs-ql-info-400);
 		}
 
 		&:disabled {
-			background-color: $info-300;
+			background-color: var(--bs-ql-info-300);
 			background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.5' fill='#{rgba($info-100, 0.99)}'/></svg>");
 		}
 

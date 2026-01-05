@@ -15,35 +15,38 @@
 .dp__input {
 	height: 38px;
 	border-radius: ql.$border-radius;
-	color: ql.$gray-600;
-	border-color: ql.$input-border-color;
+	color: var(--bs-ql-input-color);
+	border-color: var(--bs-ql-input-border-color);
 
 	&:hover {
-		border-color: ql.$secondary;
+		border-color: var(--bs-ql-input-hover-border-color);
 	}
 
 	&::placeholder {
-		color: ql.$gray-600;
+		color: var(--bs-ql-input-placeholder-color);
 	}
 
 	&:disabled {
+		color: var(--bs-ql-input-disabled-color);
+		background-color: var(--bs-ql-input-disabled-bg-color);
+		border-color: var(--bs-ql-input-disabled-border-color);
 		&::placeholder {
-			color: #7e7e7e;
+			color: var(--bs-ql-input-disabled-color);
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: #d1d1d2;
+				border-color: var(--bs-ql-input-disabled-border-color);
 			}
 		}
 	}
 }
 
 .dp__input:hover:not(.dp__input_focus) {
-	--dp-border-color-hover: #9188ff;
+	--dp-border-color-hover: var(--bs-ql-input-hover-border-color);
 }
 .dp__input_icon_pad {
-	padding: 0 16px;
+	padding: 0 rem(16);
 }
 
 .dp__input_reg {
@@ -65,12 +68,12 @@
 	border-radius: 17px;
 	// min-width: 300px;
 	font-family: ql.$font-family-base;
-	font-size: 12px;
+	font-size: rem(12);
 	overflow: hidden;
 }
 
 .dp__month_year_row {
-	padding: 8px;
+	padding: rem(8);
 	height: 50px;
 }
 
@@ -81,29 +84,29 @@
 
 .dp__month_year_select {
 	font-weight: 600;
-	font-size: 18px;
+	font-size: rem(18);
 	line-height: 120%;
-	color: ql.$black;
+	color: var(--bs-black);
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: ql.$secondary-100;
+			background-color: var(--bs-ql-secondary-100);
 		}
 	}
 }
 
 .dp__inner_nav {
-	background: ql.$white;
+	background: var(--bs-white);
 	border-radius: 6px;
-	padding: 7px;
+	padding: rem(7);
 
 	&:hover {
-		background-color: ql.$secondary-100;
+		background-color: var(--bs-ql-secondary-100);
 	}
 }
 
 .dp__icon {
-	fill: #bbbdc0;
+	fill: var(--bs-ql-info-600);
 	width: 18px;
 	height: 18px;
 }
@@ -113,21 +116,21 @@
 }
 
 .dp__calendar {
-	padding-left: 5px;
+	padding-left: rem(5);
 
 	&.dp__calendar_next {
 		padding-left: 0;
-		padding-right: 5px;
+		padding-right: rem(5);
 	}
 }
 
 .dp__calendar_header {
-	margin-bottom: 8px;
-	margin-top: 8px;
+	margin-bottom: rem(8);
+	margin-top: rem(8);
 }
 
 .dp__calendar_header_item {
-	font-size: 12px;
+	font-size: rem(12);
 	line-height: 16px;
 	// height: 32px;
 
@@ -136,12 +139,12 @@
 	justify-content: center;
 	text-align: center;
 	letter-spacing: 0.4px;
-	color: ql.$gray-500;
+	color: var(--bs-info);
 	font-weight: 400;
 }
 
 .dp__cell_offset {
-	color: ql.$gray-500;
+	color: var(--bs-info);
 }
 
 .dp__cell_inner {
@@ -150,13 +153,13 @@
 	height: 40px;
 	padding: 0;
 	font-weight: 500;
-	font-size: 12px;
+	font-size: rem(12);
 	line-height: 16px;
 	letter-spacing: 0.4px;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: ql.$secondary-100;
+			background-color: var(--bs-ql-secondary-100);
 		}
 	}
 }
@@ -164,30 +167,30 @@
 .dp__range_end,
 .dp__range_start,
 .dp__active_date {
-	background-color: ql.$secondary;
+	background-color: var(--bs-secondary);
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: ql.$secondary;
+			background-color: var(--bs-secondary);
 		}
 	}
 }
 
 .dp__overlay_cell_active {
-	background-color: ql.$secondary;
+	background-color: var(--bs-secondary);
 }
 
 .dp__today {
-	border: 2px solid ql.$secondary;
+	border: 2px solid var(--bs-secondary);
 }
 
 .dp__button {
-	border-top: ql.$gray-300;
-	border-top: 1px solid ql.$gray-300;
+	border-top: var(--bs-ql-info-300);
+	border-top: 1px solid var(--bs-ql-info-300);
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: ql.$secondary-100;
+			background-color: var(--bs-ql-secondary-100);
 		}
 	}
 }
@@ -202,11 +205,11 @@
 
 .dp__action_row {
 	border-radius: 0 0 17px 17px;
-	border-top: 1px solid ql.$gray-300;
+	border-top: 1px solid var(--bs-ql-info-300);
 }
 
 .dp__selection_preview {
-	font-size: 16px;
+	font-size: rem(16);
 	line-height: 100%;
 	letter-spacing: 0.4px;
 	color: ql.$black;
@@ -215,16 +218,16 @@
 
 .dp__action {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: rem(14);
 	line-height: 100%;
 	color: ql.$purple;
 }
 
 .dp__action_button {
-	color: ql.$secondary;
+	color: var(--bs-secondary);
 	font-weight: 500;
-	font-size: 14px;
-	padding: 4px 16px;
+	font-size: rem(14);
+	padding: rem(4) rem(16);
 	height: 100%;
 	transition: color 0.3s ease 0s;
 	border: none;
@@ -232,41 +235,41 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: ql.$secondary-600;
+			color: var(--bs-ql-secondary-600);
 		}
 	}
 }
 .dp__action_select {
 	--dp-primary-color: transparent;
-	--dp-primary-text-color: #978fff;
+	--dp-primary-text-color: var(--bs-ql-secondary-700);
 }
 .is-invalid {
 	.dp__input {
-		color: ql.$gray-500;
-		border-color: ql.$red;
+		color: var(--bs-info);
+		border-color: var(--bs-ql-input-ivalid-border-color);
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: ql.$red;
+				border-color: var(--bs-ql-input-ivalid-border-color);
 			}
 		}
 
 		&:focus {
 			@media (any-hover: hover) {
 				&:hover {
-					border-color: ql.$red;
+					border-color: var(--bs-ql-input-ivalid-border-color);
 				}
 			}
 		}
 
 		&:disabled {
 			&::placeholder {
-				color: #7e7e7e;
+				color: var(--bs-ql-input-disabled-colo);
 			}
 
 			@media (any-hover: hover) {
 				&:hover {
-					border-color: #d1d1d2;
+					border-color: var(--bs-ql-input-disabled-colo);
 				}
 			}
 		}

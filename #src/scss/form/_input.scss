@@ -15,7 +15,7 @@ input[type="search"]::-webkit-search-results-decoration {
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			border-color: var(--bs-ql-input-hover-color);
+			border-color: var(--bs-ql-input-hover-border-color);
 		}
 	}
 	&:focus {
@@ -404,7 +404,9 @@ textarea {
 
 		&:hover {
 			& ~ label {
-				border-color: var(--bs-ql-info-600);
+				border-color: var(--bs-ql-input-hover-border-color);
+				box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+					color-mix(in srgb, var(--bs-ql-input-hover-border-color), transparent 70%);
 			}
 		}
 
@@ -425,6 +427,11 @@ textarea {
 				border-color: var(--bs-ql-input-disabled-border-color);
 				opacity: 1;
 			}
+			&:hover {
+				& ~ label {
+					box-shadow: none;
+				}
+			}
 		}
 
 		&.is-invalid {
@@ -433,6 +440,12 @@ textarea {
 			}
 
 			&:focus {
+				& ~ label {
+					box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
+						color-mix(in srgb, var(--bs-ql-input-ivalid-border-color), transparent 70%);
+				}
+			}
+			&:hover {
 				& ~ label {
 					box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
 						color-mix(in srgb, var(--bs-ql-input-ivalid-border-color), transparent 70%);

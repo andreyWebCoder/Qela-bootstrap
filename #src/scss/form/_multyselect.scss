@@ -29,35 +29,43 @@
 	&__option {
 		font-size: rem(14);
 	}
+	@media (any-hover: hover) {
+		&:hover {
+			.multiselect__tags {
+				border-color: var(--bs-ql-input-hover-border-color);
+			}
+		}
+	}
+
 	&.multiselect--disabled {
 		opacity: $btn-close-opacity;
 
 		.multiselect__select {
 			background: transparent;
-			border-color: var(--bs-ql-info-200);
-			color: var(--bs-ql-info-600);
+			border-color: var(--bs-ql-input-disabled-border-color);
+			color: var(--bs-ql-input-disabled-color);
 		}
 
 		.multiselect__tags {
-			background-color: var(--bs-ql-info-200);
-			border-color: var(--bs-ql-info-200);
-			color: var(--bs-ql-info-600);
+			background-color: var(--bs-ql-input-disabled-bg-color);
+			border-color: var(--bs-ql-input-disabled-border-color);
+			color: var(--bs-ql-input-disabled-color);
 		}
 
 		.multiselect__single {
-			background-color: var(--bs-ql-info-200);
+			background-color: var(--bs-ql-input-disabled-bg-color);
 		}
 	}
 }
 .multiselect--active {
 	.multiselect__tags {
-		border-color: var(--bs-secondary);
+		border-color: var(--bs-ql-input-focus-border-color);
 
 		// border-bottom-color: $input-bg;
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: var(--bs-secondary);
+				border-color: var(--bs-ql-input-focus-border-color);
 				// border-bottom-color: $input-bg;
 			}
 		}
@@ -69,19 +77,14 @@
 	align-items: center;
 	flex-wrap: wrap;
 	border-radius: $input-border-radius;
-	border: 1px solid $input-border-color;
-	background-color: var(--bs-white);
+	border: 1px solid var(--bs-ql-input-border-color);
+	background-color: var(--bs-ql-input-bg-color);
 	min-height: 38px;
 	transition: border-color 0.2s ease 0s;
-	@media (any-hover: hover) {
-		&:hover {
-			border-color: $gray-600;
-		}
-	}
 }
 
 .multiselect__tags-wrap {
-	margin: 4px 0px 3px -12px;
+	margin: 4px 0px 3px -8px;
 }
 
 .multiselect__tag {
@@ -89,9 +92,9 @@
 	border-radius: 6px;
 	margin-right: 2px;
 	margin-bottom: 2px;
-	color: $black;
+	color: var(--bs-ql-info-800);
 	line-height: 120%;
-	background: $secondary-100;
+	background: var(--bs-ql-info-100);
 	display: inline-flex;
 	white-space: wrap;
 }
@@ -106,29 +109,25 @@
 	height: 22px;
 	padding: 4px;
 	border-radius: 4px;
-	background-color: $secondary-100;
-
+	background-color: var(--bs-ql-secondary-100);
 	&:focus {
-		background-color: $secondary-400;
-
+		background-color: var(--bs-ql-secondary-400);
 		&::after {
-			color: $black;
+			color: var(--bs-ql-info-800);
 		}
 	}
 
 	&:hover {
-		background-color: $secondary-400;
-
+		background-color: var(--bs-ql-secondary-400);
 		&::after {
-			color: $black;
+			color: var(--bs-ql-info-800);
 		}
 	}
 
 	&::after {
 		content: "\e906";
 		font-family: "icons";
-		font-size: 16px;
-		color: $black;
+		font-size: rem(16);
 	}
 }
 
@@ -139,8 +138,8 @@
 	&:before {
 		content: "\e903";
 		font-family: "icons";
-		font-size: 16px;
-		color: $input-color;
+		font-size: rem(24);
+		color: var(--bs-ql-info-600);
 		position: absolute;
 		top: 50%;
 		right: auto;
@@ -153,24 +152,25 @@
 
 .multiselect__input {
 	margin: 0;
-	padding: 5px 0;
+	padding: rem(5) 0;
 
 	&::placeholder {
-		color: $input-placeholder-color;
-		font-weight: 500;
+		color: var(--bs-ql-input-placeholder-color);
 		font-size: $input-font-size;
+		font-weight: normal;
 	}
 }
 
 .multiselect__placeholder {
-	color: $input-placeholder-color;
+	color: var(--bs-ql-input-placeholder-color);
 	margin-bottom: 0px;
 	padding-top: 0px;
 	font-size: $input-font-size;
+	font-weight: normal;
 }
 
 .multiselect__content-wrapper {
-	border-color: $secondary;
+	border-color: var(--bs-ql-input-focus-border-color);
 	border-top-color: transparent;
 	border-radius: 0 0 rem(10) rem(10);
 	overflow-x: hidden;
@@ -184,12 +184,12 @@
 	width: 100%;
 }
 .multiselect__option--highlight {
-	background: $white;
-	color: $black;
+	color: var(--bs-ql-input-color);
+	background-color: var(--bs-ql-secondary-100);
 }
 
 .multiselect__option {
-	color: $black;
+	color: var(--bs-ql-input-color);
 	line-height: 17px;
 	padding: rem(12) $input-padding-x rem(12) $input-padding-x;
 	width: 100%;
@@ -199,7 +199,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $gray-100;
+			background-color: var(--bs-ql-secondary-100);
 		}
 	}
 
@@ -210,13 +210,13 @@
 }
 
 .multiselect__option--selected {
-	background: $secondary-100;
-	color: $black;
+	background-color: var(--bs-ql-secondary-200);
+	color: var(--bs-ql-input-color);
 	font-weight: 400;
 
 	&.multiselect__option--highlight {
-		background: $secondary-100;
-		color: $black;
+		background-color: var(--bs-ql-secondary-200);
+		color: var(--bs-ql-input-color);
 		font-weight: 400;
 	}
 }
@@ -231,26 +231,33 @@
 }
 
 .is-invalid {
+	@media (any-hover: hover) {
+		&:hover {
+			.multiselect__tags {
+				border-color: var(--bs-ql-input-ivalid-border-color);
+			}
+		}
+	}
+	.multiselect__tags {
+		border-color: var(--bs-ql-input-ivalid-border-color);
+	}
 	.multiselect--active {
 		.multiselect__tags {
-			border-color: $danger;
-			border-bottom-color: $white;
-
+			border-color: var(--bs-ql-input-ivalid-border-color);
 			@media (any-hover: hover) {
 				&:hover {
-					border-color: $danger-600;
-					border-bottom-color: $white;
+					border-color: var(--bs-ql-input-ivalid-border-color);
 				}
 			}
 		}
 	}
 
 	.multiselect__content-wrapper {
-		border-color: $danger;
+		border-color: var(--bs-ql-input-ivalid-border-color);
 		border-top-color: transparent;
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: $danger-600;
+				border-color: var(--bs-ql-input-ivalid-border-color);
 			}
 		}
 	}
