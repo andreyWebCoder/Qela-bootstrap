@@ -1,38 +1,38 @@
 .qela-breadcrumb {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    > * {
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 4px;
-        color: $info-700;
-        &.disabled {
-            color: $info-500;
-            pointer-events: none;
-        }
-    }
-    a {
-        cursor: pointer;
-        max-width: 220px;
-        -webkit-line-clamp: 1;
-        transition: color 0.3s ease 0s;
-        @media (any-hover: hover) {
-            &:hover {
-                color: $secondary;
-            }
-        }
-    }
-    span {
-        pointer-events: none;
-        color: $info-500;
-        &[class*="ic-"] {
-            padding: 0;
-            &::before {
-                font-size: 18px;
-                color: $info-500;
-            }
-        }
-    }
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	> * {
+		text-decoration: none;
+		line-height: 1.5;
+		font-size: rem(14);
+		font-weight: 500;
+		padding: rem(4);
+		color: var(--bs-ql-info-700);
+		&.disabled {
+			color: var(--bs-info);
+			pointer-events: none;
+		}
+	}
+	a {
+		cursor: pointer;
+		max-width: 220px;
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--bs-secondary);
+			}
+		}
+	}
+	span {
+		pointer-events: none;
+		color: var(--bs-info);
+		&[class*="ic-"] {
+			padding: 0;
+			&::before {
+				font-size: rem(18);
+				color: var(--bs-info);
+			}
+		}
+	}
 }

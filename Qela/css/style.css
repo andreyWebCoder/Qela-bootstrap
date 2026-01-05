@@ -20237,7 +20237,7 @@ textarea {
   display: block;
   position: absolute;
   z-index: 2;
-  background-color: var(--bs-secondary);
+  background-color: var(--bs-success);
   border-radius: 50%;
   border: 1px solid var(--bs-white);
 }
@@ -20721,36 +20721,36 @@ textarea {
 }
 .qela-breadcrumb > * {
   text-decoration: none;
-  font-size: 14px;
+  line-height: 1.5;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding: 4px;
-  color: #676767;
+  padding: 0.25rem;
+  color: var(--bs-ql-info-700);
 }
 .qela-breadcrumb > *.disabled {
-  color: #ababab;
+  color: var(--bs-info);
   pointer-events: none;
 }
 .qela-breadcrumb a {
   cursor: pointer;
   max-width: 220px;
-  -webkit-line-clamp: 1;
   transition: color 0.3s ease 0s;
 }
 @media (any-hover: hover) {
   .qela-breadcrumb a:hover {
-    color: #9188ff;
+    color: var(--bs-secondary);
   }
 }
 .qela-breadcrumb span {
   pointer-events: none;
-  color: #ababab;
+  color: var(--bs-info);
 }
 .qela-breadcrumb span[class*=ic-] {
   padding: 0;
 }
 .qela-breadcrumb span[class*=ic-]::before {
-  font-size: 18px;
-  color: #ababab;
+  font-size: 1.125rem;
+  color: var(--bs-info);
 }
 
 .qela-under {
