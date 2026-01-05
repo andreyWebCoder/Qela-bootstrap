@@ -20604,16 +20604,16 @@ textarea {
 .qela-dialog {
   padding: 2rem 1rem;
   border-radius: 0.75rem;
-  background-color: #fff;
+  background-color: var(--bs-white);
   text-align: center;
   border-width: 2px;
   border-style: solid;
 }
 .qela-dialog.primary-outline {
-  border-color: #ffe000;
+  border-color: var(--bs-primary);
 }
 .qela-dialog.secondary-outline {
-  border-color: #9188ff;
+  border-color: var(--bs-secondary);
 }
 .qela-dialog h2, .qela-dialog .h2 {
   padding-bottom: 0.5rem;

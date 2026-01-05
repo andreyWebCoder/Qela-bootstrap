@@ -1,17 +1,17 @@
 .qela-dialog {
 	padding: 2rem 1rem;
 	border-radius: 0.75rem;
-	background-color: $white;
+	background-color: var(--bs-white);
 	text-align: center;
 	border-width: 2px;
 	border-style: solid;
 
 	&.primary-outline {
-		border-color: $primary;
+		border-color: var(--bs-primary);
 	}
 
 	&.secondary-outline {
-		border-color: $secondary;
+		border-color: var(--bs-secondary);
 	}
 
 	h2 {
