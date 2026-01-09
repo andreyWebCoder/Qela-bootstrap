@@ -19149,11 +19149,11 @@ textarea {
   --bs-nav-link-disabled-color: var(--bs-ql-info-600);
   --bs-nav-tabs-border-color: var(--bs-ql-info-300);
   --bs-nav-tabs-link-hover-border-color: var(--bs-nav-tabs-border-color) var(--bs-nav-tabs-border-color)
-  	var(--bs-nav-tabs-border-color);
+  	var(--bs-white);
   --bs-nav-tabs-link-active-color: var(--bs-ql-info-900);
   --bs-nav-tabs-link-active-bg: var(--bs-white);
   --bs-nav-tabs-link-active-border-color: var(--bs-nav-tabs-border-color) var(--bs-nav-tabs-border-color)
-  	var(--bs-nav-tabs-border-color);
+  	var(--bs-white);
 }
 
 .nav-item {
@@ -20983,10 +20983,6 @@ textarea {
   transform: rotate(-180deg);
   border-left-color: var(--bs-ql-info-200);
 }
-.qela-sidebar-tooltip.settings .tooltip-inner {
-  transform: translateY(5px);
-}
-
 .custom-tooltip {
   --bs-tooltip-padding-y: 0.75rem;
   --bs-tooltip-arrow-width: 14px;
@@ -21602,17 +21598,16 @@ header .container-xxl > .row [class*=col]:last-child {
   left: 0;
   top: var(--body-pad-top);
   z-index: 3;
-  border-right: 1px solid var(--bs-ql-info-200);
   transition: width 0.2s linear 0s, left 0.3s linear 0s;
 }
 .qela-menu.close {
   width: var(--body-aside-pad-close);
 }
-.qela-menu.close .qela-nav-wrapper .nav-link > small:not(.small), .qela-menu.close .qela-nav-wrapper .nav-link > .small:not(.small) {
+.qela-menu.close .qela-nav-wrapper .nav-link {
   width: 40px;
 }
 @media (max-width: 1439.98px) {
-  .qela-menu.close .qela-nav-wrapper .nav-link > small:not(.small), .qela-menu.close .qela-nav-wrapper .nav-link > .small:not(.small) {
+  .qela-menu.close .qela-nav-wrapper .nav-link {
     width: 100%;
   }
 }
@@ -21641,7 +21636,18 @@ header .container-xxl > .row [class*=col]:last-child {
   padding: 0.5rem;
   flex-direction: column;
   align-items: start;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  position: relative;
+}
+.qela-nav-wrapper .nav::after {
+  content: "";
+  width: 8px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  border-right: 1px solid var(--bs-ql-info-200);
+  background-color: var(--bs-white);
 }
 .qela-nav-wrapper .nav:first-child {
   margin-bottom: auto;
@@ -21650,37 +21656,47 @@ header .container-xxl > .row [class*=col]:last-child {
   padding-top: 0;
 }
 .qela-nav-wrapper .nav-link {
-  display: block;
+  display: flex;
+  align-items: center;
   border-radius: 30px;
   padding: 0;
   white-space: nowrap;
-}
-@media (any-hover: hover) {
-  .qela-nav-wrapper .nav-link:hover > small:not(.small), .qela-nav-wrapper .nav-link:hover > .small:not(.small) {
-    background-color: var(--bs-ql-primary-300);
-  }
-}
-.qela-nav-wrapper .nav-link > small:not(.small), .qela-nav-wrapper .nav-link > .small:not(.small) {
-  width: 152px;
+  position: relative;
+  color: var(--bs-ql-info-800);
   height: 40px;
-  color: var(--bs-ql-info-700);
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 0;
-  border-radius: 30px;
-  overflow: hidden;
-  transition: background-color 0.3s ease 0s, width 0.2s linear 0s;
-}
-.qela-nav-wrapper .nav-link > small:not(.small)::before, .qela-nav-wrapper .nav-link > .small:not(.small)::before {
-  line-height: 1;
-  padding: 0 0.5rem;
+  width: 152px;
+  transition: width 0.2s linear 0s;
 }
 @media (max-width: 1439.98px) {
-  .qela-nav-wrapper .nav-link > small:not(.small), .qela-nav-wrapper .nav-link > .small:not(.small) {
+  .qela-nav-wrapper .nav-link {
     width: 40px;
   }
 }
-.qela-nav-wrapper .nav-link > small.sm:not(.small), .qela-nav-wrapper .nav-link > .sm.small:not(.small) {
+@media (any-hover: hover) {
+  .qela-nav-wrapper .nav-link:hover {
+    background-color: var(--bs-ql-primary-300);
+  }
+}
+.qela-nav-wrapper .nav-link.active {
+  background-color: var(--bs-primary);
+  color: var(--bs-ql-info-900);
+}
+.qela-nav-wrapper .nav-link i {
+  line-height: 1;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+.qela-nav-wrapper .nav-link div {
+  font-size: 0.875rem;
+  font-weight: 500;
+  width: 112px;
+  flex: 0 0 112px;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: background-color 0.3s ease 0s;
+}
+.qela-nav-wrapper .nav-link div.sm {
   font-size: 0.75rem;
   white-space: wrap;
 }
@@ -21690,10 +21706,6 @@ header .container-xxl > .row [class*=col]:last-child {
   left: 24px;
   pointer-events: none;
   transform: translate(0%, 0%);
-}
-.qela-nav-wrapper .nav-link.active > small:not(.small), .qela-nav-wrapper .nav-link.active > .small:not(.small) {
-  background-color: var(--bs-primary);
-  color: var(--bs-ql-info-900);
 }
 
 .table {

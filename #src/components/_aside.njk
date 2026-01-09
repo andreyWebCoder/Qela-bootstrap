@@ -1,99 +1,94 @@
-<!--FIX menu -->
+<!-- menu -->
 <aside class="qela-menu">
-	<!--FIX buttons -->
+	<!-- buttons -->
 	<button type="button" class="ic-chevrons-left qela-btn-menu"></button>
 	<nav class="qela-nav qela-scroll-custom">
-		<!--FIX nav wrapper -->
+		<!-- nav wrapper -->
 		<div class="qela-nav-wrapper">
+			{% set navLinks = [
+					{
+						text: 'Організація',
+						iconClass: 'ic-city',
+						linkActive:false
+					},
+					{
+						text: 'Покроковий ґайд',
+						iconClass: 'ic-box-arrow',
+						linkActive:false
+					},
+					{
+						text: 'Користувачі',
+						iconClass: 'ic-people',
+						linkActive:false
+					},
+					{
+						text: 'Задачі адміна',
+						iconClass: 'ic-task',
+						linkActive:false
+					},
+					{
+						text: 'Квести',
+						iconClass: 'ic-diamond',
+						linkActive: quests == 'active'
+					},
+					{
+						text: 'Голосування',
+						iconClass: 'ic-voting',
+						linkActive:false
+					},
+					{
+						text: 'Новини',
+						iconClass: 'ic-notes',
+						linkActive:false
+					},
+					{
+						text: 'Теги',
+						iconClass: 'ic-tag',
+						linkActive:false
+					},
+					{
+						text: 'Винагороди',
+						iconClass: 'ic-trophy',
+						linkActive: rewards == 'active'
+					},
+					{
+						text: 'Донати',
+						iconClass: 'ic-donation-outlined',
+						linkActive: false
+					},
+					{
+						text: 'Дашборд',
+						iconClass: 'ic-chart-pie',
+						linkActive: false
+					},
+					{
+						text: 'Обговорення',
+						iconClass: 'ic-message-circle',
+						linkActive: chat == 'active',
+						counter: '<span class="qela-counter">50</span>'
+					},
+					{
+						text: 'Магазин',
+						iconClass: 'ic-tent',
+						linkActive: shop == 'active'
+					}
+				] %}
 			<ul class="nav">
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-city" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація">Організація</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-box-arrow" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд">
-							Покроковий ґайд
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-people" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі">
-							Користувачі
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-task" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна">Задачі адміна</small>
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a href="#" class="nav-link {{quests}}" aria-current="page">
-						<small class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"> Квести </small>
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-voting" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування">
-							Голосування
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-notes" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини">
-							Новини
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-tag" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги">Теги</small>
-					</a>
-				</li>
-
-				<li class="nav-item">
-					<a href="#" class="nav-link {{rewards}}" aria-current="page">
-						<small class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди">
-							Винагороди
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-donation-outlined" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати">
-							Донати
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-chart-pie" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд">
-							Дашборд
-						</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link {{chat}}" aria-current="page">
-						<span class="qela-counter">50</span>
-						<small class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення">Обговорення</small>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a href="#" class="nav-link {{shop}}" aria-current="page">
-						<small class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин">Магазин</small>
-					</a>
-				</li>
+				{% for link in navLinks %}
+					<li class="nav-item">
+						<a href="#" class="nav-link {{ 'active' if link.linkActive }}" aria-current="page">
+							{{ link.counter | safe }}
+							<i class="{{link.iconClass}}" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="{{link.text}}"></i>
+							<div>{{link.text}}</div>
+						</a>
+					</li>
+				{% endfor %}
 			</ul>
 			<ul class="nav">
 				<li class="nav-item">
 					<a href="#" class="nav-link" aria-current="page">
-						<small class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування">Налаштування</small>
+						<i class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування"></i>
+						<div>Налаштування</div>
 					</a>
 				</li>
 			</ul>

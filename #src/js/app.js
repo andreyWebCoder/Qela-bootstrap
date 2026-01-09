@@ -5,7 +5,7 @@ const sidebarTooltips = document.querySelectorAll('[data-bs-custom-class="qela-s
 
 // open/close menu
 if (menuAside) {
-	const menuLinks = menuAside.querySelectorAll('.nav-link small');
+	const menuLinks = menuAside.querySelectorAll('.nav-link div');
 	btnMenu.addEventListener('click', () => {
 		btnMenu.classList.toggle('close');
 		menuAside.classList.toggle('close');
@@ -20,11 +20,8 @@ if (menuAside) {
 
 	for (let i = 0; i < menuLinks.length; i++) {
 		const el = menuLinks[i];
-		const parentWidth = el.parentElement.offsetWidth;
 
-		const contentWidth = el.scrollWidth;
-
-		if (contentWidth > parentWidth) {
+		if (el.scrollWidth > el.clientWidth) {
 			el.classList.add('sm');
 		} else {
 			el.classList.remove('sm');
