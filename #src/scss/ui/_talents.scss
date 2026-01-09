@@ -19,7 +19,7 @@
 		top: -6px;
 		min-width: 18px;
 		border: 1px solid var(--ql-talent-border-color);
-		background-color: $white;
+		background-color: var(--bs-white);
 	}
 	.qela-badge-talent {
 		&.small {
@@ -32,15 +32,15 @@
 	}
 	&.orden {
 		.number {
-			background-color: $white;
-			color: $info-700;
+			background-color: var(--bs-white);
+			color: var(--bs-ql-info-700);
 		}
 
 		.qela-badge-talent {
-			background-color: $primary-300;
+			background-color: var(--bs-ql-secondary-300);
 			padding-right: rem(54);
 			&.small {
-				color: $info-700 !important;
+				color: var(--bs-ql-info-700) !important;
 			}
 			img {
 				position: absolute;
@@ -72,7 +72,7 @@
 	align-items: center;
 	justify-content: center;
 	.body-voice {
-		background-color: $primary-300;
+		background-color: var(--bs-ql-secondary-300);
 		border-radius: 10px;
 		display: flex;
 		align-items: center;
@@ -111,7 +111,7 @@
 	border-radius: 6px;
 	padding: rem(4) rem(8);
 	border: 1px solid transparent;
-	background-color: $white;
+	background-color: var(--bs-white);
 	text-align: start;
 	color: var(--ql-talent-color) !important;
 	transition:
@@ -138,17 +138,17 @@
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $info-100;
+			background-color: var(--bs-ql-info-100);
 			padding-right: rem(12);
 			border-color: var(--ql-talent-border-color);
 			&.disabled {
 				border-color: transparent;
-				background-color: $white;
+				background-color: var(--bs-white);
 			}
 		}
 	}
 	&.active {
-		background-color: $white;
+		background-color: var(--bs-white);
 		padding-right: rem(16);
 		border-color: var(--ql-talent-border-color);
 		&:not(.list-group-item) {
@@ -205,7 +205,7 @@
 	> div {
 		cursor: pointer;
 		&.current {
-			border: 2px solid $gray-600;
+			border: 2px solid var(--bs-ql-info-600);
 		}
 	}
 }

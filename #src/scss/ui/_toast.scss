@@ -1,23 +1,30 @@
+.toast {
+	--bs-toast-color: var(--bs-ql-info-900);
+	--bs-toast-bg: var(--bs-white);
+	--bs-toast-border-color: var(--bs-ql-info-400);
+	--bs-toast-box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--bs-black), transparent 85%);
+	--bs-toast-header-color: var(--bs-ql-info-600);
+	--bs-toast-header-bg: var(--bs-white);
+	--bs-toast-header-border-color: var(--bs-ql-info-400);
+}
 .qelas-toast {
 	.btn-close {
 		border-radius: 0;
 		padding: 0;
 
 		&::before {
-			font-size: 20px;
+			font-size: rem(20);
 		}
 	}
 
 	.toast-header {
-
 		[class^="ic-"],
 		[class*="ic-"] {
 			&::before {
-				font-size: 20px;
+				font-size: rem(20);
 			}
 
 			border-radius: 6px;
 		}
 	}
-
 }

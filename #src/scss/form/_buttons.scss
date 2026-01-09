@@ -1,3 +1,8 @@
+.btn-close {
+	--bs-btn-close-color: var(--bs-black);
+	--bs-btn-close-bg: transparent;
+	--bs-btn-close-focus-shadow: none;
+}
 .btn {
 	position: relative;
 	display: inline-flex;
@@ -13,15 +18,14 @@
 
 	&[class*="ic-"] {
 		&:before {
-			font-size: 18px;
+			font-size: rem(18);
 			transition: all 0.3s ease 0s;
 			color: var(--ql-btn-icon-color);
 		}
 	}
 
 	&.ico {
-		padding: 9px;
-
+		padding: rem(9);
 		&[aria-expanded="true"] {
 			&:before {
 				transform: rotate(-180deg);
@@ -30,16 +34,16 @@
 	}
 
 	&.ico-left {
-		padding-left: 8px;
+		padding-left: rem(8);
 	}
 
 	&.ico-right {
-		padding-right: 8px;
+		padding-right: rem(8);
 		flex-direction: row-reverse;
 	}
 
 	&.custom {
-		padding: 8px;
+		padding: rem(8);
 		border-radius: 10px;
 		font-weight: 400;
 	}
@@ -237,11 +241,11 @@
 
 		&::before {
 			font-size: 18px;
-			padding: 1.5px;
+			padding: rem(1.5);
 			background-color: var(--bs-primary);
 			border-radius: 50%;
 			right: 0;
-			margin-left: 2px;
+			margin-left: rem(2);
 		}
 	}
 
@@ -459,9 +463,8 @@
 					}
 				}
 			}
-
 			::before {
-				font-size: 18px;
+				font-size: rem(18);
 			}
 		}
 	}
@@ -476,13 +479,12 @@
 }
 
 .btn-close {
-	background-color: transparent;
 	border-radius: 50%;
-	padding: 7px;
+	padding: rem(7);
 	width: auto;
 	height: auto;
 	&::before {
-		font-size: 18px;
+		font-size: rem(18);
 	}
 
 	&:disabled {
@@ -492,10 +494,10 @@
 	&.small {
 		width: auto;
 		height: auto;
-		padding: 0px;
+		padding: 0;
 
 		&::before {
-			font-size: 24px;
+			font-size: rem(24);
 		}
 	}
 }
@@ -599,22 +601,6 @@
 	}
 }
 
-// .qela-btn-close {
-//     background-color: transparent;
-//     z-index: 4;
-//     top: 4px;
-//     right: 4px;
-//     display: none;
-
-//     @include media-breakpoint-down(md) {
-//         display: block;
-//     }
-
-//     &::before {
-//         font-size: 28px;
-//     }
-// }
-
 .qela-btn-map {
 	border-color: transparent;
 	position: absolute;
@@ -626,7 +612,7 @@
 		background: color-mix(in srgb, var(--bs-black), transparent 40%);
 		color: var(--bs-white);
 		transition: background 0.3s ease 0s;
-		padding: 10px;
+		padding: rem(10);
 
 		&:not(:first-child) {
 			margin-top: 0;
@@ -688,7 +674,7 @@
 		&[class^="ic-"],
 		&[class*="ic-"] {
 			&:before {
-				font-size: 24px;
+				font-size: rem(24);
 			}
 		}
 	}

@@ -1,3 +1,14 @@
+.modal {
+	--bs-modal-color: inherit;
+	--bs-modal-bg: var(--bs-white);
+	--bs-modal-border-color: var(--bs-ql-info-300);
+	--bs-modal-box-shadow: 0 0.125rem 0.25rem color-mix(in srgb, var(--bs-black), transparent 92.5%);
+	--bs-modal-header-border-color: var(--bs-border-color);
+	--bs-modal-footer-bg: none;
+	--bs-modal-footer-border-color: var(--bs-border-color);
+	--bs-backdrop-bg: var(--bs-black);
+}
+
 .qela-modal {
 	&.modal {
 		&:has(.card, .table) {
@@ -31,7 +42,7 @@
 		flex-direction: column;
 		align-items: start;
 		padding: rem(16);
-		border-right: 1px solid $info-300;
+		border-right: 1px solid var(--bs-ql-info-300);
 		border-bottom: none;
 		width: 220px;
 		flex-wrap: nowrap;
@@ -49,21 +60,21 @@
 	left: 0;
 	width: 100dvw;
 	height: 100dvh;
-	background: rgba($black, 0.7);
+	background: color-mix(in srgb, var(--bs-black), transparent 30%);
 	z-index: 9999;
 	.modal-content {
 		position: absolute;
-		background-color: $modal-content-bg;
+		background-color: var(--bs-body-bg);
 		border-radius: $modal-content-border-radius;
 	}
 	.modal-header {
 		padding: $modal-header-padding-y $modal-header-padding-x;
 		align-items: flex-start;
-		border-bottom: 1px solid $info-300;
+		border-bottom: 1px solid var(--bs-ql-info-300);
 	}
 	.modal-title {
 		font-weight: 700;
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: 120%;
 	}
 	.modal-body {

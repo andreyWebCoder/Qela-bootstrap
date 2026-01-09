@@ -1,62 +1,11 @@
+.offcanvas {
+	// --#{$prefix}offcanvas-color: #{$offcanvas-color};
+	--#{$prefix}offcanvas-bg: var(--bs-white);
+	// --#{$prefix}offcanvas-border-color: #{$offcanvas-border-color};
+	// --#{$prefix}offcanvas-box-shadow: #{$offcanvas-box-shadow};
+}
 .qela-offcanvas {
-    &.offcanvas-start {
-        top: 56px;
-    }
-    .offcanvas-body {
-    }
-    .qela-tab {
-        @include media-breakpoint-down(md) {
-        }
-    }
-    .qela-nav-item {
-        &.small-light {
-            &:first-child {
-                .line {
-                    @include media-breakpoint-down(md) {
-                        height: 50%;
-                    }
-                }
-            }
-            &:last-child {
-                .line {
-                    @include media-breakpoint-down(md) {
-                        height: 50%;
-                        top: 0;
-                    }
-                }
-            }
-            .nav-link {
-                @include media-breakpoint-down(md) {
-                    padding: 16px 32px 16px var(--step-pad-start);
-                    align-items: flex-start;
-                }
-                &::before {
-                    @include media-breakpoint-down(md) {
-                        margin: 0px 8px 0px 0px;
-                    }
-                }
-                &::after {
-                    @include media-breakpoint-down(md) {
-                        top: 50%;
-                        right: 0;
-                        transform: translate(0, -50%);
-                    }
-                }
-            }
-            .link-name {
-                @include media-breakpoint-down(md) {
-                    display: -webkit-box;
-                }
-            }
-            .line {
-                @include media-breakpoint-down(md) {
-                    height: 100%;
-                    bottom: 0;
-                    width: 1px;
-                    left: calc(var(--step-diametr) / 2 + var(--step-pad-start));
-                    transform: translateY(0);
-                }
-            }
-        }
-    }
+	&.offcanvas-start {
+		top: 56px;
+	}
 }

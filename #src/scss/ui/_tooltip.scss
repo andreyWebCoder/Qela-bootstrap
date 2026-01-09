@@ -1,7 +1,9 @@
 // Wrapper for the tooltip content
 .tooltip {
-	z-index: 1200;
-	--ql-tooltip-border-color: #{$gray-300};
+	--ql-tooltip-border-color: var(--bs-ql-info-300);
+	--bs-tooltip-zindex: 1200;
+	--bs-tooltip-color: var(--bs-black);
+	--bs-tooltip-bg: var(--bs-white);
 }
 .qela-admin {
 	width: 30px;
@@ -10,7 +12,7 @@
 
 	&.btn[class^="ic-"]:before,
 	&.btn[class*="ic-"]:before {
-		font-size: 20px;
+		font-size: rem(20);
 		line-height: 1;
 	}
 	&.qela-sm {
@@ -19,19 +21,19 @@
 
 		&.btn[class^="ic-"]:before,
 		&.btn[class*="ic-"]:before {
-			font-size: 16px;
+			font-size: rem(16);
 		}
 	}
 }
 
 .qela-tooltip-black {
 	.tooltip-inner {
-		background-color: $black;
-		color: $white;
+		background-color: var(--bs-black);
+		color: var(--bs-white);
 	}
 
 	&[data-popper-placement^="left"] .tooltip-arrow::before {
-		border-left-color: $black;
+		border-left-color: var(--bs-black);
 	}
 }
 
@@ -44,7 +46,7 @@
 	--bs-tooltip-border-radius: 1rem;
 	.tooltip-inner {
 		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
-		border: 1px solid $gray-200;
+		border: 1px solid var(--bs-ql-info-200);
 		z-index: 1;
 		position: relative;
 	}
@@ -63,7 +65,7 @@
 			left: 1px;
 			border-width: 8px 0 8px 14px;
 			transform: rotate(-180deg);
-			border-left-color: $gray-200;
+			border-left-color: var(--bs-ql-info-200);
 		}
 	}
 	&.settings {

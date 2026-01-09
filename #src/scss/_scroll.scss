@@ -2,8 +2,8 @@
 	--scroll-pr: 0px;
 	--scroll-width: 8px;
 	--scroll-rounded: 50px;
-	--scroll-bg-track: #dee2e6;
-	--scroll-bg-thumb: #6c757d;
+	--scroll-bg-track: var(--bs-ql-info-300);
+	--scroll-bg-thumb: var(--bs-ql-info-700);
 	> * {
 		padding-right: var(--scroll-pr);
 	}
@@ -32,13 +32,13 @@
 		background: var(--scroll-bg-thumb);
 		border-radius: var(--scroll-rounded);
 		height: 20%;
-		border: 2px solid $gray-300;
+		border: 2px solid var(--bs-ql-info-300);
 	}
 	scrollbar-thumb {
 		/* Цвет ползунка скроллбара */
 		background: var(--scroll-bg-thumb);
 		border-radius: var(--scroll-rounded);
 		height: 20%;
-		border: 2px solid $gray-300;
+		border: 2px solid var(--bs-ql-info-300);
 	}
 }

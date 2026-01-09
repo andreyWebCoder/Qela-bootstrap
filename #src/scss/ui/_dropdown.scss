@@ -1,3 +1,19 @@
+// css vars from colors themes dropdown
+.dropdown-menu {
+	--bs-dropdown-min-width: 11.25rem;
+	--bs-dropdown-color: var(--bs-ql-info-900);
+	--bs-dropdown-bg: var(--bs-white);
+	--bs-dropdown-border-color: var(--bs-ql-info-400);
+	--bs-dropdown-divider-bg: var(--bs-ql-info-400);
+	--bs-dropdown-box-shadow: 0 0.5rem 1rem color-mix(in srgb, var(--bs-black), transparent 85%);
+	--bs-dropdown-link-color: var(--bs-ql-info-900);
+	--bs-dropdown-link-hover-color: var(--bs-ql-info-900);
+	--bs-dropdown-link-hover-bg: var(--bs-ql-info-200);
+	--bs-dropdown-link-active-color: var(--bs-white);
+	--bs-dropdown-link-active-bg: var(--bs-ql-secondary-300);
+	--bs-dropdown-link-disabled-color: var(--bs-ql-info-200);
+	--bs-dropdown-header-color: var(--bs-ql-info-600);
+}
 .dropdown,
 .dropdown-center {
 	& > .btn {
@@ -10,7 +26,7 @@
 		&.show {
 			&::before {
 				transform: matrix(1, 0, 0, -1, 0, 0);
-				color: $black;
+				color: var(--bs-ql-info-900);
 			}
 		}
 		&.ico {
@@ -21,9 +37,6 @@
 	}
 }
 .qela-dropdown {
-	.dropdown-menu {
-		--bs-dropdown-min-width: 11.25rem;
-	}
 	.dropdown-item {
 		transition:
 			background-color 0.25s ease-out 0s,
@@ -41,38 +54,38 @@
 			background-color: var(--bs-secondary);
 		}
 		&.danger {
-			color: $danger-800;
+			color: var(--bs-ql-danger-800);
 			&::before {
-				color: $danger-600;
+				color: var(--bs-ql-danger-600);
 			}
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: $danger-100;
-					color: $danger-600;
+					background-color: var(--bs-ql-danger-100);
+					color: var(--bs-ql-danger-600);
 				}
 			}
 		}
 		&.success {
-			color: $success-900;
+			color: var(--bs-ql-success-900);
 			&::before {
-				color: $success-600;
+				color: var(--bs-ql-success-600);
 			}
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: $success-100;
-					color: $success-600;
+					background-color: var(--bs-ql-success-100);
+					color: var(--bs-ql-success-600);
 				}
 			}
 		}
 		&.warning {
-			color: $warning-900;
+			color: var(--bs-ql-warning-900);
 			&::before {
-				color: $warning-600;
+				color: var(--bs-ql-warning-600);
 			}
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: $warning-100;
-					color: $warning-600;
+					background-color: var(--bs-ql-warning-100);
+					color: var(--bs-ql-warning-600);
 				}
 			}
 		}
@@ -146,14 +159,14 @@
 
 	.btn {
 		&:focus-visible {
-			--bs-btn-hover-color: #{$info-900};
-			--bs-btn-hover-bg: #{$white};
-			--bs-btn-hover-border-color: #{$info-600};
+			--bs-btn-hover-color: var(--bs-ql-info-900);
+			--bs-btn-hover-bg: var(--bs-white);
+			--bs-btn-hover-border-color: var(--bs-ql-info-600);
 			box-shadow: none;
 		}
 		&.show {
-			--bs-btn-active-bg: #{$info-200};
-			--bs-btn-active-border-color: #{$info-600};
+			--bs-btn-active-bg: var(--bs-ql-info-200);
+			--bs-btn-active-border-color: var(--bs-ql-info-600);
 			&:focus-visible {
 				box-shadow: none;
 			}
@@ -164,7 +177,7 @@
 	}
 }
 .qela-item-user {
-	background-color: $white;
+	background-color: var(--bs-white);
 	padding: rem(8) rem(24);
 	display: flex;
 	align-items: start;

@@ -17,6 +17,7 @@ main {
 	--body-pad-top: 56px;
 	--body-aside-pad: 168px;
 	--body-aside-pad-close: 56px;
+	height: 100vh;
 	padding-top: var(--body-pad-top);
 	padding-left: var(--body-aside-pad);
 	display: flex;

@@ -1,43 +1,43 @@
 .text-editor {
-    padding: 1.5rem 0;
-    h2 {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 120%;
-        padding-bottom: 1rem;
-        &:not(:first-child) {
-            padding-top: 2rem;
-        }
-    }
-    a {
-        text-decoration: none;
-        color: $secondary-700;
-    }
-    img {
-        width: 100%;
-        border-radius: 8px;
-        border: 1px solid $gray-400;
-        padding-bottom: 1.5rem;
-    }
-    ul {
-        padding-left: 0;
-        li {
-            position: relative;
-            list-style: none;
-            padding-left: 1.5rem;
-            padding-bottom: 1rem;
-            &::before {
-                content: "\e99a";
-                font-family: "icons";
-                position: absolute;
-                left: 0;
-                top: 3px;
-                font-size: 14px;
-                color: $secondary;
-            }
-        }
-    }
-    ol {
-        padding-left: 1.5rem;
-    }
+	padding: 1.5rem 0;
+	h2 {
+		font-size: rem(20);
+		font-weight: 500;
+		line-height: 120%;
+		padding-bottom: 1rem;
+		&:not(:first-child) {
+			padding-top: 2rem;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: var(--bs-ql-secondary-700);
+	}
+	img {
+		width: 100%;
+		border-radius: 8px;
+		border: 1px solid var(--bs-ql-info-400);
+		padding-bottom: 1.5rem;
+	}
+	ul {
+		padding-left: 0;
+		li {
+			position: relative;
+			list-style: none;
+			padding-left: 1.5rem;
+			padding-bottom: 1rem;
+			&::before {
+				content: "\e99a";
+				font-family: "icons";
+				position: absolute;
+				left: 0;
+				top: 3px;
+				font-size: 14px;
+				color: var(--bs-secondary);
+			}
+		}
+	}
+	ol {
+		padding-left: 1.5rem;
+	}
 }

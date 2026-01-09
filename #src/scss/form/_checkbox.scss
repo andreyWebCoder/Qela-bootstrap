@@ -84,6 +84,7 @@
 		border-radius: 50%;
 		opacity: 0;
 		transition: all 0.15s ease 0s;
+		pointer-events: none;
 	}
 	&:has([type="radio"]:checked) {
 		&:hover {

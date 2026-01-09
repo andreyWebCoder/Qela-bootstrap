@@ -1,3 +1,14 @@
+.table {
+	--bs-table-color: var(--bs-body-color);
+	--bs-table-bg: transparent;
+	--bs-table-border-color: var(--bs-ql-info-200);
+	// 	--bs-table-striped-bg: #{$striped-bg};
+	// 	--bs-table-striped-color: #{color-contrast($striped-bg)};
+	// 	--bs-table-active-bg: #{$active-bg};
+	// 	--bs-table-active-color: #{color-contrast($active-bg)};
+	--bs-table-hover-bg: var(--bs-ql-info-100);
+	// 	--bs-table-hover-color: #{color-contrast($hover-bg)};
+}
 .qela-table {
 	overflow-y: hidden;
 	font-size: rem(14);
@@ -16,8 +27,8 @@
 		}
 	}
 	.table-light {
-		--bs-table-bg: #{$gray-200};
-		--bs-table-color: #{$gray-900};
+		--bs-table-bg: var(--bs-ql-info-200);
+		--bs-table-color: var(--bs-ql-info-900);
 		th,
 		tr {
 			background-color: var(--bs-table-bg);
@@ -66,8 +77,8 @@
 		}
 		&.checked {
 			td {
-				background-color: $secondary-200;
-				--bs-table-hover-bg: #{$secondary-200};
+				background-color: var(--bs-ql-secondary-200);
+				--bs-table-hover-bg: var(--bs-ql-secondary-200);
 			}
 		}
 		.qela-btn-ic {
@@ -113,34 +124,34 @@
 	}
 	.qela-light {
 		* {
-			color: $info;
+			color: var(--bs-info);
 		}
 		.qela-previews {
 			pointer-events: none;
-			border-color: $info-200;
-			background-color: $info-100;
+			border-color: var(--bs-ql-info-200);
+			background-color: var(--bs-ql-info-100);
 			img {
 				opacity: 0.4;
 			}
 			&.qela-icon {
 				border-color: transparent;
 				&::before {
-					color: $info;
+					color: var(--bs-info);
 				}
 			}
 			&.qela-text {
-				color: $secondary-400;
+				color: var(--bs-ql-secondary-400);
 			}
 		}
 		.qela-btn-group {
 			.btn {
-				color: $info !important;
+				color: var(--bs-info) !important;
 				background-color: transparent !important;
 			}
 		}
 	}
 	.qela-no--hover {
-		--bs-table-hover-bg: #{$white};
+		--bs-table-hover-bg: var(--bs-white);
 		td {
 			cursor: unset !important;
 		}
@@ -172,17 +183,17 @@
 }
 .qela-tag {
 	display: inline-block;
-	color: $black;
+	color: var(--bs-black);
 	transition: color 0.2s ease 0s;
 	text-decoration: none;
 
 	&:not(:last-child) {
-		margin-right: 3px;
+		margin-right: rem(3);
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $purple;
+			color: var(--bs-secondary);
 		}
 	}
 }
@@ -198,7 +209,7 @@
 		justify-content: center;
 		gap: 4px;
 		line-height: 1;
-		padding: 4px 10px 4px 8px;
+		padding: rem(4) rem(10) rem(4) rem(8);
 	}
 }
 
@@ -215,7 +226,7 @@
 		border-radius: 50%;
 
 		&::before {
-			font-size: 16px;
+			font-size: rem(16);
 		}
 	}
 }
@@ -223,7 +234,7 @@
 .qela-vector {
 	position: absolute;
 	width: 20px;
-	border-left: 2px solid $secondary;
+	border-left: 2px solid var(--bs-secondary);
 	right: 0;
 	top: -1px;
 	bottom: -1px;
@@ -232,7 +243,7 @@
 		content: "";
 		display: block;
 		width: 100%;
-		background-color: $secondary;
+		background-color: var(--bs-secondary);
 		top: 50%;
 		transform: translateY(-50%);
 		height: 2px;
@@ -240,7 +251,7 @@
 	}
 
 	&.start {
-		border-top: 2px solid $secondary;
+		border-top: 2px solid var(--bs-secondary);
 		border-top-left-radius: 10px;
 		height: calc(50% + 1px);
 		top: 50%;
@@ -253,7 +264,7 @@
 	&.end {
 		height: calc(50% + 1px);
 		border-bottom-left-radius: 10px;
-		border-bottom: 2px solid $secondary;
+		border-bottom: 2px solid var(--bs-secondary);
 
 		&::before {
 			display: none;
@@ -262,10 +273,10 @@
 }
 
 .qela-novector {
-	color: $info-500;
+	color: var(--bs-info);
 
 	&::before {
-		font-size: 16px;
+		font-size: rem(16);
 	}
 }
 .table-responsive {
@@ -276,15 +287,15 @@
 
 .qela-table-grid {
 	width: 100%;
-	font-size: 12px;
+	font-size: rem(12);
 	border-radius: 12px;
-	border: solid 1px $info-300;
-	background-color: $white;
+	border: solid 1px var(--bs-info);
+	background-color: var(--bs-white);
 }
 .qela-table-row {
 	display: flex;
 	gap: 16px;
-	padding: 8px 40px;
+	padding: rem(8) rem(40);
 	position: relative;
 	.td-1 {
 		flex: 0 0 31px;
@@ -302,17 +313,17 @@
 	}
 
 	&:not(.subrow) {
-		border-top: solid 1px $info-300;
+		border-top: solid 1px var(--bs-ql-info-300);
 		&:first-child {
 			border-top: none;
-			background: $info-200;
+			background: var(--bs-ql-info-200);
 			font-weight: 500;
 			line-height: 130%;
 			border-top-left-radius: 12px;
 			border-top-right-radius: 12px;
 		}
 		&:nth-child(2) {
-			border-top: 1px solid $info-200;
+			border-top: 1px solid var(--bs-ql-info-200);
 		}
 	}
 
@@ -333,12 +344,12 @@
 		}
 	}
 	a {
-		--bs-link-color: #{$gray-900};
+		--bs-link-color: var(--bs-ql-info-900);
 		text-decoration: none;
 	}
 	&.subrow {
-		background-color: $info-100;
-		border-top: solid 1px $info-300;
+		background-color: var(--bs-ql-info-100);
+		border-top: solid 1px var(--bs-ql-info-300);
 		&:last-child {
 			.qela-table-line {
 				hr {
@@ -354,7 +365,7 @@
 			}
 			[class*="ic-"] {
 				&::before {
-					background-color: $info-100;
+					background-color: var(--bs-ql-info-100);
 				}
 			}
 		}
@@ -367,12 +378,12 @@
 	left: 8px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: $secondary-400;
+	color: var(--bs-ql-secondary-400);
 	hr {
 		display: block;
 		width: 1px;
 		height: 50%;
-		background-color: $secondary-400;
+		background-color: var(--bs-ql-secondary-400);
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -380,8 +391,8 @@
 	}
 	[class*="ic-"] {
 		&::before {
-			background-color: $white;
-			font-size: 18px;
+			// background-color: var(--bs-white);
+			font-size: rem(18);
 			line-height: 1;
 		}
 	}
@@ -426,7 +437,7 @@
 		&[class*="ic-"] {
 			&::before {
 				font-size: rem(16);
-				color: $info-600;
+				color: var(--bs-ql-info-600);
 			}
 		}
 	}

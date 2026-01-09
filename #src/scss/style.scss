@@ -1,9 +1,11 @@
 @use "sass:math";
 
-/* Bootstrap style imports*/
+// Bootstrap style imports
 @import "bootstrap/functions";
 
-@import "vars"; // Переназначение переменных
+//Custom scss vars
+@import "vars";
+
 @import "bootstrap/variables";
 @import "bootstrap/maps";
 @import "bootstrap/mixins";
@@ -39,31 +41,10 @@ $utilities: map-merge(
 			)
 	)
 );
+
+// Generation and add custom colors css vars
 @import "my-root";
-// $utilities: map-merge(
-// 	$utilities,
-// 	(
-// 		"color":
-// 			map-merge(
-// 				map-get($utilities, "color"),
-// 				(
-// 					values: map-merge(map-get(map-get($utilities, "color"), "values"), ($all-colors))
-// 				)
-// 			)
-// 	)
-// );
-// $utilities: map-merge(
-// 	$utilities,
-// 	(
-// 		"background-color":
-// 			map-merge(
-// 				map-get($utilities, "background-color"),
-// 				(
-// 					values: map-merge(map-get(map-get($utilities, "background-color"), "values"), ($all-colors))
-// 				)
-// 			)
-// 	)
-// );
+
 @import "bootstrap/utilities/api";
 @import "bootstrap/root";
 @import "bootstrap/reboot";
@@ -100,29 +81,29 @@ $utilities: map-merge(
 
 // Helpers
 @import "bootstrap/helpers";
-// /* Bootstrap style imports*/
+
+// Custom scss styles
 
 @import "resources";
-/* ======================================================================== */
-/* Qela */
-/* Шрифты */
+// Qela
+// Fonts
 @import "fonts";
-/* Иконочный шрифт */
+
+// Icons font
 @import "icons";
-//<Themes>===========================================
-@import "theme/theme-strichka";
-//<Themes>===========================================
-/* Свои глобальние стили (qela-) */
+
+// Custom globall styles (qela-)
 @import "globall";
 
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ>================================
+//<Include files UI styles and forms>
 @import "forms";
 @import "ui";
-//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ>==================================
 
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>======================================
+//<Include files styles components>
 @import "components/header";
 @import "components/aside";
 @import "components/table";
 @import "components/text-editor";
-//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ 	БЛОКОВ>===========================================
+
+//<Themes>
+@import "theme/theme-strichka";

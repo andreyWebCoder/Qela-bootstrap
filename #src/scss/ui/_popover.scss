@@ -1,13 +1,19 @@
+.popover {
+	--bs-popover-bg: var(--bs-white);
+	--bs-popover-border-color: var(--bs-ql-info-300);
+	--bs-popover-box-shadow: none;
+	--bs-popover-header-color: var(--bs-black);
+	--bs-popover-header-bg: var(--bs-popover-bg);
+	--bs-popover-body-color: var(--bs-body-color);
+	--bs-popover-arrow-border: var(--bs-popover-border-color);
+}
 .qela-popover {
 	position: relative;
 	// display: inline-block;
 	.popover {
 		position: absolute;
-		margin: 0px;
+		margin: 0;
 		width: $popover-max-width;
-		@include media-breakpoint-down(sm) {
-			width: 300px;
-		}
 		&.bs-popover-bottom {
 			top: calc(100% + var(--bs-popover-arrow-height) + var(--bs-popover-border-width) + 4px);
 			left: 50%;
@@ -17,14 +23,14 @@
 			position: absolute;
 			top: 8px;
 			right: 8px;
-			color: $gray-500;
+			color: var(--bs-info);
 			width: auto;
 			height: auto;
 		}
 	}
 	.popover-header {
 		border-bottom: none;
-		padding: 16px 48px 8px 16px;
+		padding: rem(16) rem(48) rem(8) rem(16);
 	}
 	.popover-body {
 		padding-top: 0;
@@ -45,7 +51,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		background-color: rgba($black, 0.4);
+		background-color: color-mix(in srgb, var(--bs-black), transparent 60%);
 		z-index: 1121;
 	}
 	.popover {

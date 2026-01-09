@@ -22,7 +22,7 @@
 			border-color 0.3s ease-in-out 0s,
 			background-color 0.3s ease-in-out 0s,
 			transform 0.3s ease-in-out 0s;
-		background-color: $white;
+		background-color: var(--bs-white);
 		&:first-child {
 			height: 404px;
 			gap: 8px;
@@ -61,13 +61,13 @@
 	}
 	&.current {
 		.card {
-			border-color: $secondary;
+			border-color: var(--bs-secondary);
 		}
 	}
 }
 .qela-card-list {
 	width: 296px;
-	border: 1px solid $secondary;
+	border: 1px solid var(--bs-secondary);
 	border-radius: 8px;
 	> div {
 		&:first-child {
@@ -80,14 +80,14 @@
 	}
 	li {
 		padding: rem(16);
-		font-size: 14px;
+		font-size: rem(14);
 		display: flex;
 		align-items: center;
 		gap: 8px;
 		i {
 			padding: rem(4);
-			color: $secondary-600;
-			background-color: $secondary-200;
+			color: var(--bs-ql-secondary-600);
+			background-color: var(--bs-ql-secondary-200);
 			border-radius: 50%;
 		}
 	}

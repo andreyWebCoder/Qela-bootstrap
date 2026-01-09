@@ -200,7 +200,7 @@
 }
 
 .dp__icon {
-	fill: ql.$black;
+	fill: var(--bs-black);
 }
 
 .dp__action_row {
@@ -212,7 +212,7 @@
 	font-size: rem(16);
 	line-height: 100%;
 	letter-spacing: 0.4px;
-	color: ql.$black;
+	color: var(--bs-black);
 	width: 70%;
 }
 
@@ -220,7 +220,7 @@
 	font-weight: 500;
 	font-size: rem(14);
 	line-height: 100%;
-	color: ql.$purple;
+	color: var(--bs-secondary);
 }
 
 .dp__action_button {

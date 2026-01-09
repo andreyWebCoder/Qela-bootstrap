@@ -1,33 +1,33 @@
 .qela-under {
-    padding: 4rem 1rem 3rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: $info-900;
-    > * {
-        &:not(:last-child) {
-            margin-bottom: 1rem;
-        }
-    }
-    small {
-        color: $info-700;
-    }
-    img {
-        width: 39px;
-        height: 39px;
-    }
+	padding: 4rem 1rem 3rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: var(--bs-ql-info-900);
+	> * {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	small {
+		color: var(--bs-ql-info-700);
+	}
+	img {
+		width: 39px;
+		height: 39px;
+	}
 
-    .btn {
-        margin-top: 1rem;
-    }
-    &.small {
-        small {
-            font-size: 12px;
-        }
-        img {
-            width: 28px;
-            height: 28px;
-        }
-    }
+	.btn {
+		margin-top: 1rem;
+	}
+	&.small {
+		small {
+			font-size: rem(12);
+		}
+		img {
+			width: 28px;
+			height: 28px;
+		}
+	}
 }

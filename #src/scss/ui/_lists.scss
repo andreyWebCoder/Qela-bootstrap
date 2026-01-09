@@ -1,3 +1,20 @@
+// css vars from colors themes
+.list-group {
+	--bs-list-group-color: var(--bs-ql-info-900);
+	--bs-list-group-bg: var(--bs-white);
+	--bs-list-group-border-color: var(--bs-ql-info-300);
+	--bs-list-group-action-color: var(--bs-ql-info-700);
+	--bs-list-group-action-hover-color: var(--bs-ql-info-700);
+	--bs-list-group-action-hover-bg: var(--bs-ql-info-100);
+	--bs-list-group-action-active-color: var(--bs-body-color);
+	--bs-list-group-action-active-bg: var(--bs-ql-info-200);
+	--bs-list-group-disabled-color: var(--bs-ql-info-600);
+	--bs-list-group-disabled-bg: var(--bs-white);
+	--bs-list-group-active-color: var(--bs-white);
+	--bs-list-group-active-bg: var(--bs-primary);
+	--bs-list-group-active-border-color: var(--bs-primary);
+}
+
 .qela-list {
 	&.no-outline {
 		.list-group-item {
@@ -13,26 +30,26 @@
 
 	&.primary {
 		.list-group-item {
-			border-color: $primary-600;
+			border-color: var(--bs-ql-primary-600);
 		}
 	}
 
 	&.info {
 		.list-group-item {
-			border-color: $info-100;
-			background-color: $info-100;
+			border-color: var(--bs-ql-info-100);
+			background-color: var(--bs-ql-info-100);
 			transition: background-color 0.3s ease 0s;
 
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: $info-200;
+					background-color: var(--bs-ql-info-200);
 				}
 			}
 		}
 	}
 
 	.list-group-item {
-		border-color: $info-400;
+		border-color: var(--bs-ql-info-400);
 		position: relative;
 		border-radius: 0.5rem;
 		padding: 0;
@@ -43,7 +60,7 @@
 			display: flex;
 			text-decoration: none;
 			align-items: center;
-			color: $info-900;
+			color: var(--bs-ql-info-900);
 
 			p {
 				transition: color 0.3s ease 0s;
@@ -70,7 +87,7 @@
 			&:hover {
 				> a {
 					p {
-						color: $secondary;
+						color: var(--bs-secondary);
 					}
 				}
 			}
@@ -92,9 +109,9 @@
 }
 
 .qela-chain {
-	background-color: $white;
+	background-color: var(--bs-white);
 	border-radius: 12px;
-	border: 1px solid $info-400;
+	border: 1px solid var(--bs-ql-info-400);
 	padding-top: 0;
 
 	.qela-actions {
@@ -164,12 +181,12 @@
 			width: var(--diameter);
 			height: var(--diameter);
 			font-weight: 500;
-			font-size: 14px;
-			color: $info-900;
+			font-size: rem(14);
+			color: var(--bs-ql-info-900);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 1px solid $secondary;
+			border: 1px solid var(--bs-secondary);
 			border-radius: 50%;
 			margin-right: 1rem;
 		}
@@ -179,7 +196,7 @@
 			display: block;
 			width: 1px;
 			height: calc(100% - (var(--diameter) + var(--gap-num)));
-			background-color: $secondary;
+			background-color: var(--bs-secondary);
 			position: absolute;
 			left: calc(var(--diameter) / 2);
 			bottom: 0;
@@ -200,13 +217,13 @@
 		gap: 16px;
 
 		> * {
-			font-size: 14px;
+			font-size: rem(14);
 			&:first-child {
-				color: $info-700;
+				color: var(--bs-ql-info-700);
 				flex: 0 0 50%;
 			}
 			&:last-child {
-				color: $info-900;
+				color: var(--bs-ql-info-700);
 				flex: 0 1 auto;
 			}
 		}
@@ -222,7 +239,7 @@
 			flex-direction: column;
 			width: 100%;
 			p {
-				margin: 0px 0px 10px 0px;
+				margin: 0px 0px rem(10) 0px;
 			}
 		}
 	}
@@ -232,14 +249,14 @@
 	.list-group-item {
 		display: flex;
 		gap: 0.25rem;
-		font-size: 14px;
+		font-size: rem(14);
 		padding: 0;
 		border: none;
 		&:not(:last-child) {
 			margin-bottom: 1rem;
 		}
 		> * {
-			color: $gray-800;
+			color: var(--bs-ql-info-800);
 			font-variant-numeric: lining-nums tabular-nums;
 			line-height: 130%;
 		}
@@ -254,7 +271,7 @@
 		cursor: pointer;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $secondary-100;
+				background-color: var(--bs-ql-secondary-100);
 			}
 		}
 	}
@@ -262,6 +279,11 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
+		&::after {
+			position: absolute;
+			top: 22.5px;
+			left: 20px;
+		}
 	}
 	.form-check-input {
 		position: absolute;
@@ -273,24 +295,24 @@
 			& ~ .qela-collapse {
 				grid-template-rows: 1fr;
 				padding-bottom: 1rem;
-				background-color: $secondary-100;
+				background-color: var(--bs-ql-secondary-100);
 			}
 			& ~ .form-check-label {
-				background-color: $secondary-100;
+				background-color: var(--bs-ql-secondary-100);
 			}
 		}
 		&:disabled,
 		.disabled {
 			& ~ .qela-collapse {
-				background-color: $white;
+				background-color: var(--bs-white);
 				* {
-					color: $gray-600 !important;
+					color: var(--bs-ql-info-600) !important;
 				}
 			}
 			& ~ .form-check-label {
-				background-color: $white;
+				background-color: var(--bs-white);
 				* {
-					color: $gray-600 !important;
+					color: var(--bs-ql-info-600) !important;
 					pointer-events: none;
 				}
 			}
@@ -309,7 +331,7 @@
 			grid-template-rows 0.8s ease 0s,
 			padding 0.4s ease 0s,
 			background-color 0.3s ease;
-		padding: 0px 1rem;
+		padding: 0 1rem;
 		> * {
 			min-height: 0;
 			margin: 0;
@@ -328,7 +350,7 @@
 	display: flex;
 	gap: 1rem;
 	align-items: start;
-	background-color: $white;
+	background-color: var(--bs-white);
 	border: none;
 	position: relative;
 	> div {
@@ -345,7 +367,7 @@
 			width: calc(100% - (var(--bs-list-group-item-padding-x) * 2));
 			height: 1px;
 			position: absolute;
-			background-color: $info-200;
+			background-color: var(--bs-ql-info-200);
 			top: calc(100% - 1px);
 			left: 50%;
 			transform: translateX(-50%);
@@ -355,14 +377,12 @@
 	&.success {
 		.qela-icon {
 			[class*="ic-"] {
-				color: $success;
-				background-color: $success-200;
+				color: var(--bs-success);
+				background-color: var(--bs-ql-success-200);
 			}
 		}
 	}
-	@include media-breakpoint-down(lg) {
-		flex-wrap: wrap;
-	}
+
 	.btn {
 		white-space: nowrap;
 	}
@@ -371,14 +391,14 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			color: $info;
-			background-color: $info-100;
+			color: var(--bs-info);
+			background-color: var(--bs-ql-info-100);
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
 
 			&::before {
-				font-size: 20px;
+				font-size: rem(20);
 			}
 		}
 	}
@@ -398,7 +418,7 @@
 			border: 0;
 			text-align: start;
 			width: 100%;
-			background-color: $white;
+			background-color: var(--bs-white);
 			padding: rem(16);
 			display: flex;
 			align-items: center;
@@ -406,11 +426,11 @@
 			transition: background-color 0.25s ease 0s;
 			@media (any-hover: hover) {
 				&:hover {
-					background-color: $info-100;
+					background-color: var(--bs-ql-info-100);
 				}
 			}
 			&.current {
-				background-color: $secondary-200;
+				background-color: var(--bs-ql-secondary-200);
 			}
 		}
 		.qela-clamp {

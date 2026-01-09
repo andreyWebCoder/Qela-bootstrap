@@ -1,77 +1,74 @@
+.carousel {
+	--bs-carousel-indicator-active-bg: var(--bs-secondary);
+}
 .qela-carousel {
-    .carousel-item {
-        padding-top: 24px;
-        > div {
-            &:first-child {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 90px;
-                text-align: center;
-                padding: 0 24px;
-                @include media-breakpoint-down(sm) {
-                    padding: 0 8px 0 8px;
-                }
-            }
-        }
-        h1 {
-            vertical-align: middle;
-            @include media-breakpoint-down(sm) {
-                font-size: 16px;
-            }
-        }
-        > * {
-            &:not(:last-child) {
-                margin-bottom: 24px;
-            }
-        }
-    }
-    > div {
-        &:last-child {
-            display: flex;
-            align-items: center;
-            padding: 0 24px 24px 24px;
-            @include media-breakpoint-down(sm) {
-                padding: 0 8px 24px 8px;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                gap: 16px;
-                margin-top: -8px;
-            }
-            > button {
-                @include media-breakpoint-down(sm) {
-                    order: 2;
-                }
-            }
-        }
-    }
-    .carousel-indicators {
-        position: static;
-        align-items: center;
-        margin-bottom: 0;
-        flex-grow: 1;
-        margin-right: 8px;
-        margin-left: 8px;
-        @include media-breakpoint-down(sm) {
-            order: 1;
-            flex-basis: 100%;
-        }
-        button {
-            border-radius: 6px;
-            border: 0;
+	.carousel-item {
+		padding-top: rem(24);
+		> div {
+			&:first-child {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 90px;
+				text-align: center;
+				padding: 0 rem(24);
+				@include media-breakpoint-down(sm) {
+					padding: 0 rem(8) 0 rem(8);
+				}
+			}
+		}
+		h1 {
+			vertical-align: middle;
+			@include media-breakpoint-down(sm) {
+				font-size: rem(16);
+			}
+		}
+		> * {
+			&:not(:last-child) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	> div {
+		&:last-child {
+			display: flex;
+			align-items: center;
+			padding: 0 rem(24) rem(24) rem(24);
+			@include media-breakpoint-down(sm) {
+				padding: 0 rem(8) rem(24) rem(8);
+				justify-content: space-between;
+				flex-wrap: wrap;
+				gap: 16px;
+				margin-top: rem(-8);
+			}
+			> button {
+				@include media-breakpoint-down(sm) {
+					order: 2;
+				}
+			}
+		}
+	}
+	.carousel-indicators {
+		position: static;
+		align-items: center;
+		margin-bottom: 0;
+		flex-grow: 1;
+		margin-right: 8px;
+		margin-left: 8px;
+		@include media-breakpoint-down(sm) {
+			order: 1;
+			flex-basis: 100%;
+		}
+		button {
+			border-radius: 6px;
+			border: 0;
 
-            &.active {
-                background-color: $secondary;
-                & ~ button {
-                    background-color: $secondary-300;
-                }
-            }
-            @include media-breakpoint-down(md) {
-                margin-left: 4px;
-                margin-right: 4px;
-                width: 25px;
-                height: 3px;
-            }
-        }
-    }
+			&.active {
+				background-color: var(--bs-secondary);
+				& ~ button {
+					background-color: var(--bs-ql-secondary-300);
+				}
+			}
+		}
+	}
 }

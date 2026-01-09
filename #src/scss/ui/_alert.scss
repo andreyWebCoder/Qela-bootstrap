@@ -35,7 +35,7 @@
 				position: static;
 				padding-bottom: 0.5rem;
 				&::before {
-					font-size: 38px;
+					font-size: rem(38);
 				}
 			}
 		}

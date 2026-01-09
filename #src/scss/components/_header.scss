@@ -1,118 +1,109 @@
 header {
-    height: 56px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: rem(8) rem(16) rem(8) 0;
-    background-color: $white;
-    border-bottom: 1px solid $info-200;
-    z-index: 1111;
+	height: 56px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: rem(8) rem(16) rem(8) 0;
+	background-color: var(--bs-white);
+	border-bottom: 1px solid var(--bs-ql-info-200);
+	z-index: 1111;
 
-    .container-fluid {
-        height: 100%;
-        padding-left: 0;
-        padding-right: 0;
+	.container-fluid {
+		height: 100%;
+		padding-left: 0;
+		padding-right: 0;
 
-        > .row {
-            --bs-gutter-x: 0.5rem;
-            height: 100%;
-            position: relative;
+		> .row {
+			--bs-gutter-x: 0.5rem;
+			height: 100%;
+			position: relative;
 
-            [class^="col"],
-            [class*="col"] {
-                display: flex;
-                align-items: center;
-                gap: rem(8);
+			[class^="col"],
+			[class*="col"] {
+				display: flex;
+				align-items: center;
+				gap: rem(8);
 
-                &:last-child {
-                    justify-content: end;
-                }
-            }
-        }
-    }
+				&:last-child {
+					justify-content: end;
+				}
+			}
+		}
+	}
 }
 .qela-notification {
-    padding: 0;
-    border: none;
-    position: relative;
-    color: $gray-500;
+	padding: 0;
+	border: none;
+	position: relative;
+	color: var(--bs-info);
 
-    &.btn[class^="ic-"]:before,
-    &.btn[class*="ic-"]:before {
-        font-size: 24px;
-    }
+	&.btn[class^="ic-"]:before,
+	&.btn[class*="ic-"]:before {
+		font-size: rem(24);
+	}
 
-    .qela-badge {
-        position: absolute;
-        top: 5px;
-        right: 0;
-    }
+	.qela-badge {
+		position: absolute;
+		top: 5px;
+		right: 0;
+	}
 
-    &.active {
-        color: $black;
-    }
+	&.active {
+		color: var(--bs-black);
+	}
 }
 
 .qela-user {
-    display: flex;
-    padding-right: 1rem;
+	display: flex;
+	padding-right: 1rem;
 
-    @include media-breakpoint-down(md) {
-        padding-right: 0.25rem;
-        display: none;
-    }
+	&.mobile {
+		display: none;
+		padding: 0.5rem 1rem;
+		--bs-gutter-x: 0.5rem;
 
-    &.mobile {
-        display: none;
-        padding: 0.5rem 1rem;
-        --bs-gutter-x: 0.5rem;
+		[class^="col"],
+		[class*="col"] {
+			&:first-child {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+		}
+	}
 
-        [class^="col"],
-        [class*="col"] {
-            &:first-child {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
+	& > .btn {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 0;
 
-        @include media-breakpoint-down(md) {
-            display: flex;
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: var(--bs-black);
+				}
+			}
+		}
 
-    & > .btn {
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        gap: 0;
+		&::before {
+			font-size: rem(14);
+			padding: 12px;
+			color: var(--bs-info);
+			transition: transform 0.3s ease 0s;
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                &::before {
-                    color: $black;
-                }
-            }
-        }
-
-        &::before {
-            font-size: 14px;
-            padding: 12px;
-            color: $gray-500;
-            transition: transform 0.3s ease 0s;
-        }
-    }
-
-    .dropdown-menu {
-        width: 280px;
-    }
+	.dropdown-menu {
+		width: 280px;
+	}
 }
 
 .qela-logo {
-    padding: 0 rem(8);
-    // height: 56px;
-    // flex: 0 0 56px;
-    // background-color: $white;
-    z-index: 2;
+	padding: 0 rem(8);
+	// height: 56px;
+	// flex: 0 0 56px;
+	// background-color: var(--bs-white);
+	z-index: 2;
 }

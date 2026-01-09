@@ -5,7 +5,7 @@
 	left: 0;
 	top: var(--body-pad-top);
 	z-index: 3;
-	border-right: 1px solid $info-200;
+	border-right: 1px solid var(--bs-ql-info-200);
 	transition:
 		width 0.2s linear 0s,
 		left 0.3s linear 0s;
@@ -31,7 +31,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		background-color: $white;
+		background-color: var(--bs-white);
 	}
 	.qela-scroll-custom {
 		--scroll-width: 0;
@@ -42,7 +42,7 @@
 	overflow: auto;
 	overflow-x: hidden;
 	flex: 1 1 auto;
-	background-color: $white;
+	background-color: var(--bs-white);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -68,7 +68,7 @@
 			&:hover {
 				> small {
 					&:not(.small) {
-						background-color: $primary-300;
+						background-color: var(--bs-ql-primary-300);
 					}
 				}
 			}
@@ -77,7 +77,7 @@
 			&:not(.small) {
 				width: 152px;
 				height: 40px;
-				color: $info-700;
+				color: var(--bs-ql-info-700);
 				display: flex;
 				align-items: center;
 				padding: rem(8) 0;
@@ -111,8 +111,8 @@
 		&.active {
 			> small {
 				&:not(.small) {
-					background-color: $primary;
-					color: $gray-900;
+					background-color: var(--bs-primary);
+					color: var(--bs-ql-info-900);
 				}
 			}
 		}

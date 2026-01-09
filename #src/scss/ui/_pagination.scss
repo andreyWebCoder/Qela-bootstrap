@@ -1,4 +1,21 @@
 .pagination {
+	--bs-pagination-color: var(--bs-ql-secondary-600);
+	--bs-pagination-bg: var(--bs-white);
+	--bs-pagination-border-color: var(--bs-ql-info-200);
+	--bs-pagination-hover-color: var(--bs-ql-secondary-700);
+	--bs-pagination-hover-bg: var(--bs-ql-secondary-100);
+	--bs-pagination-hover-border-color: var(--bs-ql-info-300);
+	--bs-pagination-focus-color: var(--bs-ql-secondary-600);
+	--bs-pagination-focus-bg: var(--bs-white);
+	--bs-pagination-focus-box-shadow: none;
+	--bs-pagination-active-color: var(--bs-white);
+	--bs-pagination-active-bg: var(--bs-secondary);
+	--bs-pagination-active-border-color: var(--bs-pagination-border-color);
+	--bs-pagination-disabled-color: var(--bs-ql-info-600);
+	--bs-pagination-disabled-bg: var(--bs-white);
+	--bs-pagination-disabled-border-color: var(--bs-ql-info-200);
+}
+.pagination {
 	margin-bottom: 0;
 }
 .page-item {

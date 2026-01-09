@@ -19,69 +19,68 @@
 	transition:
 		opacity 0.2s ease 0s,
 		visibility 0.2s ease 0s;
-	margin-left: -13px;
+	margin-left: rem(-13);
 	transform: translateY(-60px);
-
 	&.secondary {
 		.qela-pin__num {
 			small {
-				border-color: $secondary;
+				border-color: var(--bs-secondary);
 			}
 
 			&::after {
-				background-color: $secondary;
+				background-color: var(--bs-secondary);
 			}
 		}
 
 		.qela-pin__dot {
-			background-color: $secondary;
+			background-color: var(--bs-secondary);
 		}
 
 		.qela-pin__area {
-			border: 2px solid $secondary;
-			background: #{rgba($secondary, 0.1)};
+			border: 2px solid var(--bs-secondary);
+			background: color-mix(in srgb, var(--bs-secondary), transparent 90%);
 		}
 	}
 
 	&.success {
 		.qela-pin__num {
 			small {
-				border-color: $success;
+				border-color: var(--bs-success);
 			}
 
 			&::after {
-				background-color: $success;
+				background-color: var(--bs-success);
 			}
 		}
 
 		.qela-pin__dot {
-			background-color: $success;
+			background-color: var(--bs-success);
 		}
 
 		.qela-pin__area {
-			border: 2px solid $success;
-			background: #{rgba($success, 0.1)};
+			border: 2px solid var(--bs-success);
+			background: color-mix(in srgb, var(--bs-success), transparent 90%);
 		}
 	}
 
 	&.danger {
 		.qela-pin__num {
 			small {
-				border-color: $danger;
+				border-color: var(--bs-danger);
 			}
 
 			&::after {
-				background-color: $danger;
+				background-color: var(--bs-danger);
 			}
 		}
 
 		.qela-pin__dot {
-			background-color: $danger;
+			background-color: var(--bs-danger);
 		}
 
 		.qela-pin__area {
-			border: 1px solid $danger;
-			background: #{rgba($danger, 0.1)};
+			border: 1px solid var(--bs-danger);
+			background: color-mix(in srgb, var(--bs-danger), transparent 90%);
 		}
 	}
 
@@ -124,19 +123,19 @@
 
 				&.secondary {
 					.qela-pin__dot {
-						background-color: $secondary;
+						background-color: var(--bs-secondary);
 					}
 				}
 
 				&.success {
 					.qela-pin__dot {
-						background-color: $success;
+						background-color: var(--bs-success);
 					}
 				}
 
 				&.danger {
 					.qela-pin__dot {
-						background-color: $danger;
+						background-color: var(--bs-danger);
 					}
 				}
 
@@ -157,7 +156,7 @@
 		transform: translateY(-15px);
 
 		small {
-			background-color: $white;
+			background-color: var(--bs-white);
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -199,5 +198,5 @@
 .qela-line {
 	height: 4px;
 	width: 100%;
-	border: 1px solid $white;
+	border: 1px solid var(--bs-white);
 }

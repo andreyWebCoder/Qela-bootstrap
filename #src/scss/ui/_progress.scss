@@ -1,4 +1,10 @@
 .progress {
+	--bs-progress-bg: var(--bs-ql-info-200);
+	--bs-progress-box-shadow: #{$progress-box-shadow};
+	--bs-progress-bar-color: var(--bs-white);
+	--bs-progress-bar-bg: var(--bs-primary);
+}
+.progress {
 	position: relative;
 	min-width: 150px;
 
@@ -47,10 +53,10 @@
 		height: 100%;
 		pointer-events: none;
 		background-color: transparent;
-		color: $gray-900;
-		font-size: 14px;
+		color: var(--bs-ql-info-900);
+		font-size: rem(14);
 		font-weight: 500;
-		padding: 4px 8px;
+		padding: rem(4) rem(8);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -83,11 +89,10 @@
 	}
 }
 .progressbar-tooltip {
-	padding: 8px;
 	.tooltip-inner {
 		border-radius: 10px;
-		border: 1px solid $gray-300;
-		box-shadow: 0px 0px 32px 0px rgba(108, 117, 125, 0.15);
+		border: 1px solid var(--bs-ql-info-300);
+		box-shadow: 0px 0px 32px 0px color-mix(in srgb, var(--bs-ql-info-600), transparent 85%);
 	}
 	.tooltip-arrow {
 		--bs-tooltip-arrow-width: 1rem;
@@ -109,8 +114,8 @@
 
 	.left {
 		width: 100%;
-		background: $secondary;
-		color: $white;
+		background: var(--bs-secondary);
+		color: var(--bs-white);
 	}
 
 	.right {
@@ -119,8 +124,8 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		background: $secondary-300;
-		color: $black;
+		background: var(--bs-ql-secondary-300);
+		color: var(--bs-black);
 		clip-path: inset(-1px -1px -1px var(--percent));
 	}
 
@@ -140,22 +145,22 @@
 
 		.left {
 			&:first-child {
-				padding-left: 6px;
-				padding-right: 6px;
+				padding-left: rem(6);
+				padding-right: rem(6);
 			}
 		}
 
 		.right {
 			&:last-child {
-				padding-left: 6px;
-				padding-right: 6px;
+				padding-left: rem(6);
+				padding-right: rem(6);
 			}
 		}
 	}
 
 	&.small {
 		height: 1rem;
-		font-size: 12px;
+		font-size: rem(12);
 		border-radius: 15px;
 
 		> div {
@@ -170,7 +175,7 @@
 	z-index: 1011;
 	left: 0;
 	top: 0;
-	background-color: rgba($black, 0.7);
+	background-color: color-mix(in srgb, var(--bs-black), transparent 30%);
 	border-radius: 8px;
 	display: flex;
 	align-items: center;
@@ -178,7 +183,7 @@
 	flex-grow: 1;
 	flex-direction: column;
 	span {
-		color: $white;
+		color: var(--bs-white);
 		font-size: rem(18);
 	}
 
@@ -193,7 +198,7 @@
 		stroke-dashoffset: 0;
 		transform-origin: center;
 		animation: dash $duration ease-in-out infinite;
-		stroke: $primary-700;
+		stroke: var(--bs-ql-primary-700);
 	}
 	@keyframes rotator {
 		0% {

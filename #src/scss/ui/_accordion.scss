@@ -1,3 +1,26 @@
+.accordion {
+	--bs-accordion-color: var(--bs-ql-info-600);
+	--bs-accordion-bg: var(--bs-white);
+	--bs-accordion-border-color: var(--bs-ql-info-200);
+	--bs-accordion-btn-color: var(--bs-accordion-color);
+	--bs-accordion-btn-bg: var(--bs-accordion-bg);
+	--bs-accordion-active-color: var(--bs-ql-info-700);
+	--bs-accordion-active-bg: var(--bs-body-bg);
+}
+.accordion {
+	.accordion-button {
+		// align-items: center;
+		&::after {
+			content: $accordion-button-icon;
+			font-family: "icons";
+			font-size: $accordion-icon-width;
+			line-height: 1;
+			color: var(--bs-ql-info-600);
+			width: $accordion-icon-width;
+			height: $accordion-icon-width;
+		}
+	}
+}
 .qela-accordion {
 	&.accordion-flush {
 		.accordion-item {
@@ -5,7 +28,7 @@
 			border: none;
 			overflow: visible;
 			&:not(:last-child) {
-				margin-bottom: 2px;
+				margin-bottom: rem(2);
 			}
 		}
 		.accordion-button {
@@ -19,7 +42,7 @@
 		}
 	}
 	.accordion-item {
-		border-top: 1px solid $accordion-border-color;
+		border-top: 1px solid var(--bs-accordion-border-color);
 		overflow: hidden;
 		border-radius: 8px;
 		&:not(:last-child) {
@@ -27,30 +50,28 @@
 		}
 
 		&.success {
-			border-top: 1px solid $success-300;
-			border-color: $success-300;
+			border-top: 1px solid var(--bs-ql-success-300);
+			border-color: var(--bs-ql-success-300);
 
 			.accordion-button {
-				color: $success-600;
+				color: var(--bs-ql-success-600);
 				gap: 0.5rem;
 
 				&::after {
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+					color: var(--bs-ql-success-600);
 				}
 
 				[class*="ic-"] {
 					display: block;
-					color: $success;
+					color: var(--bs-success);
 				}
 
 				@media (any-hover: hover) {
 					&:hover {
-						color: $success-600;
+						color: var(--bs-ql-success-600);
 
 						&::after {
-							background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-							background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($success-600, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+							color: var(--bs-ql-success-600);
 						}
 					}
 				}
@@ -64,23 +85,22 @@
 		border-radius: 7px;
 		font-weight: 500;
 		position: relative;
-		align-items: flex-start;
+		// align-items: flex-start;
 		gap: 8px;
 		&::after {
 			transition: all 0.25s ease 0s;
 		}
 		&:focus {
-			color: $gray-700;
+			color: var(--bs-ql-info-700);
 			&::after {
-				background-image: var(--bs-accordion-btn-active-icon);
+				color: var(--bs-ql-info-600);
 			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				color: $secondary;
-
+				color: var(--bs-secondary);
 				&::after {
-					background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{rgba($secondary, 0.99)}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+					color: var(--bs-secondary);
 				}
 			}
 		}
@@ -109,8 +129,13 @@
 
 	&.small {
 		.accordion-button {
-			font-size: 14px;
-			padding: 8px 8px 8px 16px;
+			font-size: rem(14);
+			padding: rem(8) rem(8) rem(8) rem(16);
+			&::after {
+				font-size: rem(16);
+				width: rem(16);
+				height: rem(16);
+			}
 		}
 	}
 	.qela-tab {
@@ -171,9 +196,9 @@
 	}
 
 	.drag {
-		border-bottom: 1px solid $info-300;
-		border-top: 1px solid $info-300;
-		box-shadow: 0 4px 34px 0 rgba($black, 0.15);
+		border-bottom: 1px solid var(--bs-ql-info-300);
+		border-top: 1px solid var(--bs-ql-info-300);
+		box-shadow: 0 4px 34px 0 color-mix(in srgb, var(--bs-black), transparent 85%);
 		opacity: 0.5;
 		transition: all 0.2s ease 0s;
 	}

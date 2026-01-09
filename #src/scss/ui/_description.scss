@@ -1,18 +1,18 @@
 .qela-description {
-    color: $info-700;
-    height: 92px;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 130%;
-    display: -webkit-box;
-    transition: all 0.4s ease 0s;
-    &.active {
-        display: block;
-        height: auto;
-    }
+	color: var(--bs-ql-info-700);
+	height: 92px;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	font-weight: 400;
+	font-size: rem(14);
+	line-height: 130%;
+	display: -webkit-box;
+	transition: all 0.4s ease 0s;
+	&.active {
+		display: block;
+		height: auto;
+	}
 }

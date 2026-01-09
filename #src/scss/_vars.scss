@@ -265,7 +265,7 @@ $display-font-sizes: (
 // scss-docs-end display-headings
 // hr
 $hr-margin-y: 0;
-$hr-border-color: $gray-300; // Allows for inherited colors
+$hr-border-color: var(--bs-ql-info-300); // Allows for inherited colors
 $hr-border-width: var(--#{$prefix}border-width);
 $hr-opacity: 1;
 // Tables
@@ -277,11 +277,7 @@ $table-cell-padding-y: 0.5rem;
 $table-cell-padding-x: 0.5rem;
 $table-cell-padding-y-sm: 0.25rem;
 $table-cell-padding-x-sm: 0.25rem;
-
 $table-cell-vertical-align: center;
-
-// $table-color: var(--#{$prefix}body-color);
-$table-bg: transparent;
 // $table-accent-bg: transparent;
 
 $table-th-font-weight: 500;
@@ -296,18 +292,12 @@ $table-th-font-weight: 500;
 
 // $table-hover-color: $table-color;
 $table-hover-bg-factor: 1;
-$table-hover-bg: rgba($gray-100, $table-hover-bg-factor);
-
 $table-border-factor: 0.1;
 $table-border-width: $border-width;
-$table-border-color: $gray-200;
-
 $table-striped-order: odd;
 $table-striped-columns-order: even;
-
 $table-group-separator-color: currentcolor;
 
-$table-caption-color: $red;
 // scss-docs-end table-variables
 // z-index start
 $zindex-dropdown: 1000;
@@ -360,9 +350,6 @@ $btn-close-width: 1.125em;
 $btn-close-height: $btn-close-width;
 $btn-close-padding-x: 0.4375em;
 $btn-close-padding-y: $btn-close-padding-x;
-$btn-close-color: $black;
-$btn-close-bg: none;
-$btn-close-focus-shadow: none;
 $btn-close-opacity: 1;
 $btn-close-hover-opacity: 0.8;
 $btn-close-focus-opacity: 1;
@@ -380,7 +367,6 @@ $offcanvas-vertical-height: 30vh !default;
 $offcanvas-transition-duration: 0.3s !default;
 // $offcanvas-border-color: $modal-content-border-color !default;
 // $offcanvas-border-width: $modal-content-border-width !default;
-$offcanvas-bg-color: $white;
 
 // scss-docs-start form-label-variables
 $form-label-margin-bottom: 0.5rem;
@@ -465,34 +451,14 @@ $form-range-thumb-transition:
 //
 // Dropdown menu container and contents.
 // scss-docs-start dropdown-variables
-// $dropdown-link-active-color: $black;
-// $dropdown-link-active-bg: transparent;
 $dropdown-item-padding-y: 0.25rem;
 $dropdown-item-padding-x: 1rem;
 $dropdown-min-width: 22.5rem;
 $dropdown-padding-x: 0rem;
 $dropdown-padding-y: 0.5rem;
-// $dropdown-spacer: .125rem;
 $dropdown-font-size: $font-size-base;
-$dropdown-color: $black;
-$dropdown-bg: $white;
-$dropdown-border-color: $info-400;
 $dropdown-border-radius: $border-radius;
 $dropdown-border-width: $border-width;
-// $dropdown-inner-border-radius: subtract($dropdown-border-radius, $dropdown-border-width);
-$dropdown-divider-bg: $info-400;
-// $dropdown-divider-margin-y: $spacer * .5;
-$dropdown-box-shadow: $box-shadow;
-
-$dropdown-link-color: $info-900;
-$dropdown-link-hover-color: $info-900;
-$dropdown-link-hover-bg: $info-200;
-
-$dropdown-link-active-color: $white;
-
-$dropdown-link-disabled-color: $gray-200;
-
-$dropdown-header-color: $gray-600;
 $dropdown-header-padding-x: $dropdown-item-padding-x;
 $dropdown-header-padding-y: $dropdown-padding-y;
 // scss-docs-end dropdown-variables
@@ -501,33 +467,20 @@ $dropdown-header-padding-y: $dropdown-padding-y;
 
 // scss-docs-start modal-variables
 $modal-inner-padding: $spacer;
-
 $modal-footer-margin-between: 0.5rem;
-
 $modal-dialog-margin: 0.5rem;
 $modal-dialog-margin-y-sm-up: 1.5rem;
-
 $modal-title-line-height: $line-height-base;
-
-$modal-content-bg: $white;
-$modal-content-border-color: $info-300;
 $modal-content-border-width: $border-width;
 $modal-content-border-radius: $border-radius;
 $modal-content-inner-border-radius: subtract($modal-content-border-radius, $modal-content-border-width);
 $modal-content-box-shadow-xs: $box-shadow-sm;
 $modal-content-box-shadow-sm-up: $box-shadow;
-
-$modal-backdrop-bg: $black;
 $modal-backdrop-opacity: 0.3;
-
-$modal-header-border-color: var(--#{$prefix}border-color);
 $modal-header-border-width: $modal-content-border-width;
 $modal-header-padding-y: $modal-inner-padding;
 $modal-header-padding-x: $modal-inner-padding;
 $modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
-
-$modal-footer-bg: null;
-$modal-footer-border-color: $modal-header-border-color;
 $modal-footer-border-width: $modal-header-border-width;
 
 $modal-sm: 300px;
@@ -549,14 +502,11 @@ $alert-dismissible-padding-r: $alert-padding-x * 3;
 //tooltip
 $tooltip-font-size: 0.75rem;
 $tooltip-max-width: 200px;
-$tooltip-color: $black;
-$tooltip-bg: $white;
 $tooltip-border-radius: 0.625rem;
 $tooltip-opacity: 1;
 $tooltip-padding-y: $spacer * 0.625;
 $tooltip-padding-x: $spacer * 0.625;
 $tooltip-margin: null;
-
 $tooltip-arrow-width: 1rem;
 $tooltip-arrow-height: 0.875rem;
 // fusv-disable
@@ -567,7 +517,7 @@ $tooltip-arrow-color: null;
 //badge
 $badge-font-size: 0.75rem;
 $badge-font-weight: 400;
-$badge-color: $white;
+$badge-color: var(--bs-white);
 $badge-padding-y: 0.25rem;
 $badge-padding-x: 0.25rem;
 $badge-border-radius: $border-radius-sm;
@@ -579,69 +529,24 @@ $pagination-padding-y-sm: 0.359375rem;
 $pagination-padding-x-sm: 0.5rem;
 $pagination-font-size: $font-size-base;
 $pagination-border-radius: $border-radius-lg * 0.8;
-$pagination-color: $secondary-600;
-$pagination-bg: $white;
-$pagination-border-color: $gray-200;
-$pagination-focus-color: $secondary-600;
-$pagination-focus-bg: $white;
-$pagination-focus-box-shadow: none;
 $pagination-focus-outline: 0;
-
-$pagination-hover-color: $secondary-700;
-$pagination-hover-bg: $secondary-100;
-$pagination-hover-border-color: $gray-300;
-
-$pagination-active-color: $white;
-$pagination-active-bg: $secondary;
-$pagination-active-border-color: $pagination-border-color;
-
-$pagination-disabled-color: $gray-600;
-$pagination-disabled-bg: $white;
-$pagination-disabled-border-color: $gray-200;
 $pagination-border-radius-sm: $border-radius-sm;
 //pagination
 $nav-link-padding-y: 0.5rem;
 $nav-link-padding-x: 1rem;
-$nav-link-color: $gray-700;
-$nav-link-hover-color: $secondary-700;
-$nav-link-disabled-color: $gray-600;
-
-$nav-tabs-border-color: $gray-300;
 $nav-tabs-border-width: $border-width;
 $nav-tabs-border-radius: $border-radius;
-$nav-tabs-link-hover-border-color: $gray-300 $gray-300 $nav-tabs-border-color;
-$nav-tabs-link-active-color: $gray-900;
-$nav-tabs-link-active-bg: $white;
-$nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg;
 // $nav-pills-border-radius: $border-radius;
 // $nav-pills-link-active-color: $component-active-color;
 // $nav-pills-link-active-bg: $component-active-bg;
 
 // List group
-$list-group-color: $gray-900;
-$list-group-bg: $white;
-$list-group-border-color: $info-300;
 $list-group-border-width: $border-width;
 $list-group-border-radius: $border-radius;
-
 $list-group-item-padding-y: $spacer * 0.5;
 $list-group-item-padding-x: $spacer * 0;
 $list-group-item-bg-scale: -80%;
 $list-group-item-color-scale: 40%;
-
-$list-group-hover-bg: $gray-100;
-// $list-group-active-color: $component-active-color;
-// $list-group-active-bg: $component-active-bg;
-// $list-group-active-border-color: $list-group-active-bg;
-
-$list-group-disabled-color: $gray-600;
-$list-group-disabled-bg: $list-group-bg;
-
-$list-group-action-color: $gray-700;
-$list-group-action-hover-color: $list-group-action-color;
-
-$list-group-action-active-color: $body-color;
-$list-group-action-active-bg: $gray-200;
 // List group end
 
 // Carousel
@@ -661,27 +566,19 @@ $carousel-indicator-transition: opacity 0.6s ease;
 
 $progress-height: 0.5rem;
 $progress-font-size: $font-size-base * 0.75;
-$progress-bg: $gray-200;
 $progress-border-radius: $border-radius;
-$progress-bar-color: $white;
-$progress-bar-bg: $primary;
 // Progress end
 // Card start
 $card-spacer-y: $spacer;
 $card-spacer-x: $spacer;
 $card-title-spacer-y: $spacer * 0;
 $card-border-width: $border-width;
-$card-border-color: $info-200;
 $card-border-radius: $border-radius;
-$card-box-shadow: null;
 $card-inner-border-radius: subtract($card-border-radius, $card-border-width);
 $card-cap-padding-y: $card-spacer-y * 0.5;
 $card-cap-padding-x: $card-spacer-x;
 $card-cap-bg: rgba($black, 0.03);
-$card-cap-color: null;
 $card-height: null;
-$card-color: null;
-$card-bg: $white;
 $card-img-overlay-padding: $spacer;
 $card-group-margin: $grid-gutter-width * 0.5;
 // Card end
@@ -691,55 +588,32 @@ $card-group-margin: $grid-gutter-width * 0.5;
 // scss-docs-start accordion-variables
 $accordion-padding-y: 1rem;
 $accordion-padding-x: 1rem;
-$accordion-color: $gray-600; // Sass variable because of
-$accordion-bg: $white;
 $accordion-border-width: $border-width;
-$accordion-border-color: $info-200;
 $accordion-border-radius: $border-radius;
 // $accordion-inner-border-radius: subtract($accordion-border-radius, $accordion-border-width) !default;
-
 $accordion-body-padding-y: $accordion-padding-y;
 $accordion-body-padding-x: $accordion-padding-x;
-
 $accordion-button-padding-y: $accordion-padding-y;
 $accordion-button-padding-x: $accordion-padding-x;
-$accordion-button-color: $accordion-color !default;
-$accordion-button-bg: var(--#{$prefix}accordion-bg);
-// $accordion-transition: border-radius .15s ease !default;
-$accordion-button-active-bg: $body-bg;
-$accordion-button-active-color: $gray-700;
-
 $accordion-button-focus-border-color: transparent;
 $accordion-button-focus-box-shadow: none;
-
-$accordion-icon-width: 1rem;
-$accordion-icon-color: $gray-600;
-$accordion-icon-active-color: $accordion-button-active-color;
+$accordion-icon-width: 1.5rem;
 $accordion-icon-transition: transform 0.2s ease-in-out;
 $accordion-icon-transform: rotate(-180deg);
-
-$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
-$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !default;
+$accordion-button-icon: "\e903";
+$accordion-button-active-icon: none;
 // scss-docs-end accordion-variables
 // Popovers
 
 // scss-docs-start popover-variables
 $popover-font-size: $font-size-sm;
-$popover-bg: $white;
 $popover-max-width: 364px;
 $popover-border-width: $border-width;
-$popover-border-color: $gray-300;
-$popover-border-radius: 0.5rem;
+$popover-border-radius: 8px;
 $popover-inner-border-radius: subtract($popover-border-radius, $popover-border-width);
-$popover-box-shadow: none;
-
 $popover-header-font-size: $font-size-base;
-$popover-header-bg: $popover-bg;
-$popover-header-color: $black;
 $popover-header-padding-y: $spacer;
 $popover-header-padding-x: $spacer;
-
-$popover-body-color: $body-color;
 $popover-body-padding-y: $spacer;
 $popover-body-padding-x: $spacer;
 
@@ -756,14 +630,6 @@ $toast-max-width: 350px;
 $toast-padding-x: 0.75rem;
 $toast-padding-y: 0.5rem;
 $toast-font-size: 0.875rem;
-$toast-color: $info-900;
-$toast-background-color: rgba($white, 1);
 $toast-border-width: $border-width;
-$toast-border-color: $info-400;
 $toast-border-radius: $border-radius-lg;
-$toast-box-shadow: $box-shadow;
 $toast-spacing: $container-padding-x;
-
-$toast-header-color: $gray-600;
-$toast-header-background-color: rgba($white, 1);
-$toast-header-border-color: $info-400;
