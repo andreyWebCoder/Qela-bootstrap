@@ -7,61 +7,61 @@
 		display: inline-flex;
 		align-items: center;
 		flex-direction: row-reverse;
-		padding-top: 2px;
-		padding-bottom: 2px;
+		padding-top: rem(2);
+		padding-bottom: rem(2);
 		gap: 2px;
 		&::before {
-			font-size: 16px;
+			font-size: rem(16);
 			line-height: 1;
 		}
 	}
 	&.message {
-		font-size: 11px;
+		font-size: rem(11);
 		font-weight: 600;
 		line-height: 9px;
-		padding: 4px;
+		padding: rem(4);
 		border-radius: 6px;
 	}
 
 	&.large {
-		padding: 5.5px 6px;
-		font-size: 14px;
+		padding: rem(5.5) rem(6);
+		font-size: rem(14);
 		&[class*="ic-"] {
 			gap: 5px;
-			padding-top: 4px;
-			padding-bottom: 4px;
+			padding-top: rem(4);
+			padding-bottom: rem(4);
 		}
 	}
 
 	&.large-xl {
-		padding: 8px 12px;
-		font-size: 16px;
+		padding: rem(8) rem(12);
+		font-size: rem(16);
 		border-radius: 8px;
 		line-height: 131%;
 		&[class*="ic-"] {
 			gap: 10px;
 			&::before {
-				font-size: 20px;
+				font-size: rem(20);
 			}
 		}
 	}
 }
 .qela-badge {
 	&.small {
-		--bs-badge-color: #{$white};
-		padding: 2px 4px;
-		font-size: 10px;
+		--bs-badge-color: #{var(--bs-white)};
+		padding: rem(2) rem(4);
+		font-size: rem(10);
 		text-align: center;
 		min-width: 14px;
 	}
 
 	&.item {
-		padding: 6px 4px 6px 6px;
+		padding: rem(6) rem(4) rem(6) rem(6);
 		border-radius: 6px;
-		background-color: $secondary-200;
-		color: $info-900;
+		background-color: var(--bs-ql-secondary-200);
+		color: var(--bs-ql-info-900);
 		font-weight: 400;
-		font-size: 14px;
+		font-size: rem(14);
 	}
 }
 
@@ -74,7 +74,7 @@
 	min-width: 24px;
 	line-height: 1;
 	border-radius: 30px;
-	color: $info-900;
+	color: var(--bs-ql-info-900);
 }
 
 .qela-counter {
@@ -83,52 +83,52 @@
 	height: 16px;
 	min-width: 16px;
 	border-radius: 14px;
-	color: $white;
+	color: var(--bs-white);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	padding: rem(2);
-	background-color: $danger;
+	background-color: var(--bs-danger);
 }
 
 .qela-badge-primary {
-	background-color: $primary-200;
-	color: $primary-900;
-	border-color: $primary-600;
+	background-color: var(--bs-ql-primary-200);
+	color: var(--bs-ql-primary-900);
+	border-color: var(--bs-ql-primary-600);
 }
 
 .qela-badge-secondary {
-	background-color: $secondary-200;
-	color: $secondary-900;
-	border-color: $secondary-600;
+	background-color: var(--bs-ql-secondary-200);
+	color: var(--bs-ql-secondary-900);
+	border-color: var(--bs-ql-secondary-600);
 }
 
 .qela-badge-danger {
-	background-color: $danger-200;
-	color: $danger-900;
-	border-color: $danger-600;
+	background-color: var(--bs-ql-danger-200);
+	color: var(--bs-ql-danger-900);
+	border-color: var(--bs-ql-danger-600);
 }
 
 .qela-badge-success {
-	background-color: $success-200;
-	color: $success-900;
-	border-color: $success-600;
+	background-color: var(--bs-ql-success-200);
+	color: var(--bs-ql-success-900);
+	border-color: var(--bs-ql-success-600);
 }
 
 .qela-badge-warning {
-	background-color: $warning-200;
-	color: $warning-900;
-	border-color: $warning-600;
+	background-color: var(--bs-ql-warning-200);
+	color: var(--bs-ql-warning-900);
+	border-color: var(--bs-ql-warning-600);
 }
 .qela-badge-info {
-	background-color: $info-200;
-	color: $info-900;
-	border-color: $info;
+	background-color: var(--bs-ql-info-200);
+	color: var(--bs-ql-info-900);
+	border-color: var(--bs-info);
 }
 .qela-badge-light {
-	background-color: $white;
-	color: $info-900;
-	border-color: $info;
+	background-color: var(--bs-white);
+	color: var(--bs-ql-info-900);
+	border-color: var(--bs-info);
 }
 
 .qela-badge-talent {
@@ -144,15 +144,15 @@
 	}
 	// ==========================================
 	&.vote {
-		color: $primary-900;
-		background-color: $primary-200;
-		border-color: $primary-700;
+		color: var(--bs-ql-primary-900);
+		background-color: var(--bs-ql-primary-200);
+		border-color: var(--bs-ql-primary-700);
 		display: inline-flex;
 		align-items: center;
 		&.large-xl {
 			&.img {
 				position: relative;
-				padding-right: 40px;
+				padding-right: rem(40);
 				img {
 					width: 28px;
 					position: absolute;
@@ -167,8 +167,8 @@
 }
 
 .qela-status-badge {
-	--bs-badge-color: #{$white};
-	--ql-badge-bg: #{$primary};
+	--bs-badge-color: var(--bs-white);
+	--ql-badge-bg: var(--bs-primary);
 	--ql-badge-color-icon: var(--bs-badge-color);
 	--ql-badge-border-color: var(--ql-badge-bg);
 	color: var(--bs-badge-color);
@@ -191,26 +191,26 @@
 		}
 	}
 	&.secondary {
-		--bs-badge-color: #{$secondary-800};
-		--ql-badge-bg: #{$secondary-100};
-		--ql-badge-color-icon: #{$secondary};
-		--ql-badge-border-color: #{$secondary-400};
+		--bs-badge-color: var(--bs-ql-secondary-800);
+		--ql-badge-bg: var(--bs-ql-secondary-100);
+		--ql-badge-color-icon: var(--bs-secondary);
+		--ql-badge-border-color: var(--bs-ql-secondary-400);
 	}
 	&.success {
-		--bs-badge-color: #{$success-900};
-		--ql-badge-bg: #{$success-100};
-		--ql-badge-color-icon: #{$success-700};
-		--ql-badge-border-color: #{$success-700};
+		--bs-badge-color: var(--bs-ql-success-900);
+		--ql-badge-bg: var(--bs-ql-success-100);
+		--ql-badge-color-icon: var(--bs-ql-success-700);
+		--ql-badge-border-color: var(--bs-ql-success-700);
 	}
 	&.warning {
-		--bs-badge-color: #{$warning-900};
-		--ql-badge-bg: #{$warning-100};
-		--ql-badge-color-icon: #{$warning-600};
-		--ql-badge-border-color: #{$warning-400};
+		--bs-badge-color: var(--bs-ql-warning-900);
+		--ql-badge-bg: var(--bs-ql-warning-100);
+		--ql-badge-color-icon: var(--bs-ql-warning-600);
+		--ql-badge-border-color: var(--bs-ql-warning-400);
 	}
 	&.danger {
-		--ql-badge-bg: #{$danger-100};
-		--ql-badge-color-icon: #{$danger};
+		--ql-badge-bg: var(--bs-ql-danger-100);
+		--ql-badge-color-icon: var(--bs-danger);
 	}
 	&.circel {
 		padding: 0;
@@ -226,13 +226,13 @@
 		min-width: 24px;
 		border-radius: 20px;
 		&::before {
-			font-size: 16px;
+			font-size: rem(16);
 		}
 	}
 }
 .qela-referral-counter {
 	padding: rem(12) rem(16) rem(12) rem(16);
-	background-color: $secondary-200;
+	background-color: var(--bs-ql-secondary-200);
 	border-radius: 8px;
 	display: inline-flex;
 	align-items: center;

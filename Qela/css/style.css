@@ -18686,33 +18686,33 @@ textarea {
   display: inline-flex;
   align-items: center;
   flex-direction: row-reverse;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
   gap: 2px;
 }
 .badge[class*=ic-]::before {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
 }
 .badge.message {
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 600;
   line-height: 9px;
-  padding: 4px;
+  padding: 0.25rem;
   border-radius: 6px;
 }
 .badge.large {
-  padding: 5.5px 6px;
-  font-size: 14px;
+  padding: 0.34375rem 0.375rem;
+  font-size: 0.875rem;
 }
 .badge.large[class*=ic-] {
   gap: 5px;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .badge.large-xl {
-  padding: 8px 12px;
-  font-size: 16px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
   border-radius: 8px;
   line-height: 131%;
 }
@@ -18720,23 +18720,23 @@ textarea {
   gap: 10px;
 }
 .badge.large-xl[class*=ic-]::before {
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .qela-badge.small {
-  --bs-badge-color: #fff;
-  padding: 2px 4px;
-  font-size: 10px;
+  --bs-badge-color: var(--bs-white);
+  padding: 0.125rem 0.25rem;
+  font-size: 0.625rem;
   text-align: center;
   min-width: 14px;
 }
 .qela-badge.item {
-  padding: 6px 4px 6px 6px;
+  padding: 0.375rem 0.25rem 0.375rem 0.375rem;
   border-radius: 6px;
-  background-color: #ecebff;
-  color: #2c2c2c;
+  background-color: var(--bs-ql-secondary-200);
+  color: var(--bs-ql-info-900);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .qela-list-num {
@@ -18748,7 +18748,7 @@ textarea {
   min-width: 24px;
   line-height: 1;
   border-radius: 30px;
-  color: #2c2c2c;
+  color: var(--bs-ql-info-900);
 }
 
 .qela-counter {
@@ -18757,54 +18757,54 @@ textarea {
   height: 16px;
   min-width: 16px;
   border-radius: 14px;
-  color: #fff;
+  color: var(--bs-white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.125rem;
-  background-color: #ff4136;
+  background-color: var(--bs-danger);
 }
 
 .qela-badge-primary {
-  background-color: #fff8c1;
-  color: #635700;
-  border-color: #dec402;
+  background-color: var(--bs-ql-primary-200);
+  color: var(--bs-ql-primary-900);
+  border-color: var(--bs-ql-primary-600);
 }
 
 .qela-badge-secondary {
-  background-color: #ecebff;
-  color: #352676;
-  border-color: #8169eb;
+  background-color: var(--bs-ql-secondary-200);
+  color: var(--bs-ql-secondary-900);
+  border-color: var(--bs-ql-secondary-600);
 }
 
 .qela-badge-danger {
-  background-color: #ffe0de;
-  color: #7b1c16;
-  border-color: #e13d33;
+  background-color: var(--bs-ql-danger-200);
+  color: var(--bs-ql-danger-900);
+  border-color: var(--bs-ql-danger-600);
 }
 
 .qela-badge-success {
-  background-color: #ceffcf;
-  color: #006002;
-  border-color: #05c609;
+  background-color: var(--bs-ql-success-200);
+  color: var(--bs-ql-success-900);
+  border-color: var(--bs-ql-success-600);
 }
 
 .qela-badge-warning {
-  background-color: #ffd8b5;
-  color: #713600;
-  border-color: #dc6a00;
+  background-color: var(--bs-ql-warning-200);
+  color: var(--bs-ql-warning-900);
+  border-color: var(--bs-ql-warning-600);
 }
 
 .qela-badge-info {
-  background-color: #e9e9e8;
-  color: #2c2c2c;
-  border-color: #ababab;
+  background-color: var(--bs-ql-info-200);
+  color: var(--bs-ql-info-900);
+  border-color: var(--bs-info);
 }
 
 .qela-badge-light {
-  background-color: #fff;
-  color: #2c2c2c;
-  border-color: #ababab;
+  background-color: var(--bs-white);
+  color: var(--bs-ql-info-900);
+  border-color: var(--bs-info);
 }
 
 .qela-badge-talent {
@@ -18820,15 +18820,15 @@ textarea {
   color: var(--ql-talent-border-color);
 }
 .qela-badge-talent.vote {
-  color: #635700;
-  background-color: #fff8c1;
-  border-color: #b49e01;
+  color: var(--bs-ql-primary-900);
+  background-color: var(--bs-ql-primary-200);
+  border-color: var(--bs-ql-primary-700);
   display: inline-flex;
   align-items: center;
 }
 .qela-badge-talent.vote.large-xl.img {
   position: relative;
-  padding-right: 40px;
+  padding-right: 2.5rem;
 }
 .qela-badge-talent.vote.large-xl.img img {
   width: 28px;
@@ -18840,8 +18840,8 @@ textarea {
 }
 
 .qela-status-badge {
-  --bs-badge-color: #fff;
-  --ql-badge-bg: #ffe000;
+  --bs-badge-color: var(--bs-white);
+  --ql-badge-bg: var(--bs-primary);
   --ql-badge-color-icon: var(--bs-badge-color);
   --ql-badge-border-color: var(--ql-badge-bg);
   color: var(--bs-badge-color);
@@ -18863,26 +18863,26 @@ textarea {
   color: var(--ql-badge-color-icon);
 }
 .qela-status-badge.secondary {
-  --bs-badge-color: #473690;
-  --ql-badge-bg: #f9f9ff;
-  --ql-badge-color-icon: #9188ff;
-  --ql-badge-border-color: #ada6ff;
+  --bs-badge-color: var(--bs-ql-secondary-800);
+  --ql-badge-bg: var(--bs-ql-secondary-100);
+  --ql-badge-color-icon: var(--bs-secondary);
+  --ql-badge-border-color: var(--bs-ql-secondary-400);
 }
 .qela-status-badge.success {
-  --bs-badge-color: #006002;
-  --ql-badge-bg: #e7ffe8;
-  --ql-badge-color-icon: #06a20a;
-  --ql-badge-border-color: #06a20a;
+  --bs-badge-color: var(--bs-ql-success-900);
+  --ql-badge-bg: var(--bs-ql-success-100);
+  --ql-badge-color-icon: var(--bs-ql-success-700);
+  --ql-badge-border-color: var(--bs-ql-success-700);
 }
 .qela-status-badge.warning {
-  --bs-badge-color: #713600;
-  --ql-badge-bg: #ffeee0;
-  --ql-badge-color-icon: #dc6a00;
-  --ql-badge-border-color: #ff9839;
+  --bs-badge-color: var(--bs-ql-warning-900);
+  --ql-badge-bg: var(--bs-ql-warning-100);
+  --ql-badge-color-icon: var(--bs-ql-warning-600);
+  --ql-badge-border-color: var(--bs-ql-warning-400);
 }
 .qela-status-badge.danger {
-  --ql-badge-bg: #fff2f1;
-  --ql-badge-color-icon: #ff4136;
+  --ql-badge-bg: var(--bs-ql-danger-100);
+  --ql-badge-color-icon: var(--bs-danger);
 }
 .qela-status-badge.circel {
   padding: 0;
@@ -18897,12 +18897,12 @@ textarea {
   border-radius: 20px;
 }
 .qela-status-badge.sm::before {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .qela-referral-counter {
   padding: 0.75rem 1rem 0.75rem 1rem;
-  background-color: #ecebff;
+  background-color: var(--bs-ql-secondary-200);
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
@@ -20384,7 +20384,7 @@ textarea {
   color: var(--bs-ql-info-700);
 }
 .qela-awards.orden .qela-badge-talent {
-  background-color: var(--bs-ql-secondary-300);
+  background-color: var(--bs-ql-primary-300);
   padding-right: 3.375rem;
 }
 .qela-awards.orden .qela-badge-talent.small {
@@ -20416,7 +20416,7 @@ textarea {
   justify-content: center;
 }
 .qela-voice .body-voice {
-  background-color: var(--bs-ql-secondary-300);
+  background-color: var(--bs-ql-primary-300);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -20427,10 +20427,10 @@ textarea {
 }
 
 .qela-talent {
-  padding: 5px 12px;
+  padding: 0.3125rem 0.75rem;
   text-align: left;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   border: 1px solid var(--ql-talent-border-color);
   background: var(--ql-talent-bg);
@@ -20438,7 +20438,7 @@ textarea {
 }
 
 .qela-talent-text {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 500;
   line-height: 120%;
   text-align: left;

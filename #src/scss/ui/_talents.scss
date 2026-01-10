@@ -37,7 +37,7 @@
 		}
 
 		.qela-badge-talent {
-			background-color: var(--bs-ql-secondary-300);
+			background-color: var(--bs-ql-primary-300);
 			padding-right: rem(54);
 			&.small {
 				color: var(--bs-ql-info-700) !important;
@@ -72,7 +72,7 @@
 	align-items: center;
 	justify-content: center;
 	.body-voice {
-		background-color: var(--bs-ql-secondary-300);
+		background-color: var(--bs-ql-primary-300);
 		border-radius: 10px;
 		display: flex;
 		align-items: center;
@@ -84,10 +84,10 @@
 }
 // +
 .qela-talent {
-	padding: 5px 12px;
+	padding: rem(5) rem(12);
 	text-align: left;
 	border-radius: 8px;
-	font-size: 20px;
+	font-size: rem(20);
 	font-weight: 500;
 	border: 1px solid var(--ql-talent-border-color);
 	background: var(--ql-talent-bg);
@@ -95,7 +95,7 @@
 }
 
 .qela-talent-text {
-	font-size: 28px;
+	font-size: rem(28);
 	font-weight: 500;
 	line-height: 120%;
 	text-align: left;
