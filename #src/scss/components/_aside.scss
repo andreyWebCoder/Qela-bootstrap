@@ -54,7 +54,7 @@
 			height: 100%;
 			position: absolute;
 			top: 0;
-			right: -1px;
+			right: 0;
 			border-right: 1px solid var(--bs-ql-info-200);
 			background-color: var(--bs-white);
 		}
@@ -99,8 +99,8 @@
 			font-weight: 500;
 			width: 112px;
 			flex: 0 0 112px;
-			padding: rem(8) 0;
-			border-radius: 30px;
+			padding: rem(4) 0;
+			border-radius: 0 30px 30px 0;
 			overflow: hidden;
 			transition: background-color 0.3s ease 0s;
 			&.sm {
@@ -111,7 +111,7 @@
 		.qela-counter {
 			position: absolute;
 			top: 0;
-			left: 24px;
+			left: 22px;
 			pointer-events: none;
 			transform: translate(0%, 0%);
 		}
