@@ -1,605 +1,563 @@
 <!DOCTYPE html>
 <html lang="ua">
-	
-	<head>
-	<title>Subscription</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/vendors.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Subscription</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-	<body class="qela-body" id="app">
-		
-		<header>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- item whith title and button burger-->
-			<div class="col gap-2">
-				<!--FIX mobile logo -->
-				<a class="navbar-brand qela-logo" href="#">
-					<img src="img/logo-sm.svg" alt="Logo" width="40" height="40"/>
-				</a>
-				<h1 class="h5 qela-clamp">Subscription</h1>
-			</div>
-			<div class="col-auto d-flex gap-2">
-				<div class="dropdown qela-dropdown ">
-					<button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i>
-					</button>
-					<ul class="dropdown-menu dropdown-menu-end shadow">
-						<li>
-							<a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
-						</li>
-						<li>
-							<a href="#" target="_blank" class="dropdown-item ">Admin Guideline</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">FAQ</a>
-						</li>
-					</ul>
-				</div>
-				<!-- <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
+<body class="qela-body" id="app">
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- item whith title and button burger-->
+                <div class="col gap-2">
+                    <!--FIX mobile logo -->
+                    <a class="navbar-brand qela-logo" href="#">
+                        <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
+                    </a>
+                    <h1 class="h5 qela-clamp">Subscription</h1>
+                </div>
+                <div class="col-auto d-flex gap-2">
+                    <div class="dropdown qela-dropdown ">
+                        <button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li>
+                                <a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="dropdown-item ">Admin Guideline</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
 				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-help-circle"></a>
 				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Сайт для прихильників"></a> -->
-				<a href="#" target="_blank" class="btn btn-sm btn-info ico-left ic-phone">User Site</a>
-				<!-- user -->
-				<div class="dropdown qela-dropdown">
-					<button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                    <a href="#" target="_blank" class="btn btn-sm btn-info ico-left ic-phone">User Site</a>
+                    <!-- user -->
+                    <div class="dropdown qela-dropdown">
+                        <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
 							<img src="img/header/user.jpg" alt="">
 						</span>
-					</button>
-					<ul class="dropdown-menu shadow" style="width:350px">
-						<li>
-							<div class="qela-item-user">
-								<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                        </button>
+                        <ul class="dropdown-menu shadow" style="width:350px">
+                            <li>
+                                <div class="qela-item-user">
+                                    <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
 									<img src="img/header/user.jpg" alt="">
 								</span>
-								<div class="flex-grow-1">
-									<div class="h3 mb-1"></div>
-									<span>qelatesting1+1800@gmail.com</span>
-									<div class="text-info-600">
-										<small>Власник</small>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<hr class="dropdown-divider"/>
-						</li>
-						<li>
-							<a class="dropdown-item ic-user-24" href="#">Профіль</a>
-
-						</li>
-						<li>
-							<a class="dropdown-item ic-bill" href="#">Оплата</a>
-						</li>
-						<li>
-							<a class="dropdown-item ic-dollar" href="#">Підписка</a>
-						</li>
-						<li>
-							<hr class="dropdown-divider"/>
-						</li>
-						<li>
-							<a class="dropdown-item ic-log-out" href="#">вийти</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-		<main class="flex-grow-1">
-			<!-- menu -->
-<aside class="qela-menu">
-	<!-- buttons -->
-	<button type="button" class="ic-chevrons-left qela-btn-menu"></button>
-	<nav class="qela-nav qela-scroll-custom">
-		<!-- nav wrapper -->
-		<div class="qela-nav-wrapper">
-			
-			<ul class="nav">
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-city" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація"></i>
-							<div>Організація</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-box-arrow" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд"></i>
-							<div>Покроковий ґайд</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-people" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі"></i>
-							<div>Користувачі</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-task" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна"></i>
-							<div>Задачі адміна</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"></i>
-							<div>Квести</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-voting" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування"></i>
-							<div>Голосування</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-notes" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини"></i>
-							<div>Новини</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-tag" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги"></i>
-							<div>Теги</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди"></i>
-							<div>Винагороди</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-donation-outlined" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати"></i>
-							<div>Донати</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-chart-pie" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд"></i>
-							<div>Дашборд</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							<span class="qela-counter">50</span>
-							<i class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення"></i>
-							<div>Обговорення</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин"></i>
-							<div>Магазин</div>
-						</a>
-					</li>
-				
-			</ul>
-			<ul class="nav">
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<i class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування"></i>
-						<div>Налаштування</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</aside>
-			<!-- ====================================== subscription ====================================-->
-			<div class="container-fluid h-100">
-				<div class="row gy-3 gx-3 mb-3">
-					<div class="col-4">
-						<div class="d-grid gap-3">
-							<div class="card p-3">
-								<div class="d-flex gap-4 align-items-start flex-wrap">
-									<span class="qela-avatar qela-ibg" style="--img-size: 100px;"><img src="img/avatar.jpg" alt=""></span>
-									<div class="align-self-center flex-grow-1">
-										<div class="h4 text-info-800 qela-clamp text-break">John Perry</div>
-									</div>
-									<button class="btn btn-info ic-edit ico-right">Edit</button>
-								</div>
-							</div>
-							<div class="card p-3">
-								<div>Current roles</div>
-								<div>
-									<ul class="list-group list-group-flush border-0 mt-3">
-										<li class="list-group-item d-flex gap-2 align-items-center border-0">
-											<small class="fw-semibold text-info-600 w-50">Roles</small>
-											<small class="fw-semibold text-info-600 w-50">Branch</small>
-										</li>
-										<li class="list-group-item d-flex gap-2 align-items-center">
-											<div class="d-inline-flex flex-column align-items-start gap-2 w-50">
-												<span class="qela-status-badge secondary ic-key" title="superadmin">superadmin</span></div>
-											<small class="fw-semibold text-info-800 w-50">All</small>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="card p-3">
-								<div class="fw-bold text-info-800 mb-3">Profile information</div>
-								<ul class="list-group list-group-flush qela-flush">
-									<li class="list-group-item">
-										<span>Person Name:</span>
-										<span class="word-break">John Perry</span></li>
-									<li class="list-group-item">
-										<span>Phone Number:</span>
-										<span>+15557238947</span></li>
-									<li class="list-group-item">
-										<span>Email:</span>
-										<span class="word-break">qelatesting1+1800@gmail.com</span></li>
-									<li class="list-group-item">
-										<span>Date Created:</span>
-										<span>25/11/2024, 17:24</span></li>
-									<li class="list-group-item">
-										<span>Date last visit:</span>
-										<span>21/09/2025, 12:19</span></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-8">
-						<div class="card">
-							<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4">
-								<li class="nav-item">
-									<a class="nav-link" href="#">Roles</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link active" href="#">Subscription</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Billing</a>
-								</li>
-							</ul>
-							<div class="pb-4">
-								<div class="px-4 py-3 d-flex justify-content-between align-items-start gap-2">
-									<div>
-										<h2 class="h5 text-info-800">SAAS solution</h2>
-										<small class="text-info-700 mt-1">pricing plans</small>
-									</div>
-									<div class="qela-members">
-										<span class="display-7 fw-semibold">Сommunity members</span>
-										<i class="ic-people"></i>
-										<span class="h5">100</span></div>
-								</div>
-								<div class="p-2 d-flex align-items-center justify-content-center gap-5">
-									<div class="form-check"><input type="radio" name="q" class="form-check-input" id="Radio5">
-										<label class="form-check-label" for="Radio5">Monthly</label>
-									</div>
-									<div class="d-flex align-items-center gap-2">
-										<div class="form-check"><input type="radio" name="q" class="form-check-input" id="Radio6">
-											<label class="form-check-label" for="Radio6">Annual</label>
-										</div>
-										<span class="badge qela-badge-success display-7 rounded-5 fw-bolder">Save 15%</span>
-									</div>
-								</div>
-								<!-- cards -->
-								<div class="row g-5 py-4 px-3 ">
-									<div class="col-4">
-										<div class="qela-subscription current">
-											<div class="card">
-												<div>
-													<div class="fw-bold text-secondary-700">Free</div>
-													<span class="badge bg-secondary py-1 px-2 rounded-5 fw-bolder">Up to 100 users</span>
-												</div>
-												<div class="align-self-center px-3">
-													<span class="fw-semibold"></span>
-													<span class="h1">$0</span>
-												</div>
-												<div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
-												<div class="fw-bold text-secondary-700 d-flex justify-content-center align-items-center gap-2 py-3">
-													<i class="ic-checkmark-starburst-filled"></i>Free
-											</div>
-												<div class="px-3 py-2">
-													<a href="#" class="display-6 text-decoration-none">Learn more</a>
-												</div>
-											</div>
-											<div class="card">
-												<div class="border-bottom">
-													<div class="fw-bold text-secondary-700">Free</div>
-													<small class="text-info-600">Available from 0 users</small>
-												</div>
-												<div class="px-3 pb-5">
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div>Users</div>
-														<div>56</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div class="text-start">
-															<div>Available user plan</div>
-															<div class="text-info-600 mt-1">$144/mo x 12 month</div>
-														</div>
-														<div>0 - 100</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between py-4">
-														<div class="fw-bold">Total</div>
-														<div>$0</div>
-													</div>
-												</div>
-												<div class="px-3 py-2 d-flex gap-2 justify-content-center">
-													<button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
-													<a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-4">
-										<div class="qela-subscription active">
-											<div class="card">
-												<div>
-													<div class="fw-bold text-secondary-700">Standard</div>
-												</div>
-												<div class="align-self-center position-relative px-3">
-													<span class="fw-semibold">from </span>
-													<span class="h1">$160/mo</span>
-													<span class="text-info-600 display-7 position-absolute top-100 end-0 ">for 100 users</span>
-												</div>
-												<div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
-												<div class="px-3 py-2">
-													<a href="#" class="btn btn-primary w-100">Subscribe</a>
-												</div>
-											</div>
-											<div class="card">
-												<div class="border-bottom">
-													<div class="fw-bold text-secondary-700">Free</div>
-													<small class="text-info-600">Available from 0 users</small>
-												</div>
-												<div class="px-3 pb-5">
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div>Users</div>
-														<div>56</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div class="text-start">
-															<div>Available user plan</div>
-															<div class="text-info-600 mt-1">$144/mo x 12 month</div>
-														</div>
-														<div>0 - 100</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between py-4">
-														<div class="fw-bold">Total</div>
-														<div>$0</div>
-													</div>
-												</div>
-												<div class="px-3 py-2 d-flex gap-2 justify-content-center">
-													<button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
-													<a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="col-4">
-										<div class="qela-subscription">
-											<div class="card ">
-												<div>
-													<div class="fw-bold text-secondary-700">Premium</div>
-													<span class="badge bg-primary text-primary-900 py-1 px-2 rounded-5 fw-bolder">No Ads</span>
-												</div>
-												<div class="align-self-center position-relative px-3">
-													<span class="fw-semibold">from </span>
-													<span class="h1">$480/mo</span>
-													<span class="text-info-600 display-7 position-absolute top-100 end-0 ">for 100 users</span>
-												</div>
-												<div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
-												<div class="px-3 py-2">
-													<a href="#" class="btn btn-primary w-100">Subscribe</a>
-												</div>
-											</div>
-											<div class="card">
-												<div class="border-bottom">
-													<div class="fw-bold text-secondary-700">Free</div>
-													<small class="text-info-600">Available from 0 users</small>
-												</div>
-												<div class="px-3 pb-5">
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div>Users</div>
-														<div>56</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between border-bottom py-3">
-														<div class="text-start">
-															<div>Available user plan</div>
-															<div class="text-info-600 mt-1">$144/mo x 12 month</div>
-														</div>
-														<div>0 - 100</div>
-													</div>
-													<div class="d-flex display-7 justify-content-between py-4">
-														<div class="fw-bold">Total</div>
-														<div>$0</div>
-													</div>
-												</div>
-												<div class="px-3 py-2 d-flex gap-2 justify-content-center">
-													<button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
-													<a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<!-- collapsed content -->
-								<div>
-									<div class="p-2 d-flex justify-content-center">
-										<button class="btn border-0 text-secondary-700 p-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
-											<i class="ic-info"></i>About subscriptions<i class="ic-chevron qela-ic-rotate"></i>
-										</button>
-									</div>
-									<div class="collapse multi-collapse" id="multiCollapseExample2">
-										<div class="row gx-0 gy-2">
-											<div class="col-4">
-												<div class="p-3">
-													<div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
-													<div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
-														<div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
-															<small class="w-50">Users</small>
-															<small class="w-50">Price $</small>
-														</div>
-														<div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
-															<small class="w-50">101 - 500</small>
-															<small class="w-50">101 - 500</small>
-														</div>
-													</div>
-
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="p-3">
-													<div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
-													<div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
-														<div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
-															<small class="w-50">Users</small>
-															<small class="w-50">Price $</small>
-														</div>
-														<div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
-															<small class="w-50">101 - 500</small>
-															<small class="w-50">101 - 500</small>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="p-3">
-													<div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
-													<div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
-														<div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
-															<small class="w-50">Users</small>
-															<small class="w-50">Price $</small>
-														</div>
-														<div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
-															<small class="w-50">101 - 500</small>
-															<small class="w-50">101 - 500</small>
-														</div>
-													</div>
-
-												</div>
-											</div>
-											<div class="col-12">
-												<div class="p-3 display-6 d-grid gap-2">
-													<b>Top up your balance for 12 months and activate a 15% discount</b>
-													<p>You top up your balance in the amount of 12 monthly payments and if the number of users exceeds the tariff plan, the price per month will also change, but we’ve got it and by paying for a subscription for an year you, in any case, receive a discount of 15% for each month.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-
-								</div>
-								<!-- collapsed content -->
-								<div>
-									<div class="p-2 d-flex justify-content-center">
-										<button class="btn border-0 text-secondary-700 p-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample23" aria-expanded="false" aria-controls="multiCollapseExample23">
-											<i class="ic-info"></i>About Ads<i class="ic-chevron qela-ic-rotate"></i>
-										</button>
-									</div>
-									<div class="collapse multi-collapse" id="multiCollapseExample23">
-										<div class="d-flex align-items-center flex-column ">
-											<div class="h5 text-info-800 px-3 py-4 text-center">Custom solution</div>
-											<div class="pt-3 pb-5">
-												<div class=" qela-card-list">
-													<div class="fw-bold text-secondary-700 py-5  text-center">White label </div>
-													<div class="p-3">
-														<button type="button" class="btn btn-primary w-100">Contact sales</button>
-													</div>
-													<ul>
-														<li>
-															<i class="ic-check"></i>
-														Brand customization, integration, native app
-													</li>
-														<li>
-															<i class="ic-check"></i>
-														Customized price
-													</li>
-													</ul>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-								<div class="pb-5 mx-3">
-									<div class="bg-secondary-200 text-center px-4 py-3 rounded"><img src="/img/flag.svg" class="mb-2">
-										<p class=" mb-1">Special offer for Ukrainian organizations Talk to our reps</p>
-										<a class="text-secondary-800" href="mailto:marketing@qela.app">marketing@qela.app</a>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</main>
-
-	<script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
-	<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-	<script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
-	<script type="text/javascript">
-		let app = Vue.createApp({
-			components: {
-				"v-date-picker": VueDatePicker,
-				"v-multi-select": VueMultiselect.default
-			},
-			data() {
-				return {
-					date: new Date(),
-					value1: "",
-					value2: "",
-					value3: "",
-					value4: "",
-					options: [
-						"Пункт 1",
-						"Пункт 2",
-						"Пункт 3",
-						"Пункт 4",
-						"Пункт 1",
-						"Пункт 2sades",
-						"Пункт 3sd",
-						"Пункт 4sd"
-					]
-				};
-			},
-			methods: {
-				click() {
-					alert(1);
-					this.message += " clicked!";
-				}
-			}
-		});
-		// console.dir(app);
-		app.mount("#app");
-	</script>
-	<!-- =========================== -->
-	<script src="js/vendors.js"></script>
-<script src="js/app.js"></script>
+                                    <div class="flex-grow-1">
+                                        <div class="h3 mb-1"></div>
+                                        <span>qelatesting1+1800@gmail.com</span>
+                                        <div class="text-info-600">
+                                            <small>Власник</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-user-24" href="#">Профіль</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-bill" href="#">Оплата</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-dollar" href="#">Підписка</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-log-out" href="#">вийти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow-1">
+        <!-- menu -->
+        <aside class="qela-menu">
+            <!-- buttons -->
+            <button type="button" class="ic-chevrons-left qela-btn-menu"></button>
+            <nav class="qela-nav qela-scroll-custom">
+                <!-- nav wrapper -->
+                <div class="qela-nav-wrapper">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-city" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація"></i>
+                                <div>Організація</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-box-arrow" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд"></i>
+                                <div>Покроковий ґайд</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-people" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі"></i>
+                                <div>Користувачі</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-task" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна"></i>
+                                <div>Задачі адміна</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"></i>
+                                <div>Квести</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-voting" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування"></i>
+                                <div>Голосування</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-notes" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини"></i>
+                                <div>Новини</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-tag" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги"></i>
+                                <div>Теги</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди"></i>
+                                <div>Винагороди</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-donation-outlined" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати"></i>
+                                <div>Донати</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-chart-pie" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд"></i>
+                                <div>Дашборд</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <span class="qela-counter">50</span>
+                                <i class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення"></i>
+                                <div>Обговорення</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин"></i>
+                                <div>Магазин</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">
+                                <i class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування"></i>
+                                <div>Налаштування</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <!-- ====================================== subscription ====================================-->
+        <div class="container-fluid h-100">
+            <div class="row gy-3 gx-3 mb-3">
+                <div class="col-4">
+                    <div class="d-grid gap-3">
+                        <div class="card p-3">
+                            <div class="d-flex gap-4 align-items-start flex-wrap">
+                                <span class="qela-avatar qela-ibg" style="--img-size: 100px;"><img src="img/avatar.jpg" alt=""></span>
+                                <div class="align-self-center flex-grow-1">
+                                    <div class="h4 text-info-800 qela-clamp text-break">John Perry</div>
+                                </div>
+                                <button class="btn btn-info ic-edit ico-right">Edit</button>
+                            </div>
+                        </div>
+                        <div class="card p-3">
+                            <div>Current roles</div>
+                            <div>
+                                <ul class="list-group list-group-flush border-0 mt-3">
+                                    <li class="list-group-item d-flex gap-2 align-items-center border-0">
+                                        <small class="fw-semibold text-info-600 w-50">Roles</small>
+                                        <small class="fw-semibold text-info-600 w-50">Branch</small>
+                                    </li>
+                                    <li class="list-group-item d-flex gap-2 align-items-center">
+                                        <div class="d-inline-flex flex-column align-items-start gap-2 w-50">
+                                            <span class="qela-status-badge secondary ic-key" title="superadmin">superadmin</span>
+                                        </div>
+                                        <small class="fw-semibold text-info-800 w-50">All</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card p-3">
+                            <div class="fw-bold text-info-800 mb-3">Profile information</div>
+                            <ul class="list-group list-group-flush qela-flush">
+                                <li class="list-group-item">
+                                    <span>Person Name:</span>
+                                    <span class="word-break">John Perry</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Phone Number:</span>
+                                    <span>+15557238947</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Email:</span>
+                                    <span class="word-break">qelatesting1+1800@gmail.com</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Date Created:</span>
+                                    <span>25/11/2024, 17:24</span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span>Date last visit:</span>
+                                    <span>21/09/2025, 12:19</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="card">
+                        <ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Roles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Subscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Billing</a>
+                            </li>
+                        </ul>
+                        <div class="pb-4">
+                            <div class="px-4 py-3 d-flex justify-content-between align-items-start gap-2">
+                                <div>
+                                    <h2 class="h5 text-info-800">SAAS solution</h2>
+                                    <small class="text-info-700 mt-1">pricing plans</small>
+                                </div>
+                                <div class="qela-members">
+                                    <span class="display-7 fw-semibold">Сommunity members</span>
+                                    <i class="ic-people"></i>
+                                    <span class="h5">100</span>
+                                </div>
+                            </div>
+                            <div class="p-2 d-flex align-items-center justify-content-center gap-5">
+                                <div class="form-check"><input type="radio" name="q" class="form-check-input" id="Radio5">
+                                    <label class="form-check-label" for="Radio5">Monthly</label>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="form-check"><input type="radio" name="q" class="form-check-input" id="Radio6">
+                                        <label class="form-check-label" for="Radio6">Annual</label>
+                                    </div>
+                                    <span class="badge qela-badge-success display-7 rounded-5 fw-bolder">Save 15%</span>
+                                </div>
+                            </div>
+                            <!-- cards -->
+                            <div class="row g-5 py-4 px-3 ">
+                                <div class="col-4">
+                                    <div class="qela-subscription current">
+                                        <div class="card">
+                                            <div>
+                                                <div class="fw-bold text-secondary-700">Free</div>
+                                                <span class="badge bg-secondary py-1 px-2 rounded-5 fw-bolder">Up to 100 users</span>
+                                            </div>
+                                            <div class="align-self-center px-3">
+                                                <span class="fw-semibold"></span>
+                                                <span class="h1">$0</span>
+                                            </div>
+                                            <div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
+                                            <div class="fw-bold text-secondary-700 d-flex justify-content-center align-items-center gap-2 py-3">
+                                                <i class="ic-checkmark-starburst-filled"></i>Free
+                                            </div>
+                                            <div class="px-3 py-2">
+                                                <a href="#" class="display-6 text-decoration-none">Learn more</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="border-bottom">
+                                                <div class="fw-bold text-secondary-700">Free</div>
+                                                <small class="text-info-600">Available from 0 users</small>
+                                            </div>
+                                            <div class="px-3 pb-5">
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div>Users</div>
+                                                    <div>56</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div class="text-start">
+                                                        <div>Available user plan</div>
+                                                        <div class="text-info-600 mt-1">$144/mo x 12 month</div>
+                                                    </div>
+                                                    <div>0 - 100</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between py-4">
+                                                    <div class="fw-bold">Total</div>
+                                                    <div>$0</div>
+                                                </div>
+                                            </div>
+                                            <div class="px-3 py-2 d-flex gap-2 justify-content-center">
+                                                <button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
+                                                <a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="qela-subscription active">
+                                        <div class="card">
+                                            <div>
+                                                <div class="fw-bold text-secondary-700">Standard</div>
+                                            </div>
+                                            <div class="align-self-center position-relative px-3">
+                                                <span class="fw-semibold">from </span>
+                                                <span class="h1">$160/mo</span>
+                                                <span class="text-info-600 display-7 position-absolute top-100 end-0 ">for 100 users</span>
+                                            </div>
+                                            <div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
+                                            <div class="px-3 py-2">
+                                                <a href="#" class="btn btn-primary w-100">Subscribe</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="border-bottom">
+                                                <div class="fw-bold text-secondary-700">Free</div>
+                                                <small class="text-info-600">Available from 0 users</small>
+                                            </div>
+                                            <div class="px-3 pb-5">
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div>Users</div>
+                                                    <div>56</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div class="text-start">
+                                                        <div>Available user plan</div>
+                                                        <div class="text-info-600 mt-1">$144/mo x 12 month</div>
+                                                    </div>
+                                                    <div>0 - 100</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between py-4">
+                                                    <div class="fw-bold">Total</div>
+                                                    <div>$0</div>
+                                                </div>
+                                            </div>
+                                            <div class="px-3 py-2 d-flex gap-2 justify-content-center">
+                                                <button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
+                                                <a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="qela-subscription">
+                                        <div class="card ">
+                                            <div>
+                                                <div class="fw-bold text-secondary-700">Premium</div>
+                                                <span class="badge bg-primary text-primary-900 py-1 px-2 rounded-5 fw-bolder">No Ads</span>
+                                            </div>
+                                            <div class="align-self-center position-relative px-3">
+                                                <span class="fw-semibold">from </span>
+                                                <span class="h1">$480/mo</span>
+                                                <span class="text-info-600 display-7 position-absolute top-100 end-0 ">for 100 users</span>
+                                            </div>
+                                            <div class="py-5 px-4 text-info-900 fw-semibold">Your community focus only on your agenda</div>
+                                            <div class="px-3 py-2">
+                                                <a href="#" class="btn btn-primary w-100">Subscribe</a>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="border-bottom">
+                                                <div class="fw-bold text-secondary-700">Free</div>
+                                                <small class="text-info-600">Available from 0 users</small>
+                                            </div>
+                                            <div class="px-3 pb-5">
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div>Users</div>
+                                                    <div>56</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between border-bottom py-3">
+                                                    <div class="text-start">
+                                                        <div>Available user plan</div>
+                                                        <div class="text-info-600 mt-1">$144/mo x 12 month</div>
+                                                    </div>
+                                                    <div>0 - 100</div>
+                                                </div>
+                                                <div class="d-flex display-7 justify-content-between py-4">
+                                                    <div class="fw-bold">Total</div>
+                                                    <div>$0</div>
+                                                </div>
+                                            </div>
+                                            <div class="px-3 py-2 d-flex gap-2 justify-content-center">
+                                                <button type="button" class="btn btn-sm btn-info ico ic-undo"></button>
+                                                <a href="#" class="btn btn-primary btn-sm flex-grow-1">Subscribe</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- collapsed content -->
+                            <div>
+                                <div class="p-2 d-flex justify-content-center">
+                                    <button class="btn border-0 text-secondary-700 p-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">
+                                        <i class="ic-info"></i>About subscriptions<i class="ic-chevron qela-ic-rotate"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                                    <div class="row gx-0 gy-2">
+                                        <div class="col-4">
+                                            <div class="p-3">
+                                                <div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
+                                                <div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
+                                                    <div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
+                                                        <small class="w-50">Users</small>
+                                                        <small class="w-50">Price $</small>
+                                                    </div>
+                                                    <div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
+                                                        <small class="w-50">101 - 500</small>
+                                                        <small class="w-50">101 - 500</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3">
+                                                <div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
+                                                <div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
+                                                    <div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
+                                                        <small class="w-50">Users</small>
+                                                        <small class="w-50">Price $</small>
+                                                    </div>
+                                                    <div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
+                                                        <small class="w-50">101 - 500</small>
+                                                        <small class="w-50">101 - 500</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="p-3">
+                                                <div class="fw-bold text-secondary-700 rounded-3 py-4 bg-secondary-200 text-center">Free</div>
+                                                <div class="mt-2 bg-info-100 rounded-3 px-2 py-3">
+                                                    <div class="d-flex display-7 justify-content-between border-bottom fw-semibold px-2 pb-2 gap-2">
+                                                        <small class="w-50">Users</small>
+                                                        <small class="w-50">Price $</small>
+                                                    </div>
+                                                    <div class="d-flex display-7 justify-content-between p-2 mt-2 gap-2">
+                                                        <small class="w-50">101 - 500</small>
+                                                        <small class="w-50">101 - 500</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="p-3 display-6 d-grid gap-2">
+                                                <b>Top up your balance for 12 months and activate a 15% discount</b>
+                                                <p>You top up your balance in the amount of 12 monthly payments and if the number of users exceeds the tariff plan, the price per month will also change, but we’ve got it and by paying for a subscription for an year you, in any case, receive a discount of 15% for each month.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- collapsed content -->
+                            <div>
+                                <div class="p-2 d-flex justify-content-center">
+                                    <button class="btn border-0 text-secondary-700 p-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample23" aria-expanded="false" aria-controls="multiCollapseExample23">
+                                        <i class="ic-info"></i>About Ads<i class="ic-chevron qela-ic-rotate"></i>
+                                    </button>
+                                </div>
+                                <div class="collapse multi-collapse" id="multiCollapseExample23">
+                                    <div class="d-flex align-items-center flex-column ">
+                                        <div class="h5 text-info-800 px-3 py-4 text-center">Custom solution</div>
+                                        <div class="pt-3 pb-5">
+                                            <div class=" qela-card-list">
+                                                <div class="fw-bold text-secondary-700 py-5  text-center">White label </div>
+                                                <div class="p-3">
+                                                    <button type="button" class="btn btn-primary w-100">Contact sales</button>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <i class="ic-check"></i> Brand customization, integration, native app
+                                                    </li>
+                                                    <li>
+                                                        <i class="ic-check"></i> Customized price
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pb-5 mx-3">
+                                <div class="bg-secondary-200 text-center px-4 py-3 rounded"><img src="/img/flag.svg" class="mb-2">
+                                    <p class=" mb-1">Special offer for Ukrainian organizations Talk to our reps</p>
+                                    <a class="text-secondary-800" href="mailto:marketing@qela.app">marketing@qela.app</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script src="https://unpkg.com/@vuepic/vue-datepicker@latest"></script>
+    <script type="text/javascript">
+        let app = Vue.createApp({
+            components: {
+                "v-date-picker": VueDatePicker,
+                "v-multi-select": VueMultiselect.default
+            },
+            data() {
+                return {
+                    date: new Date(),
+                    value1: "",
+                    value2: "",
+                    value3: "",
+                    value4: "",
+                    options: ["Пункт 1", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"]
+                };
+            },
+            methods: {
+                click() {
+                    alert(1);
+                    this.message += " clicked!";
+                }
+            }
+        });
+        // console.dir(app);
+        app.mount("#app");
+    </script>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
 </body>
-
 </html>

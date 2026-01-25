@@ -1,569 +1,487 @@
 <!DOCTYPE html>
 <html lang="ua">
-	
-	<head>
-	<title>List-verification</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/vendors.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>List-verification</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-	<body class="qela-body">
-		
-		<header>
-	<div class="container-fluid">
-		<div class="row">
-			<!-- item whith title and button burger-->
-			<div class="col gap-2">
-				<!--FIX mobile logo -->
-				<a class="navbar-brand qela-logo" href="#">
-					<img src="img/logo-sm.svg" alt="Logo" width="40" height="40"/>
-				</a>
-				<h1 class="h5 qela-clamp">Verification</h1>
-			</div>
-			<div class="col-auto d-flex gap-2">
-				<div class="dropdown qela-dropdown ">
-					<button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i>
-					</button>
-					<ul class="dropdown-menu dropdown-menu-end shadow">
-						<li>
-							<a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
-						</li>
-						<li>
-							<a href="#" target="_blank" class="dropdown-item ">Admin Guideline</a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="#">FAQ</a>
-						</li>
-					</ul>
-				</div>
-				<!-- <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
+<body class="qela-body">
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- item whith title and button burger-->
+                <div class="col gap-2">
+                    <!--FIX mobile logo -->
+                    <a class="navbar-brand qela-logo" href="#">
+                        <img src="img/logo-sm.svg" alt="Logo" width="40" height="40" />
+                    </a>
+                    <h1 class="h5 qela-clamp">Verification</h1>
+                </div>
+                <div class="col-auto d-flex gap-2">
+                    <div class="dropdown qela-dropdown ">
+                        <button type="button" class="btn btn-sm btn-info ico-right ic-chevron" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-faitracker-form-bind="true">Help<i class="ic-help-circle"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow">
+                            <li>
+                                <a href="#" target="_blank" class="dropdown-item ">User App Guideline</a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank" class="dropdown-item ">Admin Guideline</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <a href="#" target="_blank" class="btn btn-info btn-sm ico ic-message-circle"></a>
 				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-help-circle"></a>
 				<a href="#" target="_blank" class="btn btn-info btn-sm ico ic-player-play" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Сайт для прихильників"></a> -->
-				<a href="#" target="_blank" class="btn btn-sm btn-info ico-left ic-phone">User Site</a>
-				<!-- user -->
-				<div class="dropdown qela-dropdown">
-					<button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
-						<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                    <a href="#" target="_blank" class="btn btn-sm btn-info ico-left ic-phone">User Site</a>
+                    <!-- user -->
+                    <div class="dropdown qela-dropdown">
+                        <button type="button" class="btn p-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                            <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
 							<img src="img/header/user.jpg" alt="">
 						</span>
-					</button>
-					<ul class="dropdown-menu shadow" style="width:350px">
-						<li>
-							<div class="qela-item-user">
-								<span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
+                        </button>
+                        <ul class="dropdown-menu shadow" style="width:350px">
+                            <li>
+                                <div class="qela-item-user">
+                                    <span class="qela-avatar qela-ibg online-sm" style="--img-size: 40px">
 									<img src="img/header/user.jpg" alt="">
 								</span>
-								<div class="flex-grow-1">
-									<div class="h3 mb-1"></div>
-									<span>qelatesting1+1800@gmail.com</span>
-									<div class="text-info-600">
-										<small>Власник</small>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<hr class="dropdown-divider"/>
-						</li>
-						<li>
-							<a class="dropdown-item ic-user-24" href="#">Профіль</a>
-
-						</li>
-						<li>
-							<a class="dropdown-item ic-bill" href="#">Оплата</a>
-						</li>
-						<li>
-							<a class="dropdown-item ic-dollar" href="#">Підписка</a>
-						</li>
-						<li>
-							<hr class="dropdown-divider"/>
-						</li>
-						<li>
-							<a class="dropdown-item ic-log-out" href="#">вийти</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-		<main>
-			<!-- menu -->
-<aside class="qela-menu">
-	<!-- buttons -->
-	<button type="button" class="ic-chevrons-left qela-btn-menu"></button>
-	<nav class="qela-nav qela-scroll-custom">
-		<!-- nav wrapper -->
-		<div class="qela-nav-wrapper">
-			
-			<ul class="nav">
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-city" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація"></i>
-							<div>Організація</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-box-arrow" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд"></i>
-							<div>Покроковий ґайд</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-people" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі"></i>
-							<div>Користувачі</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-task" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна"></i>
-							<div>Задачі адміна</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"></i>
-							<div>Квести</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-voting" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування"></i>
-							<div>Голосування</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-notes" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини"></i>
-							<div>Новини</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-tag" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги"></i>
-							<div>Теги</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди"></i>
-							<div>Винагороди</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-donation-outlined" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати"></i>
-							<div>Донати</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-chart-pie" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд"></i>
-							<div>Дашборд</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							<span class="qela-counter">50</span>
-							<i class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення"></i>
-							<div>Обговорення</div>
-						</a>
-					</li>
-				
-					<li class="nav-item">
-						<a href="#" class="nav-link " aria-current="page">
-							
-							<i class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин"></i>
-							<div>Магазин</div>
-						</a>
-					</li>
-				
-			</ul>
-			<ul class="nav">
-				<li class="nav-item">
-					<a href="#" class="nav-link" aria-current="page">
-						<i class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування"></i>
-						<div>Налаштування</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-</aside>
-			<!-- =====================Список користувачів==================== -->
-			<div class="container-fluid">
-				<div class="row mb-3 mt-3">
-					<div class="col-12">
-						<div class="border mb-3 bg-white rounded-2">
-							<ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
-								<li class="nav-item" role="presentation">
-									<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
-									Users
-								</button>
-								</li>
-								<li class="nav-item" role="presentation">
-									<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-									Settings
-								</button>
-								</li>
-							</ul>
-							<div class="tab-content" id="myTabContent">
-								<!-- Users -->
-								<div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-									<!--  Item  с подзаголовком поиском и кнопками -->
-									<div class="border-bottom px-3 py-2">
-										<div class="row gx-4 align-items-center">
-											<div class="col-md-5">
-												<h2 class="h6 mb-2 mb-md-0">User Verification List</h2>
-											</div>
-											<div class="col-md-7 d-flex gap-1 flex-wrap">
-												<form class="flex-grow-1" role="search">
-													<div class="input-group">
-														<button class="btn btn-input ic-search" type="button" id="button-search"></button>
-														<input type="password" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search"/>
-													</div>
-												</form>
-												<button type="button" class="btn btn-info ico ic-layout-grid"></button>
-											</div>
-										</div>
-									</div>
-									<!--  Item  с пагинацией + дробдауны -->
-									<div class="px-3 py-2 border-bottom">
-										<div class="d-flex gap-2 gap-md-4 justify-content-between align-items-center flex-wrap">
-											<div class="d-flex align-items-center">
-												<div class="form-check form-check-inline me-2">
-													<input type="checkbox" class="form-check-input" id="Check1"/>
-												</div>
-												<div class="dropdown">
-													<button class="btn btn-sm btn-outline-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-													Дії з обраним
-												</button>
-													<ul class="dropdown-menu shadow">
-														<li>
-															<button type="button" class="dropdown-item">
-															Змінити статус
-														</button>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Відправити Email
-														</button>
-														</li>
-														<li>
-															<hr class="dropdown-divider"/>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Заблокувати
-														</button>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Видалити
-														</button>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<div class="d-flex align-items-center gap-2">
-												<div class="dropdown">
-													<button class="btn btn-sm btn-outline-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-													View all
-												</button>
-													<ul class="dropdown-menu shadow">
-														<li>
-															<button type="button" class="dropdown-item">
-															Змінити статус
-														</button>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Відправити Email
-														</button>
-														</li>
-														<li>
-															<hr class="dropdown-divider"/>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Заблокувати
-														</button>
-														</li>
-														<li>
-															<button type="button" class="dropdown-item">
-															Видалити
-														</button>
-														</li>
-													</ul>
-												</div>
-												<nav aria-label="Page navigation">
-													<ul class="pagination pagination-sm mb-0">
-														<li class="page-item disabled">
-															<a class="page-link" href="#" aria-label="Previous">
-																<span aria-hidden="true">Prev</span>
-															</a>
-														</li>
-														<li class="page-item active">
-															<a class="page-link" href="#">1</a>
-														</li>
-														<li class="page-item">
-															<a class="page-link" href="#">2</a>
-														</li>
-														<li class="page-item">
-															<a class="page-link" href="#">...</a>
-														</li>
-														<li class="page-item">
-															<a class="page-link" href="#">24</a>
-														</li>
-														<li class="page-item">
-															<a class="page-link" href="#" aria-label="Next">
-																<span aria-hidden="true">Next</span>
-															</a>
-														</li>
-													</ul>
-												</nav>
-											</div>
-										</div>
-									</div>
-									<!--  Таблица -->
-									<div class="table-responsive table-qela">
-										<table class="table table-hover">
-											<thead class="table-light">
-												<tr>
-													<th width="105" scope="col">Фото</th>
-													<th width="155" scope="col">Дата створення</th>
-													<th width="70" scope="col">ID</th>
-													<th width="50%" class="text-center" scope="col">
-													ПІП
-												</th>
-													<th width="50%" scope="col">Email</th>
-													<th class="text-end" scope="col">Дії</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td width="105">
-														<div class="d-flex align-items-center">
-															<div class="form-check form-check-inline me-2">
-																<input type="checkbox" class="form-check-input" id="Check1"/>
-															</div>
-															<img src="img/img-table.jpg" width="42" height="42" alt=""/>
-														</div>
-													</td>
-													<td width="155">20/20/2023 12:02:23</td>
-													<td width="70">
-														<a href="">#02344</a>
-													</td>
-													<td width="50%" class="text-center">Босик Ждана</td>
-													<td width="50%">example@gmail.com</td>
-													<td>
-														<div class="text-end">
-															<div class="btn-group" role="group" aria-label="Basic example">
-																<button type="button" class="btn btn-sm btn-danger">
-																Відхилити
-															</button>
-																<button type="button" class="btn btn-sm btn-success ic-check-big ico-right">
-																Прийняти
-															</button>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td width="105">
-														<div class="d-flex align-items-center">
-															<div class="form-check form-check-inline me-2">
-																<input type="checkbox" class="form-check-input" id="Check1"/>
-															</div>
-															<img src="img/img-table.jpg" width="42" height="42" alt=""/>
-														</div>
-													</td>
-													<td width="155">20/20/2023 12:02:23</td>
-													<td width="70">
-														<a href="">#02344</a>
-													</td>
-													<td width="50%" class="text-center">Босик Ждана</td>
-													<td width="50%">example@gmail.com</td>
-													<td>
-														<div class="text-end">
-															<div class="btn-group" role="group" aria-label="Basic example">
-																<button type="button" class="btn btn-sm btn-danger">
-																Відхилити
-															</button>
-																<button type="button" class="btn btn-sm btn-success ic-check-big ico-right">
-																Прийняти
-															</button>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td width="105">
-														<div class="d-flex align-items-center">
-															<div class="form-check form-check-inline me-2">
-																<input type="checkbox" class="form-check-input" id="Check1"/>
-															</div>
-															<img src="img/img-table.jpg" width="42" height="42" alt=""/>
-														</div>
-													</td>
-													<td width="155">20/20/2023 12:02:23</td>
-													<td width="70">
-														<a href="">#02344</a>
-													</td>
-													<td width="50%" class="text-center">Босик Ждана</td>
-													<td width="50%">example@gmail.com</td>
-													<td>
-														<div class="text-end">
-															<div class="btn-group" role="group" aria-label="Basic example">
-																<button type="button" class="btn btn-sm btn-danger">
-																Відхилити
-															</button>
-																<button type="button" class="btn btn-sm btn-success ic-check-big ico-right">
-																Прийняти
-															</button>
-															</div>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td width="105">
-														<div class="d-flex align-items-center">
-															<div class="form-check form-check-inline me-2">
-																<input type="checkbox" class="form-check-input" id="Check1"/>
-															</div>
-															<img src="img/img-table.jpg" width="42" height="42" alt=""/>
-														</div>
-													</td>
-													<td width="155">20/20/2023 12:02:23</td>
-													<td width="70">
-														<a href="">#02344</a>
-													</td>
-													<td width="50%" class="text-center">Босик Ждана</td>
-													<td width="50%">example@gmail.com</td>
-													<td>
-														<div class="text-end">
-															<div class="btn-group" role="group" aria-label="Basic example">
-																<button type="button" class="btn btn-sm btn-danger">
-																Відхилити
-															</button>
-																<button type="button" class="btn btn-sm btn-success ic-check-big ico-right">
-																Прийняти
-															</button>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<!--  Item только с пагинацией-->
-									<div class="p-3">
-										<div class="d-flex gap-2 gap-md-4 justify-content-end align-items-center flex-wrap">
-											<nav aria-label="Page navigation">
-												<ul class="pagination pagination-sm mb-0">
-													<li class="page-item disabled">
-														<a class="page-link" href="#" aria-label="Previous">
-															<span aria-hidden="true">Prev</span>
-														</a>
-													</li>
-													<li class="page-item active">
-														<a class="page-link" href="#">1</a>
-													</li>
-													<li class="page-item">
-														<a class="page-link" href="#">2</a>
-													</li>
-													<li class="page-item">
-														<a class="page-link" href="#">...</a>
-													</li>
-													<li class="page-item">
-														<a class="page-link" href="#">24</a>
-													</li>
-													<li class="page-item">
-														<a class="page-link" href="#" aria-label="Next">
-															<span aria-hidden="true">Next</span>
-														</a>
-													</li>
-												</ul>
-											</nav>
-										</div>
-									</div>
-								</div>
-								<!-- Settings -->
-								<div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-									<div class="py-2 px-3">
-										<h2 class="h5">Notification Settings</h2>
-									</div>
-									<hr/>
-									<div class="row gx-4 p-3">
-										<div class="col-md-6">
-											<div class="d-flex justify-content-between gap-1">
-												<div class="d-flex align-items-start gap-1">
-													<label for="textarea1" class="form-label">Label <span class="text-danger">*</span></label>
-													<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-												</div>
-												<label class="form-label">0/<span>2500</span></label>
-											</div>
-											<div class="mb-3 mb-md-4">
-												<textarea class="form-control" placeholder="Describe requirements" id="textarea1" rows="3"></textarea>
-												<div class="invalid-feedback">Error text</div>
-												<div class="helper-text">Max 200 characters</div>
-											</div>
-											<div class="d-flex justify-content-end gap-1">
-												<button type="button" class="btn btn-info">
-												Cancel
-											</button>
-												<button type="button" class="btn btn-primary ic-check-big ico-right">
-												Save
-											</button>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<p class="mt-md-0 mt-3 mb-0">
-												<small>What does it mean. Where it’s going to be used. Place
-												to display in app etc. What does it mean. Where it’s
-												going to be used. Place to display in app etc. What
-												does it mean. Where it’s going to be used. Place to
-												display in app etc.What does it mean. Where it’s going
-												to be used. Place to display in app etc</small>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
-		<!-- =========================== -->
-		<script src="js/vendors.js"></script>
-<script src="js/app.js"></script>
-	</body>
-
+                                    <div class="flex-grow-1">
+                                        <div class="h3 mb-1"></div>
+                                        <span>qelatesting1+1800@gmail.com</span>
+                                        <div class="text-info-600">
+                                            <small>Власник</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-user-24" href="#">Профіль</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-bill" href="#">Оплата</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-dollar" href="#">Підписка</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item ic-log-out" href="#">вийти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- menu -->
+        <aside class="qela-menu">
+            <!-- buttons -->
+            <button type="button" class="ic-chevrons-left qela-btn-menu"></button>
+            <nav class="qela-nav qela-scroll-custom">
+                <!-- nav wrapper -->
+                <div class="qela-nav-wrapper">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-city" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Організація"></i>
+                                <div>Організація</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-box-arrow" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Покроковий ґайд"></i>
+                                <div>Покроковий ґайд</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-people" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Користувачі"></i>
+                                <div>Користувачі</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-task" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Задачі адміна"></i>
+                                <div>Задачі адміна</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-diamond" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Квести"></i>
+                                <div>Квести</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-voting" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Голосування"></i>
+                                <div>Голосування</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-notes" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Новини"></i>
+                                <div>Новини</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-tag" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Теги"></i>
+                                <div>Теги</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-trophy" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Винагороди"></i>
+                                <div>Винагороди</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-donation-outlined" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Донати"></i>
+                                <div>Донати</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-chart-pie" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Дашборд"></i>
+                                <div>Дашборд</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <span class="qela-counter">50</span>
+                                <i class="ic-message-circle" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Обговорення"></i>
+                                <div>Обговорення</div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link " aria-current="page">
+                                <i class="ic-tent" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip" data-bs-title="Магазин"></i>
+                                <div>Магазин</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" aria-current="page">
+                                <i class="ic-settings" data-bs-trigger="hover" data-bs-offset="0, 12" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="qela-sidebar-tooltip settings" data-bs-title="Налаштування"></i>
+                                <div>Налаштування</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <!-- =====================Список користувачів==================== -->
+        <div class="container-fluid">
+            <div class="row mb-3 mt-3">
+                <div class="col-12">
+                    <div class="border mb-3 bg-white rounded-2">
+                        <ul class="nav nav-tabs px-3 pt-3 px-md-4 pt-md-4" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"> Users </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"> Settings </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Users -->
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                <!--  Item  с подзаголовком поиском и кнопками -->
+                                <div class="border-bottom px-3 py-2">
+                                    <div class="row gx-4 align-items-center">
+                                        <div class="col-md-5">
+                                            <h2 class="h6 mb-2 mb-md-0">User Verification List</h2>
+                                        </div>
+                                        <div class="col-md-7 d-flex gap-1 flex-wrap">
+                                            <form class="flex-grow-1" role="search">
+                                                <div class="input-group">
+                                                    <button class="btn btn-input ic-search" type="button" id="button-search"></button>
+                                                    <input type="password" class="form-control" placeholder="Пошук" aria-label="Search" aria-describedby="button-search" />
+                                                </div>
+                                            </form>
+                                            <button type="button" class="btn btn-info ico ic-layout-grid"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  Item  с пагинацией + дробдауны -->
+                                <div class="px-3 py-2 border-bottom">
+                                    <div class="d-flex gap-2 gap-md-4 justify-content-between align-items-center flex-wrap">
+                                        <div class="d-flex align-items-center">
+                                            <div class="form-check form-check-inline me-2">
+                                                <input type="checkbox" class="form-check-input" id="Check1" />
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false"> Дії з обраним </button>
+                                                <ul class="dropdown-menu shadow">
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Змінити статус </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Відправити Email </button>
+                                                    </li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Заблокувати </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Видалити </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="dropdown">
+                                                <button class="btn btn-sm btn-outline-info ic-chevron ico-right" type="button" data-bs-toggle="dropdown" aria-expanded="false"> View all </button>
+                                                <ul class="dropdown-menu shadow">
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Змінити статус </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Відправити Email </button>
+                                                    </li>
+                                                    <li>
+                                                        <hr class="dropdown-divider" />
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Заблокувати </button>
+                                                    </li>
+                                                    <li>
+                                                        <button type="button" class="dropdown-item"> Видалити </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <nav aria-label="Page navigation">
+                                                <ul class="pagination pagination-sm mb-0">
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">Prev</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item active">
+                                                        <a class="page-link" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">...</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#">24</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">Next</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  Таблица -->
+                                <div class="table-responsive table-qela">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="105" scope="col">Фото</th>
+                                                <th width="155" scope="col">Дата створення</th>
+                                                <th width="70" scope="col">ID</th>
+                                                <th width="50%" class="text-center" scope="col"> ПІП </th>
+                                                <th width="50%" scope="col">Email</th>
+                                                <th class="text-end" scope="col">Дії</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td width="105">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input type="checkbox" class="form-check-input" id="Check1" />
+                                                        </div>
+                                                        <img src="img/img-table.jpg" width="42" height="42" alt="" />
+                                                    </div>
+                                                </td>
+                                                <td width="155">20/20/2023 12:02:23</td>
+                                                <td width="70">
+                                                    <a href="">#02344</a>
+                                                </td>
+                                                <td width="50%" class="text-center">Босик Ждана</td>
+                                                <td width="50%">example@gmail.com</td>
+                                                <td>
+                                                    <div class="text-end">
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-sm btn-danger"> Відхилити </button>
+                                                            <button type="button" class="btn btn-sm btn-success ic-check-big ico-right"> Прийняти </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="105">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input type="checkbox" class="form-check-input" id="Check1" />
+                                                        </div>
+                                                        <img src="img/img-table.jpg" width="42" height="42" alt="" />
+                                                    </div>
+                                                </td>
+                                                <td width="155">20/20/2023 12:02:23</td>
+                                                <td width="70">
+                                                    <a href="">#02344</a>
+                                                </td>
+                                                <td width="50%" class="text-center">Босик Ждана</td>
+                                                <td width="50%">example@gmail.com</td>
+                                                <td>
+                                                    <div class="text-end">
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-sm btn-danger"> Відхилити </button>
+                                                            <button type="button" class="btn btn-sm btn-success ic-check-big ico-right"> Прийняти </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="105">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input type="checkbox" class="form-check-input" id="Check1" />
+                                                        </div>
+                                                        <img src="img/img-table.jpg" width="42" height="42" alt="" />
+                                                    </div>
+                                                </td>
+                                                <td width="155">20/20/2023 12:02:23</td>
+                                                <td width="70">
+                                                    <a href="">#02344</a>
+                                                </td>
+                                                <td width="50%" class="text-center">Босик Ждана</td>
+                                                <td width="50%">example@gmail.com</td>
+                                                <td>
+                                                    <div class="text-end">
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-sm btn-danger"> Відхилити </button>
+                                                            <button type="button" class="btn btn-sm btn-success ic-check-big ico-right"> Прийняти </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="105">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="form-check form-check-inline me-2">
+                                                            <input type="checkbox" class="form-check-input" id="Check1" />
+                                                        </div>
+                                                        <img src="img/img-table.jpg" width="42" height="42" alt="" />
+                                                    </div>
+                                                </td>
+                                                <td width="155">20/20/2023 12:02:23</td>
+                                                <td width="70">
+                                                    <a href="">#02344</a>
+                                                </td>
+                                                <td width="50%" class="text-center">Босик Ждана</td>
+                                                <td width="50%">example@gmail.com</td>
+                                                <td>
+                                                    <div class="text-end">
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-sm btn-danger"> Відхилити </button>
+                                                            <button type="button" class="btn btn-sm btn-success ic-check-big ico-right"> Прийняти </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--  Item только с пагинацией-->
+                                <div class="p-3">
+                                    <div class="d-flex gap-2 gap-md-4 justify-content-end align-items-center flex-wrap">
+                                        <nav aria-label="Page navigation">
+                                            <ul class="pagination pagination-sm mb-0">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" aria-label="Previous">
+                                                        <span aria-hidden="true">Prev</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">...</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">24</a>
+                                                </li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" aria-label="Next">
+                                                        <span aria-hidden="true">Next</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Settings -->
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                                <div class="py-2 px-3">
+                                    <h2 class="h5">Notification Settings</h2>
+                                </div>
+                                <hr />
+                                <div class="row gx-4 p-3">
+                                    <div class="col-md-6">
+                                        <div class="d-flex justify-content-between gap-1">
+                                            <div class="d-flex align-items-start gap-1">
+                                                <label for="textarea1" class="form-label">Label <span class="text-danger">*</span></label>
+                                                <button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
+                                            </div>
+                                            <label class="form-label">0/<span>2500</span></label>
+                                        </div>
+                                        <div class="mb-3 mb-md-4">
+                                            <textarea class="form-control" placeholder="Describe requirements" id="textarea1" rows="3"></textarea>
+                                            <div class="invalid-feedback">Error text</div>
+                                            <div class="helper-text">Max 200 characters</div>
+                                        </div>
+                                        <div class="d-flex justify-content-end gap-1">
+                                            <button type="button" class="btn btn-info"> Cancel </button>
+                                            <button type="button" class="btn btn-primary ic-check-big ico-right"> Save </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p class="mt-md-0 mt-3 mb-0">
+                                            <small>What does it mean. Where it’s going to be used. Place to display in app etc. What does it mean. Where it’s going to be used. Place to display in app etc. What does it mean. Where it’s going to be used. Place to display in app etc.What does it mean. Where it’s going to be used. Place to display in app etc</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>

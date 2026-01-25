@@ -1,268 +1,246 @@
 <!DOCTYPE html>
 <html lang="ua">
-	
-	<head>
-	<title>shop-items</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/vendors.css">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>shop-items</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/vendors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-	<body class="qela-body" id="app">
-		<main class="flex-grow-1">
-
-			<div class="container-fluid h-100">
-				<!-- ====================================== Shop - Products - Edit Category order start ====================================-->
-				<div class="bg-white rounded-3 border mb-2">
-					<!-- Tabs -->
-					<ul class="nav nav-tabs rounded-top px-3 pt-3 px-md-4 pt-md-4" id="shopTab" role="tablist">
-						<li class="nav-item" role="presentation">
-							<button class="nav-link active" id="products-tab" data-bs-toggle="tab" data-bs-target="#products-tab-pane" type="button" role="tab" aria-controls="products-tab-pane" aria-selected="true">
-							Товари
-						</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="true">
-							Замовлення
-						</button>
-						</li>
-					</ul>
-					<!--Tab content -->
-					<div class="tab-content">
-						<!-- Products -->
-						<div class="tab-pane active" id="products-tab-pane" role="tabpanel" aria-labelledby="products-tab" tabindex="0">
-							<!-- 1 row: redaction category -->
-							<div class="border-bottom p-3">
-								<div class="d-flex align-items-center gap-3">
-									<div class="text-info-900 h4">Редагувати категорії</div>
-									<div class="d-flex gap-2">
-										<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
-										<button type="button" class="btn btn-primary btn-md ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modalSave">Зберегти</button>
-									</div>
-								</div>
-							</div>
-							<div class="px-3 py-2">
-								<small class="text-info-700">Увага! Видалення категорій також видалить і всі товари в ній</small>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<span class="h5 text-info-900">🔥Топ-пропозиції</span>
-								<button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
-								<button type="button" class="qela-btn-ic ic-delete text-danger"></button>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<span class="h5 text-info-900">💚 Психологічна підтримка</span>
-								<button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
-								<button type="button" class="qela-btn-ic ic-delete text-danger"></button>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<span class="h5 text-info-900">🧢 Мерч Strichka</span>
-								<button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
-								<button type="button" class="qela-btn-ic ic-delete text-danger"></button>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<input type="text" class="form-control" placeholder="🎓 Освітні програми та розвиток" style="width: 320px;">
-								<div class="d-flex align-items-center gap-2">
-									<button type="button" class="qela-btn-ic ic-check-big text-info-900"></button>
-									<button type="button" class="qela-btn-ic ic-cloze text-info-900"></button>
-								</div>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<span class="h5 text-info-900">📚 Книги та культура</span>
-								<button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
-								<button type="button" class="qela-btn-ic ic-delete text-danger"></button>
-							</div>
-							<div class="py-4 px-3 d-flex align-items-center gap-3">
-								<span class="h5 text-info-900">🪖 Сувеніри від військових 🇺🇦</span>
-								<button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
-								<button type="button" class="qela-btn-ic ic-delete text-danger"></button>
-							</div>
-						</div>
-						<!-- Order -->
-						<div class="tab-pane" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
-							<div class="p-4">
-								<a href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/shop">Замовлення</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ====================================== Shop - Products - Edit Category order end ====================================-->
-				<!-- ====================================== Shop - Products - Edit Category start ====================================-->
-				<div class="bg-white rounded-3 border mb-2">
-					<!-- Tabs -->
-					<ul class="nav nav-tabs rounded-top px-3 pt-3" id="shopTab" role="tablist">
-						<li class="nav-item" role="presentation">
-							<button class="nav-link active" id="products-tab" data-bs-toggle="tab" data-bs-target="#products-tab-pane" type="button" role="tab" aria-controls="products-tab-pane" aria-selected="true">
-							Товари
-						</button>
-						</li>
-						<li class="nav-item" role="presentation">
-							<button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="true">
-							Замовлення
-						</button>
-						</li>
-					</ul>
-					<!--Tab content -->
-					<div class="tab-content">
-						<!-- Products -->
-						<div class="tab-pane active" id="products-tab-pane" role="tabpanel" aria-labelledby="products-tab" tabindex="0">
-							<!-- 1 row: redaction category -->
-							<div class="p-3">
-								<div class="d-flex align-items-center gap-3">
-									<div class="text-info-900 h4">Змінити порядок</div>
-									<div class="d-flex gap-2">
-										<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
-										<button type="button" class="btn btn-primary btn-md ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modalSave">Зберегти</button>
-									</div>
-								</div>
-							</div>
-							<!-- accordion -->
-							<div class="accordion qela-accordion qela-accordion-shop accordion-flush small" id="accordion-sm-1">
-								<div class="accordion-item border-top">
-									<h2 class="accordion-header d-flex gap-2 align-items-center" id="heading-sm-1">
-										<button class="accordion-button align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-sm-1" aria-expanded="true" aria-controls="collapse-sm-1">
-											<i class="ic-dots-2 text-info-600 d-block"></i>
-											<span class="h5 text-info-900">
+<body class="qela-body" id="app">
+    <main class="flex-grow-1">
+        <div class="container-fluid h-100">
+            <!-- ====================================== Shop - Products - Edit Category order start ====================================-->
+            <div class="bg-white rounded-3 border mb-2">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs rounded-top px-3 pt-3 px-md-4 pt-md-4" id="shopTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="products-tab" data-bs-toggle="tab" data-bs-target="#products-tab-pane" type="button" role="tab" aria-controls="products-tab-pane" aria-selected="true"> Товари </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="true"> Замовлення </button>
+                    </li>
+                </ul>
+                <!--Tab content -->
+                <div class="tab-content">
+                    <!-- Products -->
+                    <div class="tab-pane active" id="products-tab-pane" role="tabpanel" aria-labelledby="products-tab" tabindex="0">
+                        <!-- 1 row: redaction category -->
+                        <div class="border-bottom p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="text-info-900 h4">Редагувати категорії</div>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+                                    <button type="button" class="btn btn-primary btn-md ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modalSave">Зберегти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <small class="text-info-700">Увага! Видалення категорій також видалить і всі товари в ній</small>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <span class="h5 text-info-900">🔥Топ-пропозиції</span>
+                            <button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
+                            <button type="button" class="qela-btn-ic ic-delete text-danger"></button>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <span class="h5 text-info-900">💚 Психологічна підтримка</span>
+                            <button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
+                            <button type="button" class="qela-btn-ic ic-delete text-danger"></button>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <span class="h5 text-info-900">🧢 Мерч Strichka</span>
+                            <button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
+                            <button type="button" class="qela-btn-ic ic-delete text-danger"></button>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <input type="text" class="form-control" placeholder="🎓 Освітні програми та розвиток" style="width: 320px;">
+                            <div class="d-flex align-items-center gap-2">
+                                <button type="button" class="qela-btn-ic ic-check-big text-info-900"></button>
+                                <button type="button" class="qela-btn-ic ic-cloze text-info-900"></button>
+                            </div>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <span class="h5 text-info-900">📚 Книги та культура</span>
+                            <button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
+                            <button type="button" class="qela-btn-ic ic-delete text-danger"></button>
+                        </div>
+                        <div class="py-4 px-3 d-flex align-items-center gap-3">
+                            <span class="h5 text-info-900">🪖 Сувеніри від військових 🇺🇦</span>
+                            <button type="button" class="qela-btn-ic ic-edit text-info-600"></button>
+                            <button type="button" class="qela-btn-ic ic-delete text-danger"></button>
+                        </div>
+                    </div>
+                    <!-- Order -->
+                    <div class="tab-pane" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
+                        <div class="p-4">
+                            <a href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/shop">Замовлення</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ====================================== Shop - Products - Edit Category order end ====================================-->
+            <!-- ====================================== Shop - Products - Edit Category start ====================================-->
+            <div class="bg-white rounded-3 border mb-2">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs rounded-top px-3 pt-3" id="shopTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="products-tab" data-bs-toggle="tab" data-bs-target="#products-tab-pane" type="button" role="tab" aria-controls="products-tab-pane" aria-selected="true"> Товари </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="order-tab" data-bs-toggle="tab" data-bs-target="#order-tab-pane" type="button" role="tab" aria-controls="order-tab-pane" aria-selected="true"> Замовлення </button>
+                    </li>
+                </ul>
+                <!--Tab content -->
+                <div class="tab-content">
+                    <!-- Products -->
+                    <div class="tab-pane active" id="products-tab-pane" role="tabpanel" aria-labelledby="products-tab" tabindex="0">
+                        <!-- 1 row: redaction category -->
+                        <div class="p-3">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="text-info-900 h4">Змінити порядок</div>
+                                <div class="d-flex gap-2">
+                                    <button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+                                    <button type="button" class="btn btn-primary btn-md ic-check-big ico-right" data-bs-toggle="modal" data-bs-target="#modalSave">Зберегти</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accordion -->
+                        <div class="accordion qela-accordion qela-accordion-shop accordion-flush small" id="accordion-sm-1">
+                            <div class="accordion-item border-top">
+                                <h2 class="accordion-header d-flex gap-2 align-items-center" id="heading-sm-1">
+                                    <button class="accordion-button align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-sm-1" aria-expanded="true" aria-controls="collapse-sm-1">
+                                        <i class="ic-dots-2 text-info-600 d-block"></i>
+                                        <span class="h5 text-info-900">
 											📚 Книги та культура
 										</span>
-											<i class="qela-btn-ic ic-chevron d-block text-black"></i>
-										</button>
-									</h2>
-									<div id="collapse-sm-1" class="accordion-collapse collapse show" aria-labelledby="heading-sm-1">
-										<div class="accordion-body">
-											<div class="px-3 py-2 d-flex align-items-center gap-3">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-											<div class="px-3 py-2 d-flex align-items-center gap-3 drag">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-											<div class="px-3 py-2 d-flex align-items-center gap-3">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="accordion-item border-top">
-									<h2 class="accordion-header d-flex gap-2 align-items-center" id="heading-sm-2">
-										<button class="accordion-button align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-sm-2" aria-expanded="true" aria-controls="collapse-sm-2">
-											<i class="ic-dots-2 text-info-600 d-block"></i>
-											<span class="h5 text-info-900">
+                                        <i class="qela-btn-ic ic-chevron d-block text-black"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapse-sm-1" class="accordion-collapse collapse show" aria-labelledby="heading-sm-1">
+                                    <div class="accordion-body">
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3 drag">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item border-top">
+                                <h2 class="accordion-header d-flex gap-2 align-items-center" id="heading-sm-2">
+                                    <button class="accordion-button align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-sm-2" aria-expanded="true" aria-controls="collapse-sm-2">
+                                        <i class="ic-dots-2 text-info-600 d-block"></i>
+                                        <span class="h5 text-info-900">
 											📚 Книги та культура
 										</span>
-											<i class="qela-btn-ic ic-chevron d-block text-black"></i>
-										</button>
-									</h2>
-									<div id="collapse-sm-2" class="accordion-collapse collapse show" aria-labelledby="heading-sm-1">
-										<div class="accordion-body">
-											<div class="px-3 py-2 d-flex align-items-center gap-3 bg-white">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-											<div class="px-3 py-2 d-flex align-items-center gap-3 bg-white drag">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-											<div class="px-3 py-2 d-flex align-items-center gap-3 bg-white">
-												<i class="ic-dots-2 text-info-600 d-block"></i>
-												<div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
-												<small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
-											</div>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<!-- Order -->
-						<div class="tab-pane" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
-							<div class="p-4">
-								<a href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/shop">Замовлення</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ====================================== Shop - Products - Edit Category end ====================================-->
-			</div>
-			<!-- modals start-->
-			<!-- modal cancel -->
-			<div class="modal fade" id="modalCancel" tabindex="-1" aria-labelledby="modalCancelLabel" aria-hidden="true">
-				<div class="modal-dialog modal-md modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-body p-4 text-center">
-							<h5 class="fs-18 fw-medium pb-2">Зберегти зміни?</h5>
-							<div class="pt-1">Якщо ви вийдете, зміни не будуть збережені</div>
-						</div>
-						<div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
-							<button type="button" class="btn btn-info m-0 me-auto" data-bs-dismiss="modal">Назад</button>
-							<button type="button" class="btn btn-info m-0">Не зберігати</button>
-							<button type="button" class="btn btn-primary m-0">Зберегти</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- modal Save -->
-			<div class="modal fade" id="modalSave" tabindex="-1" aria-labelledby="modalSaveLabel" aria-hidden="true">
-				<div class="modal-dialog modal-md modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-body p-4 text-center">
-							<h5 class="fs-18 fw-medium pb-2">Хвилинку уваги!</h5>
-							<div class="pt-1">Видалення категорій також видалить і всі товари в ній</div>
-						</div>
-						<div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
-							<button type="button" class="btn btn-info m-0" data-bs-dismiss="modal">Скасувати</button>
-							<button type="button" class="btn btn-danger ico-right ic-delete m-0">Видалити</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- modals end-->
-		</main>
-
-		<script src="https://unpkg.com/vue@latest"></script>
-		<script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
-		<script>
-			const app = Vue.createApp({
-				components: {
-					"v-multi-select": VueMultiselect.default
-				},
-				data() {
-					return {
-						date: null,
-						value1: null,
-						value2: null,
-						value3: null,
-						value4: null,
-						value5: null,
-						value7: null,
-						value6: null,
-						value8: null,
-						value9: null,
-						options: [
-							"🪖 Сувеніри від військових 🇺🇦",
-							"Пункт 2",
-							"Пункт 3",
-							"Пункт 4",
-							"Пункт 1",
-							"Пункт 2sades",
-							"Пункт 3sd",
-							"Пункт 4sd"
-						]
-					};
-				}
-			});
-			app.mount("#app");
-		</script>
-		<!-- =========================== -->
-		<script src="js/vendors.js"></script>
-<script src="js/app.js"></script>
-	</body>
-
+                                        <i class="qela-btn-ic ic-chevron d-block text-black"></i>
+                                    </button>
+                                </h2>
+                                <div id="collapse-sm-2" class="accordion-collapse collapse show" aria-labelledby="heading-sm-1">
+                                    <div class="accordion-body">
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3 bg-white">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3 bg-white drag">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                        <div class="px-3 py-2 d-flex align-items-center gap-3 bg-white">
+                                            <i class="ic-dots-2 text-info-600 d-block"></i>
+                                            <div class="qela-previews qela-ibg"><img src="img/table-img-1.jpg" alt=""></div>
+                                            <small class="text-info-900">«Я бачу, вас цікавить пітьма», Ілларіон Павлюк</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Order -->
+                    <div class="tab-pane" id="order-tab-pane" role="tabpanel" aria-labelledby="order-tab" tabindex="0">
+                        <div class="p-4">
+                            <a href="https://andreywebcoder.github.io/Qela-bootstrap/Qela/shop">Замовлення</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ====================================== Shop - Products - Edit Category end ====================================-->
+        </div>
+        <!-- modals start-->
+        <!-- modal cancel -->
+        <div class="modal fade" id="modalCancel" tabindex="-1" aria-labelledby="modalCancelLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4 text-center">
+                        <h5 class="fs-18 fw-medium pb-2">Зберегти зміни?</h5>
+                        <div class="pt-1">Якщо ви вийдете, зміни не будуть збережені</div>
+                    </div>
+                    <div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
+                        <button type="button" class="btn btn-info m-0 me-auto" data-bs-dismiss="modal">Назад</button>
+                        <button type="button" class="btn btn-info m-0">Не зберігати</button>
+                        <button type="button" class="btn btn-primary m-0">Зберегти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal Save -->
+        <div class="modal fade" id="modalSave" tabindex="-1" aria-labelledby="modalSaveLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4 text-center">
+                        <h5 class="fs-18 fw-medium pb-2">Хвилинку уваги!</h5>
+                        <div class="pt-1">Видалення категорій також видалить і всі товари в ній</div>
+                    </div>
+                    <div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
+                        <button type="button" class="btn btn-info m-0" data-bs-dismiss="modal">Скасувати</button>
+                        <button type="button" class="btn btn-danger ico-right ic-delete m-0">Видалити</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modals end-->
+    </main>
+    <script src="https://unpkg.com/vue@latest"></script>
+    <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
+    <script>
+        const app = Vue.createApp({
+            components: {
+                "v-multi-select": VueMultiselect.default
+            },
+            data() {
+                return {
+                    date: null,
+                    value1: null,
+                    value2: null,
+                    value3: null,
+                    value4: null,
+                    value5: null,
+                    value7: null,
+                    value6: null,
+                    value8: null,
+                    value9: null,
+                    options: ["🪖 Сувеніри від військових 🇺🇦", "Пункт 2", "Пункт 3", "Пункт 4", "Пункт 1", "Пункт 2sades", "Пункт 3sd", "Пункт 4sd"]
+                };
+            }
+        });
+        app.mount("#app");
+    </script>
+    <!-- =========================== -->
+    <script src="js/vendors.js"></script>
+    <script src="js/app.js"></script>
+</body>
 </html>
