@@ -15012,7 +15012,7 @@ textarea.form-control-lg {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 24px;
+  font-size: 1.5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15796,6 +15796,58 @@ textarea.form-control-lg {
 
 .ic-emptylist:before {
   content: "\e9bf";
+}
+
+.ic-fold-dawn:before {
+  content: "\e9c0";
+}
+
+.ic-box:before {
+  content: "\e9c1";
+}
+
+.ic-fold-up:before {
+  content: "\e9c2";
+}
+
+.ic-minus-circled:before {
+  content: "\e9c3";
+}
+
+.ic-order:before {
+  content: "\e9c4";
+}
+
+.ic-post-office:before {
+  content: "\e9c5";
+}
+
+.ic-order-list:before {
+  content: "\e9c6";
+}
+
+.ic-send1:before {
+  content: "\e9c7";
+}
+
+.ic-shop-filled:before {
+  content: "\e9c8";
+}
+
+.ic-shop:before {
+  content: "\e9c9";
+}
+
+.ic-table:before {
+  content: "\e9ca";
+}
+
+.ic-user1:before {
+  content: "\e9cb";
+}
+
+.ic-star-nofilled:before {
+  content: "\e9cc";
 }
 
 html,
