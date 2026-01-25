@@ -70,58 +70,49 @@
 		}
 	}
 }
-.qela-radiobutton {
+
+[type="radio"] {
+	appearance: none;
 	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	&::after {
 		content: "";
 		position: absolute;
-		top: 6.5px;
-		left: 4px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		z-index: 3;
 		width: 8px;
 		height: 8px;
+		flex-basis: 8px;
 		background-color: var(--bs-secondary);
-		border-radius: 50%;
+		border-radius: 99px;
 		opacity: 0;
 		transition: all 0.15s ease 0s;
 		pointer-events: none;
+		line-height: 0;
+		display: block;
 	}
-	&:has([type="radio"]:checked) {
-		&:hover {
-			&::after {
-				background-color: var(--bs-ql-secondary-700);
-			}
-		}
+	&:checked {
 		&::after {
 			opacity: 1;
 		}
-	}
-	&:has([type="radio"]:checked.is-invalid) {
-		&:hover {
-			&::after {
-				background-color: var(--bs-ql-danger-600);
-			}
-		}
-		&::after {
-			background-color: var(--bs-danger);
-		}
-	}
-	&:has([type="radio"]:checked:disabled) {
-		&::after {
-			background-color: var(--bs-ql-secondary-400);
-		}
-	}
-}
-[type="radio"] {
-	&:checked {
 		border-width: 2px;
 		background-color: var(--bs-white);
 		&:hover {
 			background-color: var(--bs-white);
 			border-color: var(--bs-ql-secondary-700);
+			&::after {
+				background-color: var(--bs-ql-secondary-700);
+			}
 			&.is-invalid {
 				background-color: var(--bs-white);
 				border-color: var(--bs-ql-danger-600);
+				&::after {
+					background-color: var(--bs-ql-danger-600);
+				}
 			}
 			&:disabled {
 				background-color: var(--bs-white);
@@ -130,10 +121,16 @@
 		&.is-invalid {
 			background-color: var(--bs-white);
 			border-color: var(--bs-danger);
+			&::after {
+				background-color: var(--bs-danger);
+			}
 		}
 		&:disabled {
 			background-color: var(--bs-white);
 			border-color: var(--bs-ql-secondary-400);
+			&::after {
+				background-color: var(--bs-ql-secondary-400);
+			}
 		}
 	}
 }
@@ -196,6 +193,7 @@
 		}
 	}
 	&.form-switch-sm {
+		align-items: center;
 		.form-check-input {
 			width: 2.125em;
 			height: 1.25rem;

@@ -48,6 +48,7 @@
 	}
 }
 .qela-card-shop {
+	text-decoration: none;
 	width: 130px;
 	height: 130px;
 	overflow: hidden;
@@ -60,6 +61,7 @@
 		border: 1px dashed var(--bs-info);
 		cursor: pointer;
 		font-size: rem(10);
+		color: var(--bs-ql-info-600);
 		i {
 			&::before {
 				font-size: rem(32);
@@ -69,6 +71,14 @@
 	&.eddit {
 		display: flex;
 		flex-direction: column;
+	}
+	&.disable {
+		cursor: auto;
+		color: var(--bs-ql-info-400);
+		--bs-ql-secondary-500: var(--bs-ql-info-400);
+		i {
+			color: var(--bs-ql-info-400);
+		}
 	}
 	&:not(.eddit, .empty) {
 		@media (any-hover: hover) {
@@ -81,6 +91,9 @@
 				}
 			}
 		}
+	}
+	i {
+		color: var(--bs-ql-info-600);
 	}
 	img {
 		position: absolute;

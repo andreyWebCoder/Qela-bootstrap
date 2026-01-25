@@ -1,0 +1,51 @@
+{% macro cardShop(card) %}
+	{% if card == 'default' %}
+		<!-- {{card}} -->
+		<div class="qela-card-shop">
+			<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+			<div class="qela-card-actions px-2">
+				<button type="button" class="btn btn-sm btn-danger ic-delete ico-right w-100"> Видалити </button>
+			</div>
+		</div>
+	{% elif card == 'empty' %}
+		<!-- {{card}} -->
+		<button type="button" class="qela-card-shop empty">
+			<div class="d-flex flex-column justify-content-center align-items-center h-100 gap-2 ">
+				<i class="ic-img-plus"></i>
+				<div class="text-center px-1">
+					<div class="text-secondary-500 text-decoration-underline text-nowrap">Клікніть щоб загрузити</div>
+					<div class="text-info-700 mt-1">або перетягніть сюди</div>
+				</div>
+			</div>
+		</button>
+	{% elif card == 'eddit' %}
+		<!-- {{card}} -->
+		<div class="qela-card-shop eddit">
+			<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+			<span class="qela-list-num bg-white border">1</span>
+			<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
+				<i class="ic-dots-2 d-inline-block"></i>
+			</div>
+		</div>
+	{% elif card == 'eddit-drag' %}
+		<!-- {{card}} -->
+		<div class="qela-card-shop eddit opacity-50" style="cursor: grab;">
+			<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
+			<span class="qela-list-num bg-white border">1</span>
+			<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
+				<i class="ic-dots-2 d-inline-block"></i>
+			</div>
+		</div>
+	{% elif card == 'empty-disable' %}
+		<!-- {{card}} -->
+		<div class="qela-card-shop empty disable">
+			<div class="d-flex flex-column justify-content-center align-items-center h-100 gap-2 ">
+				<i class="ic-img-plus"></i>
+				<div class="text-center px-1">
+					<div class="text-secondary-500 text-decoration-underline text-nowrap" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-offset="0, 8" data-bs-title="Досягнуто максимальну кількість фото">Клікніть щоб загрузити</div>
+					<div class="mt-1">або перетягніть сюди</div>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endmacro %}

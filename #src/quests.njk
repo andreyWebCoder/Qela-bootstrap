@@ -4,11 +4,11 @@
 	{% include "_head.njk" %}
 	<body class="qela-body">
 		{% set header = {title:"Quests > Title", logo:"img/logo-sm.svg"} %}
-		{% include "./components/_header.njk" %}
+		{% include "html/components/_header.njk" %}
 		<div id="app" v-cloak>
 			<main>
 				{% set quests = "active" %}
-				{% include "./components/_aside.njk" %}
+				{% include "html/components/_aside.njk" %}
 				<!-- =====================Список користувачів==================== -->
 				<div class="container-fluid">
 					<div class="row mb-3 mt-3">

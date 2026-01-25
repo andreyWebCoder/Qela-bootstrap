@@ -1,0 +1,72 @@
+<!--  Card  -->
+<section class="d-grid gap-3">
+	<h2 class="h1 mt-4">Cards</h2>
+	<!-- Card modal -->
+	<h4>Card modal</h4>
+	<div class="d-flex flex-wrap gap-2">
+		<a href="#" class="card qela-card" style="width: 13.625rem">
+			<div class="qela-ibg card-img-top">
+				<img src="img/table-img-1.jpg" class="card-img-top" alt="img"/>
+			</div>
+			<div class="card-body pt-2">
+				<div class="text-end pb-2">
+					<span class="badge qela-badge-success">Published</span>
+				</div>
+				<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+			</div>
+		</a>
+		<a href="#" class="card qela-card" style="width: 13.625rem">
+			<div class="qela-ibg qela-noimg bg-info-100">
+				<span class="ic-img text-info"></span>
+			</div>
+			<div class="card-body pt-2">
+				<div class="text-end pb-2">
+					<span class="badge qela-badge-success">Published</span>
+				</div>
+				<h5 class="card-title h6">Share invite to the Climate Unity March!</h5>
+			</div>
+		</a>
+	</div>
+	<!--  Card Verification -->
+	<h4 class="mt-4">Card verification</h4>
+	<div class="card p-3 border-0 rounded-0" style="width: 244px">
+		<div class="form-check pe-2 mb-2">
+			<input type="checkbox" class="form-check-input" id="Check1"/>
+		</div>
+		<a href="#" class="qela-ibg qela-img1x1 ic-arrows-maximize">
+			<img src="img/img-ver2.jpg" alt="img"/>
+		</a>
+		<div class="card-body p-0 pt-2">
+			<div class="d-flex align-items-center w-100">
+				<button type="button" class="btn btn-danger me-1 flex-grow-1">
+					Decline
+				</button>
+				<button type="button" class="btn btn-success ic-check-big ico-right flex-grow-1">
+					Verify
+				</button>
+			</div>
+			<div class="pt-3">
+				<div class="mb-1 h6">Босик Ждана</div>
+				<div class="text-info-600">example@gmail.com</div>
+			</div>
+			<div class="pt-3">
+				<div class="text-info-600">
+					<small>20/20/2023 12:02:23</small>
+				</div>
+				<div class="text-info-600">
+					<small>ID: 02344</small>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  Card shop -->
+	<h4 class="mt-4">Card shop</h4>
+	<div class="d-flex gap-3 flex-wrap">
+		{% set cards = ['default', 'empty','eddit','eddit-drag','empty-disable'] 
+		%}
+		{% from "html/includes/cards/_card-shop.njk" import  cardShop %}
+		{% for card in cards %}
+			{{cardShop(card)}}
+		{% endfor %}
+	</div>
+</section>

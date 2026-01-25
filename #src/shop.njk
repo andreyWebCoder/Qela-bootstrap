@@ -5,10 +5,10 @@
 
 	<body class="qela-body theme--strichka" id="app">
 		{% set header = {title:"Магазин", logo:"img/logo-strichka.svg"} %}
-		{% include "./components/_header.njk" %}
+		{% include "html/components/_header.njk" %}
 		<main class="flex-grow-1">
 			{% set shop = "active" %}
-			{% include "./components/_aside.njk" %}
+			{% include "html/components/_aside.njk" %}
 			<!-- ====================================== shop start====================================-->
 			<div class="container-fluid h-100">
 				<div class="bg-white rounded-3 border mb-2">
@@ -588,7 +588,7 @@
 				</div>
 			</div>
 			<!-- modal Add Item -->
-			<div class="modal fade" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true">
+			<div class="modal fade show" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true" style="display: block;">
 				<div class="modal-dialog modal-lg modal-dialog-centered" style="--bs-modal-width:896px">
 					<div class="modal-content">
 						<div class="modal-header py-4">
@@ -596,48 +596,22 @@
 						</div>
 						<div class="modal-body p-0">
 							<div class="row g-0">
+								<!-- Left (imgs) -->
 								<div class="col-auto border-end" style="flex-basis: 302px;">
 									<div class="p-3 d-flex justify-content-between align-content-center border-bottom">
 										<h3 class="fs-5 text-info-700">Фото</h3>
 										<button type="button" class="qela-btn-ic ic-menu-order text-info" data-bs-offset="0, 5" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Змінити порядок"></button>
 									</div>
 									<div class="p-3 d-flex gap-2 flex-wrap">
-										<!-- default -->
-										<div class="qela-card-shop">
-											<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
-											<div class="qela-card-actions px-2">
-												<button type="button" class="btn btn-sm btn-danger ic-delete ico-right w-100"> Видалити </button>
-												<button type="button" class="btn btn-sm btn-info ic-refresh ico-right w-100"> Оновити </button>
-											</div>
-										</div>
-										<!-- no img -->
-										<div class="qela-card-shop empty">
-											<div class="d-flex flex-column justify-content-center align-items-center h-100 gap-2 ">
-												<i class="ic-img-plus text-info-600"></i>
-												<div class="text-center px-1">
-													<div class="text-secondary text-decoration-underline text-nowrap">Клікніть щоб загрузити</div>
-													<div class="text-info-700 mt-1">або перетягніть сюди</div>
-												</div>
-											</div>
-										</div>
-										<!-- eddit -->
-										<div class="qela-card-shop eddit">
-											<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
-											<span class="qela-list-num bg-white border">1</span>
-											<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
-												<i class="ic-dots-2 text-info-600 d-inline-block"></i>
-											</div>
-										</div>
-										<!-- eddit drag-->
-										<div class="qela-card-shop eddit opacity-50" style="cursor: grab;">
-											<img src="img/cards/shop-img.png" class="img-fluid" alt="photo product">
-											<span class="qela-list-num bg-white border">1</span>
-											<div class="position-relative mt-auto py-1 px-2 bg-white text-center border-top">
-												<i class="ic-dots-2 text-info-600 d-inline-block"></i>
-											</div>
-										</div>
+										{% set cards = ['default', 'empty','eddit','eddit-drag','empty-disable'] %}
+										{% from "html/includes/cards/_card-shop.njk" import  cardShop %}
+										{% for card in cards %}
+											{{cardShop(card)}}
+										{% endfor %}
+										<div class="display-7 text-danger-600 w-100">Додайте фото товару</div>
 									</div>
 								</div>
+								<!-- Right (inputs) -->
 								<div class="col">
 									<div class="border-bottom p-3">
 										<h3 class="fs-5 text-info-700">Опис</h3>
@@ -696,9 +670,9 @@
 										<!-- + -->
 										<div>
 											<div class="form-check form-switch form-switch-sm">
-												<div class="d-flex gap-2">
-													<label class="form-check-label" for="SwitchCheck">Написати в обговореннях</label>
-													<button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Цей текст нижче буде автоматично відправлено користувачу, після замовлення"></button>
+												<div class="d-flex gap-2 align-items-center">
+													<label class="form-check-label display-7 text-black lh-1" for="SwitchCheck">Написати в обговореннях</label>
+													<button type="button" class="btn btn-sm qela-btn-tooltip mb-0 ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Цей текст нижче буде автоматично відправлено користувачу, після замовлення"></button>
 												</div>
 												<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck" checked>
 											</div>
@@ -781,9 +755,9 @@
 											</div>
 											<div class="col">
 												<div class="form-check form-switch form-switch-sm">
-													<div class="d-flex gap-2">
-														<label class="form-check-label" for="SwitchCheck2">Одразу</label>
-														<button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="До повного розпродажу"></button>
+													<div class="d-flex gap-2 align-items-center">
+														<label class="form-check-label display-7 text-black lh-1" for="SwitchCheck2">Одразу</label>
+														<button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="До повного розпродажу"></button>
 													</div>
 													<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck2" checked="">
 												</div>
@@ -799,9 +773,9 @@
 											</div>
 											<div class="col">
 												<div class="form-check form-switch form-switch-sm">
-													<div class="d-flex gap-2">
-														<label class="form-check-label" for="SwitchCheck3">Весь час</label>
-														<button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Одразу після збереження"></button>
+													<div class="d-flex gap-2 align-items-center">
+														<label class="form-check-label display-7 text-black lh-1" for="SwitchCheck3">Весь час</label>
+														<button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Одразу після збереження"></button>
 													</div>
 													<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck3" checked="">
 												</div>
@@ -809,10 +783,13 @@
 										</div>
 									</div>
 									<!-- + -->
-									<div class="p-3">
+									<div class="px-3 py-2">
 										<div class="row gx-3 gy-1 align-items-center">
 											<div class="col-12">
-												<label for="inputText4" class="form-label text-info-600 mb-0">Кількість</label>
+												<div class="fs-5 fw-medium mb-2" id="modalAddProductLabel">Кількість</div>
+											</div>
+											<div class="col-12">
+												<label for="inputText4" class="form-label text-info-600 mb-0">В наявності</label>
 											</div>
 											<div class="col-auto" style="flex-basis: 275px;">
 												<input type="text" class="form-control" id="inputText4" placeholder="Вкажіть наявну кількість">
@@ -820,23 +797,19 @@
 											</div>
 											<div class="col">
 												<div class="d-flex gap-3">
-													<div class="form-check">
-														<input type="radio" class="form-check-input" id="radioQuantity" name="quantity">
-														<label class="form-check-label display-7" for="radioQuantity">Необмежено</label>
-													</div>
-													<div class="form-check">
-														<input type="radio" class="form-check-input" id="radioQuantity2" name="quantity">
-														<label class="form-check-label display-7" for="radioQuantity2">Немає в наявності</label>
+													<div class="form-check form-switch form-switch-sm">
+														<label class="form-check-label display-7 text-black" for="SwitchCheck4">Необмежено</label>
+														<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck4">
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 									<!-- + -->
-									<div class="p-3">
+									<div class="px-3 py-2 mb-3">
 										<div class="row gx-3 gy-1 align-items-center">
 											<div class="col-12">
-												<label for="inputText45" class="form-label text-info-600 mb-0">Кількість</label>
+												<label for="inputText45" class="form-label text-info-600 mb-0">На особу</label>
 											</div>
 											<div class="col-auto" style="flex-basis: 275px;">
 												<input type="text" class="form-control" id="inputText45" placeholder="Вкажіть наявну кількість">
@@ -844,14 +817,21 @@
 											</div>
 											<div class="col">
 												<div class="d-flex gap-3">
-													<div class="form-check">
-														<input type="radio" class="form-check-input" id="radioQuantity3">
-														<label class="form-check-label display-7" for="radioQuantity3">Необмежено</label>
+													<div class="form-check form-switch form-switch-sm">
+														<label class="form-check-label display-7 text-black" for="SwitchCheck5">Необмежено</label>
+														<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck5">
 													</div>
-
 												</div>
 											</div>
 										</div>
+									</div>
+								</div>
+								<!-- Alert -->
+								<div class="col-12 px-3">
+									<div class="alert alert-danger qela-alert fade show small" role="alert">
+										<span class="ic-error-warning-fill text-danger"></span>
+										<div>Будь ласка, заповніть необхідні поля</div>
+										<button type="button" class="btn-close bg-transparent small ic-cloze" data-bs-dismiss="alert" aria-label="Close"></button>
 									</div>
 								</div>
 							</div>

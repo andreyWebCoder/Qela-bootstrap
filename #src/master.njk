@@ -4,14 +4,14 @@
 	{% include "_head.njk" %}
 	<body class="qela-body">
 		{% set header = {title:"Quests > Campaign master", logo:"img/logo-sm.svg"} %}
-		{% include "./components/_header.njk" %}
+		{% include "html/components/_header.njk" %}
 		<main class="qela-main">
-			{% include "./components/_aside.njk" %}
+			{% include "html/components/_aside.njk" %}
 			<!-- =====================Список користувачів==================== -->
 			<div class="container-fluid">
 				<div class="qela-page" id="app" v-cloak>
 					<div class="row">
-						{% include "components/quest/_nav.njk" %}
+						{% include "html/components/quest/_nav.njk" %}
 					</div>
 					<div class="row row-grow">
 						<div class="col-12 col-lg-4 child-mb">

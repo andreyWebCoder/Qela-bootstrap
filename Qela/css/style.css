@@ -17721,50 +17721,51 @@ textarea {
   background-color: var(--bs-ql-danger-600);
 }
 
-.qela-radiobutton {
+[type=radio] {
+  appearance: none;
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
-.qela-radiobutton::after {
+[type=radio]::after {
   content: "";
   position: absolute;
-  top: 6.5px;
-  left: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   width: 8px;
   height: 8px;
+  flex-basis: 8px;
   background-color: var(--bs-secondary);
-  border-radius: 50%;
+  border-radius: 99px;
   opacity: 0;
   transition: all 0.15s ease 0s;
   pointer-events: none;
+  line-height: 0;
+  display: block;
 }
-.qela-radiobutton:has([type=radio]:checked):hover::after {
-  background-color: var(--bs-ql-secondary-700);
-}
-.qela-radiobutton:has([type=radio]:checked)::after {
-  opacity: 1;
-}
-.qela-radiobutton:has([type=radio]:checked.is-invalid):hover::after {
-  background-color: var(--bs-ql-danger-600);
-}
-.qela-radiobutton:has([type=radio]:checked.is-invalid)::after {
-  background-color: var(--bs-danger);
-}
-.qela-radiobutton:has([type=radio]:checked:disabled)::after {
-  background-color: var(--bs-ql-secondary-400);
-}
-
 [type=radio]:checked {
   border-width: 2px;
   background-color: var(--bs-white);
+}
+[type=radio]:checked::after {
+  opacity: 1;
 }
 [type=radio]:checked:hover {
   background-color: var(--bs-white);
   border-color: var(--bs-ql-secondary-700);
 }
+[type=radio]:checked:hover::after {
+  background-color: var(--bs-ql-secondary-700);
+}
 [type=radio]:checked:hover.is-invalid {
   background-color: var(--bs-white);
   border-color: var(--bs-ql-danger-600);
+}
+[type=radio]:checked:hover.is-invalid::after {
+  background-color: var(--bs-ql-danger-600);
 }
 [type=radio]:checked:hover:disabled {
   background-color: var(--bs-white);
@@ -17773,9 +17774,15 @@ textarea {
   background-color: var(--bs-white);
   border-color: var(--bs-danger);
 }
+[type=radio]:checked.is-invalid::after {
+  background-color: var(--bs-danger);
+}
 [type=radio]:checked:disabled {
   background-color: var(--bs-white);
   border-color: var(--bs-ql-secondary-400);
+}
+[type=radio]:checked:disabled::after {
+  background-color: var(--bs-ql-secondary-400);
 }
 
 .form-check-label {
@@ -17827,6 +17834,9 @@ textarea {
 }
 .form-switch .form-check-input:focus {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3.5' fill='rgba(255, 255, 255, 0.99)'/></svg>");
+}
+.form-switch.form-switch-sm {
+  align-items: center;
 }
 .form-switch.form-switch-sm .form-check-input {
   width: 2.125em;
@@ -18258,7 +18268,7 @@ textarea {
 
 .qela-alert {
   position: relative;
-  font-size: 0.875rem;
+  font-size: 1rem;
   letter-spacing: 0.2px;
   border-width: 1px;
   border-style: solid;
@@ -18270,9 +18280,6 @@ textarea {
   position: absolute;
   left: 1rem;
   top: 1rem;
-}
-.qela-alert.alert span[class*=ic-]::before {
-  font-size: 1rem;
 }
 .qela-alert.alert a {
   text-decoration: none;
@@ -18328,7 +18335,7 @@ textarea {
   border-color: var(--bs-ql-success-400);
 }
 .qela-alert.small {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3.5rem;
 }
 .qela-alert.small span[class^=ic-],
 .qela-alert.small span [class*=ic-] {
@@ -20291,6 +20298,7 @@ textarea {
 }
 
 .qela-card-shop {
+  text-decoration: none;
   width: 130px;
   height: 130px;
   overflow: hidden;
@@ -20304,6 +20312,7 @@ textarea {
   border: 1px dashed var(--bs-info);
   cursor: pointer;
   font-size: 0.625rem;
+  color: var(--bs-ql-info-600);
 }
 .qela-card-shop.empty i::before {
   font-size: 2rem;
@@ -20311,6 +20320,14 @@ textarea {
 .qela-card-shop.eddit {
   display: flex;
   flex-direction: column;
+}
+.qela-card-shop.disable {
+  cursor: auto;
+  color: var(--bs-ql-info-400);
+  --bs-ql-secondary-500: var(--bs-ql-info-400);
+}
+.qela-card-shop.disable i {
+  color: var(--bs-ql-info-400);
 }
 @media (any-hover: hover) {
   .qela-card-shop:not(.eddit, .empty):hover {
@@ -20321,6 +20338,9 @@ textarea {
     opacity: 1;
     pointer-events: auto;
   }
+}
+.qela-card-shop i {
+  color: var(--bs-ql-info-600);
 }
 .qela-card-shop img {
   position: absolute;
