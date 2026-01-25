@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="ua">
+	{% set links = {
+		indexCss: '<link rel="stylesheet" href="filesIndex/index.css">'
+	} %}
 	{% set title = "Components" %}
 	{% include "_head.njk" %}
-
 	<body class="theme--strichka">
+		<script src="filesIndex/indexhead.js"></script>
 		<script>
 			function addDarkClass() {
 				try {
@@ -270,7 +273,8 @@
 							<button class="btn --burger">
 								<span></span>
 								<span></span>
-								<span></span></button>
+								<span></span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -466,49 +470,49 @@
 				<!-- Навигация (якоря) -->
 				<div style="max-width: 1024px" class="mx-auto px-3 w-100">
 					<div class="mt-3 pb-3 d-flex flex-column gap-3">
-						{% include "html/components/_buttons.html" %}
+						{% include "html/components/_buttons.njk" %}
 						{% include "html/components/_text-fild.njk" %}
 						{% include "html/components/_multi-select.njk" %}
-						{% include "html/components/_datapiker.html" %}
-						{% include "html/components/_chat.html" %}
+						{% include "html/components/_datapiker.njk" %}
+						{% include "html/components/_chat.njk" %}
 						{% include "html/components/_checkbox.njk" %}
 						{% include "html/components/_radiobutton.njk" %}
-						{% include "html/components/_range.html" %}
-						{% include "html/components/_accordion.html" %}
+						{% include "html/components/_range.njk" %}
+						{% include "html/components/_accordion.njk" %}
 						{% include "html/components/_alert.njk" %}
-						{% include "html/components/_avatars.html" %}
-						{% include "html/components/_badge.html" %}
-						{% include "html/components/_breadcrumb.html" %}
+						{% include "html/components/_avatars.njk" %}
+						{% include "html/components/_badge.njk" %}
+						{% include "html/components/_breadcrumb.njk" %}
 						{% include "html/components/_card.njk" %}
-						{% include "html/components/_delimiter.html" %}
-						{% include "html/components/_description.html" %}
-						{% include "html/components/_dialog.html" %}
-						{% include "html/components/_dropdown.html" %}
-						{% include "html/components/_icons.html" %}
-						{% include "html/components/_icon-svg.html" %}
-						{% include "html/components/_img.html" %}
-						{% include "html/components/_img-preview.html" %}
-						{% include "html/components/_items.html" %}
-						{% include "html/components/_labels.html" %}
+						{% include "html/components/_delimiter.njk" %}
+						{% include "html/components/_description.njk" %}
+						{% include "html/components/_dialog.njk" %}
+						{% include "html/components/_dropdown.njk" %}
+						{% include "html/components/_icons.njk" %}
+						{% include "html/components/_icon-svg.njk" %}
+						{% include "html/components/_img.njk" %}
+						{% include "html/components/_img-preview.njk" %}
+						{% include "html/components/_items.njk" %}
+						{% include "html/components/_labels.njk" %}
 						{% include "html/components/_list.njk" %}
-						{% include "html/components/_logo.html" %}
-						{% include "html/components/_map.html" %}
-						{% include "html/components/_modals.html" %}
-						{% include "html/components/_orden.html" %}
-						{% include "html/components/_pagination.html" %}
-						{% include "html/components/_progress.html" %}
+						{% include "html/components/_logo.njk" %}
+						{% include "html/components/_map.njk" %}
+						{% include "html/components/_modals.njk" %}
+						{% include "html/components/_orden.njk" %}
+						{% include "html/components/_pagination.njk" %}
+						{% include "html/components/_progress.njk" %}
 						{% include "html/components/_popover.njk" %}
-						{% include "html/components/_qr.html" %}
-						{% include "html/components/_rating.html" %}
-						{% include "html/components/_slider.html" %}
-						{% include "html/components/_subscription.html" %}
-						{% include "html/components/_tables.html" %}
-						{% include "html/components/_tabs.html" %}
-						{% include "html/components/_talents.html" %}
-						{% include "html/components/_toasts.html" %}
-						{% include "html/components/_toolbar.html" %}
-						{% include "html/components/_tooltip.html" %}
-						{% include "html/components/_under.html" %}
+						{% include "html/components/_qr.njk" %}
+						{% include "html/components/_rating.njk" %}
+						{% include "html/components/_slider.njk" %}
+						{% include "html/components/_subscription.njk" %}
+						{% include "html/components/_tables.njk" %}
+						{% include "html/components/_tabs.njk" %}
+						{% include "html/components/_talents.njk" %}
+						{% include "html/components/_toasts.njk" %}
+						{% include "html/components/_toolbar.njk" %}
+						{% include "html/components/_tooltip.njk" %}
+						{% include "html/components/_under.njk" %}
 					</div>
 				</div>
 			</main>
@@ -696,7 +700,8 @@
 			});
 		</script>
 		<!-- =========================== -->
-		{% include "_js.html" %}
+		<script src="filesIndex/index.js"></script>
+		{% include "_js.njk" %}
 	</body>
 
 </html>
