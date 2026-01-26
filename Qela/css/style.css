@@ -18153,7 +18153,7 @@ textarea {
 }
 
 .form-label {
-  color: var(--bs-ql-info-900);
+  color: var(--bs-ql-info-700);
 }
 .form-label.small {
   font-size: 0.9375rem;

@@ -751,7 +751,7 @@
                 </div>
             </div>
         </div>
-        <!-- modal Add Item -->
+        <!-- modal Add product -->
         <div class="modal fade" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered" style="--bs-modal-width:896px">
                 <div class="modal-content">
@@ -871,19 +871,28 @@
                                     </div>
                                     <!-- + -->
                                     <div>
+                                        <div class="qela-form-labels">
+                                            <label for="textareaEmailText" class="form-label">Email повідомлення</label>
+                                            <label class="form-label">0/<span>200</span></label>
+                                        </div>
+                                        <textarea class="form-control" placeholder="Наприклад: Ось ваш бонус код на знижку! Дякуюємо!" id="textareaEmailText" rows="1"></textarea>
+                                        <div class="invalid-feedback">Error text</div>
+                                    </div>
+                                    <!-- + -->
+                                    <div>
                                         <div class="form-check form-switch form-switch-sm">
                                             <div class="d-flex gap-2 align-items-center">
-                                                <label class="form-check-label display-7 text-black lh-1" for="SwitchCheck">Написати в обговореннях</label>
+                                                <label class="form-check-label display-6 text-black lh-1" for="SwitchCheck">Написати в обговореннях</label>
                                                 <button type="button" class="btn btn-sm qela-btn-tooltip mb-0 ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Цей текст нижче буде автоматично відправлено користувачу, після замовлення"></button>
                                             </div>
                                             <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck" checked>
                                         </div>
                                         <div class="pt-3">
                                             <div class="qela-form-labels">
-                                                <label for="textareaText" class="form-label">Формат</label>
+                                                <label for="textareaText" class="form-label">Текст повідомлення</label>
                                                 <label class="form-label">0/<span>200</span></label>
                                             </div>
-                                            <textarea class="form-control" placeholder="Текст повідомлення" id="textareaText" rows="1"></textarea>
+                                            <textarea class="form-control" placeholder="Наприклад: Добрий день, який у вас розмір?" id="textareaText" rows="1"></textarea>
                                             <div class="invalid-feedback">Error text</div>
                                         </div>
                                     </div>
@@ -913,30 +922,17 @@
                                         </div>
                                         <div class="invalid-feedback">Error text</div>
                                     </div>
-                                    <!-- or input -->
-                                    <div class="d-flex flex-wrap">
-                                        <div class="w-100">
-                                            <label class="form-label" for="addCategory2">Категорія</label>
-                                        </div>
-                                        <div style="width: 320px">
-                                            <input type="text" class="form-control" id="addCategory2" placeholder="Придумайте назву категорії">
-                                        </div>
-                                        <div class="p-1 d-flex gap-2 ms-3">
-                                            <button type="button" class="qela-btn-ic ic-cloze text-info-900"></button>
-                                            <button type="button" class="qela-btn-ic ic-check-big text-info-900"></button>
-                                        </div>
-                                    </div>
                                     <!-- +  switch -->
                                     <div class="form-check form-switch">
                                         <div class="d-flex gap-2">
-                                            <label class="form-check-label" for="SwitchCheck">Відображати в розділі “🔥Топ-пропозиції”</label>
+                                            <label class="form-check-label text-black" for="SwitchCheck">Відображати в розділі “🔥Топ-пропозиції”</label>
                                             <button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Товар відображатиметьсяна початку сторінки"></button>
                                         </div>
                                         <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck" checked>
                                     </div>
                                 </div>
                                 <!-- + -->
-                                <div class="p-3">
+                                <div class="p-3" style="width: 275px">
                                     <label for="inputText" class="form-label">Ціна, бали</label>
                                     <input type="text" class="form-control" id="inputText" placeholder="Вкажіть ціну у балах">
                                     <div class="invalid-feedback">Error text</div>
@@ -958,7 +954,7 @@
                                         <div class="col">
                                             <div class="form-check form-switch form-switch-sm">
                                                 <div class="d-flex gap-2 align-items-center">
-                                                    <label class="form-check-label display-7 text-black lh-1" for="SwitchCheck2">Одразу</label>
+                                                    <label class="form-check-label display-6 text-black lh-1" for="SwitchCheck2">Одразу</label>
                                                     <button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="До повного розпродажу"></button>
                                                 </div>
                                                 <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck2" checked="">
@@ -976,7 +972,7 @@
                                         <div class="col">
                                             <div class="form-check form-switch form-switch-sm">
                                                 <div class="d-flex gap-2 align-items-center">
-                                                    <label class="form-check-label display-7 text-black lh-1" for="SwitchCheck3">Весь час</label>
+                                                    <label class="form-check-label display-6 text-black lh-1" for="SwitchCheck3">Весь час</label>
                                                     <button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Одразу після збереження"></button>
                                                 </div>
                                                 <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck3" checked="">
@@ -1000,7 +996,7 @@
                                         <div class="col">
                                             <div class="d-flex gap-3">
                                                 <div class="form-check form-switch form-switch-sm">
-                                                    <label class="form-check-label display-7 text-black" for="SwitchCheck4">Необмежено</label>
+                                                    <label class="form-check-label display-6 text-black" for="SwitchCheck4">Необмежено</label>
                                                     <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck4">
                                                 </div>
                                             </div>
@@ -1020,7 +1016,7 @@
                                         <div class="col">
                                             <div class="d-flex gap-3">
                                                 <div class="form-check form-switch form-switch-sm">
-                                                    <label class="form-check-label display-7 text-black" for="SwitchCheck5">Необмежено</label>
+                                                    <label class="form-check-label display-6 text-black" for="SwitchCheck5">Необмежено</label>
                                                     <input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck5">
                                                 </div>
                                             </div>
