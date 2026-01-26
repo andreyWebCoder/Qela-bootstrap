@@ -330,8 +330,9 @@ $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width $i
 
 // scss-docs-end input-btn-variables
 // scss-docs-start btn-variables
-$btn-padding-y: $input-btn-padding-y;
+$btn-padding-y: 0.375rem;
 $btn-padding-x: $input-btn-padding-x;
+$btn-line-height: $input-btn-line-height;
 $btn-border-width: $input-btn-border-width;
 $btn-border-radius: $border-radius-lg;
 $btn-font-weight: 400;

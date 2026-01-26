@@ -9,6 +9,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 4px;
+	min-height: 38px;
 	--bs-btn-border-color: transparent;
 	--ql-btn-icon-color: var(--bs-btn-color);
 	&:disabled,
@@ -18,14 +19,14 @@
 
 	&[class*="ic-"] {
 		&:before {
-			font-size: rem(18);
+			font-size: rem(24);
 			transition: all 0.3s ease 0s;
 			color: var(--ql-btn-icon-color);
 		}
 	}
 
 	&.ico {
-		padding: rem(9);
+		padding: $btn-padding-y;
 		&[aria-expanded="true"] {
 			&:before {
 				transform: rotate(-180deg);
@@ -66,7 +67,7 @@
 	font-weight: 400;
 	padding: rem(9.5) rem(8);
 	gap: rem(4);
-	line-height: 124%;
+	line-height: 120%;
 	&[class^="ic-"],
 	&[class*="ic-"] {
 		&:before {
@@ -77,6 +78,7 @@
 .btn-sm {
 	gap: rem(4);
 	font-weight: 400;
+	min-height: 32px;
 	&[class^="ic-"],
 	&[class*="ic-"] {
 		&:before {

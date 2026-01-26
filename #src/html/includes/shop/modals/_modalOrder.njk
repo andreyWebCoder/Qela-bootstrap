@@ -1,4 +1,4 @@
-<div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
+<div class="modal fade show" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true" style="display:block;">
 	<div class="modal-dialog modal-xl modal-dialog-centered" style="--bs-modal-width: 1336px;">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -8,12 +8,14 @@
 			<div class="modal-body p-0">
 				<div class="p-3">
 					<div class="fw-bold mb-3">Змінити статус</div>
-					<div class="d-flex gap-3">
-						<button type="button" class="btn btn-md btn-info current">Нове</button>
-						<button type="button" class="btn btn-md btn-warning">В роботі</button>
+					<div class="d-flex align-items-center gap-3">
+						<button type="button" class="btn btn-md btn-info ic-check ico-right" disabled>Нове</button>
+						<button type="button" class="btn btn-md btn-warning" disabled>В роботі</button>
 						<button type="button" class="btn btn-md btn-info">Відправлено</button>
-						<button type="button" class="btn btn-md btn-danger">Скасовано</button>
-						<button type="button" class="btn btn-md btn-success">Отримано</button>
+						<button type="button" class="btn btn-md btn-success current ic-check ico-right">Отримано</button>
+						<a href="#" class="btn btn-info ico ic-message-circle ms-auto position-relative">
+							<span class="qela-counter position-absolute bottom-50 start-100 translate-middle">+10</span>
+						</a>
 					</div>
 				</div>
 				<div class="p-3">
@@ -21,9 +23,9 @@
 						<!-- left -->
 						<div class="col-8 d-grid gap-3">
 							<!-- info 1 -->
-							<div class="border rounded-3">
-								<div class="fw-bold p-3 mb-2">Загальна інформація</div>
-								<div class="p-3 pt-0 d-flex gap-3">
+							<div class="border rounded-3 p-3 d-grid gap-3">
+								<div class="fw-bold">Загальна інформація</div>
+								<div class="d-flex gap-3">
 									<div class="d-grid gap-2 flex-grow-1">
 										<small class="text-info-700 text-nowrap fw-semibold">Замовлення №</small>
 										<small>0123456789</small>
@@ -45,11 +47,15 @@
 										<small>12.11.2025 - 21:57</small>
 									</div>
 								</div>
+								<div class="d-grid gap-2 flex-grow-1">
+									<small class="text-info-700 text-nowrap fw-semibold">Коментар</small>
+									<small>Розмір X, будь ласка</small>
+								</div>
 							</div>
 							<!-- info 2 -->
-							<div class="border rounded-3">
-								<div class="fw-bold p-3 mb-2">Загальна інформація</div>
-								<div class="p-3 pt-0 d-flex gap-3">
+							<div class="border rounded-3 p-3 d-grid gap-3">
+								<div class="fw-bold">Загальна інформація</div>
+								<div class="d-flex gap-3">
 									<div class="d-grid gap-2 flex-grow-1">
 										<small class="text-info-700 text-nowrap fw-semibold">Замовлення №</small>
 										<small>-</small>
@@ -72,16 +78,16 @@
 									</div>
 								</div>
 							</div>
-							<!-- details 1 -->
-							<div class="border rounded-3">
-								<div class="fw-bold p-3 mb-2">Деталі</div>
-								<div class="p-3 pt-0 d-flex gap-3 align-items-start">
+							<!-- Product 1 -->
+							<div class="border rounded-3 p-3 d-grid gap-3">
+								<div class="fw-bold">Товар</div>
+								<div class="d-flex gap-3 align-items-start">
 									<div>
 										<div class="qela-previews qela-ibg" style="--img-size:54px"><img src="img/table-img-1.jpg" alt=""></div>
 									</div>
-									<div class="d-grid gap-2 flex-grow-1" style="max-width: 300px;">
+									<div class="d-grid gap-2 flex-grow-1" style="max-width: 242px;">
 										<small class="text-info-700 text-nowrap fw-semibold">Назва</small>
-										<small>Книга “Українське військове лідерство. Як командують українці”</small>
+										<small class="qela-clamp text-break" style="--clamp-line: 2;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-offset="0, 5" data-bs-title="Книга “Українське військове лідерство. Як командують українці”">Книга “Українське військове лідерство. Як командують українці”</small>
 									</div>
 									<div class="d-grid gap-2 flex-grow-1">
 										<small class="text-info-700 text-nowrap fw-semibold">Тип</small>
