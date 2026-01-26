@@ -13169,7 +13169,7 @@ textarea.form-control-lg {
 
 .alert {
   --bs-alert-bg: transparent;
-  --bs-alert-padding-x: 2.625rem;
+  --bs-alert-padding-x: 3.5rem;
   --bs-alert-padding-y: 1rem;
   --bs-alert-margin-bottom: 0;
   --bs-alert-color: inherit;
@@ -13196,14 +13196,14 @@ textarea.form-control-lg {
 }
 
 .alert-dismissible {
-  padding-right: 7.875rem;
+  padding-right: 10.5rem;
 }
 .alert-dismissible .btn-close {
   position: absolute;
   top: 0;
   right: 0;
   z-index: 2;
-  padding: 1.25rem 2.625rem;
+  padding: 1.25rem 3.5rem;
 }
 
 .alert-primary {
@@ -18320,36 +18320,22 @@ textarea {
 
 .qela-alert {
   position: relative;
-  font-size: 1rem;
   letter-spacing: 0.2px;
   border-width: 1px;
   border-style: solid;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
+  line-height: 130%;
+}
+.qela-alert.alert {
+  --bs-alert-color: var(--bs-ql-info-900);
 }
 .qela-alert.alert span[class*=ic-] {
   position: absolute;
   left: 1rem;
   top: 1rem;
-}
-.qela-alert.alert a {
-  text-decoration: none;
-}
-.qela-alert.custom {
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-}
-.qela-alert.custom.alert-secondary {
-  border-color: transparent;
-}
-.qela-alert.custom span[class*=ic-] {
-  position: static;
-  padding-bottom: 0.5rem;
-}
-.qela-alert.custom span[class*=ic-]::before {
-  font-size: 2.375rem;
 }
 .qela-alert.alert-secondary {
   background-color: var(--bs-ql-secondary-200);
@@ -18370,18 +18356,6 @@ textarea {
 .qela-alert.alert-success {
   background-color: var(--bs-ql-success-100);
   border-color: var(--bs-ql-success-400);
-}
-.qela-alert.small {
-  padding: 0.5rem 3.5rem;
-}
-.qela-alert.small span[class^=ic-],
-.qela-alert.small span [class*=ic-] {
-  left: 12px;
-  top: 0.5rem;
-}
-.qela-alert.small .btn-close {
-  top: 0.5rem;
-  right: 0.5rem;
 }
 .qela-alert .btn-close {
   position: absolute;

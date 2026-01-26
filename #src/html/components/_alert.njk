@@ -1,5 +1,42 @@
 <!-- Alert  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Alert</h2>
-	{% include "html/includes/alert/_alert.njk" %}
+	{% set alertsData = [
+		{
+			class: "danger",
+			ic: "text-danger ic-alert-triangle",
+			text: "Error! We are sorry the system is down at the moment. Please try again later",
+			link:{text:"Reload page", color:"text-danger-700"},
+			btnClose: true
+		},{
+			class: "warning",
+			ic: "text-warning ic-alert-triangle",
+			text: "Warning! Your amount of users is getting over 1000. Please make sure there are enough money on your balance.",
+			link:{text:"Billing", color:"text-warning-800"},
+			btnClose: true
+		},{
+			class: "info",
+			ic: "text-info ic-info-filled",
+			text: "The weather is good!",
+			link:{text:"I agree", color:"text-info-700"},
+			btnClose: true
+		},{
+			class: "success",
+			ic: "text-success-700 ic-check-filled",
+			text: "Success! You’re very good person!",
+			link:{text:"Thanks", color:"text-success-800"},
+			btnClose: true
+		},{
+			class: "success",
+			ic: "text-success-700 ic-check-filled",
+			text: "Success! You’re very good person!",
+			btn:"Thanks",
+			btnClose: true
+		}
+	] %}
+	{% from "html/includes/alert/_alert.njk" import alerts %}
+	{% for alert in alertsData %}
+		{{alerts(alert)}}
+	{% endfor %}
+
 </section>

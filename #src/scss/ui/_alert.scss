@@ -1,13 +1,15 @@
 .qela-alert {
 	position: relative;
-	font-size: rem(16);
 	letter-spacing: 0.2px;
 	border-width: 1px;
 	border-style: solid;
 	display: flex;
 	align-items: flex-start;
 	justify-content: space-between;
+	gap: 16px;
+	line-height: 130%;
 	&.alert {
+		--bs-alert-color: var(--bs-ql-info-900);
 		span {
 			&[class*="ic-"] {
 				position: absolute;
@@ -15,29 +17,7 @@
 				top: 1rem;
 			}
 		}
-
-		a {
-			text-decoration: none;
-		}
 	}
-	&.custom {
-		text-align: center;
-		flex-direction: column;
-		align-items: center;
-		&.alert-secondary {
-			border-color: transparent;
-		}
-		span {
-			&[class*="ic-"] {
-				position: static;
-				padding-bottom: 0.5rem;
-				&::before {
-					font-size: rem(38);
-				}
-			}
-		}
-	}
-
 	&.alert-secondary {
 		background-color: var(--bs-ql-secondary-200);
 		border-color: var(--bs-ql-secondary-400);
@@ -59,22 +39,6 @@
 		background-color: var(--bs-ql-success-100);
 		border-color: var(--bs-ql-success-400);
 	}
-
-	&.small {
-		padding: 0.5rem rem(56);
-		span {
-			&[class^="ic-"],
-			[class*="ic-"] {
-				left: 12px;
-				top: 0.5rem;
-			}
-		}
-		.btn-close {
-			top: 0.5rem;
-			right: 0.5rem;
-		}
-	}
-
 	.btn-close {
 		position: absolute;
 		top: 16px;
