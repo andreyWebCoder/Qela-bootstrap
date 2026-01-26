@@ -3,8 +3,9 @@
 	{% set title = "Device alert" %}
 	{% include "_head.njk" %}
 	<body class="qela-body">
-	@@include('./components/_header.html',{ "title":"Main Dashboard" , "logo":"img/logo-sm.svg" })
-	<div id="app" v-cloak>
+		{% set header = {title:"Магазин", logo:"img/logo-sm.svg"} %}
+		{% include "html/components/_header.njk" %}
+		<div id="app" v-cloak>
 			<main>
 				<!-- =====================Список користувачів==================== -->
 				<div class="container">
