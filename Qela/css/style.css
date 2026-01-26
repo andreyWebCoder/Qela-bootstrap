@@ -16362,11 +16362,6 @@ main {
   padding-right: 0.5rem;
   flex-direction: row-reverse;
 }
-.btn.custom {
-  padding: 0.5rem;
-  border-radius: 10px;
-  font-weight: 400;
-}
 .btn.current::after {
   content: "";
   position: absolute;
@@ -16414,9 +16409,9 @@ main {
   --bs-btn-hover-border-color: var(--bs-ql-primary-600);
 }
 .btn-primary:disabled, .btn-primary.disabled {
-  --bs-btn-disabled-color: var(--bs-ql-info-100);
-  --bs-btn-disabled-bg: var(--bs-ql-info-500);
-  --ql-btn-icon-color: var(--bs-ql-info-100);
+  --bs-btn-disabled-color: var(--bs-ql-info-500);
+  --bs-btn-disabled-bg: var(--bs-ql-primary-300);
+  --ql-btn-icon-color: var(--bs-ql-info-500);
 }
 
 .btn-secondary {
@@ -16525,36 +16520,12 @@ main {
   --bs-btn-active-border-color: var(--bs-ql-info-300);
 }
 .btn-info:disabled, .btn-info.disabled {
-  --bs-btn-disabled-color: var(--bs-ql-info-500);
+  --bs-btn-disabled-color: var(--bs-ql-info-400);
   --bs-btn-disabled-bg: var(--bs-ql-info-100);
-  --ql-btn-icon-color: var(--bs-ql-info-500);
+  --ql-btn-icon-color: var(--bs-ql-info-400);
+  --bs-btn-disabled-border-color: var(--bs-ql-info-200);
 }
 
-.btn-custom {
-  padding: 0;
-}
-.btn-custom.ico-right {
-  padding-right: 1.5rem;
-}
-.btn-custom.ico-right::before {
-  font-size: 18px;
-  padding: 0.09375rem;
-  background-color: var(--bs-primary);
-  border-radius: 50%;
-  right: 0;
-  margin-left: 0.125rem;
-}
-.btn-custom:hover {
-  color: var(--bs-secondary);
-}
-.btn-custom:active {
-  border-color: transparent !important;
-  background-color: transparent !important;
-  color: var(--bs-black) !important;
-}
-.btn-custom:disabled, .btn-custom.disabled {
-  background-color: transparent;
-}
 .btn-link {
   font-weight: 500;
   --bs-link-color: var(--bs-secondary);
@@ -16590,7 +16561,7 @@ main {
 .btn-outline-primary:disabled, .btn-outline-primary.disabled {
   --bs-btn-disabled-color: var(--bs-info);
   --ql-btn-icon-color: var(--bs-info);
-  --bs-btn-disabled-border-color: var(--bs-ql-info-300);
+  --bs-btn-disabled-border-color: var(--bs-ql-primary-300);
 }
 
 .btn-outline-secondary {

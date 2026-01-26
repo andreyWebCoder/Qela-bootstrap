@@ -1,463 +1,572 @@
 <!-- Buttons  -->
 <section class="d-grid gap-3">
 	<h2 class="h1 mt-4">Buttons</h2>
-	<!-- Large buttons  -->
-	<h4>Large buttons</h4>
+	<!-- Buttons (default)  -->
+	<h4>Buttons (default)</h4>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-primary">Primary</button>
-		<button type="button" class="btn btn-primary" disabled>Primary</button>
-		<button type="button" class="btn btn-primary ic-plus ico-left">
-			Primary
-		</button>
-		<button type="button" class="btn btn-primary ic-plus ico-left" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-primary ic-plus ico-right">
-			Primary
-		</button>
-		<button type="button" class="btn btn-primary ic-plus ico-right" disabled>
-			Primary
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "primary",
+				classes: "",
+				text: "Primary",
+				disabled: false
+			}, {
+				button: true,
+				type: "primary",
+				classes: "",
+				text: "Primary",
+				disabled: true
+			}, {
+				button: true,
+				type: "primary",
+				classes: "ic-plus ico-left",
+				text: "Primary",
+				disabled: false
+			},{
+				button: true,
+				type: "primary",
+				classes: "ic-plus ico-right",
+				text: "Primary",
+				disabled: false
+			},{
+				button: true,
+				type: "primary",
+				classes: "ic-plus ico-right",
+				text: "Primary",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-secondary">Secondary</button>
-		<button type="button" class="btn btn-secondary" disabled>Secondary</button>
-		<button type="button" class="btn btn-secondary ic-plus ico-left">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-secondary ic-plus ico-left" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-secondary ic-plus ico-right">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-secondary ic-plus ico-right" disabled>
-			Secondary
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "secondary",
+				classes: "",
+				text: "Secondary",
+				disabled: false
+			}, {
+				button: true,
+				type: "secondary",
+				classes: "",
+				text: "Secondary",
+				disabled: true
+			}, {
+				button: true,
+				type: "secondary",
+				classes: "ic-plus ico-left",
+				text: "Secondary",
+				disabled: false
+			},{
+				button: true,
+				type: "secondary",
+				classes: "ic-plus ico-right",
+				text: "Secondary",
+				disabled: false
+			},{
+				button: true,
+				type: "secondary",
+				classes: "ic-plus ico-right",
+				text: "Secondary",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-success">Success</button>
-		<button type="button" class="btn btn-success" disabled>Success</button>
-		<button type="button" class="btn btn-success ic-plus ico-left">
-			Success
-		</button>
-		<button type="button" class="btn btn-success ic-plus ico-left" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-success ic-plus ico-right">
-			Success
-		</button>
-		<button type="button" class="btn btn-success ic-plus ico-right" disabled>
-			Success
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "success",
+				classes: "",
+				text: "Success",
+				disabled: false
+			}, {
+				button: true,
+				type: "success",
+				classes: "",
+				text: "Success",
+				disabled: true
+			}, {
+				button: true,
+				type: "success",
+				classes: "ic-plus ico-left",
+				text: "Success",
+				disabled: false
+			},{
+				button: true,
+				type: "success",
+				classes: "ic-plus ico-right",
+				text: "Success",
+				disabled: false
+			},{
+				button: true,
+				type: "success",
+				classes: "ic-plus ico-right",
+				text: "Success",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-danger">Danger</button>
-		<button type="button" class="btn btn-danger" disabled>Danger</button>
-		<button type="button" class="btn btn-danger ic-plus ico-left">
-			Danger
-		</button>
-		<button type="button" class="btn btn-danger ic-plus ico-left" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-danger ic-plus ico-right">
-			Danger
-		</button>
-		<button type="button" class="btn btn-danger ic-plus ico-right" disabled>
-			Danger
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "danger",
+				classes: "",
+				text: "Danger",
+				disabled: false
+			}, {
+				button: true,
+				type: "danger",
+				classes: "",
+				text: "Danger",
+				disabled: true
+			}, {
+				button: true,
+				type: "danger",
+				classes: "ic-plus ico-left",
+				text: "Danger",
+				disabled: false
+			},{
+				button: true,
+				type: "danger",
+				classes: "ic-plus ico-right",
+				text: "Danger",
+				disabled: false
+			},{
+				button: true,
+				type: "danger",
+				classes: "ic-plus ico-right",
+				text: "Danger",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-warning">Warning</button>
-		<button type="button" class="btn btn-warning" disabled>Warning</button>
-		<button type="button" class="btn btn-warning ic-plus ico-left">
-			Warning
-		</button>
-		<button type="button" class="btn btn-warning ic-plus ico-left" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-warning ic-plus ico-right">
-			Warning
-		</button>
-		<button type="button" class="btn btn-warning ic-plus ico-right" disabled>
-			Warning
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "warning",
+				classes: "",
+				text: "Warning",
+				disabled: false
+			}, {
+				button: true,
+				type: "warning",
+				classes: "",
+				text: "Warning",
+				disabled: true
+			}, {
+				button: true,
+				type: "warning",
+				classes: "ic-plus ico-left",
+				text: "Warning",
+				disabled: false
+			},{
+				button: true,
+				type: "warning",
+				classes: "ic-plus ico-right",
+				text: "Warning",
+				disabled: false
+			},{
+				button: true,
+				type: "warning",
+				classes: "ic-plus ico-right",
+				text: "Warning",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-info">Info</button>
-		<button type="button" class="btn btn-info" disabled>Info</button>
-		<button type="button" class="btn btn-info ic-plus ico-left">Info</button>
-		<button type="button" class="btn btn-info ic-plus ico-left" disabled>
-			Info
-		</button>
-		<button type="button" class="btn btn-info ic-plus ico-right">Info</button>
-		<button type="button" class="btn btn-info ic-plus ico-right" disabled>
-			Info
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "info",
+				classes: "",
+				text: "Info",
+				disabled: false
+			}, {
+				button: true,
+				type: "info",
+				classes: "",
+				text: "Info",
+				disabled: true
+			}, {
+				button: true,
+				type: "info",
+				classes: "ic-plus ico-left",
+				text: "Info",
+				disabled: false
+			},{
+				button: true,
+				type: "info",
+				classes: "ic-plus ico-right",
+				text: "Info",
+				disabled: false
+			},{
+				button: true,
+				type: "info",
+				classes: "ic-plus ico-right",
+				text: "Info",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
+	</div>
+	<!-- Buttons link  -->
+	<div class="d-flex gap-2 flex-wrap">
+		{% set btnLinksData = [
+			{
+				button: false,
+				type: "link",
+				classes: "",
+				text: "Link text",
+				disabled: false
+			}, {
+				button: false,
+				type: "link",
+				classes: "",
+				text: "Link text",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in btnLinksData %}
+			{{btns(bt)}}
+		{% endfor %}
+	</div>
+
+	<!-- Buttons outlined (default) -->
+	<h4 class="mt-4">Buttons outlined (default)</h4>
+	<div class="d-flex gap-2 flex-wrap">
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-primary",
+				classes: "",
+				text: "Primary",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-primary",
+				classes: "",
+				text: "Primary",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-primary",
+				classes: "ic-plus ico-left",
+				text: "Primary",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-primary",
+				classes: "ic-plus ico-right",
+				text: "Primary",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-primary",
+				classes: "ic-plus ico-right",
+				text: "Primary",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-custom">Info-custom-text</button>
-		<button type="button" class="btn btn-custom" disabled>
-			Info-custom-text
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-secondary",
+				classes: "",
+				text: "Secondary",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-secondary",
+				classes: "",
+				text: "Secondary",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-secondary",
+				classes: "ic-plus ico-left",
+				text: "Secondary",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-secondary",
+				classes: "ic-plus ico-right",
+				text: "Secondary",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-secondary",
+				classes: "ic-plus ico-right",
+				text: "Secondary",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-link">Link</button>
-		<button type="button" class="btn btn-link" disabled>Link</button>
-	</div>
-	<!-- Small buttons  -->
-	<h4 class="mt-4">Small buttons</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-primary">Primary</button>
-		<button type="button" class="btn btn-sm btn-primary" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-primary ic-plus ico-left">
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-primary ic-plus ico-left" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-primary ic-plus ico-right">
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-primary ic-plus ico-right" disabled>
-			Primary
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-secondary">Secondary</button>
-		<button type="button" class="btn btn-sm btn-secondary" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-secondary ic-plus ico-left">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-secondary ic-plus ico-left" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-secondary ic-plus ico-right" disabled>
-			Secondary
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-success",
+				classes: "",
+				text: "Success",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-success",
+				classes: "",
+				text: "Success",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-success",
+				classes: "ic-plus ico-left",
+				text: "Success",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-success",
+				classes: "ic-plus ico-right",
+				text: "Success",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-success",
+				classes: "ic-plus ico-right",
+				text: "Success",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-success">Success</button>
-		<button type="button" class="btn btn-sm btn-success" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-success ic-plus ico-left">
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-success ic-plus ico-left" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-success ic-plus ico-right">
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-success ic-plus ico-right" disabled>
-			Success
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-danger",
+				classes: "",
+				text: "Danger",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-danger",
+				classes: "",
+				text: "Danger",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-danger",
+				classes: "ic-plus ico-left",
+				text: "Danger",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-danger",
+				classes: "ic-plus ico-right",
+				text: "Danger",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-danger",
+				classes: "ic-plus ico-right",
+				text: "Danger",
+				disabled: true
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-danger">Danger</button>
-		<button type="button" class="btn btn-sm btn-danger" disabled>Danger</button>
-		<button type="button" class="btn btn-sm btn-danger ic-plus ico-left">
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-danger ic-plus ico-left" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-danger ic-plus ico-right">
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-danger ic-plus ico-right" disabled>
-			Danger
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-warning",
+				classes: "",
+				text: "Warning",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-warning",
+				classes: "",
+				text: "Warning",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-warning",
+				classes: "ic-plus ico-left",
+				text: "Warning",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-warning",
+				classes: "ic-plus ico-right",
+				text: "Warning",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-warning",
+				classes: "ic-plus ico-right",
+				text: "Warning",
+				disabled: true
+			}
+			] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-warning">Warning</button>
-		<button type="button" class="btn btn-sm btn-warning" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-warning ic-plus ico-left">
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-warning ic-plus ico-left" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-warning ic-plus ico-right">
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-warning ic-plus ico-right" disabled>
-			Warning
-		</button>
+		{% set buttonsData = [
+			{
+				button: true,
+				type: "outline-info",
+				classes: "",
+				text: "Info",
+				disabled: false
+			}, {
+				button: true,
+				type: "outline-info",
+				classes: "",
+				text: "Info",
+				disabled: true
+			}, {
+				button: true,
+				type: "outline-info",
+				classes: "ic-plus ico-left",
+				text: "Info",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-info",
+				classes: "ic-plus ico-right",
+				text: "Info",
+				disabled: false
+			},{
+				button: true,
+				type: "outline-info",
+				classes: "ic-plus ico-right",
+				text: "Info",
+				disabled: true
+			}
+			] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-info">Info</button>
-		<button type="button" class="btn btn-sm btn-info" disabled>Info</button>
-		<button type="button" class="btn btn-sm btn-info ic-plus ico-left">
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-info ic-plus ico-left" disabled>
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-info ic-plus ico-right">
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-info ic-plus ico-right" disabled>
-			Info
-		</button>
+	<!-- Buttons size -->
+	<h4 class="mt-4">Size buttons large(default), middle, small</h4>
+	<div class="d-flex gap-2 flex-wrap align-items-start">
+		{% set btnsSize = [
+			{
+				button: true,
+				type: "primary",
+				classes: "",
+				text: "Primary lg",
+				disabled: false
+			}, {
+				button: true,
+				type: "primary",
+				classes: "btn-md",
+				text: "Primary md",
+				disabled: false
+			}, {
+				button: true,
+				type: "primary",
+				classes: "btn-sm",
+				text: "Primary sm",
+				disabled: false
+			},			{
+				button: false,
+				type: "link",
+				classes: "",
+				text: "Link text",
+				disabled: false
+			},			{
+				button: false,
+				type: "link",
+				classes: "btn-sm",
+				text: "Link small text",
+				disabled: false
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in btnsSize %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-custom">
-			Info-custom-text
-		</button>
-		<button type="button" class="btn btn-sm btn-custom" disabled>
-			Info-custom-text
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-link">Link</button>
-		<button type="button" class="btn btn-sm btn-link" disabled>Link</button>
-	</div>
-	<!-- Large outlined buttons -->
-	<h4 class="mt-4">Large outlined buttons</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-primary">Primary</button>
-		<button type="button" class="btn btn-outline-primary" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-outline-primary ic-plus ico-left">
-			Primary
-		</button>
-		<button type="button" class="btn btn-outline-primary ic-plus ico-left" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-outline-primary ic-plus ico-right">
-			Primary
-		</button>
-		<button type="button" class="btn btn-outline-primary ic-plus ico-right" disabled>
-			Primary
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-secondary">Secondary</button>
-		<button type="button" class="btn btn-outline-secondary" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-outline-secondary ic-plus ico-left">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-outline-secondary ic-plus ico-left" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-outline-secondary ic-plus ico-right">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-outline-secondary ic-plus ico-right" disabled>
-			Secondary
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-success">Success</button>
-		<button type="button" class="btn btn-outline-success" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-outline-success ic-plus ico-left">
-			Success
-		</button>
-		<button type="button" class="btn btn-outline-success ic-plus ico-left" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-outline-success ic-plus ico-right">
-			Success
-		</button>
-		<button type="button" class="btn btn-outline-success ic-plus ico-right" disabled>
-			Success
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-danger">Danger</button>
-		<button type="button" class="btn btn-outline-danger" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-outline-danger ic-plus ico-left">
-			Danger
-		</button>
-		<button type="button" class="btn btn-outline-danger ic-plus ico-left" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-outline-danger ic-plus ico-right">
-			Danger
-		</button>
-		<button type="button" class="btn btn-outline-danger ic-plus ico-right" disabled>
-			Danger
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-warning">Warning</button>
-		<button type="button" class="btn btn-outline-warning" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-outline-warning ic-plus ico-left">
-			Warning
-		</button>
-		<button type="button" class="btn btn-outline-warning ic-plus ico-left" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-outline-warning ic-plus ico-right">
-			Warning
-		</button>
-		<button type="button" class="btn btn-outline-warning ic-plus ico-right" disabled>
-			Warning
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-outline-info">Info</button>
-		<button type="button" class="btn btn-outline-info" disabled>Info</button>
-		<button type="button" class="btn btn-outline-info ic-plus ico-left">
-			Info
-		</button>
-		<button type="button" class="btn btn-outline-info ic-plus ico-left" disabled>
-			Info
-		</button>
-		<button type="button" class="btn btn-outline-info ic-plus ico-right">
-			Info
-		</button>
-		<button type="button" class="btn btn-outline-info ic-plus ico-right" disabled>
-			Info
-		</button>
-	</div>
-	<!-- Small outlined  buttons -->
-	<h4 class="mt-4">Small outlined buttons</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-primary">
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-primary" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-left">
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-left" disabled>
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-right">
-			Primary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-primary ic-plus ico-right" disabled>
-			Primary
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-secondary">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-secondary" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-left">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-left" disabled>
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-right">
-			Secondary
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-secondary ic-plus ico-right" disabled>
-			Secondary
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-success">
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-success" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-left">
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-left" disabled>
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-right">
-			Success
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-success ic-plus ico-right" disabled>
-			Success
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-danger">Danger</button>
-		<button type="button" class="btn btn-sm btn-outline-danger" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-left">
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-left" disabled>
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-right">
-			Danger
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-danger ic-plus ico-right" disabled>
-			Danger
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-warning">
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-warning" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-left">
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-left" disabled>
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-right">
-			Warning
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-warning ic-plus ico-right" disabled>
-			Warning
-		</button>
-	</div>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-outline-info">Info</button>
-		<button type="button" class="btn btn-sm btn-outline-info" disabled>
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-left">
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-left" disabled>
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-right">
-			Info
-		</button>
-		<button type="button" class="btn btn-sm btn-outline-info ic-plus ico-right" disabled>
-			Info
-		</button>
-	</div>
-	<!-- Custom ico-right -->
-	<h4 class="mt-4">Custom ico-right</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-custom ic-plus ico-right">
-			Info-custom-text
-		</button>
-		<button type="button" class="btn btn-sm btn-custom ic-plus ico-right" disabled>
-			Info-custom-text
-		</button>
+	<!-- Icon buttons -->
+	<h4 class="mt-4">Icon buttons</h4>
+	<div class="d-flex gap-2 flex-wrap align-items-start">
+		{% set buttonsIcData = [
+			{
+				button: true,
+				type: "primary",
+				classes: "ico ic-plus",
+				disabled: false
+			}, {
+				button: true,
+				type: "secondary",
+				classes: "ico ic-plus",
+				disabled: false
+			},{
+				button: true,
+				type: "primary",
+				classes: "btn-sm ico ic-plus",
+				disabled: false
+			}, {
+				button: true,
+				type: "secondary",
+				classes: "btn-sm ico ic-plus",
+				disabled: false
+			}
+		] %}
+		{% from "html/includes/btns/_btn.njk" import btns %}
+		{% for bt in buttonsIcData %}
+			{{btns(bt)}}
+		{% endfor %}
 	</div>
 	<!-- Button-close -->
 	<h4 class="mt-4">Button-close</h4>
@@ -476,26 +585,6 @@
 	<div class="d-flex gap-2 flex-wrap">
 		<button type="button" class="qela-btn-ic ic-search"></button>
 		<button type="button" class="qela-btn-ic ic-search" disabled></button>
-	</div>
-	<!-- Icon buttons -->
-	<h4 class="mt-4">Icon buttons</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-primary ico ic-plus"></button>
-		<button type="button" class="btn btn-secondary ico ic-plus"></button>
-		<button type="button" class="btn btn-warning ico ic-plus"></button>
-		<button type="button" class="btn btn-success ico ic-plus"></button>
-		<button type="button" class="btn btn-danger ico ic-plus"></button>
-		<button type="button" class="btn btn-info ico ic-plus"></button>
-	</div>
-	<!-- Icon buttons  small-->
-	<h4 class="mt-4">Icon buttons small</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-sm btn-primary ico ic-plus"></button>
-		<button type="button" class="btn btn-sm btn-secondary ico ic-plus"></button>
-		<button type="button" class="btn btn-sm btn-warning ico ic-plus"></button>
-		<button type="button" class="btn btn-sm btn-success ico ic-plus"></button>
-		<button type="button" class="btn btn-sm btn-danger ico ic-plus"></button>
-		<button type="button" class="btn btn-sm btn-info ico ic-plus"></button>
 	</div>
 	<!-- Buttons group-->
 	<h4 class="mt-4">Buttons group</h4>
@@ -530,12 +619,6 @@
 			<button type="button" class="btn ico ic-chevron-left" disabled></button>
 			<button type="button" class="btn ico ic-chevron-right"></button>
 		</div>
-	</div>
-	<!-- Buttons custom  -->
-	<h4 class="mt-4">Buttons custom</h4>
-	<div class="d-flex gap-2 flex-wrap">
-		<button type="button" class="btn btn-secondary custom">Secondary</button>
-		<button type="button" class="btn btn-outline-dark custom">Dark</button>
 	</div>
 	<!-- Buttons custom  -->
 	<h4 class="mt-4">Buttons appstor, googleplay</h4>
