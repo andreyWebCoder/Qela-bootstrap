@@ -338,7 +338,10 @@
 									</div>
 									<div class="d-flex gap-3">
 										<div class="d-flex gap-1 align-items-center">
-											<button type="button" class="btn btn-warning"> В роботі </button>
+											<!-- button with tooltip -->
+											<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip" data-bs-placement="top" data-bs-offset="0, -5" data-bs-title="Дія недоступна для всіх вибраних замовлень">
+												<button type="button" class="btn btn-warning" disabled > В роботі </button>
+											</span>
 											<button type="button" class="btn btn-info"> Відправлено </button>
 											<button type="button" class="btn btn-success"> Виконано </button>
 											<button type="button" class="btn btn-danger"> Скасувати замовлення </button>
@@ -719,6 +722,19 @@
 												<v-multi-select v-model="value5" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі статуси"></v-multi-select>
 											</div>
 											<div class="invalid-feedback">Error text</div>
+										</div>
+										<!-- or input -->
+										<div class="d-flex flex-wrap">
+											<div class="w-100">
+												<label class="form-label" for="addCategory2">Категорія</label>
+											</div>
+											<div style="width: 320px">
+												<input type="text" class="form-control" id="addCategory2" placeholder="Придумайте назву категорії">
+											</div>
+											<div class="p-1 d-flex gap-2 ms-3">
+												<button type="button" class="qela-btn-ic ic-cloze text-info-900"></button>
+												<button type="button" class="qela-btn-ic ic-check-big text-info-900"></button>
+											</div>
 										</div>
 										<!-- +  switch -->
 										<div class="form-check form-switch">
