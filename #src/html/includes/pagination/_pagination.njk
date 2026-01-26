@@ -1,0 +1,68 @@
+{% macro pagination(props) %}
+	<nav aria-label="Page navigation" {% if props.table %} class="d-flex justify-content-end" {% endif %}>
+		{% if props.table %}
+			<div class="d-flex flex-wrap align-items-baseline gap-3">
+				<select class="form-control w-auto">
+					{% set options = [10, 25, 50] %}
+					{% for i in options %}
+						<option value="{{i}}">{{i}}</option>
+					{% endfor %}
+				</select>
+				<span style="flex: 0 0 auto;">1 - 10 from 62</span>
+			{% endif %}
+			<ul class="pagination{{ ' ' + props.sizeClass if props.sizeClass}}">
+				<li class="page-item disabled">
+					{% if props.typeBtn == "text" %}
+						<a class="page-link" href="#" aria-label="Previous">
+							<span aria-hidden="true">Prev</span>
+						</a>
+					{% elif props.typeBtn == "icon" %}
+						<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
+							<span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
+						</a>
+					{% endif %}
+				</li>
+				{% set items = [1, 2, "...", 24] %}
+				{% for item in items %}
+					<li class="page-item{{ ' active' if loop.first }}">
+						<a class="page-link" href="#">{{item}}</a>
+					</li>
+				{% endfor %}
+				<li class="page-item">
+					{% if props.typeBtn == "text" %}
+						<a class="page-link" href="#" aria-label="Next">
+							<span aria-hidden="true">Next</span>
+						</a>
+					{% elif props.typeBtn == "icon" %}
+						<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
+							<span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
+						</a>
+					{% endif %}
+				</li>
+			</ul>
+			{% if props.table %}
+			</div>
+		{% endif %}
+	</nav>
+{% endmacro %}
+
+{# 	{% set paginationsData = [
+		{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'text',
+			table: false
+		},
+		{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'icon',
+			table: false
+		},{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'icon',
+			table: true
+		} 
+	]%}
+	{% from "html/includes/pagination/_pagination.njk" import pagination %}
+	{% for item in paginationsData %}
+		{{pagination(item)}}
+{% endfor %} #}

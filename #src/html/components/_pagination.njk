@@ -3,110 +3,42 @@
 	<h2 class="h1 mt-4">Pagination</h2>
 	<!-- Pagination  default -->
 	<h4>Pagination default</h4>
-	<nav aria-label="Page navigation">
-		<ul class="pagination">
-			<li class="page-item disabled">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">Prev</span>
-				</a>
-			</li>
-			<li class="page-item active">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">...</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">24</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Next">
-					<span aria-hidden="true">Next</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<nav aria-label="Page navigation">
-		<ul class="pagination">
-			<li class="page-item disabled">
-				<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
-					<span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
-				</a>
-			</li>
-			<li class="page-item active">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">...</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">24</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
-					<span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+	{% set paginationsData = [
+		{	
+			sizeClass:'',
+			typeBtn: 'text',
+			table: false
+		},
+		{	
+			sizeClass:'',
+			typeBtn: 'icon',
+			table: false
+		} 
+	]%}
+	{% from "html/includes/pagination/_pagination.njk" import pagination %}
+	{% for item in paginationsData %}
+		{{pagination(item)}}
+	{% endfor %}
 	<!-- Pagination small -->
 	<h4>Pagination small</h4>
-	<nav aria-label="Page navigation">
-		<ul class="pagination pagination-sm">
-			<li class="page-item disabled">
-				<a class="page-link" href="#" aria-label="Previous">
-					<span aria-hidden="true">Prev</span>
-				</a>
-			</li>
-			<li class="page-item active">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">...</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">24</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#" aria-label="Next">
-					<span aria-hidden="true">Next</span>
-				</a>
-			</li>
-		</ul>
-	</nav>
-	<nav aria-label="Page navigation">
-		<ul class="pagination pagination-sm">
-			<li class="page-item disabled">
-				<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Previous">
-					<span class="ic-chevron-left ico-sm" aria-hidden="true"></span>
-				</a>
-			</li>
-			<li class="page-item active">
-				<a class="page-link" href="#">1</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">2</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">...</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link" href="#">24</a>
-			</li>
-			<li class="page-item">
-				<a class="page-link h-100 d-flex align-items-center" href="#" aria-label="Next">
-					<span class="ic-chevron-right ico-sm" aria-hidden="true"></span>
-				</a>
-			</li>
-		</ul>
-	</nav>
+	{% set paginationsData = [
+		{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'text',
+			table: false
+		},
+		{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'icon',
+			table: false
+		},{	
+			sizeClass:'pagination-sm',
+			typeBtn: 'icon',
+			table: true
+		} 
+	]%}
+	{% from "html/includes/pagination/_pagination.njk" import pagination %}
+	{% for item in paginationsData %}
+		{{pagination(item)}}
+	{% endfor %}
 </section>

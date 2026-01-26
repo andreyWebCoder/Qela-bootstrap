@@ -136,45 +136,14 @@
 							{% include "html/includes/shop/tables/_table-products.njk" %}
 							<!-- Table navigation -->
 							<div class="px-4 py-3">
-								<nav aria-label="Page navigation" class="d-flex justify-content-end">
-									<div class="d-flex flex-wrap align-items-baseline gap-3">
-										<select class="form-control w-auto">
-											<option value="10">10</option>
-											<option value="25">25</option>
-											<option value="50">50</option>
-										</select>
-										<span style="flex: 0 0 auto;">1 - 10 from 62</span>
-										<ul class="pagination pagination-sm">
-											<li class="page-item disabled">
-												<button class="page-link" aria-label="Previous page">Prev</button>
-											</li>
-											<li class="page-item active">
-												<button class="page-link">1</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">2</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">3</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">4</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">5</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">6</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">7</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link" aria-label="Next Page">Next</button>
-											</li>
-										</ul>
-									</div>
-								</nav>
+								{% set paginationData = {	
+										sizeClass:'pagination-sm',
+										typeBtn: 'icon',
+										table: true
+									} 
+								%}
+								{% from "html/includes/pagination/_pagination.njk" import pagination %}
+								{{pagination(paginationData)}}
 							</div>
 						</div>
 						<!-- Order -->
@@ -236,45 +205,14 @@
 							{% include "html/includes/shop/tables/_table-orders.njk" %}
 							<!-- Table navigation -->
 							<div class="px-4 py-3">
-								<nav aria-label="Page navigation" class="d-flex justify-content-end">
-									<div class="d-flex flex-wrap align-items-baseline gap-3">
-										<select class="form-control w-auto">
-											<option value="10">10</option>
-											<option value="25">25</option>
-											<option value="50">50</option>
-										</select>
-										<span style="flex: 0 0 auto;">1 - 10 from 62</span>
-										<ul class="pagination pagination-sm">
-											<li class="page-item disabled">
-												<button class="page-link" aria-label="Previous page">Prev</button>
-											</li>
-											<li class="page-item active">
-												<button class="page-link">1</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">2</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">3</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">4</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">5</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">6</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link">7</button>
-											</li>
-											<li class="page-item ">
-												<button class="page-link" aria-label="Next Page">Next</button>
-											</li>
-										</ul>
-									</div>
-								</nav>
+								{% set paginationData = {	
+										sizeClass:'pagination-sm',
+										typeBtn: 'icon',
+										table: true
+									} 
+								%}
+								{% from "html/includes/pagination/_pagination.njk" import pagination %}
+								{{pagination(paginationData)}}
 							</div>
 						</div>
 					</div>
