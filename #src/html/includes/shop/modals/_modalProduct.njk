@@ -1,0 +1,283 @@
+<div class="modal fade" id="modalAddProduct" tabindex="-1" aria-labelledby="modalAddProductLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered" style="--bs-modal-width:896px">
+		<div class="modal-content">
+			<div class="modal-header py-4">
+				<h2 class="modal-title fs-5" id="modalAddProductLabel">Створення товару</h2>
+			</div>
+			<div class="modal-body p-0">
+				<div class="row g-0">
+					<!-- Left (imgs) -->
+					<div class="col-auto border-end" style="flex-basis: 302px;">
+						<div class="p-3 d-flex justify-content-between align-content-center border-bottom">
+							<h3 class="fs-5 text-info-700">Фото</h3>
+							<button type="button" class="qela-btn-ic ic-menu-order text-info" data-bs-offset="0, 5" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Змінити порядок"></button>
+						</div>
+						<div class="p-3 d-flex gap-2 flex-wrap">
+							{% set cards = ['default', 'empty','eddit','eddit-drag','empty-disable'] %}
+							{% from "html/includes/cards/_card-shop.njk" import  cardShop %}
+							{% for card in cards %}
+								{{cardShop(card)}}
+							{% endfor %}
+							<div class="display-7 text-danger-600 w-100">Додайте фото товару</div>
+						</div>
+					</div>
+					<!-- Right (inputs) -->
+					<div class="col">
+						<div class="border-bottom p-3">
+							<h3 class="fs-5 text-info-700">Опис</h3>
+						</div>
+						<div class="p-3 d-grid gap-4">
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaName" class="form-label">Назва</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Введіть назву товару" id="textareaName" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaDescription" class="form-label">Опис</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Опишіть товар" id="textareaDescription" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaFormat" class="form-label">Формат</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Фізичний товар, доставка поштою" id="textareaFormat" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + -->
+							<div>
+								<label class="form-label">Тип товару</label>
+								<div class="row gx-3 gy-2">
+									<div class="col-auto">
+										<div class="form-check">
+											<input type="radio" class="form-check-input" id="radioProd1" name="product">
+											<label class="form-check-label" for="radioProd1">Електронний (автоматичний)</label>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="form-check">
+											<input type="radio" class="form-check-input" id="radioProd2" name="product">
+											<label class="form-check-label" for="radioProd2">Електронний (з опрацюванням)</label>
+										</div>
+									</div>
+									<div class="col-auto">
+										<div class="form-check">
+											<input type="radio" class="form-check-input" id="radioProd3" name="product" checked>
+											<label class="form-check-label" for="radioProd3">Фізичний</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaEmailText" class="form-label">Email повідомлення</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Наприклад: Ось ваш бонус код на знижку! Дякуюємо!" id="textareaEmailText" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="form-check form-switch form-switch-sm">
+									<div class="d-flex gap-2 align-items-center">
+										<label class="form-check-label display-6 text-black lh-1" for="SwitchCheck">Написати в обговореннях</label>
+										<button type="button" class="btn btn-sm qela-btn-tooltip mb-0 ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Цей текст нижче буде автоматично відправлено користувачу, після замовлення"></button>
+									</div>
+									<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck" checked>
+								</div>
+								<div class="pt-3">
+									<div class="qela-form-labels">
+										<label for="textareaText" class="form-label">Текст повідомлення</label>
+										<label class="form-label">0/<span>200</span></label>
+									</div>
+									<textarea class="form-control" placeholder="Наприклад: Добрий день, який у вас розмір?" id="textareaText" rows="1"></textarea>
+									<div class="invalid-feedback">Error text</div>
+								</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaProvider" class="form-label">Постачальник</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Вкажіть постачальника" id="textareaProvider" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + -->
+							<div>
+								<div class="qela-form-labels">
+									<label for="textareaInclude" class="form-label">Що включено</label>
+									<label class="form-label">0/<span>200</span></label>
+								</div>
+								<textarea class="form-control" placeholder="Наприклад футболка чи книжка" id="textareaInclude" rows="1"></textarea>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- + select-->
+							<div>
+								<label class="form-label">Категорія</label>
+								<div>
+									<v-multi-select v-model="value5" :searchable="true" open-direction="bottom" :options="options" :multiple="false" :close-on-select="true" placeholder="Всі статуси"></v-multi-select>
+								</div>
+								<div class="invalid-feedback">Error text</div>
+							</div>
+							<!-- or input -->
+							<div class="d-flex flex-wrap">
+								<div class="w-100">
+									<label class="form-label" for="addCategory2">Категорія</label>
+								</div>
+								<div style="width: 320px">
+									<input type="text" class="form-control" id="addCategory2" placeholder="Придумайте назву категорії">
+								</div>
+								<div class="p-1 d-flex gap-2 ms-3">
+									<button type="button" class="qela-btn-ic ic-cloze text-info-900"></button>
+									<button type="button" class="qela-btn-ic ic-check-big text-info-900"></button>
+								</div>
+							</div>
+							<!-- +  switch -->
+							<div class="form-check form-switch">
+								<div class="d-flex gap-2">
+									<label class="form-check-label text-black" for="SwitchCheck">Відображати в розділі “🔥Топ-пропозиції”</label>
+									<button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Товар відображатиметьсяна початку сторінки"></button>
+								</div>
+								<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck" checked>
+							</div>
+						</div>
+						<!-- + -->
+						<div class="p-3" style="width: 275px">
+							<label for="inputText" class="form-label">Ціна, бали</label>
+							<input type="text" class="form-control" id="inputText" placeholder="Вкажіть ціну у балах">
+							<div class="invalid-feedback">Error text</div>
+						</div>
+						<!-- + -->
+						<div class="p-3">
+							<div class="d-flex gap-2 mb-2">
+								<div class=" fs-5 fw-medium" id="modalAddProductLabel">Час публікації</div>
+								<button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Оберіть час публікації товару та його завершення"></button>
+							</div>
+							<div class="row gx-3 gy-1 align-items-center mb-2">
+								<div class="col-12">
+									<label for="inputText2" class="form-label text-info-600 mb-0">Початок</label>
+								</div>
+								<div class="col-auto" style="flex-basis: 275px;">
+									<input type="text" class="form-control" id="inputText2" placeholder="Datapiker" disabled>
+									<div class="invalid-feedback">Error text</div>
+								</div>
+								<div class="col">
+									<div class="form-check form-switch form-switch-sm">
+										<div class="d-flex gap-2 align-items-center">
+											<label class="form-check-label display-6 text-black lh-1" for="SwitchCheck2">Одразу</label>
+											<button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="До повного розпродажу"></button>
+										</div>
+										<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck2" checked="">
+									</div>
+								</div>
+							</div>
+							<div class="row gx-3 gy-1 align-items-center mb-2">
+								<div class="col-12">
+									<label for="inputText3" class="form-label text-info-600 mb-0">Кінець</label>
+								</div>
+								<div class="col-auto" style="flex-basis: 275px;">
+									<input type="text" class="form-control" id="inputText3" placeholder="Datapiker" disabled>
+									<div class="invalid-feedback">Error text</div>
+								</div>
+								<div class="col">
+									<div class="form-check form-switch form-switch-sm">
+										<div class="d-flex gap-2 align-items-center">
+											<label class="form-check-label display-6 text-black lh-1" for="SwitchCheck3">Весь час</label>
+											<button type="button" class="btn btn-sm mb-0 qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-offset="0, 8" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-title="Одразу після збереження"></button>
+										</div>
+										<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck3" checked="">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- + -->
+						<div class="px-3 py-2">
+							<div class="row gx-3 gy-1 align-items-center">
+								<div class="col-12">
+									<div class="fs-5 fw-medium mb-2" id="modalAddProductLabel">Кількість</div>
+								</div>
+								<div class="col-12">
+									<label for="inputText4" class="form-label text-info-600 mb-0">В наявності</label>
+								</div>
+								<div class="col-auto" style="flex-basis: 275px;">
+									<input type="text" class="form-control" id="inputText4" placeholder="Вкажіть наявну кількість">
+									<div class="invalid-feedback">Error text</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3">
+										<div class="form-check form-switch form-switch-sm">
+											<label class="form-check-label display-6 text-black" for="SwitchCheck4">Необмежено</label>
+											<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck4">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- + -->
+						<div class="px-3 py-2 mb-3">
+							<div class="row gx-3 gy-1 align-items-center">
+								<div class="col-12">
+									<label for="inputText45" class="form-label text-info-600 mb-0">На особу</label>
+								</div>
+								<div class="col-auto" style="flex-basis: 275px;">
+									<input type="text" class="form-control" id="inputText45" placeholder="Вкажіть наявну кількість">
+									<div class="invalid-feedback">Error text</div>
+								</div>
+								<div class="col">
+									<div class="d-flex gap-3">
+										<div class="form-check form-switch form-switch-sm">
+											<label class="form-check-label display-6 text-black" for="SwitchCheck5">Необмежено</label>
+											<input class="form-check-input" type="checkbox" role="switch" id="SwitchCheck5">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Alert -->
+					<div class="col-12 px-3">
+						{% set alertData = 
+							{
+								class: "danger",
+								ic: "text-danger ic-error-warning-fill",
+								text: "Будь ласка, заповніть необхідні поля",
+								btnClose: true
+							}
+						%}
+						{% from "html/includes/alert/_alert.njk" import alerts %}
+						{{alerts(alertData)}}
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer p-3 gap-2">
+				<div class="d-flex gap-2">
+					<div class="d-flex gap-1 align-items-center">
+						<button type="button" class="btn btn-warning ic-mute ico-right" data-bs-toggle="modal" data-bs-target="#modalOff"> Вимкнути </button>
+						<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Вимикає товар, міняє статус та видаляє зі списку юзера."></button>
+					</div>
+					<div class="d-flex gap-1 align-items-center">
+						<button type="button" class="btn btn-danger ic-delete ico-right" data-bs-toggle="modal" data-bs-target="#modalDelete"> Видалити </button>
+						<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-offset="0, 8" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Видаляє товар з  активного списку в магазині. Його видно тільки за фільтром"></button>
+					</div>
+				</div>
+				<div class="d-flex gap-2 ms-auto">
+					<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+					<button type="button" class="btn btn-info m-0" aria-label="Save as draft">Зберегти як чернетку</button>
+					<button type="button" class="btn btn-primary m-0" aria-label="Save">Зберегти</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
