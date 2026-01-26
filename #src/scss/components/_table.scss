@@ -82,16 +82,11 @@
 			}
 		}
 		.qela-btn-ic {
-			visibility: hidden;
-			opacity: 0;
-			pointer-events: none;
-			transition: all 0.2s ease-in 0s;
-		}
-		&:hover {
-			.qela-btn-ic {
-				visibility: visible;
-				opacity: 1;
-				pointer-events: auto;
+			.qela-counter {
+				position: absolute;
+				pointer-events: none;
+				top: -9px;
+				left: 14px;
 			}
 		}
 	}

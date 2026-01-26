@@ -21805,16 +21805,11 @@ header .container-xxl > .row [class*=col]:last-child {
   background-color: var(--bs-ql-secondary-200);
   --bs-table-hover-bg: var(--bs-ql-secondary-200);
 }
-.qela-table tr .qela-btn-ic {
-  visibility: hidden;
-  opacity: 0;
+.qela-table tr .qela-btn-ic .qela-counter {
+  position: absolute;
   pointer-events: none;
-  transition: all 0.2s ease-in 0s;
-}
-.qela-table tr:hover .qela-btn-ic {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
+  top: -9px;
+  left: 14px;
 }
 .qela-table.large td,
 .qela-table.large th {
