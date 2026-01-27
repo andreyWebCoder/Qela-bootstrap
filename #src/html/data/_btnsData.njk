@@ -1,0 +1,63 @@
+{# buttons global for components #}
+{# buttons global for components #}
+{# buttons shop modalOrder #}
+{% set btnsStatus = [
+	{
+		button: true,
+		type: "info",
+		classes: "btn-md ico-right ic-check",
+		text: "Нове",
+		disabled: true
+	},{
+		button: true,
+		type: "warning",
+		classes: "btn-md",
+		text: "В роботі",
+		disabled: true
+	},{
+		button: true,
+		type: "danger",
+		classes: "btn-md",
+		text: "Скасовано",
+		disabled: false
+	},{
+		button: true,
+		type: "info",
+		classes: "btn-md",
+		text: "Відправлено",
+		disabled: false
+	},{
+		button: true,
+		type: "success",
+		classes: "btn-md ico-right current ic-check",
+		text: "Отримано",
+		disabled: false
+	}
+] %}
+
+{% set btnsSwichStatus = [
+	{
+		button: true,
+		type: "info",
+		classes: "btn-md ic-cloze ht",
+		text: "Скасувати",
+		disabled: false
+	},{
+		button: true,
+		type: "primary",
+		classes: "btn-md k-big ico-right",
+		text: "Підтвердити",
+		disabled: false
+	}
+] %}
+
+{% set btnChat = 
+	{
+		button: false,
+		type: "info",
+		classes: "ico ic-message-circle ms-auto position-relative",
+		disabled: false,
+		counter:"+10"
+	}
+%}
+{# buttons shop modalOrder #}

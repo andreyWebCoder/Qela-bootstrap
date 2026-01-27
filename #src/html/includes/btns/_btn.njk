@@ -11,7 +11,31 @@
 	>
 
 		{{ props.text }}
-
+		{% if props.counter %}
+			<span class="qela-counter position-absolute bottom-50 start-100 translate-middle">
+				{{ props.counter }}
+			</span>
+		{% endif %}
 	</{{ tag }}>
 
 {% endmacro %}
+
+{# {% set buttonsData = [
+	{
+		button: true,
+		type: "primary",
+		classes: "",
+		text: "Primary",
+		disabled: false
+	}, {
+		button: true,
+		type: "primary",
+		classes: "",
+		text: "Primary",
+		disabled: true
+	}
+] %}
+{% from "html/includes/btns/_btn.njk" import btns %}
+{% for bt in buttonsData %}
+	{{btns(bt)}}
+{% endfor %} #}

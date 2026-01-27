@@ -1078,15 +1078,26 @@
                     <div class="modal-body p-0">
                         <div class="p-3">
                             <div class="fw-bold mb-3">Змінити статус</div>
-                            <div class="d-flex align-items-center gap-3">
-                                <button type="button" class="btn btn-md btn-info ic-check ico-right" disabled>Нове</button>
-                                <button type="button" class="btn btn-md btn-warning" disabled>В роботі</button>
-                                <button type="button" class="btn btn-md btn-info">Відправлено</button>
-                                <button type="button" class="btn btn-md btn-success current ic-check ico-right">Отримано</button>
+                            <div class="d-flex align-items-center gap-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <button type="button" class="btn btn-info btn-md ico-right ic-check" disabled> Нове </button>
+                                    <button type="button" class="btn btn-warning btn-md" disabled> В роботі </button>
+                                    <button type="button" class="btn btn-danger btn-md"> Скасовано </button>
+                                    <button type="button" class="btn btn-info btn-md"> Відправлено </button>
+                                    <button type="button" class="btn btn-success btn-md ico-right current ic-check"> Отримано </button>
+                                </div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <small>Підтвердити зміну статусу?</small>
+                                    <button type="button" class="btn btn-info btn-md ic-cloze ht"> Скасувати </button>
+                                    <button type="button" class="btn btn-primary btn-md k-big ico-right"> Підтвердити </button>
+                                </div>
                                 <a href="#" class="btn btn-info ico ic-message-circle ms-auto position-relative">
-                                    <span class="qela-counter position-absolute bottom-50 start-100 translate-middle">+10</span>
+                                    <span class="qela-counter position-absolute bottom-50 start-100 translate-middle">
+				+10
+			</span>
                                 </a>
                             </div>
+                            <div class="text-danger-600 mt-3">Будь ласка, підвердіть зміни статусу</div>
                         </div>
                         <div class="p-3">
                             <div class="row gy-0 gx-3">
@@ -1122,29 +1133,45 @@
                                             <small>Розмір X, будь ласка</small>
                                         </div>
                                     </div>
-                                    <!-- info 2 -->
+                                    <!-- info eddit 1 -->
                                     <div class="border rounded-3 p-3 d-grid gap-3">
-                                        <div class="fw-bold">Загальна інформація</div>
+                                        <div class="fw-bold">Загальна інформація створення</div>
                                         <div class="d-flex gap-3">
-                                            <div class="d-grid gap-2 flex-grow-1">
+                                            <div class="flex-grow-1">
+                                                <label for="inputTextUser" class="display-6 form-label">Замовник</label>
+                                                <input id="inputTextUser" type="text" class="form-control form-control-sm" placeholder="Замовник">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <label for="inputEmail" class="display-6 form-label">Електронна пошта</label>
+                                                <input id="inputEmail" type="email" class="form-control form-control-sm" placeholder="Електронна пошта">
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <label for="inputContact" class="display-6 form-label">Контактний номер</label>
+                                                <input id="inputContact" type="number" class="form-control form-control-sm" placeholder="Контактний номер">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- info eddit 2 -->
+                                    <div class="border rounded-3 p-3 d-grid gap-3">
+                                        <div class="fw-bold">Загальна інформація створення v2</div>
+                                        <div class="d-flex gap-3">
+                                            <div class="d-grid gap-2 flex-grow-1 w-50">
                                                 <small class="text-info-700 text-nowrap fw-semibold">Замовлення №</small>
-                                                <small>-</small>
+                                                <small class="qela-clamp">0123456789</small>
                                             </div>
-                                            <div class="d-grid gap-2 flex-grow-1">
+                                            <div class="d-grid gap-2 flex-grow-1 w-50">
                                                 <small class="text-info-700 text-nowrap fw-semibold">Замовник</small>
-                                                <input type="text" class="form-control form-control-sm" placeholder="Замовник">
+                                                <small class="qela-clamp">Микола Грім</small>
                                             </div>
-                                            <div class="d-grid gap-2 flex-grow-1">
-                                                <small class="text-info-700 text-nowrap fw-semibold">Електронна пошта</small>
-                                                <input type="text" class="form-control form-control-sm" placeholder="Електронна пошта">
+                                        </div>
+                                        <div class="d-flex gap-3">
+                                            <div class="flex-grow-1 w-50">
+                                                <label for="inputEmail" class="display-6 form-label">Електронна пошта</label>
+                                                <input id="inputEmail" type="email" class="form-control form-control-sm" placeholder="Електронна пошта">
                                             </div>
-                                            <div class="d-grid gap-2 flex-grow-1">
-                                                <small class="text-info-700 text-nowrap fw-semibold">Контактний номер</small>
-                                                <input type="text" class="form-control form-control-sm" placeholder="Контактний номер">
-                                            </div>
-                                            <div class="d-grid gap-2 flex-grow-1">
-                                                <small class="text-info-700 text-nowrap fw-semibold">Створено</small>
-                                                <small>-</small>
+                                            <div class="flex-grow-1 w-50">
+                                                <label for="inputContact" class="display-6 form-label">Контактний номер</label>
+                                                <input id="inputContact" type="number" class="form-control form-control-sm" placeholder="Контактний номер">
                                             </div>
                                         </div>
                                     </div>
@@ -1251,16 +1278,15 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer justify-content-end p-3 gap-2">
-                        <button type="button" class="btn btn-md btn-danger ico-right ic-delete m-0">Видалити</button>
-                        <button type="button" class="btn btn-md btn-info m-0">Скасувати</button>
-                        <button type="button" class="btn btn-md btn-primary m-0">Редагувати</button>
+                        <div class="modal-footer justify-content-end p-3 gap-2">
+                            <button type="button" class="btn btn-md btn-danger ico-right ic-delete m-0">Видалити</button>
+                            <button type="button" class="btn btn-md btn-info m-0">Скасувати</button>
+                            <button type="button" class="btn btn-md btn-primary m-0">Редагувати</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- modals end-->
+            <!-- modals end-->
     </main>
     <script src="https://unpkg.com/vue@latest"></script>
     <script type="text/javascript" src="https://www.unpkg.com/vue-multiselect@3.0.0-beta.1/dist/vue-multiselect.js"></script>
