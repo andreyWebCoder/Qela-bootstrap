@@ -2,9 +2,11 @@
 {% import "html/data/shop/_productInfoData.njk" as dataInfo %}
 {% from "html/includes/btns/_btn.njk" import btns %}
 {% from "html/includes/shop/tables/_product-info.njk" import productInfo %}
-<div class="modal fade show" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true" style="display:block;">
+
+<div class="modal fade" id="modalOrder" tabindex="-1" aria-labelledby="modalOrderLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-dialog-centered" style="--bs-modal-width: 1336px;">
-		<div class="modal-content">
+		<!-- !!!modal-content +  class visibility--modal = modal cancel order !!!-->
+		<div class="modal-content position-relative">
 			<div class="modal-header">
 				<h2 class="modal-title fs-5" id="exampleModalLabel3">Замовлення 0123456789</h2>
 				<button type="button" class="btn-close ic-cloze" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -324,5 +326,7 @@
 					{% endfor %}
 				</div>
 			</div>
+			<!-- modal cancel order (blur) -->
+			{% include "html/includes/shop/modals/_modalCancelOrder.njk" %}
 		</div>
 	</div>
