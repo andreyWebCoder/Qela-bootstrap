@@ -207,9 +207,9 @@
 
 				</div>
 				<div class="modal-footer justify-content-end p-3 gap-2">
-					<button type="button" class="btn btn-md btn-danger ico-right ic-delete m-0">Видалити</button>
-					<button type="button" class="btn btn-md btn-info m-0">Скасувати</button>
-					<button type="button" class="btn btn-md btn-primary m-0">Редагувати</button>
+					{% for item in data.btnOrderFooter %}
+						{{btns(item)}}
+					{% endfor %}
 				</div>
 			</div>
 		</div>

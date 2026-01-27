@@ -39,13 +39,13 @@
 	{
 		button: true,
 		type: "info",
-		classes: "btn-md ic-cloze ht",
+		classes: "btn-md ic-cloze ico-right",
 		text: "Скасувати",
 		disabled: false
 	},{
 		button: true,
 		type: "primary",
-		classes: "btn-md k-big ico-right",
+		classes: "btn-md ic-check-big ico-right",
 		text: "Підтвердити",
 		disabled: false
 	}
@@ -60,4 +60,28 @@
 		counter:"+10"
 	}
 %}
+
+{% set btnOrderFooter = [
+	{
+		button: true,
+		type: "danger",
+		classes: "btn-md ico-right ic-stop me-auto m-0",
+		text: "Скасувати замовлення",
+		disabled: false
+	},
+	{
+		button: true,
+		type: "info",
+		classes: "btn-md m-0",
+		text: "Скасувати зміни",
+		disabled: false
+	},
+	{
+		button: true,
+		type: "primary",
+		classes: "btn-md m-0",
+		text: "Зберегти",
+		disabled: false
+	}
+] %}
 {# buttons shop modalOrder #}
