@@ -1,0 +1,8 @@
+{% macro productInfo(props) %}
+	<div class="d-grid gap-2" {% if props.width %}
+		style="flex: {{props.width}}"
+	{% endif %} >
+		<small class="text-info-700 fw-semibold">{{props.label}}</small>
+		<small>{{props.text}}</small>
+	</div>
+{% endmacro %}
