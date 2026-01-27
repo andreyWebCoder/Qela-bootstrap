@@ -11,6 +11,10 @@
 						<div class="p-3 d-flex justify-content-between align-content-center border-bottom">
 							<h3 class="fs-5 text-info-700">Фото</h3>
 							<button type="button" class="qela-btn-ic ic-menu-order text-info" data-bs-offset="0, 5" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="custom-tooltip" data-bs-title="Змінити порядок"></button>
+							<!-- <div class="d-flex gap-2">
+								<button type="button" class="qela-btn-ic text-black ic-check-big"></button>
+								<button type="button" class="qela-btn-ic text-black ic-cloze"></button>
+							</div> -->
 						</div>
 						<div class="p-3 d-flex gap-2 flex-wrap">
 							{% set cards = ['default', 'empty','eddit','eddit-drag','empty-disable'] %}
@@ -272,7 +276,7 @@
 					</div>
 				</div>
 				<div class="d-flex gap-2 ms-auto">
-					<button type="button" class="btn btn-info btn-md ic-cloze ico-right" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
+					<button type="button" class="btn btn-info btn-md m-0" data-bs-toggle="modal" data-bs-target="#modalCancel">Скасувати</button>
 					<button type="button" class="btn btn-info m-0" aria-label="Save as draft">Зберегти як чернетку</button>
 					<button type="button" class="btn btn-primary m-0" aria-label="Save">Зберегти</button>
 				</div>
