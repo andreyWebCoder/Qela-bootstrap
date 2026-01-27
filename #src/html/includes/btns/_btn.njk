@@ -6,8 +6,9 @@
 	<{{ tag }} 
 		{% if not props.button %}href="{{ props.url or '#' }}"{% endif %}
 		{% if props.button %}type="button"{% endif %}
-		class="btn btn-{{ props.type}}{{' ' + props.classes if props.classes}}{{" disabled" if props.disabled and not props.button}}"
+		class="btn btn-{{props.type}}{{' ' + props.classes if props.classes}}{{" disabled" if props.disabled and not props.button}}"
 		{{ "disabled" if props.disabled and props.button}} 
+		{{ props.modal | safe if props.modal }}
 	>
 
 		{{ props.text }}
@@ -19,6 +20,8 @@
 	</{{ tag }}>
 
 {% endmacro %}
+
+<button type="button" class="btn btn-warning ic-mute ico-right" data-bs-toggle="modal" data-bs-target="#modalOff"> Вимкнути </button>
 
 {# {% set buttonsData = [
 	{
