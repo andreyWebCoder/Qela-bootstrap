@@ -1,0 +1,30 @@
+{% macro inputField(input) %}
+	<div>
+		{% if input.label %}
+			<label class="form-label" for="{{input.id}}">{{input.label}}</label>
+		{% endif %}
+		{% if input.textarea %}
+			<textarea 
+				id="{{input.id}}" 
+				class="form-control{{ ' ' + 'invalid' if input.error }}" 
+				placeholder="{{input.placeholder}}" 
+				rows="{{input.rows or 5}}" 
+				{{ 'disabled' if input.disabled }} 
+			></textarea>
+		{% else %}
+			<input 
+				id="{{input.id}}" 
+				type="{{input.type or 'text'}}" 
+				class="form-control{{ ' ' + 'invalid' if input.error }}" 
+				placeholder="{{input.placeholder}}" 
+				{{ 'disabled' if input.disabled }} 
+			>
+		{% endif %}
+		{% if input.helpText %}
+			<span class="helper-text">{{input.helpText}}</span>
+		{% endif %}
+		{% if input.errorText %}
+			<span class="form-error">{{input.errorText}}</span>
+		{% endif %}
+	</div>
+{% endmacro %}

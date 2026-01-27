@@ -1,0 +1,19 @@
+{% macro inputCheckbox(check) %}
+	<div class="form-check">
+		<input 
+			id="{{check.id}}" 
+			{% if check.type != 'checkbox' %} 
+			name="{{ check.name }}"{% endif %} 
+			type="{{check.type}}" 
+			class="form-check-input{{' ' + 'invalid' if check.error }}" 
+			{{ 'disabled' if check.disabled }} 
+			{{ 'checked' if check.checked }}
+		>
+		{% if check.label %}
+			<label class="form-check-label" for="{{check.id}}">{{check.label}}</label>
+		{% endif %}
+		{% if check.errorText %}
+			<span class="form-error">{{check.errorText}}</span>
+		{% endif %}
+	</div>
+{% endmacro %}

@@ -1471,6 +1471,14 @@
   font-size: 1rem !important;
 }
 
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+.fs-14 {
+  font-size: 0.875rem !important;
+}
+
 .fs-18 {
   font-size: 1.125rem !important;
 }
@@ -16530,6 +16538,7 @@ main {
   font-weight: 500;
   --bs-link-color: var(--bs-secondary);
   --bs-link-hover-color: var(--bs-ql-secondary-700);
+  min-height: unset;
 }
 .btn-link:disabled, .btn-link.disabled {
   background-color: transparent;
@@ -16716,6 +16725,7 @@ main {
   padding: 0.4375rem;
   width: auto;
   height: auto;
+  min-height: unset;
 }
 .btn-close::before {
   font-size: 1.125rem;
@@ -16733,6 +16743,7 @@ main {
 }
 
 .qela-btn-tooltip {
+  min-height: unset;
   border: none;
   --ql-btn-icon-color: var(--bs-secondary);
   padding: 0;
@@ -16786,6 +16797,7 @@ main {
 }
 
 .qela-btn-menu {
+  min-height: unset;
   position: absolute;
   left: calc(100% - 15px);
   top: 50%;
@@ -16824,6 +16836,7 @@ main {
 }
 
 .qela-btn-map {
+  min-height: unset;
   border-color: transparent;
   position: absolute;
   right: 0;
@@ -16855,6 +16868,7 @@ main {
   margin-left: 0;
 }
 .qela-btn-slide .btn {
+  min-height: unset;
   padding: 0.25rem 0.125rem;
   background-color: color-mix(in srgb, var(--bs-black), transparent 20%);
   --bs-btn-border-width: 0;
@@ -16888,6 +16902,7 @@ main {
 .qela-btn-intro {
   width: 100%;
   height: 80px;
+  min-height: unset;
 }
 
 .btn-apple,
@@ -16910,6 +16925,7 @@ main {
   padding: 0;
   color: var(--bs-ql-secondary-700);
   transition: color 0.25s ease 0s;
+  min-height: unset;
 }
 @media (any-hover: hover) {
   .qela-btn-ic:hover {
@@ -18128,8 +18144,9 @@ textarea {
 .form-label {
   color: var(--bs-ql-info-700);
 }
-.form-label.small {
-  font-size: 0.9375rem;
+.form-label.sm {
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
 }
 
 .accordion {
@@ -20935,6 +20952,7 @@ textarea {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  min-height: unset;
 }
 .qela-admin.btn[class^=ic-]:before, .qela-admin.btn[class*=ic-]:before {
   font-size: 1.25rem;

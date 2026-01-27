@@ -1134,15 +1134,15 @@
                                         <div class="fw-bold">Загальна інформація створення</div>
                                         <div class="d-flex gap-3">
                                             <div class="flex-grow-1">
-                                                <label for="inputTextUser" class="display-6 form-label">Замовник</label>
+                                                <label for="inputTextUser" class="sm form-label">Замовник</label>
                                                 <input id="inputTextUser" type="text" class="form-control form-control-sm" placeholder="Замовник">
                                             </div>
                                             <div class="flex-grow-1">
-                                                <label for="inputEmail" class="display-6 form-label">Електронна пошта</label>
+                                                <label for="inputEmail" class="sm form-label">Електронна пошта</label>
                                                 <input id="inputEmail" type="email" class="form-control form-control-sm" placeholder="Електронна пошта">
                                             </div>
                                             <div class="flex-grow-1">
-                                                <label for="inputContact" class="display-6 form-label">Контактний номер</label>
+                                                <label for="inputContact" class="sm form-label">Контактний номер</label>
                                                 <input id="inputContact" type="number" class="form-control form-control-sm" placeholder="Контактний номер">
                                             </div>
                                         </div>
@@ -1162,11 +1162,11 @@
                                         </div>
                                         <div class="d-flex gap-3">
                                             <div class="flex-grow-1 w-50">
-                                                <label for="inputEmail" class="display-6 form-label">Електронна пошта</label>
+                                                <label for="inputEmail" class="sm form-label">Електронна пошта</label>
                                                 <input id="inputEmail" type="email" class="form-control form-control-sm" placeholder="Електронна пошта">
                                             </div>
                                             <div class="flex-grow-1 w-50">
-                                                <label for="inputContact" class="display-6 form-label">Контактний номер</label>
+                                                <label for="inputContact" class="sm form-label">Контактний номер</label>
                                                 <input id="inputContact" type="number" class="form-control form-control-sm" placeholder="Контактний номер">
                                             </div>
                                         </div>
@@ -1297,6 +1297,114 @@
                                                         <small class="text-info-700 fw-semibold">Коментар для курʼєра</small>
                                                         <small>Зателефонувати перед доставкою</small>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- delivery create -->
+                                    <div class="border rounded-3">
+                                        <div class="p-3 d-grid gap-3">
+                                            <div class="fw-bold">Доставка</div>
+                                            <div class="fw-semibold d-flex align-items-center gap-1">
+                                                <i class="text-info-600 ic-user1"></i>
+                                                <span>Одержувач</span>
+                                            </div>
+                                            <div class="d-flex gap-4">
+                                                <div class="form-check">
+                                                    <input name="radioDeliveri" type="radio" class="form-check-input" id="radioDeliveri" checked>
+                                                    <label class="form-check-label fs-7 text-info-900" for="radioDeliveri">Той самий що й замовник </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input name="radioDeliveri" type="radio" class="form-check-input" id="radioDeliveri2">
+                                                    <label class="form-check-label fs-7 text-info-900" for="radioDeliveri2">Інша особа</label>
+                                                </div>
+                                            </div>
+                                            <!-- row 1 -->
+                                            <div class="row g-4">
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriName" class="form-label sm required">Імʼя</label>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriName" placeholder="Імʼя">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                        <div class="helper-text fs-7">Вкажіть імʼя одержувача так, як у документі</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriLastName" class="form-label sm required">Прізвище</label>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriLastName" placeholder="Прізвище">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriMail" class="form-label sm required">Електронна пошта</label>
+                                                        <input type="email" class="form-control form-control-sm" id="deliveriMail" placeholder="Введіть пошту">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriPhone" class="form-label fs-14 required">Номер телефону </label>
+                                                        <input type="number" class="form-control form-control-sm" id="deliveriPhone" placeholder="+49">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                        <div class="helper-text fs-7">Вкажіть код країни</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-top p-3 d-grid gap-3">
+                                            <div class="fw-semibold d-flex align-items-center gap-1">
+                                                <i class="text-info-600 ic-mark"></i>
+                                                <span>Адреса</span>
+                                            </div>
+                                            <!-- row 2 -->
+                                            <div class="row g-4">
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriCountry" class="form-label sm">Країна</label>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriCountry" placeholder="Оберіть країну">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriCity" class="form-label sm">Місто</label>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriCity" placeholder="Оберіть місто">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-2">
+                                                    <div>
+                                                        <label for="deliveriIndex" class="form-label sm">Індекс</label>
+                                                        <input type="number" class="form-control form-control-sm" id="deliveriIndex" placeholder="42500">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <label for="deliveriAddress1" class="form-label sm">Вулиця або пункт видачі</label>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriAddress1" placeholder="Введіть адресу">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                        <div class="helper-text fs-7">Назва вулиці та номер будинку або назва пункту видачі / поштомату</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-5">
+                                                    <div>
+                                                        <div class="d-flex align-items-start gap-1">
+                                                            <label for="deliveriAddress2" class="form-label sm">Додаткові дані адреси (необовʼязково)</label>
+                                                            <button type="button" class="btn btn-sm qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip" data-bs-offset="0, 10" data-bs-title="Для доставки у відділення або поштомат служба доставки може вимагати вказати фактичну адресу проживання."></button>
+                                                        </div>
+                                                        <input type="text" class="form-control form-control-sm" id="deliveriAddress2" placeholder="Введіть адресу">
+                                                        <div class="invalid-feedback">Error text</div>
+                                                        <div class="helper-text fs-7">Примітки для доставки або фактична адреса проживання, якщо цього вимагає служба доставки</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-10">
+                                                    <label for="deliveriTextarea" class="form-label sm">Коментар для курʼєра (необовʼязково)</label>
+                                                    <textarea class="form-control form-control-sm" placeholder="Коментар" id="deliveriTextarea" rows="1"></textarea>
+                                                    <div class="invalid-feedback">Error text</div>
+                                                    <div class="helper-text fs-7">Корисні інструкції для курʼєра (наприклад: зателефонувати перед доставкою)</div>
                                                 </div>
                                             </div>
                                         </div>
