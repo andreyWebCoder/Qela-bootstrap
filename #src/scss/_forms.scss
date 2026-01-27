@@ -9,7 +9,8 @@
 }
 .form-label {
 	color: var(--bs-ql-info-700);
-	&.small {
-		font-size: rem(15);
+	&.sm {
+		font-size: rem(14);
+		margin-bottom: rem(6);
 	}
 }

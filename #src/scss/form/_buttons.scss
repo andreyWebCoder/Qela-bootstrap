@@ -234,6 +234,7 @@
 	font-weight: 500;
 	--bs-link-color: var(--bs-secondary);
 	--bs-link-hover-color: var(--bs-ql-secondary-700);
+	min-height: unset;
 	&:disabled,
 	&.disabled {
 		background-color: transparent;
@@ -443,6 +444,7 @@
 	padding: rem(7);
 	width: auto;
 	height: auto;
+	min-height: unset;
 	&::before {
 		font-size: rem(18);
 	}
@@ -463,6 +465,7 @@
 }
 
 .qela-btn-tooltip {
+	min-height: unset;
 	border: none;
 	--ql-btn-icon-color: var(--bs-secondary);
 	padding: 0;
@@ -521,6 +524,7 @@
 }
 
 .qela-btn-menu {
+	min-height: unset;
 	position: absolute;
 	left: calc(100% - 15px);
 	top: 50%;
@@ -562,6 +566,7 @@
 }
 
 .qela-btn-map {
+	min-height: unset;
 	border-color: transparent;
 	position: absolute;
 	right: 0;
@@ -600,6 +605,7 @@
 	}
 
 	.btn {
+		min-height: unset;
 		padding: rem(4) rem(2);
 		background-color: color-mix(in srgb, var(--bs-black), transparent 20%);
 		--bs-btn-border-width: 0;
@@ -642,6 +648,7 @@
 .qela-btn-intro {
 	width: 100%;
 	height: 80px;
+	min-height: unset;
 }
 .btn-apple,
 .btn-google {
@@ -660,6 +667,7 @@
 	padding: 0;
 	color: var(--bs-ql-secondary-700);
 	transition: color 0.25s ease 0s;
+	min-height: unset;
 	@media (any-hover: hover) {
 		&:hover {
 			opacity: 0.85;

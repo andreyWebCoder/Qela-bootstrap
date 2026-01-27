@@ -9,7 +9,7 @@
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
-
+	min-height: unset;
 	&.btn[class^="ic-"]:before,
 	&.btn[class*="ic-"]:before {
 		font-size: rem(20);
