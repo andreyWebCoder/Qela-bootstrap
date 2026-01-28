@@ -1,12 +1,15 @@
+{% import "html/data/_btnsData.njk" as data %}
+{% from "html/includes/btns/_btn.njk" import btns %}
 <div class="qela-modal-blur">
 	<div class="modal-content">
 		<div class="modal-body p-4 text-center">
-			<h5 class="fs-18 fw-medium pb-2">Хвилинку уваги!</h5>
-			<div class="pt-1">Видалення категорій також видалить і всі товари в ній</div>
+			<h5 class="fs-18 fw-medium pb-2">Скасувати замовлення?</h5>
+			<div class="pt-1">Після скасування замовлення буде недоступне для обробки.</div>
 		</div>
 		<div class="modal-footer justify-content-center p-3 border-top-0 gap-2">
-			<button type="button" class="btn btn-info m-0" data-bs-dismiss="modal">Скасувати</button>
-			<button type="button" class="btn btn-danger ico-right ic-delete m-0">Видалити</button>
+			{% for item in data.btnModalBlur %}
+				{{btns(item)}}
+			{% endfor %}
 		</div>
 	</div>
 </div>
