@@ -158,6 +158,11 @@
 	}
 
 	.btn {
+		min-height: unset;
+		padding: 0;
+		&::before {
+			font-size: rem(18);
+		}
 		&:focus-visible {
 			--bs-btn-hover-color: var(--bs-ql-info-900);
 			--bs-btn-hover-bg: var(--bs-white);

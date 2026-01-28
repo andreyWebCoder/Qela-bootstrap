@@ -18500,6 +18500,13 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
 }
+.qela-hover-dropdown .btn {
+  min-height: unset;
+  padding: 0;
+}
+.qela-hover-dropdown .btn::before {
+  font-size: 1.125rem;
+}
 .qela-hover-dropdown .btn:focus-visible {
   --bs-btn-hover-color: var(--bs-ql-info-900);
   --bs-btn-hover-bg: var(--bs-white);
