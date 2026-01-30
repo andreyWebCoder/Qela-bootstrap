@@ -1,0 +1,25 @@
+{% macro tooltip(props) %}
+	{% if props.comment %}
+		<!-- {{props.comment}} -->
+	{% endif %}
+
+	<button 
+		type="button" 
+		{% if props.text %}
+		class="qela-clamp p-0 bg-transparent border-0{{' ' + props.classes if props.classes}}" 
+		{% else %}
+		class="btn qela-btn-tooltip{{' ' + props.classes if props.classes}}" 
+		{% endif %}
+		data-bs-offset="{{props.offset}}"
+		data-bs-toggle="tooltip" 
+		data-bs-placement="{{props.placement}}" 
+		data-bs-custom-class="{{props.customClass}}"
+		data-bs-title="{{props.title}}"
+		{% if props.style %}
+			style="{{props.style}}"
+		{% endif %}
+		>
+		{{props.text}}
+	</button>
+
+{% endmacro %}
