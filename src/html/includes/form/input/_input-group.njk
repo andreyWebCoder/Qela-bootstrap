@@ -1,0 +1,27 @@
+{% from "html/includes/form/input/_input.njk" import input %}
+{% from "html/includes/btns/_btn.njk" import btns %}
+{% macro inputGroup(props, id) %}
+
+	<div class="input-group{{' has-validation' if not props.typeGroup}}{{' is-invalid' if props.error}} ">
+		{% if props.typeGroup == 'icon' %}
+			<div class="qela-input-inner{{' ' + props.position if props.position}}">
+			{% endif %}
+
+			{% if props.position == 'left' %}
+				{{btns(props.btn)}}
+			{% endif %}
+
+			{{input(props.input, id)}}
+
+			{% if props.position == 'right' %}
+				{{btns(props.btn)}}
+			{% endif %}
+
+			{% if props.typeGroup == 'icon' %}
+			</div>
+		{% endif %}
+		{% if props.errorText %}
+			<div class="invalid-feedback">{{props.errorText}}</div>
+		{% endif %}
+	</div>
+{% endmacro %}

@@ -1,0 +1,272 @@
+{# Input componets #}
+{# input #}
+{% set inputsComponent = [
+	{
+		label: 'Label',
+		id: "inputText1",
+		required: true,
+		input:{
+			type: "text",
+			placeholder: "Placeholder",
+			error: false,
+			disabled: false
+		},
+		hintText: 'hint text',
+		errorText: 'Error text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	},{
+		label: 'Label',
+		id: "inputText2",
+		required: true,
+		input:{
+			type: "text",
+			placeholder: "Placeholder",
+			error: true,
+			disabled: false
+		},
+		hintText: 'hint text',
+		errorText: 'Error text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	},{
+		label: 'Label',
+		id: "inputText3",
+		required: true,
+		input:{
+			type: "text",
+			placeholder: "Placeholder",
+			error: false,
+			disabled: true
+		},
+		hintText: 'hint text',
+		errorText: 'Error text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	}
+] %}
+{# textarea #}
+{% set textareaComponent = [
+	{
+		label: 'Label',
+		id: "Textarea",
+		required: true,
+		textarea:{
+			placeholder: "Placeholder",
+			rows:"4",
+			error: false,
+			disabled: false
+		},
+		hintText: 'hint text',
+		errorText: 'Error text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur textarea'
+		}
+	}
+] %}
+{# input group default #}
+{% set inputsGroupComponent = [
+	{
+		label: 'Label',
+		id: "inputTextGroup1",
+		required: true,
+		inputGroup:{
+			errorText: 'Error text',
+			position:'left',
+			btn:{
+				id:'button-addon4',
+				button: true,
+				type: "outline-info",
+				classes: "btn-input ico-left ic-plus",
+				text: "Light",
+				disabled: false
+			},
+			input:{
+				type: "text",
+				placeholder: "Placeholder",
+				ariaLabel:'Text',
+				ariaDescribedby:'button-addon4',
+				error: false,
+				disabled: false
+			}
+		},
+		hintText: 'hint text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	},
+	{
+		label: 'Label',
+		id: "inputTextGroup2",
+		required: true,
+		inputGroup:{
+			errorText: 'Error text',
+			position:'right',
+			btn:{
+				id:'button-addon8',
+				button: true,
+				type: "outline-info",
+				classes: "btn-input ico-right ic-plus",
+				text: "Light",
+				disabled: false
+			},
+			input:{
+				type: "text",
+				placeholder: "Placeholder",
+				ariaLabel:'Text',
+				ariaDescribedby:'button-addon8',
+				error: false,
+				disabled: false
+			}
+		},
+		hintText: 'hint text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	}
+] %}
+{# input group icon #}
+{% set inputsGroupIconComponent = [
+	{
+		label: 'Label',
+		id: "inputTextGroup13",
+		required: true,
+		inputGroup:{
+			typeGroup:'icon',
+			errorText: 'Error text',
+			position:'right',
+			error:false,
+			btn:{
+				id:'button-addon13',
+				button: true,
+				type: "",
+				classes: "ic-eye",
+				text: "",
+				disabled: false
+			},
+			input:{
+				type: "password",
+				placeholder: "Placeholder",
+				ariaLabel:'Text',
+				ariaDescribedby:'button-addon13',
+				error: false,
+				disabled: false
+			}
+		},
+		hintText: 'hint text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	},
+	{
+		label: 'Label',
+		id: "inputTextGroup15",
+		required: true,
+		inputGroup:{
+			typeGroup:'icon',
+			errorText: 'Error text',
+			position:'right',
+			error:true,
+			btn:{
+				id:'button-addon15',
+				button: true,
+				type: "",
+				classes: "ic-eye-close",
+				text: "",
+				disabled: false
+			},
+			input:{
+				type: "password",
+				placeholder: "Placeholder",
+				ariaLabel:'Text',
+				ariaDescribedby:'button-addon15',
+				error: true,
+				disabled: false
+			}
+		},
+		hintText: 'hint text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	},	
+	{
+		label: 'Label',
+		id: "inputTextGroup19",
+		required: true,
+		inputGroup:{
+			typeGroup:'icon',
+			errorText: 'Error text',
+			position:'right',
+			error:false,
+			btn:{
+				id:'button-addon19',
+				button: true,
+				type: "",
+				classes: "ic-eye-close",
+				text: "",
+				disabled: false
+			},
+			input:{
+				type: "password",
+				placeholder: "Placeholder",
+				ariaLabel:'Text',
+				ariaDescribedby:'button-addon19',
+				error: false,
+				disabled: true
+			}
+		},
+		hintText: 'hint text',
+		helperText: 'Helper text',
+		tooltipData: {
+			classes: 'ic-help-circle-filled',
+			offset: '0, 5',
+			placement:'bottom',
+			customClass: "custom-tooltip",
+			title:'Lorem ipsum dolor sit amet, consectetur input'
+		}
+	}
+] %}
+{# Input componets #}

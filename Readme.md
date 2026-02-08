@@ -40,11 +40,7 @@
 
 ```bash
 git clone https://github.com
-```
-```bash
 cd Qela-bootstrap
-```
-```bash
 npm install
 ```
 
@@ -60,9 +56,9 @@ npm install
 ---
 
 ## 📂 Структура проекта
-
+```text
 Qela-bootstrap/
-├── #src/               # Исходные файлы
+├── src/              	# Исходные файлы
 │   ├── filesIndex/     # CSS и JS для страницы с компонентами (GitHub Pages)
 │   ├── fonts/          # Шрифты и Icomoon (.ttf)
 │   ├── html/           # Шаблоны Nunjucks (.njk)
@@ -74,11 +70,12 @@ Qela-bootstrap/
 │   ├── json/           # Конфигурационные файлы иконок Icomoon
 │   ├── scss/           # Bootstrap + custom SCSS
 │   ├── videos/         # Видео файлы
-│   └── .njk/           # Layouts страниц
+│   └── .njk	        # Layouts страниц
 ├── Qela/               # Готовая сборка 
 ├── .gitignore        
 ├── gulpfile.js         
 └── package.json       	
+```
 
 ---
 

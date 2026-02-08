@@ -1,0 +1,60 @@
+{% from "html/includes/tollip/_tooltip.njk" import tooltip %}
+{% from "html/includes/form/input/_input-group.njk" import inputGroup %}
+{% from "html/includes/form/input/_input.njk" import input %}
+{% from "html/includes/form/input/_textarea.njk" import textarea %}
+{% macro formControl(props) %}
+	<div>
+		{# --- Block labels --- #}
+		{% if props.tooltipData %}
+
+			<div class="qela-form-labels">
+				<div>
+					{% if props.label %}
+						<label for="{{props.id}}" class="form-label{{' ' + 'required' if props.required}} ">{{props.label}}</label>
+					{% endif %}
+					{% if props.tooltipData %}
+						{{ tooltip(props.tooltipData) }}
+					{% endif %}
+				</div>
+				{% if props.hintText %}
+					<label class="form-label">{{props.hintText}}</label>
+				{% endif %}
+			</div>
+
+		{% elif props.hintText %}
+
+			<div class="d-flex justify-content-between gap-2">
+				<label for="{{props.id}}" class="form-label{{' ' + 'required' if props.required}} ">{{props.label}}</label>
+				{% if props.hintText %}
+					<label class="form-label fw-normal">{{props.hintText}}</label>
+				{% endif %}
+			</div>
+		{% else  %}
+			{% if props.label %}
+				<label for="{{props.id}}" class="form-label{{' ' + 'required' if props.required}} ">{{props.label}}</label>
+			{% endif %}
+		{% endif %}
+		{# --- Block labels --- #}
+		{# --- Block inputs --- #}
+		{% if props.inputGroup %}
+			{{inputGroup(props.inputGroup, props.id)}}
+		{% else %}
+			{% if props.input %}
+				{{input(props.input, props.id)}}
+			{% elif props.textarea %}
+				{{textarea(props.textarea, props.id)}}
+			{% else %}
+
+			{% endif %}
+		{% endif %}
+		{# --- Block inputs --- #}
+		{# --- Block text --- #}
+		{% if props.errorText and props.inputGroup %}
+			<div class="invalid-feedback">{{props.errorText}}</div>
+		{% endif %}
+		{% if props.helperText %}
+			<div class="helper-text">{{props.helperText}}</div>
+		{% endif %}
+		{# --- Block text --- #}
+	</div>
+{% endmacro %}

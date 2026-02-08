@@ -1,0 +1,19 @@
+{% macro input(props, id) %}
+	<input 
+	{% if id %}
+		id="{{id}}" 
+	{% endif %}
+	type="{{props.type}}" 
+	class="form-control{{' is-invalid' if props.error}}{{' ' + props.class if props.class}}" 
+	placeholder="{{props.placeholder}}"
+	{% if props.ariaDescribedby %}
+	aria-describedby="{{props.ariaDescribedby}}"
+	{% endif %}
+	{% if props.ariaLabel %}
+	aria-label="{{props.ariaLabel}}"
+	{% endif %}
+	{% if props.disabled %}
+		disabled
+	{% endif %}
+/>
+{% endmacro %}

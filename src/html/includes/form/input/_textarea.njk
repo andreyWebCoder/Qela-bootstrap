@@ -1,0 +1,13 @@
+{% macro textarea(props, id) %}
+	<textarea 
+	{% if id %}
+		id="{{id}}" 
+	{% endif %}
+	class="form-control{{' is-invalid' if props.error}}{{' ' + props.class if props.class}}" 
+	placeholder="{{props.placeholder}}"
+	rows="{{props.rows}}"
+	{% if props.disabled %}
+		disabled
+	{% endif %}
+></textarea>
+{% endmacro %}
