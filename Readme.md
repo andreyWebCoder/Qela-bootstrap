@@ -40,7 +40,11 @@
 
 ```bash
 git clone https://github.com
+```
+```bash
 cd Qela-bootstrap
+```
+```bash
 npm install
 ```
 
@@ -56,7 +60,7 @@ npm install
 ---
 
 ## 📂 Структура проекта
-```text
+
 Qela-bootstrap/
 ├── #src/               # Исходные файлы
 │   ├── filesIndex/     # CSS и JS для страницы с компонентами (GitHub Pages)
@@ -75,7 +79,6 @@ Qela-bootstrap/
 ├── .gitignore        
 ├── gulpfile.js         
 └── package.json       	
-```
 
 ---
 
