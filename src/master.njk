@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 	{% set title = "Quests master" %}
-	{% include "_head.njk" %}
+	{% include "html/includes/_head.njk" %}
 	<body class="qela-body">
 		{% set header = {title:"Quests > Campaign master", logo:"img/logo-sm.svg"} %}
 		{% include "html/components/_header.njk" %}
@@ -298,7 +298,7 @@
 			app.mount("#app");
 		</script>
 		<!-- =========================== -->
-		{% include "_js.njk" %}
+		{% include "html/includes/_js.njk" %}
 	</body>
 
 </html>

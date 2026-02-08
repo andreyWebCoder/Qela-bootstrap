@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ua">
 	{% set title = "shopTab" %}
-	{% include "_head.njk" %}
-
+	{% include "html/includes/_head.njk" %}
 	<body class="qela-body theme--strichka" id="app">
 		{% set header = {title:"Магазин", logo:"img/logo-strichka.svg"} %}
 		{% include "html/components/_header.njk" %}
@@ -274,7 +273,7 @@
 			app.mount("#app");
 		</script>
 		<!-- =========================== -->
-		{% include "_js.njk" %}
+		{% include "html/includes/_js.njk" %}
 	</body>
 
 </html>

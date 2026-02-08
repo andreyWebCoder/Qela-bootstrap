@@ -70,7 +70,8 @@ Qela-bootstrap/
 │   ├── json/           # Конфигурационные файлы иконок Icomoon
 │   ├── scss/           # Bootstrap + custom SCSS
 │   ├── videos/         # Видео файлы
-│   └── index.njk	    # Entry page (GitHub Pages demo)
+│   ├── index.njk       # Entry page (GitHub Pages demo)
+│   └──	[name].njk 		# Остальные страницы
 ├── Qela/               # Готовая сборка 
 ├── .gitignore        
 ├── gulpfile.js         
