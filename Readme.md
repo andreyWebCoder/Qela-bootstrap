@@ -56,7 +56,7 @@ npm install
 ---
 
 ## 📂 Структура проекта
-```text
+```
 Qela-bootstrap/
 ├── src/              	# Исходные файлы
 │   ├── demo-assets/    # CSS/JS только для index.njk (demo, не входит в сборку)
