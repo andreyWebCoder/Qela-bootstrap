@@ -59,7 +59,7 @@ npm install
 ```text
 Qela-bootstrap/
 ├── src/              	# Исходные файлы
-│   ├── filesIndex/     # CSS и JS для страницы с компонентами (GitHub Pages)
+│   ├── demo-assets/    # CSS/JS только для index.njk (demo, не входит в сборку)
 │   ├── fonts/          # Шрифты и Icomoon (.ttf)
 │   ├── html/           # Шаблоны Nunjucks (.njk)
 │   │   ├── components/ # Группы компонентов для демонстрации
@@ -70,12 +70,15 @@ Qela-bootstrap/
 │   ├── json/           # Конфигурационные файлы иконок Icomoon
 │   ├── scss/           # Bootstrap + custom SCSS
 │   ├── videos/         # Видео файлы
-│   └── .njk	        # Layouts страниц
+│   └── index.njk	    # Entry page (GitHub Pages demo)
 ├── Qela/               # Готовая сборка 
 ├── .gitignore        
 ├── gulpfile.js         
 └── package.json       	
 ```
+> **Note:**  
+> `filesIndex/` содержит CSS и JavaScript, используемые **только** для demo-страницы (`index.njk`).  
+> Эти файлы **не входят** в финальную сборку UI Kit.
 
 ---
 

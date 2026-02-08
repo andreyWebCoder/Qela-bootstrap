@@ -41,7 +41,7 @@ let path = {
 		fonts: project_name + "/fonts/",
 		json: project_name + "/json/",
 		txt: project_name + "/",
-		filesIndex: project_name + "/filesIndex/",
+		demoAssets: project_name + "/demo-assets/",
 	},
 	src: {
 		favicon: src_folder + "/img/favicon.{jpg,png,svg,gif,ico,webp}",
@@ -53,7 +53,7 @@ let path = {
 		fonts: src_folder + "/fonts/*.ttf",
 		json: src_folder + "/json/**/*.*",
 		txt: src_folder + "/**/*.txt",
-		filesIndex: [src_folder + "/filesIndex/*.css", src_folder + "/filesIndex/*.js"],
+		demoAssets: [src_folder + "/demo-assets/*.css", src_folder + "/demo-assets/*.js"],
 	},
 	watch: {
 		// html: src_folder + "/**/*.html",
@@ -63,7 +63,7 @@ let path = {
 		images: src_folder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
 		json: src_folder + "/json/**/*.*",
 		txt: src_folder + "/**/*.txt",
-		filesIndex: [src_folder + "/filesIndex/*.css", src_folder + "/filesIndex/*.js"],
+		demoAssets: [src_folder + "/demo-assets/*.css", src_folder + "/demo-assets/*.js"],
 	},
 	clean: "./" + project_name + "/"
 };
@@ -223,7 +223,7 @@ function watchFiles() {
 	gulp.watch([path.watch.json], json);
 	gulp.watch([path.watch.txt], txt);
 	gulp.watch([path.watch.images], images);
-	gulp.watch(path.watch.filesIndex, filesIndex);
+	gulp.watch(path.watch.demoAssets, demoAssets);
 
 }
 function cssBuild() {
@@ -323,20 +323,20 @@ function htmlBuild() {
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream());
 }
-function filesIndex() {
-	return src(path.src.filesIndex, {})
-		.pipe(newer(path.build.filesIndex))
-		.pipe(dest(path.build.filesIndex))
+function demoAssets() {
+	return src(path.src.demoAssets, {})
+		.pipe(newer(path.build.demoAssets))
+		.pipe(dest(path.build.demoAssets))
 		.pipe(browsersync.stream());
 }
 let fontsBuild = gulp.series(fonts_otf, fonts, fontstyle);
-let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, copyFolders, json, txt, html, css, js, favicon, images, filesIndex));
+let buildDev = gulp.series(clean, gulp.parallel(fontsBuild, copyFolders, json, txt, html, css, js, favicon, images, demoAssets));
 let watch = gulp.series(buildDev, gulp.parallel(watchFiles, browserSync));
-let build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imagesBuild, filesIndex);
+let build = gulp.parallel(htmlBuild, cssBuild, jsBuild, imagesBuild, demoAssets);
 
 exports.copy = copyFolders;
 exports.fonts = fontsBuild;
-exports.filesIndex = filesIndex;
+exports.demoAssets = demoAssets;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
