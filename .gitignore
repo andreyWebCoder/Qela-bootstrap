@@ -1,6 +1,7 @@
 node_modules/
 /*#src/videos
 howtouse.txt
-/*.json
-gulpfile.js
+/*#src/json
 .vscode
+package-lock.json
+version.json
