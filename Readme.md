@@ -58,7 +58,7 @@ npm install
 ## 📂 Структура проекта
 ```
 Qela-bootstrap/
-├── src/              	# Исходные файлы
+├── _src/              	# Исходные файлы
 │   ├── demo-assets/    # CSS/JS только для index.njk (demo, не входит в сборку)
 │   ├── fonts/          # Шрифты и Icomoon (.ttf)
 │   ├── html/           # Шаблоны Nunjucks (.njk)
@@ -90,7 +90,7 @@ Qela-bootstrap/
 
 ---
 
-## 🤝 Авторы
+## 🤝 Автор
 **Разработчик:** [Shupyk Andrii]
 **Связаться:** [@MarkupDev]
 

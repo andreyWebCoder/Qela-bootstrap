@@ -17,9 +17,9 @@ let newer = require('gulp-newer');
 
 let version = require('gulp-version-number');
 
-let webp = require('imagemin-webp');
-let webpcss = require("gulp-webpcss");
-let webphtml = require('gulp-webp-html');
+// let webp = require('imagemin-webp');
+// let webpcss = require("gulp-webpcss");
+// let webphtml = require('gulp-webp-html');
 
 let fonter = require('gulp-fonter');
 
@@ -27,7 +27,7 @@ let ttf2woff = require('gulp-ttf2woff');
 let ttf2woff2 = require('gulp-ttf2woff2');
 
 let project_name = require("path").basename(__dirname);
-let src_folder = "src";
+let src_folder = "_src";
 const prettyHtml = require('gulp-pretty-html');
 let nunjucksRender = require('gulp-nunjucks-render');
 let progeny = require('gulp-progeny');
@@ -240,12 +240,12 @@ function cssBuild() {
 				cascade: true
 			})
 		)
-		.pipe(webpcss(
-			{
-				webpClass: "._webp",
-				noWebpClass: "._no-webp"
-			}
-		))
+		// .pipe(webpcss(
+		// 	{
+		// 		webpClass: "._webp",
+		// 		noWebpClass: "._no-webp"
+		// 	}
+		// ))
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
 		.pipe(
@@ -279,20 +279,20 @@ function jsBuild() {
 function imagesBuild() {
 	return src(path.src.images)
 		//.pipe(newer(path.build.images))
-		.pipe(
-			imagemin([
-				webp({
-					quality: 85
-				})
-			])
-		)
-		.pipe(
-			rename({
-				extname: ".webp"
-			})
-		)
-		.pipe(dest(path.build.images))
-		.pipe(src(path.src.images))
+		// .pipe(
+		// 	imagemin([
+		// 		webp({
+		// 			quality: 85
+		// 		})
+		// 	])
+		// )
+		// .pipe(
+		// 	rename({
+		// 		extname: ".webp"
+		// 	})
+		// )
+		// .pipe(dest(path.build.images))
+		// .pipe(src(path.src.images))
 		//.pipe(newer(path.build.images))
 		.pipe(
 			imagemin({
@@ -315,7 +315,7 @@ function htmlBuild() {
 			},
 			manageEnv: manageEnvironment,
 		}))
-		.pipe(webphtml())
+		// .pipe(webphtml())
 		.pipe(version({
 			'value': '%DT%',
 			'append': { 'key': '_v', 'to': ['css', 'js'] }

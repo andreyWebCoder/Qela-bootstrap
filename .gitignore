@@ -1,7 +1,7 @@
 node_modules/
-/*#src/videos
+/*src/videos
 howtouse.txt
-/*#src/json
+/*src/json
 .vscode
 package-lock.json
 version.json
