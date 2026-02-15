@@ -17493,6 +17493,9 @@ textarea {
     border-color: var(--bs-ql-input-hover-border-color);
   }
 }
+.multiselect.multiselect--above .multiselect__content-wrapper {
+  border-top-color: var(--bs-ql-input-focus-border-color);
+}
 .multiselect.multiselect--disabled {
   opacity: 1;
 }
@@ -17509,22 +17512,23 @@ textarea {
 .multiselect.multiselect--disabled .multiselect__single {
   background-color: var(--bs-ql-input-disabled-bg-color);
 }
-.multiselect.qela-sm {
+.multiselect.multiselect-sm {
   --select-h: 30px;
   min-height: var(--select-h);
 }
-.multiselect.qela-sm .multiselect__tags {
+.multiselect.multiselect-sm .multiselect__tags {
   min-height: var(--select-h);
 }
-.multiselect.qela-sm .multiselect__select {
-  height: var(--select-h);
+.multiselect.multiselect-sm .multiselect__select {
+  top: 4px;
 }
-.multiselect.qela-sm .multiselect__tags-wrap {
+.multiselect.multiselect-sm .multiselect__tags-wrap {
   margin: 0.125rem 0 0 -0.5rem;
 }
-.multiselect.qela-sm .multiselect__input {
+.multiselect.multiselect-sm .multiselect__input {
   padding: 0.1875rem 0;
   font-size: 0.75rem;
+  top: auto;
 }
 
 .multiselect--active .multiselect__tags {
@@ -17535,9 +17539,15 @@ textarea {
     border-color: var(--bs-ql-input-focus-border-color);
   }
 }
+.multiselect--active .multiselect__select {
+  transform: none;
+}
+.multiselect--active .multiselect__select::before {
+  transform: translate(0, -50%) rotate(180deg);
+}
 
 .multiselect__tags {
-  padding: 0 2.625rem 0 0.75rem;
+  padding: 0 2rem 0 0.75rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -17595,13 +17605,12 @@ textarea {
 }
 
 .multiselect__select {
-  right: 0;
-  top: 0;
+  right: 4px;
+  top: 7px;
   padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   line-height: 1;
+  width: 24px;
+  height: 24px;
 }
 .multiselect__select:before {
   content: "\e903";
@@ -17611,16 +17620,18 @@ textarea {
   color: var(--bs-ql-info-600);
   position: absolute;
   top: 50%;
-  right: auto;
-  left: 50%;
+  right: 0;
+  transform: translate(0, -50%);
   margin-top: 0;
-  transform: translate(-50%, -50%);
   border: none;
+  transition: transform 0.25s ease 0s;
+  transform-origin: center center;
 }
 
 .multiselect__input {
   margin: 0;
-  padding: 0.3125rem 0;
+  padding: 0.3125rem 0 0.25rem 0;
+  top: -2px;
 }
 .multiselect__input::placeholder {
   color: var(--bs-ql-input-placeholder-color);

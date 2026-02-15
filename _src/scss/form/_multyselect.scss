@@ -37,7 +37,11 @@
 			}
 		}
 	}
-
+	&.multiselect--above {
+		.multiselect__content-wrapper {
+			border-top-color: var(--bs-ql-input-focus-border-color);
+		}
+	}
 	&.multiselect--disabled {
 		opacity: $btn-close-opacity;
 
@@ -57,14 +61,14 @@
 			background-color: var(--bs-ql-input-disabled-bg-color);
 		}
 	}
-	&.qela-sm {
+	&.multiselect-sm {
 		--select-h: 30px;
 		min-height: var(--select-h);
 		.multiselect__tags {
 			min-height: var(--select-h);
 		}
 		.multiselect__select {
-			height: var(--select-h);
+			top: 4px;
 		}
 		.multiselect__tags-wrap {
 			margin: rem(2) 0 0 rem(-8);
@@ -72,6 +76,7 @@
 		.multiselect__input {
 			padding: rem(3) 0;
 			font-size: rem(12);
+			top: auto;
 		}
 	}
 }
@@ -88,9 +93,15 @@
 			}
 		}
 	}
+	.multiselect__select {
+		transform: none;
+		&::before {
+			transform: translate(0, -50%) rotate(180deg);
+		}
+	}
 }
 .multiselect__tags {
-	padding: 0 rem(42) 0 $input-padding-x;
+	padding: 0 rem(32) 0 $input-padding-x;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
@@ -150,13 +161,12 @@
 }
 
 .multiselect__select {
-	right: 0;
-	top: 0;
+	right: 4px;
+	top: 7px;
 	padding: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	line-height: 1;
+	width: 24px;
+	height: 24px;
 	&:before {
 		content: "\e903";
 		display: block;
@@ -165,18 +175,20 @@
 		color: var(--bs-ql-info-600);
 		position: absolute;
 		top: 50%;
-		right: auto;
-		left: 50%;
+		right: 0;
+		transform: translate(0, -50%);
 		margin-top: 0;
-		transform: translate(-50%, -50%);
 		border: none;
+		transition: transform 0.25s ease 0s;
+		transform-origin: center center;
 	}
 }
 
 .multiselect__input {
 	margin: 0;
-	padding: rem(5) 0;
-
+	padding: rem(5) 0 rem(4) 0;
+	// padding: 0 0 1.5px 0;
+	top: -2px;
 	&::placeholder {
 		color: var(--bs-ql-input-placeholder-color);
 		font-size: $input-font-size;
