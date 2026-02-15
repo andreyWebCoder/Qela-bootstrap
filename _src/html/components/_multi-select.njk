@@ -4,63 +4,46 @@
 	<h4>Multi-select</h4>
 	<!-- default -->
 	<div>
-		<div class="qela-form-labels">
-			<div>
-				<label class="form-label required">Select multiple</label>
-				<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-			</div>
-			<label class="form-label">hint text</label>
-		</div>
+		<label class="form-label required">Select multiple</label>
 		<div>
 			<v-multi-select v-model="value1" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true"></v-multi-select>
 		</div>
 		<div class="invalid-feedback">Error text</div>
-		<div class="helper-text">Helper text</div>
 	</div>
 	<!-- disabled -->
 	<div>
-		<div class="qela-form-labels">
-			<div>
-				<label class="form-label required">Select multiple</label>
-				<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-			</div>
-			<label class="form-label">hint text</label>
-		</div>
+		<label class="form-label required">Select multiple</label>
 		<div>
 			<v-multi-select v-model="value2" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" :disabled="true"></v-multi-select>
 		</div>
 		<div class="invalid-feedback">Error text</div>
-		<div class="helper-text">Helper text</div>
 	</div>
 	<!-- error -->
 	<div>
-		<div class="qela-form-labels">
-			<div>
-				<label class="form-label required">Select multiple</label>
-				<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-			</div>
-			<label class="form-label">hint text</label>
-		</div>
+		<label class="form-label required">Select multiple</label>
 		<div class="is-invalid">
 			<v-multi-select v-model="value3" :searchable="true" open-direction="bottom" :options="options" :multiple="true"></v-multi-select>
 		</div>
 		<div class="invalid-feedback">Error text</div>
-		<div class="helper-text">Helper text</div>
 	</div>
 	<!-- default select-->
 	<h4>Select</h4>
 	<div>
-		<div class="qela-form-labels">
-			<div>
-				<label class="form-label required">Select</label>
-				<button type="button" class="btn qela-btn-tooltip ic-help-circle-filled" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lobortis nisl cursus bibendum."></button>
-			</div>
-			<label class="form-label">hint text</label>
-		</div>
+		<label class="form-label required">Select</label>
 		<div>
 			<v-multi-select v-model="value4" :searchable="false" open-direction="bottom" :options="options" :single="true"></v-multi-select>
 		</div>
 		<div class="invalid-feedback">Error text</div>
-		<div class="helper-text">Helper text</div>
+	</div>
+	<!-- Small select-->
+	<h4>Select multiple small</h4>
+	<div>
+		<label class="form-label required">
+			<small>Select multiple</small>
+		</label>
+		<div>
+			<v-multi-select v-model="value8" :searchable="true" open-direction="bottom" :options="options" :multiple="true" :close-on-select="true" class='qela-sm'></v-multi-select>
+		</div>
+		<div class="invalid-feedback">Error text</div>
 	</div>
 </section>

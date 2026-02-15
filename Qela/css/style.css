@@ -17481,8 +17481,9 @@ textarea {
 }
 
 .multiselect {
+  --select-h: 38px;
   cursor: pointer;
-  min-height: 38px;
+  min-height: var(--select-h);
 }
 .multiselect__option {
   font-size: 0.875rem;
@@ -17508,6 +17509,23 @@ textarea {
 .multiselect.multiselect--disabled .multiselect__single {
   background-color: var(--bs-ql-input-disabled-bg-color);
 }
+.multiselect.qela-sm {
+  --select-h: 30px;
+  min-height: var(--select-h);
+}
+.multiselect.qela-sm .multiselect__tags {
+  min-height: var(--select-h);
+}
+.multiselect.qela-sm .multiselect__select {
+  height: var(--select-h);
+}
+.multiselect.qela-sm .multiselect__tags-wrap {
+  margin: 0.125rem 0 0 -0.5rem;
+}
+.multiselect.qela-sm .multiselect__input {
+  padding: 0.1875rem 0;
+  font-size: 0.75rem;
+}
 
 .multiselect--active .multiselect__tags {
   border-color: var(--bs-ql-input-focus-border-color);
@@ -17519,28 +17537,28 @@ textarea {
 }
 
 .multiselect__tags {
-  padding: 0px 2.625rem 0 0.75rem;
+  padding: 0 2.625rem 0 0.75rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   border-radius: 0.375rem;
   border: 1px solid var(--bs-ql-input-border-color);
   background-color: var(--bs-ql-input-bg-color);
-  min-height: 38px;
+  min-height: var(--select-h);
   transition: border-color 0.2s ease 0s;
 }
 
 .multiselect__tags-wrap {
-  margin: 4px 0px 3px -8px;
+  margin: 0.375rem 0 0.25rem -0.5rem;
 }
 
 .multiselect__tag {
-  padding: 5px 28px 5px 6px;
+  padding: 0.25rem 1.75rem 0.25rem 0.375rem;
   border-radius: 6px;
-  margin-right: 2px;
-  margin-bottom: 2px;
+  margin-right: 0.125rem;
+  margin-bottom: 0.125rem;
   color: var(--bs-ql-info-800);
-  line-height: 120%;
+  line-height: 116%;
   background: var(--bs-ql-info-100);
   display: inline-flex;
   white-space: wrap;
@@ -17554,7 +17572,7 @@ textarea {
   align-items: center;
   width: 22px;
   height: 22px;
-  padding: 4px;
+  padding: 0.25rem;
   border-radius: 4px;
   background-color: var(--bs-ql-secondary-100);
 }
@@ -17580,9 +17598,14 @@ textarea {
   right: 0;
   top: 0;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 .multiselect__select:before {
   content: "\e903";
+  display: block;
   font-family: "icons";
   font-size: 1.5rem;
   color: var(--bs-ql-info-600);
@@ -17607,8 +17630,8 @@ textarea {
 
 .multiselect__placeholder {
   color: var(--bs-ql-input-placeholder-color);
-  margin-bottom: 0px;
-  padding-top: 0px;
+  margin-bottom: 0;
+  padding-top: 0;
   font-size: 0.875rem;
   font-weight: normal;
 }
@@ -17636,12 +17659,13 @@ textarea {
 
 .multiselect__option {
   color: var(--bs-ql-input-color);
-  line-height: 17px;
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+  line-height: 120%;
+  padding: 0.5rem;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-height: unset;
 }
 @media (any-hover: hover) {
   .multiselect__option:hover {

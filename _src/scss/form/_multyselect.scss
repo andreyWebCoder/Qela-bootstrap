@@ -24,8 +24,9 @@
 	}
 }
 .multiselect {
+	--select-h: 38px;
 	cursor: pointer;
-	min-height: 38px;
+	min-height: var(--select-h);
 	&__option {
 		font-size: rem(14);
 	}
@@ -56,6 +57,23 @@
 			background-color: var(--bs-ql-input-disabled-bg-color);
 		}
 	}
+	&.qela-sm {
+		--select-h: 30px;
+		min-height: var(--select-h);
+		.multiselect__tags {
+			min-height: var(--select-h);
+		}
+		.multiselect__select {
+			height: var(--select-h);
+		}
+		.multiselect__tags-wrap {
+			margin: rem(2) 0 0 rem(-8);
+		}
+		.multiselect__input {
+			padding: rem(3) 0;
+			font-size: rem(12);
+		}
+	}
 }
 .multiselect--active {
 	.multiselect__tags {
@@ -72,28 +90,28 @@
 	}
 }
 .multiselect__tags {
-	padding: 0px rem(42) 0 $input-padding-x;
+	padding: 0 rem(42) 0 $input-padding-x;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
 	border-radius: $input-border-radius;
 	border: 1px solid var(--bs-ql-input-border-color);
 	background-color: var(--bs-ql-input-bg-color);
-	min-height: 38px;
+	min-height: var(--select-h);
 	transition: border-color 0.2s ease 0s;
 }
 
 .multiselect__tags-wrap {
-	margin: 4px 0px 3px -8px;
+	margin: rem(6) 0 rem(4) rem(-8);
 }
 
 .multiselect__tag {
-	padding: 5px 28px 5px 6px;
+	padding: rem(4) rem(28) rem(4) rem(6);
 	border-radius: 6px;
-	margin-right: 2px;
-	margin-bottom: 2px;
+	margin-right: rem(2);
+	margin-bottom: rem(2);
 	color: var(--bs-ql-info-800);
-	line-height: 120%;
+	line-height: 116%;
 	background: var(--bs-ql-info-100);
 	display: inline-flex;
 	white-space: wrap;
@@ -107,7 +125,7 @@
 	align-items: center;
 	width: 22px;
 	height: 22px;
-	padding: 4px;
+	padding: rem(4);
 	border-radius: 4px;
 	background-color: var(--bs-ql-secondary-100);
 	&:focus {
@@ -135,8 +153,13 @@
 	right: 0;
 	top: 0;
 	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
 	&:before {
 		content: "\e903";
+		display: block;
 		font-family: "icons";
 		font-size: rem(24);
 		color: var(--bs-ql-info-600);
@@ -163,8 +186,8 @@
 
 .multiselect__placeholder {
 	color: var(--bs-ql-input-placeholder-color);
-	margin-bottom: 0px;
-	padding-top: 0px;
+	margin-bottom: 0;
+	padding-top: 0;
 	font-size: $input-font-size;
 	font-weight: normal;
 }
@@ -190,13 +213,13 @@
 
 .multiselect__option {
 	color: var(--bs-ql-input-color);
-	line-height: 17px;
-	padding: rem(12) $input-padding-x rem(12) $input-padding-x;
+	line-height: 120%;
+	padding: rem(8);
 	width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-
+	min-height: unset;
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: var(--bs-ql-secondary-100);
