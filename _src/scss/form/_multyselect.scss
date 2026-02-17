@@ -44,7 +44,7 @@
 	}
 	&.multiselect--disabled {
 		opacity: $btn-close-opacity;
-
+		background: transparent;
 		.multiselect__select {
 			background: transparent;
 			border-color: var(--bs-ql-input-disabled-border-color);

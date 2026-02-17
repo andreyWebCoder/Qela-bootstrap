@@ -17498,6 +17498,7 @@ textarea {
 }
 .multiselect.multiselect--disabled {
   opacity: 1;
+  background: transparent;
 }
 .multiselect.multiselect--disabled .multiselect__select {
   background: transparent;
