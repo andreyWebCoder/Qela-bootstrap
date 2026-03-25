@@ -20134,6 +20134,23 @@ textarea {
   --img-size: 32px;
 }
 
+.qela-unread-dot {
+  position: relative;
+}
+.qela-unread-dot::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 10px;
+  height: 10px;
+  background-color: var(--bs-danger);
+  border-radius: 50%;
+  border: 1px solid var(--bs-white);
+  top: -3px;
+  right: -3px;
+}
+
 .qela-img1x1 {
   padding-top: 100%;
   overflow: auto;
