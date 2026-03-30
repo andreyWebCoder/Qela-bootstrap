@@ -15858,6 +15858,10 @@ textarea.form-control-lg {
   content: "\e9cc";
 }
 
+.ic-coin:before {
+  content: "\e9cd";
+}
+
 html,
 body {
   height: 100%;
