@@ -16718,6 +16718,19 @@ main {
   font-size: 1.125rem;
 }
 
+.qela-btn-group-vert .btn {
+  min-height: 19.5px;
+  width: 38px;
+  background-color: var(--bs-ql-info-100);
+}
+.qela-btn-group-vert .btn::before {
+  font-size: 1.125rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .btn-group .btn-outline-info,
 .btn-group-vertical .btn-outline-info {
   color: var(--bs-ql-info-600);

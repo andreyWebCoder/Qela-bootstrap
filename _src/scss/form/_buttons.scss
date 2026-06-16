@@ -431,6 +431,21 @@
 	}
 }
 
+.qela-btn-group-vert {
+	.btn {
+		min-height: 19.5px;
+		width: 38px;
+		background-color: var(--bs-ql-info-100);
+		&::before {
+			font-size: rem(18);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
 .btn-group,
 .btn-group-vertical {
 	.btn-outline-info {
